@@ -15,6 +15,9 @@ class ViewController: UIViewController {
         
         let ts = UIFont.mq_allFontNames
         print(ts)
+        
+        let bgColor = UIColor(hexString: "#AABBCC")
+        self.view.backgroundColor = bgColor
     }
 }
 

@@ -13,6 +13,7 @@
 		E79ECC3A22A6C10D00736EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3922A6C10D00736EF2 /* Assets.xcassets */; };
 		E79ECC3D22A6C10D00736EF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3B22A6C10D00736EF2 /* LaunchScreen.storyboard */; };
 		E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */; };
+		E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E79ECC3C22A6C10D00736EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E79ECC3E22A6C10D00736EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+MQ.swift"; sourceTree = "<group>"; };
+		E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MQ.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */,
+				E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */,
 			);
 			path = MQKit;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79ECC3522A6C10D00736EF2 /* ViewController.swift in Sources */,
+				E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */,
 				E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
 			);
