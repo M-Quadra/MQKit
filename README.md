@@ -19,3 +19,12 @@ init(hexString: String, alpha: CGFloat = 1)
 ```
 
 \#RRGGBB 通过HEX创建颜色
+
+# FileManager
+
+```
+.mq_cachesPath
+.mq_cachesURL
+```
+
+获取Caches目录 Path/URL
