@@ -20,11 +20,24 @@ init(hexString: String, alpha: CGFloat = 1)
 
 \#RRGGBB 通过HEX创建颜色
 
-# FileManager
+# String
 
 ```
-.mq_cachesPath
-.mq_cachesURL
+.mq_documents
+.mq_caches
+.mq_library
+.mq_tmp
 ```
 
-获取Caches目录 Path/URL
+获取`Documents``Caches``Library``tmp`目录path
+
+# URL
+
+```
+.mq_documents
+.mq_caches
+.mq_library
+.mq_tmp
+```
+
+获取`Documents``Caches``Library``tmp`目录URL

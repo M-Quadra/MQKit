@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7065D6022A7CF5600D1D1A6 /* FileManager+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7065D5F22A7CF5600D1D1A6 /* FileManager+MQ.swift */; };
+		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
+		E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */; };
 		E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */; };
 		E79ECC3522A6C10D00736EF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3422A6C10D00736EF2 /* ViewController.swift */; };
 		E79ECC3822A6C10D00736EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3622A6C10D00736EF2 /* Main.storyboard */; };
@@ -18,7 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E7065D5F22A7CF5600D1D1A6 /* FileManager+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+MQ.swift"; sourceTree = "<group>"; };
+		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
+		E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQ.swift"; sourceTree = "<group>"; };
 		E79ECC2F22A6C10C00736EF2 /* MQKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79ECC3422A6C10D00736EF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +65,8 @@
 			children = (
 				E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */,
 				E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */,
-				E7065D5F22A7CF5600D1D1A6 /* FileManager+MQ.swift */,
+				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
+				E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */,
 			);
 			path = MQKit;
 			sourceTree = "<group>";
@@ -156,7 +159,8 @@
 				E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */,
 				E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
-				E7065D6022A7CF5600D1D1A6 /* FileManager+MQ.swift in Sources */,
+				E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */,
+				E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

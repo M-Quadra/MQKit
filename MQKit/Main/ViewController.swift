@@ -22,7 +22,10 @@ class ViewController: UIViewController {
         print(txt)
         print(NSString(string: txt).length, txt.count)
         
-        print(FileManager.mq_cachesPath, "\n", FileManager.mq_cachesURL)
+        print(URL.mq_documents, "\n", String.mq_documents)
+        print(URL.mq_caches, "\n", String.mq_caches)
+        print(URL.mq_library, "\n", String.mq_library)
+        print(URL.mq_tmp, "\n", String.mq_tmp)
     }
 }
 
