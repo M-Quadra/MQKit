@@ -30,4 +30,15 @@ extension UIColor {
         
         self.init(red: red, green: green, blue: blue, alpha: colorAlpha)
     }
+    
+    /// random RBG, Alpha = 1
+    public class var mq_random: UIColor {
+        get {
+            let r = CGFloat(arc4random() % 255)
+            let g = CGFloat(arc4random() % 255)
+            let b = CGFloat(arc4random() % 255)
+            
+            return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
+        }
+    }
 }
