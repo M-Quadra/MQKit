@@ -11,8 +11,13 @@ swift ABI 都稳定了，那么近期就准备开工吧
 .mq_allFontNames
 ```
 
-
 获取系统支持的所有字体
+
+```
+.mq_localFontName(forPath: String) -> String
+.mq_localFontName(forPath: URL) -> String
+```
+获取字体文件对应的`fontName`
 
 # UIColor
 

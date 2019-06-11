@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreText
 
 extension UIFont {
     /// get all fontName in system
@@ -23,5 +24,23 @@ extension UIFont {
             puts("")
             return fontNameAry
         }
+    }
+    
+    /// get local fontName
+    public class func mq_localFontName(forPath: String) -> String {
+        let fileURL = URL(fileURLWithPath: forPath)
+        return UIFont.mq_localFontName(forPath: fileURL)
+    }
+    public class func mq_localFontName(forPath: URL) -> String {
+        let preProvider = CGDataProvider(url: forPath as CFURL)
+        guard let provider = preProvider else {
+            return ""
+        }
+        let preFont = CGFont(provider)
+        guard let font = preFont else {
+            return ""
+        }
+
+        return String(font.postScriptName ?? "")
     }
 }
