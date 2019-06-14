@@ -101,3 +101,16 @@ mq_openQQGroup(qqGroup: String) -> Bool
 ```
 
 app相关信息
+
+# Date
+
+```
+.mq_year
+.mq_month
+.mq_day
+.mq_hour
+.mq_minute
+.mq_second
+```
+
+获取 年/月/日/小时/分钟/秒

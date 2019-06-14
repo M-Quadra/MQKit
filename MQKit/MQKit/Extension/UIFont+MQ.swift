@@ -12,18 +12,16 @@ import CoreText
 extension UIFont {
     /// get all fontName in system
     public class var mq_allFontNames: [String] {
-        get {
-            var fontNameAry = [String]()
-            for familyName in UIFont.familyNames {
-                print("familyName: ", familyName)
-                for fontName in UIFont.fontNames(forFamilyName: familyName) {
-                    print("    fontName: ", fontName)
-                    fontNameAry.append(fontName)
-                }
+        var fontNameAry = [String]()
+        for familyName in UIFont.familyNames {
+            print("familyName: ", familyName)
+            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+                print("    fontName: ", fontName)
+                fontNameAry.append(fontName)
             }
-            puts("")
-            return fontNameAry
         }
+        puts("")
+        return fontNameAry
     }
     
     /// get local fontName

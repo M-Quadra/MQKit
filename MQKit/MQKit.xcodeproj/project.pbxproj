@@ -10,6 +10,7 @@
 		E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9C22B0878600D5E334 /* MQCollectionView.swift */; };
 		E70A9B9F22B0883500D5E334 /* MQTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9E22B0883500D5E334 /* MQTableView.swift */; };
 		E70A9BBD22B0F21400D5E334 /* UIApplication+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9BBC22B0F21400D5E334 /* UIApplication+MQ.swift */; };
+		E72171F722B3AB7C00397F0E /* Date+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72171F622B3AB7C00397F0E /* Date+MQ.swift */; };
 		E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7122AE017B001202B2 /* UIView+MQ.swift */; };
 		E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7322AE4D17001202B2 /* Double+MQ.swift */; };
 		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
@@ -27,6 +28,7 @@
 		E70A9B9C22B0878600D5E334 /* MQCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQCollectionView.swift; sourceTree = "<group>"; };
 		E70A9B9E22B0883500D5E334 /* MQTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTableView.swift; sourceTree = "<group>"; };
 		E70A9BBC22B0F21400D5E334 /* UIApplication+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+MQ.swift"; sourceTree = "<group>"; };
+		E72171F622B3AB7C00397F0E /* Date+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+MQ.swift"; sourceTree = "<group>"; };
 		E7246B7122AE017B001202B2 /* UIView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MQ.swift"; sourceTree = "<group>"; };
 		E7246B7322AE4D17001202B2 /* Double+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E7246B7122AE017B001202B2 /* UIView+MQ.swift */,
 				E7246B7322AE4D17001202B2 /* Double+MQ.swift */,
 				E70A9BBC22B0F21400D5E334 /* UIApplication+MQ.swift */,
+				E72171F622B3AB7C00397F0E /* Date+MQ.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */,
 				E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */,
 				E70A9BBD22B0F21400D5E334 /* UIApplication+MQ.swift in Sources */,
+				E72171F722B3AB7C00397F0E /* Date+MQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
