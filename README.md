@@ -66,6 +66,12 @@ init(hexString: String, alpha: CGFloat = 1)
 
 修改对应UIView属性
 
+```
+.mq_parentViewController
+```
+
+寻找UIView的上层VC
+
 # 数值
 
 ```
@@ -114,3 +120,11 @@ app相关信息
 ```
 
 获取 年/月/日/小时/分钟/秒
+
+# UIImage
+
+```
+mq_averageColor
+```
+
+获取图片平均色

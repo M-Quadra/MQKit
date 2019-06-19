@@ -53,4 +53,15 @@ extension UIView {
             self.frame = frame
         }
     }
+    
+    public var mq_parentViewController: UIViewController? {
+        var responder = self.next
+        while responder != nil {
+            if let vc = responder as? UIViewController {
+                return vc
+            }
+            responder = responder?.next
+        }
+        return nil
+    }
 }
