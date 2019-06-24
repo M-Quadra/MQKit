@@ -128,3 +128,11 @@ mq_averageColor
 ```
 
 获取图片平均色
+
+# MQTaptic
+
+```
+MQTaptic.tap(type: type)
+```
+
+震动反馈
