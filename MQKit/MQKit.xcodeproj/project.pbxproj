@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812622C1348200FBD89D /* MQShowViewController.swift */; };
+		E700812B22C1350600FBD89D /* MQShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812A22C1350600FBD89D /* MQShowCell.swift */; };
+		E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812E22C13A1F00FBD89D /* MQFontViewController.swift */; };
 		E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */; };
 		E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9C22B0878600D5E334 /* MQCollectionView.swift */; };
 		E70A9B9F22B0883500D5E334 /* MQTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9E22B0883500D5E334 /* MQTableView.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E700812622C1348200FBD89D /* MQShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQShowViewController.swift; sourceTree = "<group>"; };
+		E700812A22C1350600FBD89D /* MQShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQShowCell.swift; sourceTree = "<group>"; };
+		E700812E22C13A1F00FBD89D /* MQFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFontViewController.swift; sourceTree = "<group>"; };
 		E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTaptic.swift; sourceTree = "<group>"; };
 		E70A9B9C22B0878600D5E334 /* MQCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQCollectionView.swift; sourceTree = "<group>"; };
 		E70A9B9E22B0883500D5E334 /* MQTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTableView.swift; sourceTree = "<group>"; };
@@ -61,6 +67,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E700812522C1343900FBD89D /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				E700812922C134F200FBD89D /* View */,
+				E700812822C134E700FBD89D /* Controller */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		E700812822C134E700FBD89D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E700812622C1348200FBD89D /* MQShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E700812922C134F200FBD89D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E700812A22C1350600FBD89D /* MQShowCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E700812C22C139CF00FBD89D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E700812D22C13A0300FBD89D /* UIFont */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E700812D22C13A0300FBD89D /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				E700812E22C13A1F00FBD89D /* MQFontViewController.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 		E709B4ED22BCDE670093B7F1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,17 +144,17 @@
 		E722768722B8CCFF00008A96 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E722768822B8CD0800008A96 /* images */,
+				E722768822B8CD0800008A96 /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E722768822B8CD0800008A96 /* images */ = {
+		E722768822B8CD0800008A96 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				E722768922B8CD1200008A96 /* image0@2x.png */,
 			);
-			path = images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		E79ECC2622A6C10C00736EF2 = {
@@ -140,6 +187,8 @@
 		E79ECC4422A6C16D00736EF2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E700812C22C139CF00FBD89D /* Extension */,
+				E700812522C1343900FBD89D /* Show */,
 				E722768722B8CCFF00008A96 /* Resources */,
 				E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */,
 				E79ECC3422A6C10D00736EF2 /* ViewController.swift */,
@@ -226,12 +275,15 @@
 				E79ECC3522A6C10D00736EF2 /* ViewController.swift in Sources */,
 				E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */,
 				E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */,
+				E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */,
+				E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */,
 				E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */,
 				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
 				E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */,
 				E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */,
 				E70A9B9F22B0883500D5E334 /* MQTableView.swift in Sources */,
+				E700812B22C1350600FBD89D /* MQShowCell.swift in Sources */,
 				E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */,
 				E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */,
 				E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */,
