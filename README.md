@@ -44,6 +44,17 @@ init(hexString: String, alpha: CGFloat = 1)
 
 获取`Documents``Caches``Library``tmp`目录path
 
+```
+.mq_IDFA
+```
+
+获取IDFA
+
+```
+.mq_md5
+```
+32位 小写 md5
+
 # URL
 
 ```
