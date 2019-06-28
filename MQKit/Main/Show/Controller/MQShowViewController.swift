@@ -35,18 +35,28 @@ class MQShowViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             cell.textLabel?.text = "UIFont+MQ"
+        case 1:
+            cell.textLabel?.text = "UIColor+MQ"
+        case 2:
+            cell.textLabel?.text = "URL+MQ"
         default:
             cell.textLabel?.text = ""
         }
         
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
             let fontVC = MQFontViewController()
             self.navigationController?.pushViewController(fontVC, animated: true)
+        case 1:
+            let colorVC = MQColorViewController()
+            self.navigationController?.pushViewController(colorVC, animated: true)
+        case 2:
+            let URLVC = MQURLViewController()
+            self.navigationController?.pushViewController(URLVC, animated: true)
         default: break
         }
     }
