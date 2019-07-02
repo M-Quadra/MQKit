@@ -73,6 +73,7 @@ init(hexString: String, alpha: CGFloat = 1)
 .mq_left
 .mq_bottom
 .mq_right
+.mq_size
 ```
 
 修改对应UIView属性

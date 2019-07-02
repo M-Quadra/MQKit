@@ -54,6 +54,17 @@ extension UIView {
         }
     }
     
+    public var mq_size: CGSize {
+        get {
+            return self.frame.size
+        }
+        set {
+            var frame = self.frame
+            frame.size = newValue
+            self.frame = frame
+        }
+    }
+    
     public var mq_parentViewController: UIViewController? {
         var responder = self.next
         while responder != nil {
