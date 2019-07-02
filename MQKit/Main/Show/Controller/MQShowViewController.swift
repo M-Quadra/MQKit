@@ -19,7 +19,6 @@ class MQShowViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -39,8 +38,14 @@ class MQShowViewController: UITableViewController {
             cell.textLabel?.text = "UIColor+MQ"
         case 2:
             cell.textLabel?.text = "URL+MQ"
+        case 3:
+            cell.textLabel?.text = "Date+MQ"
+        case 4:
+            cell.textLabel?.text = "String+MQ"
+        case 5:
+            cell.textLabel?.text = "UIImage+MQ"
         default:
-            cell.textLabel?.text = ""
+            cell.textLabel?.text = "------"
         }
         
         return cell
@@ -57,6 +62,15 @@ class MQShowViewController: UITableViewController {
         case 2:
             let URLVC = MQURLViewController()
             self.navigationController?.pushViewController(URLVC, animated: true)
+        case 3:
+            let dateVC = MQDateViewController()
+            self.navigationController?.pushViewController(dateVC, animated: true)
+        case 4:
+            let strVC = MQStringViewController()
+            self.navigationController?.pushViewController(strVC, animated: true)
+        case 5:
+            let imgVC = MQUIImageViewController()
+            self.navigationController?.pushViewController(imgVC, animated: true)
         default: break
         }
     }

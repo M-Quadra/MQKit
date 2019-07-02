@@ -41,4 +41,21 @@ extension UIImage {
                        blue:  rgba[2] / rgba[3],
                        alpha: rgba[3] / 255)
     }
+    
+    convenience public init(layer: CALayer, alpha: Bool) {        
+        var optImg: UIImage?
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, !alpha, 0)
+        if let context = UIGraphicsGetCurrentContext() {
+            layer.render(in: context)
+            optImg = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        UIGraphicsEndImageContext()
+        
+        if let cgImg = optImg?.cgImage {
+            self.init(cgImage: cgImg, scale: UIScreen.main.scale, orientation: .up)
+        } else {
+            self.init()
+        }
+    }
+    
 }

@@ -24,6 +24,10 @@
 		E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7322AE4D17001202B2 /* Double+MQ.swift */; };
 		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
 		E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */; };
+		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
+		E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */; };
+		E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918EE22C9AA2D00877715 /* MQStringViewController.swift */; };
+		E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */; };
 		E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */; };
 		E79ECC3522A6C10D00736EF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3422A6C10D00736EF2 /* ViewController.swift */; };
 		E79ECC3822A6C10D00736EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3622A6C10D00736EF2 /* Main.storyboard */; };
@@ -51,6 +55,10 @@
 		E7246B7322AE4D17001202B2 /* Double+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQ.swift"; sourceTree = "<group>"; };
+		E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQDateViewController.swift; sourceTree = "<group>"; };
+		E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIImageViewController.swift; sourceTree = "<group>"; };
+		E77918EE22C9AA2D00877715 /* MQStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQStringViewController.swift; sourceTree = "<group>"; };
+		E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIApplicationViewController.swift; sourceTree = "<group>"; };
 		E79ECC2F22A6C10C00736EF2 /* MQKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79ECC3422A6C10D00736EF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,9 +109,13 @@
 		E700812C22C139CF00FBD89D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E70ECF2A22C5F6350073B888 /* URL */,
+				E768962922CB08D300B5D143 /* UIImage */,
+				E77918F022C9AEF400877715 /* UIApplication */,
+				E75EF41B22C99AC9006DA5A3 /* Date */,
+				E77918ED22C9A9EC00877715 /* String */,
 				E70ECF2722C5F11A0073B888 /* UIColor */,
 				E700812D22C13A0300FBD89D /* UIFont */,
+				E70ECF2A22C5F6350073B888 /* URL */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -182,6 +194,38 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		E75EF41B22C99AC9006DA5A3 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		E768962922CB08D300B5D143 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		E77918ED22C9A9EC00877715 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				E77918EE22C9AA2D00877715 /* MQStringViewController.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		E77918F022C9AEF400877715 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
 		E79ECC2622A6C10C00736EF2 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +301,7 @@
 				TargetAttributes = {
 					E79ECC2E22A6C10C00736EF2 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -305,8 +350,11 @@
 				E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */,
 				E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */,
 				E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */,
+				E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */,
 				E70ECF2C22C5F6600073B888 /* MQURLViewController.swift in Sources */,
 				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
+				E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */,
+				E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
 				E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */,
 				E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */,
@@ -316,6 +364,7 @@
 				E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */,
 				E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */,
 				E70A9BBD22B0F21400D5E334 /* UIApplication+MQ.swift in Sources */,
+				E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */,
 				E72171F722B3AB7C00397F0E /* Date+MQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -471,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -480,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

@@ -141,6 +141,12 @@ mq_averageColor
 
 获取图片平均色
 
+```
+UIImage(layer: CALayer, alpha: Bool)
+```
+
+通过CALayer创建UIImage，是否开启alpha通道由外部控制
+
 # MQTaptic
 
 ```
