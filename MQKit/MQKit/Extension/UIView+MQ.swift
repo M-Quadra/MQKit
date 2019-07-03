@@ -75,4 +75,16 @@ extension UIView {
         }
         return nil
     }
+    
+    public func mq_setShadow(offset: CGSize, effect: CGFloat, color: UIColor) {
+        self.layer.shadowColor   = color.cgColor
+        self.layer.shadowOffset  = offset
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius  = effect
+    }
+    
+    public func mq_shadowPathToFit() {
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+    }
+    
 }

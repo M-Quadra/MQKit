@@ -84,6 +84,19 @@ init(hexString: String, alpha: CGFloat = 1)
 
 寻找UIView的上层VC
 
+```
+.mq_setShadow(offset: CGSize, effect: CGFloat, color: UIColor)
+```
+
+设置阴影，使用贴近标注的命名
+
+
+```
+.mq_shadowPathToFit
+```
+
+根据bounds创建shadowPath
+
 # 数值
 
 ```
