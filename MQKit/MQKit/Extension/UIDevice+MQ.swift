@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIDevice {
+    
     var mq_isJailbroken: Bool {// just copy and exit(0) !!!
         #if targetEnvironment(simulator)
         return false;
@@ -52,5 +53,25 @@ extension UIDevice {
         }
         
         return false
+    }
+    
+    func mq_clearKeyChain() {
+        let secItemAry = [
+            kSecClassInternetPassword,
+            kSecClassGenericPassword,
+            kSecClassCertificate,
+            kSecClassKey,
+            kSecClassIdentity
+        ]
+        
+        for secItem in secItemAry {
+            let dic = [kSecClass: secItem]
+            let status = SecItemDelete(dic as CFDictionary)
+            
+            guard status == errSecSuccess || status == errSecItemNotFound else {
+                print("Keychain Clear Error")
+                continue
+            }
+        }
     }
 }
