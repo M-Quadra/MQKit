@@ -22,6 +22,7 @@
 		E722768A22B8CD1200008A96 /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E722768922B8CD1200008A96 /* image0@2x.png */; };
 		E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7122AE017B001202B2 /* UIView+MQ.swift */; };
 		E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7322AE4D17001202B2 /* Double+MQ.swift */; };
+		E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */; };
 		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
 		E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
@@ -53,6 +54,7 @@
 		E722768922B8CD1200008A96 /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
 		E7246B7122AE017B001202B2 /* UIView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MQ.swift"; sourceTree = "<group>"; };
 		E7246B7322AE4D17001202B2 /* Double+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+MQ.swift"; sourceTree = "<group>"; };
+		E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQ.swift"; sourceTree = "<group>"; };
 		E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQDateViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				E722768522B8C56300008A96 /* UIImage+MQ.swift */,
 				E7246B7122AE017B001202B2 /* UIView+MQ.swift */,
 				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
+				E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
 				E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */,
 				E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */,
+				E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
 				E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */,
 				E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */,

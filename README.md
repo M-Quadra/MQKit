@@ -33,6 +33,12 @@ init(hexString: String, alpha: CGFloat = 1)
 
 获取一个随机颜色
 
+```
+.mq_inverseColor
+```
+
+计算反色
+
 # String
 
 ```
@@ -54,6 +60,24 @@ init(hexString: String, alpha: CGFloat = 1)
 .mq_md5
 ```
 32位 小写 md5
+
+```
+.mq_base64Encode(using: String.Encoding = .utf8)
+```
+
+base64编码
+
+```
+.mq_base64Decode(using: String.Encoding = .utf8)
+```
+
+base64解码
+
+```
+.mq_jsonToDictionary
+```
+
+json转dic
 
 # URL
 
@@ -181,3 +205,11 @@ MQTaptic.tap(type: type)
 ```
 
 清空KeyChain
+
+# Dictionary
+
+```
+.mq_jsonString(encoding: String.Encoding = .utf8) -> String
+```
+
+dic转json

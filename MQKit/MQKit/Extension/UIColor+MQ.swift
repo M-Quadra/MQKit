@@ -39,4 +39,15 @@ extension UIColor {
         
         return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
+    
+    public func mq_inverseColor() -> UIColor {
+        guard let componentAry = self.cgColor.components, componentAry.count == 4 else {
+            return .clear
+        }
+        
+        return UIColor(red:   1 - componentAry[0],
+                       green: 1 - componentAry[1],
+                       blue:  1 - componentAry[2],
+                       alpha: componentAry[3])
+    }
 }

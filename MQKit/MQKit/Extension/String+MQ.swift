@@ -36,4 +36,28 @@ extension String {
                       buffer[12], buffer[13], buffer[14], buffer[15]
         )
     }
+    
+    public func mq_base64Encode(using: String.Encoding = .utf8) -> String {
+        guard let data = self.data(using: using) else {
+            return ""
+        }
+        return data.base64EncodedString()
+    }
+    
+    public func mq_base64Decode(using: String.Encoding = .utf8) -> String {
+        guard let data = Data(base64Encoded: self) else {
+            return ""
+        }
+        return String(data: data, encoding: using) ?? ""
+    }
+    
+    public func mq_jsonToDictionary(using: String.Encoding = .utf8) -> [String: Any] {
+        guard let data = self.data(using: using) else {
+            return [:]
+        }
+        
+        let dic = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        let optDic = dic as? [String: Any] ?? [:]
+        return optDic
+    }
 }

@@ -20,7 +20,7 @@ class MQColorViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +38,10 @@ class MQColorViewController: UITableViewController {
             UIColor(hexString: "#112233", alpha: 0.5)
             """
             cell.backgroundColor = UIColor(hexString: "#112233", alpha: 0.5)
+        case 2:
+            cell.textLabel?.text = "UIColor.red.mq_inverseColor()"
+            cell.textLabel?.textColor = .red
+            cell.backgroundColor = UIColor.red.mq_inverseColor()
         default: break
         }
         return cell
