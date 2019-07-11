@@ -131,16 +131,6 @@ Double.mq_radian(angle: )
 
 角度值转弧度值
 
-# UIKit
-
-```
-MQCollectionView
-MQTableView
-```
-
-为了更方便地写卡片滑动，延伸出了控制`hitTest`的闭包
-
-神™的swift不能自动补全闭包，没办法，改成func了
 
 # UIApplication
 
