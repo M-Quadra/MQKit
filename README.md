@@ -98,6 +98,8 @@ json转dic
 .mq_bottom
 .mq_right
 .mq_size
+.mq_width
+.mq_height
 ```
 
 修改对应UIView属性
