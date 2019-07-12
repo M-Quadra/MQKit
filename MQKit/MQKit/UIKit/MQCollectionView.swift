@@ -56,66 +56,53 @@ public struct MQReusableView<T> {
     }
 }
 
-extension MQCollectionView {
+extension UICollectionView {
     
-    public func dequeue<T>(reusableCell: MQReusableCell<T>) -> T {
-        guard let cls = T.self as? AnyClass else {
-            fatalError("need __kindof UICollectionViewCell")
-        }
-        guard let _ = cls as? UICollectionViewCell.Type else {
-            fatalError("need __kindof UICollectionViewCell")
-        }
-        
+    public func mq_dequeue<T: UICollectionViewCell>(reusableCell: MQReusableCell<T>) -> T {
+        let cls = T.self
         let clsName = NSStringFromClass(cls)
         
-        if !self.cellIdentifierSet.contains(clsName) {
-            self.register(cls, forCellWithReuseIdentifier: clsName)
-            self.cellIdentifierSet.insert(clsName)
+        if let mqCltView = self as? MQCollectionView {
+            if !mqCltView.cellIdentifierSet.contains(clsName) {
+                mqCltView.register(cls, forCellWithReuseIdentifier: clsName)
+                mqCltView.cellIdentifierSet.insert(clsName)
+            }
         }
         
         let cell = self.dequeueReusableCell(withReuseIdentifier: clsName, for: reusableCell.idxPath)
         return cell as! T
     }
     
-    public func dequeue<T>(reusableHeader: MQReusableView<T>) -> T {
-        guard let cls = T.self as? AnyClass else {
-            fatalError("need __kindof UICollectionReusableView")
-        }
-        guard let _ = cls as? UICollectionReusableView.Type else {
-            fatalError("need __kindof UICollectionReusableView")
-        }
-        
+    public func mq_dequeue<T: UICollectionReusableView>(reusableHeader: MQReusableView<T>) -> T {
+        let cls = T.self
         let clsName = NSStringFromClass(cls)
         let kind = UICollectionView.elementKindSectionHeader
         
-        if !self.headIdentifierSet.contains(clsName) {
-            self.register(cls, forSupplementaryViewOfKind: kind, withReuseIdentifier: clsName)
-            self.headIdentifierSet.insert(clsName)
+        if let mqCltView = self as? MQCollectionView {
+            if !mqCltView.headIdentifierSet.contains(clsName) {
+                mqCltView.register(cls, forSupplementaryViewOfKind: kind, withReuseIdentifier: clsName)
+                mqCltView.headIdentifierSet.insert(clsName)
+            }
         }
         
         let foot = self.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: clsName, for: reusableHeader.idxPath)
         return foot as! T
     }
     
-    public func dequeue<T>(reusableFooter: MQReusableView<T>) -> T {
-        guard let cls = T.self as? AnyClass else {
-            fatalError("need __kindof UICollectionReusableView")
-        }
-        guard let _ = cls as? UICollectionReusableView.Type else {
-            fatalError("need __kindof UICollectionReusableView")
-        }
+    public func mq_dequeue<T: UICollectionReusableView>(reusableFooter: MQReusableView<T>) -> T {
+        let cls = T.self
         
         let clsName = NSStringFromClass(cls)
         let kind = UICollectionView.elementKindSectionFooter
         
-        if !self.footIdentifierSet.contains(clsName) {
-            self.register(cls, forSupplementaryViewOfKind: kind, withReuseIdentifier: clsName)
-            self.footIdentifierSet.insert(clsName)
+        if let mqCltView = self as? MQCollectionView {
+            if !mqCltView.footIdentifierSet.contains(clsName) {
+                mqCltView.register(cls, forSupplementaryViewOfKind: kind, withReuseIdentifier: clsName)
+                mqCltView.footIdentifierSet.insert(clsName)
+            }
         }
         
         let foot = self.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: clsName, for: reusableFooter.idxPath)
         return foot as! T
     }
 }
-
-

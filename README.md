@@ -5,6 +5,8 @@ swift ABI 都稳定了，那么近期就准备开工吧
 
 在QMUI里看到了一些感觉有趣的方法，就直接搬进来好了
 
+随缘更新
+
 # UIFont
 
 ```
@@ -205,3 +207,15 @@ MQTaptic.tap(type: type)
 ```
 
 dic转json
+
+# UICollectionView
+
+```
+.mq_dequeue<T>(reusableCell: MQReusableCell<T>) -> T
+.mq_dequeue<T>(reusableHeader: MQReusableView<T>) -> T
+.mq_dequeue<T>(reusableFooter: MQReusableView<T>) -> T
+```
+
+复用方法, 后续可能会加入注册
+
+参考[MQCollectionView](https://github.com/M-Quadra/MQKit/blob/master/Document/MQ_Class.md)
