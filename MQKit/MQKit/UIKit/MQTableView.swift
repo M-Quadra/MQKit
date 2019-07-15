@@ -17,12 +17,16 @@ class MQTableView: UITableView {
     }
     
     private var inOutsideHitTest = false
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        guard let whenHitTest = preWhenHitTest else {
+    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        guard let whenHitTest = preWhenHitTest, !self.inOutsideHitTest else {
             return super.hitTest(point, with: event)
         }
         
-        return whenHitTest(point, event)
+        self.inOutsideHitTest = true
+        let rtn = whenHitTest(point, event)
+        self.inOutsideHitTest = false
+        
+        return rtn
     }
 
 }
