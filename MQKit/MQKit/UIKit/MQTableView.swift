@@ -19,7 +19,7 @@ class MQTableView: UITableView {
     private var inOutsideHitTest = false
     override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         guard let whenHitTest = preWhenHitTest, !self.inOutsideHitTest else {
-            return super.hitTest(point, with: event)
+            return self.superHitTest(point, with: event)
         }
         
         self.inOutsideHitTest = true
@@ -29,5 +29,8 @@ class MQTableView: UITableView {
         return rtn
     }
 
+    public func superHitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        return super.hitTest(point, with: event)
+    }
 }
 

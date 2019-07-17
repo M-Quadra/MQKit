@@ -22,6 +22,8 @@
 		E722768A22B8CD1200008A96 /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E722768922B8CD1200008A96 /* image0@2x.png */; };
 		E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7122AE017B001202B2 /* UIView+MQ.swift */; };
 		E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7322AE4D17001202B2 /* Double+MQ.swift */; };
+		E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */; };
+		E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */; };
 		E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */; };
 		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
 		E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */; };
@@ -54,6 +56,8 @@
 		E722768922B8CD1200008A96 /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
 		E7246B7122AE017B001202B2 /* UIView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MQ.swift"; sourceTree = "<group>"; };
 		E7246B7322AE4D17001202B2 /* Double+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+MQ.swift"; sourceTree = "<group>"; };
+		E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingView.swift; sourceTree = "<group>"; };
+		E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingViewController.swift; sourceTree = "<group>"; };
 		E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQ.swift"; sourceTree = "<group>"; };
@@ -133,7 +137,8 @@
 		E709B4ED22BCDE670093B7F1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */,
+				E72D731E22D8857C0064F5BF /* MQHorizontalPagingView */,
+				E7BEBA3D22D5BB3B004D295D /* MQTaptic */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -195,6 +200,22 @@
 				E722768922B8CD1200008A96 /* image0@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		E72D731E22D8857C0064F5BF /* MQHorizontalPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */,
+			);
+			path = MQHorizontalPagingView;
+			sourceTree = "<group>";
+		};
+		E72D732322D8AB280064F5BF /* MQHorizontalPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */,
+			);
+			path = MQHorizontalPagingView;
 			sourceTree = "<group>";
 		};
 		E75EF41B22C99AC9006DA5A3 /* Date */ = {
@@ -259,6 +280,7 @@
 		E79ECC4422A6C16D00736EF2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E7BEBA4022D5BC0F004D295D /* Other */,
 				E700812C22C139CF00FBD89D /* Extension */,
 				E700812522C1343900FBD89D /* Show */,
 				E722768722B8CCFF00008A96 /* Resources */,
@@ -270,6 +292,22 @@
 				E79ECC3E22A6C10D00736EF2 /* Info.plist */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E7BEBA3D22D5BB3B004D295D /* MQTaptic */ = {
+			isa = PBXGroup;
+			children = (
+				E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */,
+			);
+			path = MQTaptic;
+			sourceTree = "<group>";
+		};
+		E7BEBA4022D5BC0F004D295D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E72D732322D8AB280064F5BF /* MQHorizontalPagingView */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +393,7 @@
 				E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */,
 				E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */,
 				E70ECF2C22C5F6600073B888 /* MQURLViewController.swift in Sources */,
+				E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */,
 				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
 				E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */,
 				E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */,
@@ -364,6 +403,7 @@
 				E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */,
 				E70A9B9F22B0883500D5E334 /* MQTableView.swift in Sources */,
 				E700812B22C1350600FBD89D /* MQShowCell.swift in Sources */,
+				E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */,
 				E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */,
 				E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */,
 				E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */,
@@ -516,7 +556,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,6 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -536,7 +579,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,6 +590,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
