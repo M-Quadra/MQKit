@@ -38,6 +38,7 @@
 		E79ECC3D22A6C10D00736EF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3B22A6C10D00736EF2 /* LaunchScreen.storyboard */; };
 		E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */; };
 		E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */; };
+		E7C2ACCA22DF2C4E00150F9E /* MQKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		E79ECC3E22A6C10D00736EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+MQ.swift"; sourceTree = "<group>"; };
 		E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MQ.swift"; sourceTree = "<group>"; };
+		E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQKeychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		E709B4ED22BCDE670093B7F1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E7C2ACC822DF2C3000150F9E /* MQKeychain */,
 				E72D731E22D8857C0064F5BF /* MQHorizontalPagingView */,
 				E7BEBA3D22D5BB3B004D295D /* MQTaptic */,
 			);
@@ -310,6 +313,14 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		E7C2ACC822DF2C3000150F9E /* MQKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */,
+			);
+			path = MQKeychain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +407,7 @@
 				E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */,
 				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
 				E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */,
+				E7C2ACCA22DF2C4E00150F9E /* MQKeychain.swift in Sources */,
 				E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */,
 				E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
