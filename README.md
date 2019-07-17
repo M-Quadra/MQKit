@@ -63,6 +63,18 @@ init(hexString: String, alpha: CGFloat = 1)
 获取IDFA
 
 ```
+.mq_IDFV
+```
+
+获取IDFV
+
+```
+.mq_UUID
+```
+
+获取一个UUID
+
+```
 .mq_md5
 ```
 32位 小写 md5

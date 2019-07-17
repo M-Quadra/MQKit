@@ -9,6 +9,7 @@
 import Foundation
 import AdSupport
 import CommonCrypto
+import UIKit
 
 extension String {
     public static let mq_documents = URL.mq_documents.path
@@ -17,6 +18,12 @@ extension String {
     public static let mq_tmp       = NSTemporaryDirectory()
     
     public static let mq_IDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+    public static let mq_IDFV = UIDevice.current.identifierForVendor?.uuidString ?? ""
+    public static var mq_UUID: String {
+        let uuidRef = CFUUIDCreate(kCFAllocatorDefault)
+        let cfUUID = CFUUIDCreateString(kCFAllocatorDefault, uuidRef) ?? "" as CFString
+        return cfUUID as String
+    }
     
     var mq_md5: String {
         if self.count <= 0 {
