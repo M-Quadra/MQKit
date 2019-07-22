@@ -45,6 +45,15 @@ init(hexString: String, alpha: CGFloat = 1)
 
 计算反色
 
+```
+.mq_red
+.mq_green
+.mq_blue
+.mq_alpha
+```
+
+获取RGBA
+
 # String
 
 ```

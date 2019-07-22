@@ -50,4 +50,37 @@ extension UIColor {
                        blue:  1 - componentAry[2],
                        alpha: componentAry[3])
     }
+    
+    var mq_red: CGFloat {
+        var red: CGFloat = 0
+        guard self.getRed(&red, green: nil, blue: nil, alpha: nil) else {
+            return red
+        }
+        return 0
+    }
+    
+    var mq_green: CGFloat {
+        var green: CGFloat = 0
+        guard self.getRed(nil, green: &green, blue: nil, alpha: nil) else {
+            return green
+        }
+        return 0
+    }
+    
+    var mq_blue: CGFloat {
+        var blue: CGFloat = 0
+        guard self.getRed(nil, green: nil, blue: &blue, alpha: nil) else {
+            return blue
+        }
+        return 0
+    }
+    
+    var mq_alpha: CGFloat {
+        var alpha: CGFloat = 0
+        guard self.getRed(nil, green: nil, blue: nil, alpha: &alpha) else {
+            return alpha
+        }
+        return 0
+    }
+    
 }
