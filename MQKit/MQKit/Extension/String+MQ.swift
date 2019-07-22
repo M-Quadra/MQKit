@@ -20,9 +20,7 @@ extension String {
     public static let mq_IDFA = ASIdentifierManager.shared().advertisingIdentifier.uuidString
     public static let mq_IDFV = UIDevice.current.identifierForVendor?.uuidString ?? ""
     public static var mq_UUID: String {
-        let uuidRef = CFUUIDCreate(kCFAllocatorDefault)
-        let cfUUID = CFUUIDCreateString(kCFAllocatorDefault, uuidRef) ?? "" as CFString
-        return cfUUID as String
+        return NSUUID().uuidString
     }
     
     var mq_md5: String {
