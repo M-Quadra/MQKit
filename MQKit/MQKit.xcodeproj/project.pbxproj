@@ -21,10 +21,10 @@
 		E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722768522B8C56300008A96 /* UIImage+MQ.swift */; };
 		E722768A22B8CD1200008A96 /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E722768922B8CD1200008A96 /* image0@2x.png */; };
 		E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7122AE017B001202B2 /* UIView+MQ.swift */; };
-		E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7322AE4D17001202B2 /* Double+MQ.swift */; };
 		E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */; };
 		E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */; };
 		E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */; };
+		E74B455D22E776460015038C /* Coordinate+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B455C22E776460015038C /* Coordinate+MQ.swift */; };
 		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
 		E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
@@ -56,10 +56,10 @@
 		E722768522B8C56300008A96 /* UIImage+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MQ.swift"; sourceTree = "<group>"; };
 		E722768922B8CD1200008A96 /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
 		E7246B7122AE017B001202B2 /* UIView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MQ.swift"; sourceTree = "<group>"; };
-		E7246B7322AE4D17001202B2 /* Double+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+MQ.swift"; sourceTree = "<group>"; };
 		E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingView.swift; sourceTree = "<group>"; };
 		E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingViewController.swift; sourceTree = "<group>"; };
 		E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+MQ.swift"; sourceTree = "<group>"; };
+		E74B455C22E776460015038C /* Coordinate+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQ.swift"; sourceTree = "<group>"; };
 		E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQDateViewController.swift; sourceTree = "<group>"; };
@@ -149,8 +149,9 @@
 		E70A9B9A22B0872100D5E334 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E74B455C22E776460015038C /* Coordinate+MQ.swift */,
 				E72171F622B3AB7C00397F0E /* Date+MQ.swift */,
-				E7246B7322AE4D17001202B2 /* Double+MQ.swift */,
+				E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */,
 				E75E5D0A22A82FD9000C1A61 /* String+MQ.swift */,
 				E70A9BBC22B0F21400D5E334 /* UIApplication+MQ.swift */,
 				E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */,
@@ -159,7 +160,6 @@
 				E722768522B8C56300008A96 /* UIImage+MQ.swift */,
 				E7246B7122AE017B001202B2 /* UIView+MQ.swift */,
 				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
-				E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -408,6 +408,7 @@
 				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
 				E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */,
 				E7C2ACCA22DF2C4E00150F9E /* MQKeychain.swift in Sources */,
+				E74B455D22E776460015038C /* Coordinate+MQ.swift in Sources */,
 				E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */,
 				E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
@@ -416,7 +417,6 @@
 				E70A9B9F22B0883500D5E334 /* MQTableView.swift in Sources */,
 				E700812B22C1350600FBD89D /* MQShowCell.swift in Sources */,
 				E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */,
-				E7246B7422AE4D17001202B2 /* Double+MQ.swift in Sources */,
 				E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */,
 				E75E5D0B22A82FD9000C1A61 /* String+MQ.swift in Sources */,
 				E70A9BBD22B0F21400D5E334 /* UIApplication+MQ.swift in Sources */,

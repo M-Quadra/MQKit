@@ -154,6 +154,7 @@ json转dic
 
 ```
 Double.mq_radian(angle: )
+CGFloat.mq_radian(angle: )
 ```
 
 角度值转弧度值
