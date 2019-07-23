@@ -219,6 +219,18 @@ MQTaptic.tap(type: type)
 
 检测设备是否越狱(建议直接复制代码并使用exit(0))
 
+```
+.mq_totalCapacity
+```
+
+获取总容量
+
+```
+.mq_availableCapacity
+```
+
+获取可用容量
+
 # Dictionary
 
 ```

@@ -55,4 +55,27 @@ extension UIDevice {
         return false
     }
     
+    private static var mq_privateTotalCapacity: UInt64 = 0
+    public var mq_totalCapacity: UInt64 {
+        if UIDevice.mq_privateTotalCapacity > 0 {
+            return UIDevice.mq_privateTotalCapacity
+        }
+        
+        var info = statfs()
+        guard statfs("/var", &info) == 0 else {
+            return 0
+        }
+        
+        UIDevice.mq_privateTotalCapacity = info.f_blocks * UInt64(info.f_bsize)
+        return UIDevice.mq_privateTotalCapacity
+    }
+    
+    public var mq_availableCapacity: UInt64 {
+        var info = statfs()
+        guard statfs("/var", &info) == 0 else {
+            return 0
+        }
+        
+        return info.f_bavail * UInt64(info.f_bsize)
+    }
 }
