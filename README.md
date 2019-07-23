@@ -231,6 +231,18 @@ MQTaptic.tap(type: type)
 
 获取可用容量
 
+```
+.mq_totalMemory
+```
+
+获取总内存大小
+
+```
+.mq_availableMemory
+```
+
+获取可用内存大小(低于实际值)
+
 # Dictionary
 
 ```
