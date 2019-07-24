@@ -106,6 +106,12 @@ base64解码
 
 json转dic
 
+```
+func mq_substring(with filter: MQStringFilter) -> String
+```
+
+String 过滤
+
 # URL
 
 ```

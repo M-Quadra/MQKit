@@ -65,4 +65,23 @@ extension String {
         let optDic = dic as? [String: Any] ?? [:]
         return optDic
     }
+    
+    public struct MQStringFilter {
+        let set: CharacterSet
+        let closure: (Character) -> Bool
+        
+        /// [0-9]
+        public static var naturalNumber: MQStringFilter {
+            return MQStringFilter(set: .decimalDigits) { $0.isNumber }
+        }
+    }
+    
+    public func mq_substring(with filter: MQStringFilter) -> String {
+        let iptStr = self.filter(filter.closure)
+        let originSet = CharacterSet(charactersIn: iptStr)
+        
+        let filterSet = originSet.subtracting(filter.set)
+        let optStr = iptStr.components(separatedBy: filterSet).joined(separator: "")
+        return optStr
+    }
 }
