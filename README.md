@@ -258,6 +258,16 @@ MQTaptic.tap(type: type)
 
 dic转json
 
+# CGPoint
+
+```
+init(mq_xy: CGFloat)
+init(mq_xy: Int)
+init(mq_xy: Double)
+```
+
+创建xy相同的Point
+
 # UICollectionView
 
 ```
