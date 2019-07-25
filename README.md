@@ -268,6 +268,16 @@ init(mq_xy: Double)
 
 创建xy相同的Point
 
+# CGSize
+
+```
+init(mq_edge: CGFloat)
+init(mq_edge: Int)
+init(mq_edge: Double)
+```
+
+创建宽高相同的Size
+
 # UICollectionView
 
 ```

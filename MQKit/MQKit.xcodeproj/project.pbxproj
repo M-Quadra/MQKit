@@ -39,6 +39,7 @@
 		E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */; };
 		E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */; };
 		E7A4DE4E22E955B2006D5AD8 /* CGPoint+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */; };
+		E7A4DE5022E9CD5C006D5AD8 /* CGSize+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */; };
 		E7C2ACCA22DF2C4E00150F9E /* MQKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+MQ.swift"; sourceTree = "<group>"; };
 		E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MQ.swift"; sourceTree = "<group>"; };
 		E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+MQ.swift"; sourceTree = "<group>"; };
+		E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+MQ.swift"; sourceTree = "<group>"; };
 		E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQKeychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				E7246B7122AE017B001202B2 /* UIView+MQ.swift */,
 				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
 				E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */,
+				E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */,
 				E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */,
 				E70ECF2922C5F1400073B888 /* MQColorViewController.swift in Sources */,
+				E7A4DE5022E9CD5C006D5AD8 /* CGSize+MQ.swift in Sources */,
 				E710088F22C458A900BDA7D4 /* UIDevice+MQ.swift in Sources */,
 				E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */,
 				E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */,
