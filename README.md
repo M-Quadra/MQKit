@@ -107,10 +107,23 @@ base64解码
 json转dic
 
 ```
-func mq_substring(with filter: MQStringFilter) -> String
+func mq_substring(with charSet: MQCharacterSet) -> String
 ```
 
 String 过滤
+
+```
+public typealias MQCharacterSet = Set<Character>
+.naturalNumber
+.uppercaseLetter
+.lowercaseLetter
+.letter
+```
+
+数字集合  
+大写字母集合  
+小写字母集合  
+字母集合
 
 # URL
 
