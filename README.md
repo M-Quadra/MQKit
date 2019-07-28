@@ -56,74 +56,10 @@ init(hexString: String, alpha: CGFloat = 1)
 
 # String
 
-```
-.mq_documents
-.mq_caches
-.mq_library
-.mq_tmp
-```
-
-获取`Documents``Caches``Library``tmp`目录path
-
-```
-.mq_IDFA
-```
-
-获取IDFA
-
-```
-.mq_IDFV
-```
-
-获取IDFV
-
-```
-.mq_UUID
-```
-
-获取一个UUID
-
-```
-.mq_md5
-```
-32位 小写 md5
-
-```
-.mq_base64Encode(using: String.Encoding = .utf8)
-```
-
-base64编码
-
-```
-.mq_base64Decode(using: String.Encoding = .utf8)
-```
-
-base64解码
-
-```
-.mq_jsonToDictionary
-```
-
-json转dic
-
-```
-func mq_substring(with charSet: MQCharacterSet) -> String
-```
-
-String 过滤
-
-```
-public typealias MQCharacterSet = Set<Character>
-.naturalNumber
-.uppercaseLetter
-.lowercaseLetter
-.letter
-```
-
-数字集合  
-大写字母集合  
-小写字母集合  
-字母集合
+1. 路径相关 String+MQPath
+2. 标示相关 String+MQMark (考虑迁移至UIDevice)
+3. 编码相关 String+MQCode
+4. 字符相关 String+MQChar
 
 # URL
 
