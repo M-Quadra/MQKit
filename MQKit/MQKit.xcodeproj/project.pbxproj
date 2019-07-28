@@ -34,6 +34,7 @@
 		E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */; };
 		E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918EE22C9AA2D00877715 /* MQStringViewController.swift */; };
 		E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */; };
+		E79324A322EE0B9400880C23 /* OperationQueue+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */; };
 		E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */; };
 		E79ECC3522A6C10D00736EF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3422A6C10D00736EF2 /* ViewController.swift */; };
 		E79ECC3822A6C10D00736EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3622A6C10D00736EF2 /* Main.storyboard */; };
@@ -74,6 +75,7 @@
 		E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIImageViewController.swift; sourceTree = "<group>"; };
 		E77918EE22C9AA2D00877715 /* MQStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQStringViewController.swift; sourceTree = "<group>"; };
 		E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIApplicationViewController.swift; sourceTree = "<group>"; };
+		E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+MQ.swift"; sourceTree = "<group>"; };
 		E79ECC2F22A6C10C00736EF2 /* MQKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79ECC3422A6C10D00736EF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -171,9 +173,12 @@
 			isa = PBXGroup;
 			children = (
 				E70A549922EBE7AB003D0E2B /* String */,
+				E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */,
+				E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */,
 				E74B455C22E776460015038C /* Coordinate+MQ.swift */,
 				E72171F622B3AB7C00397F0E /* Date+MQ.swift */,
 				E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */,
+				E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */,
 				E70A9BBC22B0F21400D5E334 /* UIApplication+MQ.swift */,
 				E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */,
 				E710088E22C458A900BDA7D4 /* UIDevice+MQ.swift */,
@@ -181,8 +186,6 @@
 				E722768522B8C56300008A96 /* UIImage+MQ.swift */,
 				E7246B7122AE017B001202B2 /* UIView+MQ.swift */,
 				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
-				E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */,
-				E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */,
 				E7A4DE4E22E955B2006D5AD8 /* CGPoint+MQ.swift in Sources */,
 				E72171F722B3AB7C00397F0E /* Date+MQ.swift in Sources */,
+				E79324A322EE0B9400880C23 /* OperationQueue+MQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

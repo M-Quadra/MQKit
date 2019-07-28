@@ -227,6 +227,26 @@ init(mq_edge: Double)
 
 创建宽高相同的Size
 
+# OperationQueue
+
+```
+.mq_single
+```
+
+串型队列, 最大并发数 = 1
+
+```
+.mq_mid
+```
+
+并行队列, 最大并发数 = 线程数/2
+
+```
+.mq_max
+```
+
+并行队列, 最大并发数 = 线程数
+
 # UICollectionView
 
 ```
@@ -237,6 +257,6 @@ init(mq_edge: Double)
 
 复用方法, 后续可能会加入注册
 
-参考[MQCollectionView](https://github.com/M-Quadra/MQKit/blob/master/Document/MQ_Class.md)
+参考[MQCollectionView](Document/MQ_Class.md)
 
 # [相关控件](https://github.com/M-Quadra/MQKit/blob/master/Document/MQ_Class.md)
