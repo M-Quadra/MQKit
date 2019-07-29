@@ -10,6 +10,7 @@ import Foundation
 import CommonCrypto
 
 extension String {
+    
     var mq_md5: String {
         if self.count <= 0 {
             return ""

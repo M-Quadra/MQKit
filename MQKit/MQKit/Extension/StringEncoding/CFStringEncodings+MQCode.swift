@@ -14,3 +14,14 @@ extension CFStringEncodings {
         return String.Encoding(self)
     }
 }
+
+extension String {
+    
+    init?(data: Data, mq_encoding: CFStringEncodings) {
+        self.init(data: data, mq_encoding: String.Encoding(mq_encoding))
+    }
+    
+    init?(data: Data, mq_encoding: String.Encoding) {
+        self.init(data: data, encoding: mq_encoding)
+    }
+}
