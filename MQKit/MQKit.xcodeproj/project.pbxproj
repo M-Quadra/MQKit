@@ -28,6 +28,9 @@
 		E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */; };
 		E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */; };
 		E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */; };
+		E73DEBF122EFE36E006FD71C /* StringEncoding+MQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */; };
+		E73DEBF322EFE380006FD71C /* StringEncoding+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */; };
+		E73DEBF722F043E9006FD71C /* String+MQSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF622F043E9006FD71C /* String+MQSub.swift */; };
 		E74B455D22E776460015038C /* Coordinate+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B455C22E776460015038C /* Coordinate+MQ.swift */; };
 		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
@@ -35,7 +38,6 @@
 		E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918EE22C9AA2D00877715 /* MQStringViewController.swift */; };
 		E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */; };
 		E79324A322EE0B9400880C23 /* OperationQueue+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */; };
-		E79324A622EE0F1100880C23 /* StringEncoding+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A522EE0F1100880C23 /* StringEncoding+MQ.swift */; };
 		E79324A822EE103600880C23 /* CFStringEncodings+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */; };
 		E79324AA22EE105900880C23 /* CFStringEncodings+MQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */; };
 		E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */; };
@@ -72,6 +74,9 @@
 		E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingView.swift; sourceTree = "<group>"; };
 		E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingViewController.swift; sourceTree = "<group>"; };
 		E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+MQ.swift"; sourceTree = "<group>"; };
+		E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringEncoding+MQList.swift"; sourceTree = "<group>"; };
+		E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringEncoding+MQCode.swift"; sourceTree = "<group>"; };
+		E73DEBF622F043E9006FD71C /* String+MQSub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQSub.swift"; sourceTree = "<group>"; };
 		E74B455C22E776460015038C /* Coordinate+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQDateViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +84,6 @@
 		E77918EE22C9AA2D00877715 /* MQStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQStringViewController.swift; sourceTree = "<group>"; };
 		E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIApplicationViewController.swift; sourceTree = "<group>"; };
 		E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+MQ.swift"; sourceTree = "<group>"; };
-		E79324A522EE0F1100880C23 /* StringEncoding+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringEncoding+MQ.swift"; sourceTree = "<group>"; };
 		E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CFStringEncodings+MQCode.swift"; sourceTree = "<group>"; };
 		E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CFStringEncodings+MQList.swift"; sourceTree = "<group>"; };
 		E79ECC2F22A6C10C00736EF2 /* MQKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +175,7 @@
 				E70A549E22EBF3BA003D0E2B /* String+MQMark.swift */,
 				E70A54A022EBF578003D0E2B /* String+MQCode.swift */,
 				E70A54A222EBF684003D0E2B /* String+MQChar.swift */,
+				E73DEBF622F043E9006FD71C /* String+MQSub.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -289,9 +294,10 @@
 		E79324A422EE0EED00880C23 /* StringEncoding */ = {
 			isa = PBXGroup;
 			children = (
-				E79324A522EE0F1100880C23 /* StringEncoding+MQ.swift */,
 				E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */,
 				E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */,
+				E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */,
+				E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */,
 			);
 			path = StringEncoding;
 			sourceTree = "<group>";
@@ -443,9 +449,10 @@
 				E70ECF2922C5F1400073B888 /* MQColorViewController.swift in Sources */,
 				E7A4DE5022E9CD5C006D5AD8 /* CGSize+MQ.swift in Sources */,
 				E710088F22C458A900BDA7D4 /* UIDevice+MQ.swift in Sources */,
+				E73DEBF722F043E9006FD71C /* String+MQSub.swift in Sources */,
 				E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */,
+				E73DEBF122EFE36E006FD71C /* StringEncoding+MQList.swift in Sources */,
 				E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */,
-				E79324A622EE0F1100880C23 /* StringEncoding+MQ.swift in Sources */,
 				E70A54A322EBF684003D0E2B /* String+MQChar.swift in Sources */,
 				E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */,
 				E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */,
@@ -470,6 +477,7 @@
 				E70A549F22EBF3BA003D0E2B /* String+MQMark.swift in Sources */,
 				E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */,
 				E70A9BBD22B0F21400D5E334 /* UIApplication+MQ.swift in Sources */,
+				E73DEBF322EFE380006FD71C /* StringEncoding+MQCode.swift in Sources */,
 				E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */,
 				E7A4DE4E22E955B2006D5AD8 /* CGPoint+MQ.swift in Sources */,
 				E72171F722B3AB7C00397F0E /* Date+MQ.swift in Sources */,

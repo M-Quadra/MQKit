@@ -56,17 +56,19 @@ init(hexString: String, alpha: CGFloat = 1)
 
 # String
 
-1. 路径相关 [String+MQPath](Document/Extension/String/String+MQPath.md)
-2. 标示相关 [String+MQMark](Document/Extension/String/String+MQMark.md)
+1. [路径相关](Document/Extension/String/String+MQPath.md)
+2. [标示相关](Document/Extension/String/String+MQMark.md)
  (考虑迁移至UIDevice)
-3. 编码相关 [String+MQCode](Document/Extension/String/String+MQCode.md)
-4. 字符相关 [String+MQChar](Document/Extension/String/String+MQChar.md)
+3. [编码相关](Document/Extension/String/String+MQCode.md)
+4. [字符相关](Document/Extension/String/String+MQChar.md)
+5. [子串相关](Document/Extension/String/String+MQSub.md)
 
 # StringEncoding
 
-1. CFStringEncodings列表 [CFStringEncodings+MQList](Document/Extension/StringEncoding/CFStringEncodings+MQList.md)
-2. [CFStringEncodings+MQCode](Document/Extension/StringEncoding/CFStringEncodings+MQCode.md)
-3. [StringEncoding+MQ](Document/Extension/StringEncoding/StringEncoding+MQ.md)
+1. [CFStringEncodings 编码相关](Document/Extension/StringEncoding/CFStringEncodings+MQCode.md)
+2. [CFStringEncodings 枚举相关](Document/Extension/StringEncoding/CFStringEncodings+MQList.md)
+2. [StringEncoding 编码相关](Document/Extension/StringEncoding/StringEncoding+MQCode.md)
+3. [StringEncoding 枚举相关](Document/Extension/StringEncoding/StringEncoding+MQList.md)
 
 # URL
 
