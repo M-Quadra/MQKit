@@ -25,4 +25,11 @@ extension String {
         let ed = self.index(self.startIndex, offsetBy: rangeAry[1])
         return String(self[st..<ed])
     }
+    
+    /// [st, ed]
+    func mq_substring(with range : ClosedRange<Int>) -> String {
+        let st = range.lowerBound
+        let ed = range.upperBound + 1
+        return self.mq_substring(with: st..<ed)
+    }
 }
