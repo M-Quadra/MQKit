@@ -70,6 +70,20 @@ init(hexString: String, alpha: CGFloat = 1)
 2. [StringEncoding 编码相关](Document/Extension/StringEncoding/StringEncoding+MQCode.md)
 3. [StringEncoding 枚举相关](Document/Extension/StringEncoding/StringEncoding+MQList.md)
 
+# NSMutableAttributedString
+
+```
+var mq_color: UIColor?
+```
+
+设置富文本的整体文字颜色
+
+```
+public var mq_font: UIFont?
+```
+
+设置富文本的整体字体
+
 # URL
 
 ```
@@ -268,4 +282,4 @@ init(mq_edge: Double)
 
 参考[MQCollectionView](Document/MQ_Class.md)
 
-# [相关控件](https://github.com/M-Quadra/MQKit/blob/master/Document/MQ_Class.md)
+# [相关控件](Document/MQ_Class.md)
