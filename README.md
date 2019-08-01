@@ -230,6 +230,14 @@ MQTaptic.tap(type: type)
 
 dic转json
 
+# Array
+
+```
+.mq_jsonString(encoding: String.Encoding = .utf8) -> String
+```
+
+Array转json
+
 # CGPoint
 
 ```
