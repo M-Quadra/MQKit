@@ -290,4 +290,11 @@ init(mq_edge: Double)
 
 参考[MQCollectionView](Document/MQ_Class.md)
 
-# [相关控件](Document/MQ_Class.md)
+# 相关控件
+
+1. [震动反馈](Document/Other/MQTaptic.md)
+2. [MQCollectionView](Document/MQ_Class.md)
+3. [MQTableView](Document/MQ_Class.md)
+4. [MQHorizontalPagingView](Document/MQ_Class.md)
+5. [简易Keychain](Document/Other/MQKeychain.md)
+6. [MQTextField](Document/Other/MQTextField.md)

@@ -46,6 +46,8 @@ class MQShowViewController: UITableViewController {
             cell.textLabel?.text = "UIImage+MQ"
         case 6:
             cell.textLabel?.text = "MQHorizontalPagingView"
+        case 7:
+            cell.textLabel?.text = "MQTextField"
         default:
             cell.textLabel?.text = "------"
         }
@@ -76,6 +78,9 @@ class MQShowViewController: UITableViewController {
         case 6:
             let sliderVC = MQHorizontalPagingViewController()
             self.navigationController?.pushViewController(sliderVC, animated: true)
+        case 7:
+            let txtFieldVC = MQTextFieldViewController()
+            self.navigationController?.pushViewController(txtFieldVC, animated: true)
         default: break
         }
     }
