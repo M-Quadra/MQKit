@@ -19,6 +19,12 @@ Data.mq_random(bytes: Int) -> Data
 128位(16 bytes)随机Data
 
 ```
+.mq_random192
+```
+
+192位(24 bytes)随机Data
+
+```
 .mq_random256
 ```
 

@@ -9,8 +9,9 @@
 import Foundation
 
 extension Data {
+    
     public static func mq_random(bytes: Int) -> Data {
-        let byteAry = Array<UInt8>(repeating: 0, count: bytes).map({_ in
+        let byteAry = Data(count: bytes).map({ _ in
             UInt8(arc4random() % (UInt32(UInt8.max)+1))
         })
         return Data(byteAry)
@@ -18,6 +19,10 @@ extension Data {
     
     public static var mq_random128: Data {
         return .mq_random(bytes: 128/8)
+    }
+    
+    public static var mq_random192: Data {
+        return .mq_random(bytes: 192/8)
     }
     
     public static var mq_random256: Data {
