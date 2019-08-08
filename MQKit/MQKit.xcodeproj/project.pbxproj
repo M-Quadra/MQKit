@@ -10,6 +10,7 @@
 		E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812622C1348200FBD89D /* MQShowViewController.swift */; };
 		E700812B22C1350600FBD89D /* MQShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812A22C1350600FBD89D /* MQShowCell.swift */; };
 		E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812E22C13A1F00FBD89D /* MQFontViewController.swift */; };
+		E70705E822FC403200F5779C /* Data+MQCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70705E722FC403200F5779C /* Data+MQCrypt.swift */; };
 		E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */; };
 		E70A549B22EBE7CF003D0E2B /* String+MQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A549A22EBE7CF003D0E2B /* String+MQPath.swift */; };
 		E70A549F22EBF3BA003D0E2B /* String+MQMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A549E22EBF3BA003D0E2B /* String+MQMark.swift */; };
@@ -60,6 +61,7 @@
 		E700812622C1348200FBD89D /* MQShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQShowViewController.swift; sourceTree = "<group>"; };
 		E700812A22C1350600FBD89D /* MQShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQShowCell.swift; sourceTree = "<group>"; };
 		E700812E22C13A1F00FBD89D /* MQFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFontViewController.swift; sourceTree = "<group>"; };
+		E70705E722FC403200F5779C /* Data+MQCrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+MQCrypt.swift"; sourceTree = "<group>"; };
 		E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTaptic.swift; sourceTree = "<group>"; };
 		E70A549A22EBE7CF003D0E2B /* String+MQPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQPath.swift"; sourceTree = "<group>"; };
 		E70A549E22EBF3BA003D0E2B /* String+MQMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQMark.swift"; sourceTree = "<group>"; };
@@ -166,9 +168,18 @@
 			path = UIFont;
 			sourceTree = "<group>";
 		};
+		E70705E622FC322600F5779C /* MQCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				E70705E722FC403200F5779C /* Data+MQCrypt.swift */,
+			);
+			path = MQCrypt;
+			sourceTree = "<group>";
+		};
 		E709B4ED22BCDE670093B7F1 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E70705E622FC322600F5779C /* MQCrypt */,
 				E77E0A4A22F1B4B7003243F3 /* MQTextField */,
 				E7C2ACC822DF2C3000150F9E /* MQKeychain */,
 				E72D731E22D8857C0064F5BF /* MQHorizontalPagingView */,
@@ -481,6 +492,7 @@
 				E710088F22C458A900BDA7D4 /* UIDevice+MQ.swift in Sources */,
 				E73DEBF722F043E9006FD71C /* String+MQSub.swift in Sources */,
 				E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */,
+				E70705E822FC403200F5779C /* Data+MQCrypt.swift in Sources */,
 				E73DEBF122EFE36E006FD71C /* StringEncoding+MQList.swift in Sources */,
 				E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */,
 				E70A54A322EBF684003D0E2B /* String+MQChar.swift in Sources */,
