@@ -27,6 +27,7 @@
 		E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722768522B8C56300008A96 /* UIImage+MQ.swift */; };
 		E722768A22B8CD1200008A96 /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E722768922B8CD1200008A96 /* image0@2x.png */; };
 		E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7122AE017B001202B2 /* UIView+MQ.swift */; };
+		E72B9ECC23018F8000F2A8D7 /* MQCrypt+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72B9ECB23018F8000F2A8D7 /* MQCrypt+AES.swift */; };
 		E72C450022F29B1E00F0FB79 /* Array+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */; };
 		E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */; };
 		E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */; };
@@ -36,6 +37,7 @@
 		E73DEBF722F043E9006FD71C /* String+MQSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF622F043E9006FD71C /* String+MQSub.swift */; };
 		E741048322F41A7000BE8984 /* MQTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741048222F41A7000BE8984 /* MQTextFieldViewController.swift */; };
 		E74B455D22E776460015038C /* Coordinate+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B455C22E776460015038C /* Coordinate+MQ.swift */; };
+		E7556C0B22FEA343005CFD37 /* MQCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7556C0A22FEA343005CFD37 /* MQCrypt.swift */; };
 		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
 		E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */; };
@@ -78,6 +80,7 @@
 		E722768522B8C56300008A96 /* UIImage+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MQ.swift"; sourceTree = "<group>"; };
 		E722768922B8CD1200008A96 /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
 		E7246B7122AE017B001202B2 /* UIView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MQ.swift"; sourceTree = "<group>"; };
+		E72B9ECB23018F8000F2A8D7 /* MQCrypt+AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MQCrypt+AES.swift"; sourceTree = "<group>"; };
 		E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+MQ.swift"; sourceTree = "<group>"; };
 		E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingView.swift; sourceTree = "<group>"; };
 		E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		E73DEBF622F043E9006FD71C /* String+MQSub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQSub.swift"; sourceTree = "<group>"; };
 		E741048222F41A7000BE8984 /* MQTextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTextFieldViewController.swift; sourceTree = "<group>"; };
 		E74B455C22E776460015038C /* Coordinate+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+MQ.swift"; sourceTree = "<group>"; };
+		E7556C0A22FEA343005CFD37 /* MQCrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQCrypt.swift; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQDateViewController.swift; sourceTree = "<group>"; };
 		E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIImageViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				E70705E722FC403200F5779C /* Data+MQCrypt.swift */,
+				E7556C0A22FEA343005CFD37 /* MQCrypt.swift */,
+				E72B9ECB23018F8000F2A8D7 /* MQCrypt+AES.swift */,
 			);
 			path = MQCrypt;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 				E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */,
 				E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */,
 				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
+				E7556C0B22FEA343005CFD37 /* MQCrypt.swift in Sources */,
 				E79324A822EE103600880C23 /* CFStringEncodings+MQCode.swift in Sources */,
 				E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */,
 				E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */,
@@ -519,6 +526,7 @@
 				E79324AA22EE105900880C23 /* CFStringEncodings+MQList.swift in Sources */,
 				E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */,
 				E70A549F22EBF3BA003D0E2B /* String+MQMark.swift in Sources */,
+				E72B9ECC23018F8000F2A8D7 /* MQCrypt+AES.swift in Sources */,
 				E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */,
 				E70A9BBD22B0F21400D5E334 /* UIApplication+MQ.swift in Sources */,
 				E73DEBF322EFE380006FD71C /* StringEncoding+MQCode.swift in Sources */,
