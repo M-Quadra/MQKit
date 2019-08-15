@@ -18,6 +18,7 @@ class MQTextFieldViewController: UIViewController, MQTextFieldDelegate {
         self.view.addSubview(txtField)
         txtField.placeholder = "这个是测试";
         txtField.delegate_ = self
+        txtField.maxTextCount = 4
 //        txtField.delegate = self
         
     }

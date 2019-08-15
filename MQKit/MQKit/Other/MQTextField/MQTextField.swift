@@ -23,6 +23,20 @@ public class MQTextField: UITextField {
     
     public var delegate_: MQTextFieldDelegate?
     
+    public var maxTextCount = Int.max {
+        didSet {
+            if self.maxTextCount < 0 {
+                self.maxTextCount = 0
+            }
+            
+            if self.markedTextRange != nil || self.text?.count ?? 0 <= self.maxTextCount {
+                return
+            }
+            
+            self.delegator.textFieldDidChange(textField: self)
+        }
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.didInitialize()
@@ -46,10 +60,18 @@ fileprivate class MQTextFieldDelegator: NSObject, UITextFieldDelegate {
     
     weak var textField: MQTextField?
     
-    @objc func textFieldDidChange(textField: UITextField) {
-        guard textField == self.textField, let txtf = self.textField else {
+    @objc func textFieldDidChange(textField: MQTextField) {
+        guard textField == self.textField, let field = self.textField else {
             return
         }
-        txtf.delegate_?.textField?(txtf, textDidChange: txtf.text ?? "")
+        let text = field.text ?? ""
+        
+        if field.markedTextRange != nil || text.count < field.maxTextCount {
+            field.delegate_?.textField?(field, textDidChange: text)
+            return
+        }
+        
+        field.text = text.mq_substring(with: 0..<field.maxTextCount)
+        field.delegate_?.textField?(field, textDidChange: field.text ?? "")
     }
 }
