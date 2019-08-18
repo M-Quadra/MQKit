@@ -1,15 +1,14 @@
 # MQKit
 
-备胎工具集, 尽可能使用纯swift实现
+拖延症巨制, 不定时太监
 
-swift ABI 都稳定了，那么近期就准备开工吧
+既然swift ABI稳定, SPM也要来了, 那么就尽量纯swift吧
 
-在QMUI里看到了一些感觉有趣的方法，就直接搬进来好了
+在QMUI里看到了一些感觉有趣的方法，这里就班门弄斧了
 
 Xcode支持SPM后再考虑集成问题
 
 随缘更新
-
 
 # UIFont
 
@@ -137,23 +136,10 @@ CGFloat.mq_radian(angle: )
 
 角度值转弧度值
 
-
 # UIApplication
 
-```
-mq_openQQGroup(qqGroup: String) -> Bool
-```
-
-打开QQ群名片
-
-```
-.mq_appDisplayName
-.mq_appBundleIdentifier
-.mq_appVersion
-.mq_appBluidVersion
-```
-
-app相关信息
+1. [常用三方 URL Scheme](Document/Extension/UIApplication/UIApplication+MQThird.md)
+2. [应用相关信息](Document/Extension/UIApplication/UIApplication+MQInfo.md)
 
 # Date
 
@@ -181,14 +167,6 @@ UIImage(layer: CALayer, alpha: Bool)
 ```
 
 通过CALayer创建UIImage，是否开启alpha通道由外部控制
-
-# MQTaptic
-
-```
-MQTaptic.tap(type: type)
-```
-
-震动反馈
 
 # UIDevice
 
@@ -293,9 +271,9 @@ init(mq_edge: Double)
 # 零零碎碎
 
 1. [震动反馈](Document/Other/MQTaptic.md)
-2. [MQCollectionView](Document/MQ_Class.md)
-3. [MQTableView](Document/MQ_Class.md)
-4. [MQHorizontalPagingView](Document/MQ_Class.md)
-5. [简易Keychain](Document/Other/MQKeychain.md)
-6. [MQTextField](Document/Other/MQTextField.md)
-7. [加密解密](Document/Other/MQCrypt.md)
+2. [简易Keychain](Document/Other/MQKeychain.md)
+3. [加密解密](Document/Other/MQCrypt.md)
+4. [MQCollectionView](Document/MQ_Class.md)
+5. [MQTableView](Document/MQ_Class.md)
+6. [MQHorizontalPagingView](Document/MQ_Class.md)
+7. [MQTextField](Document/Other/MQTextField.md)

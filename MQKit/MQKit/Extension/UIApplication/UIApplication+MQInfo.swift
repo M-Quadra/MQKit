@@ -1,8 +1,8 @@
 //
-//  UIApplication+MQ.swift
+//  UIApplication+MQInfo.swift
 //  MQKit
 //
-//  Created by M_Quadra on 2019/6/12.
+//  Created by M_Quadra on 2019/8/16.
 //  Copyright © 2019 M_noAria. All rights reserved.
 //
 
@@ -40,12 +40,5 @@ extension UIApplication {
             let bluidVersion = infoDic["CFBundleVersion"] as? String ?? ""
             return bluidVersion
         }
-    }
-    
-    /// open QQ group card
-    public func mq_openQQGroup(qqGroup: String) -> Bool {
-        let urlStr = String(format: "mqqapi://card/show_pslcard?src_type=internal&version=1&uin=%@&card_type=group", qqGroup)
-        let qqGroupUrl = URL(string: urlStr) ?? URL(fileURLWithPath: "")
-        return self.openURL(qqGroupUrl)
     }
 }
