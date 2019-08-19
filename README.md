@@ -170,35 +170,9 @@ UIImage(layer: CALayer, alpha: Bool)
 
 # UIDevice
 
-```
-.mq_isJailbroken
-```
-
-检测设备是否越狱(建议直接复制代码并使用exit(0))
-
-```
-.mq_totalCapacity
-```
-
-获取总容量
-
-```
-.mq_availableCapacity
-```
-
-获取可用容量
-
-```
-.mq_totalMemory
-```
-
-获取总内存大小
-
-```
-.mq_availableMemory
-```
-
-获取可用内存大小(低于实际值)
+1. [硬件相关信息](Document/Extension/UIDevice/UIDevice+MQHardware.md)
+2. [软件相关信息](Document/Extension/UIDevice/UIDevice+MQSoftware.md)
+3. [设备判断](Document/Extension/UIDevice/设备判断.md)
 
 # Dictionary
 
