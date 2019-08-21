@@ -31,4 +31,10 @@ MQCharacterSet.letter
 
 字母集合, [A-Z]|[a-z]
 
+```
+MQCharacterSet.base64
+```
+
+base64 字符集合, [A-Z]|[a-z]|[0-9]|[\+/=]
+
 [为啥用Set\<Character>?](字符过滤.md)
