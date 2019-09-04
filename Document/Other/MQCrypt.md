@@ -31,6 +31,27 @@ func decrypt(data dataIn: Data, key: Data, vi: Data? = nil) -> Data
 
 Data, AES128解密, 规则同上
 
+# MQCrypt.MD5
+
+```
+func encrypt(data: Data, bits: Int = 128) -> Data
+```
+
+Data md5加密, `128/64`bits 
+
+默认128bits
+
+```
+func encrypt(str: String,
+             hexLenght: Int = 32, uppercased: Bool = false,
+             using: String.Encoding = .utf8
+    ) -> String
+```
+
+String md5加密, `32/16`位十六进制`大/小`字符串
+
+默认32位十六进制小写
+
 # Data+MQCrypt
 
 ```
