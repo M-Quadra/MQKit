@@ -54,4 +54,22 @@ extension UIDevice {
         
         return false
     }
+    
+    var mq_isDebug: Bool {
+        let name = UnsafeMutablePointer<Int32>.allocate(capacity: 4)
+        var info = kinfo_proc()
+        var infoSize = MemoryLayout<kinfo_proc>.size
+        
+        name[0] = CTL_KERN
+        name[1] = KERN_PROC
+        name[2] = KERN_PROC_PID
+        name[3] = getpid()
+        
+        info.kp_proc.p_flag = 0
+        
+        guard sysctl(name, 4, &info, &infoSize, nil, 0) == 0 else {
+            return true
+        }
+        return info.kp_proc.p_flag & P_TRACED != 0
+    }
 }
