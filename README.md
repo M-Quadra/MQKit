@@ -154,6 +154,12 @@ CGFloat.mq_radian(angle: )
 
 获取 年/月/日/小时/分钟/秒
 
+```
+init(mq_str: String, formatter: String, timeZone: TimeZone = TimeZone.current)
+```
+
+String 转 Date
+
 # UIImage
 
 ```

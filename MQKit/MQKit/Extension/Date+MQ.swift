@@ -9,6 +9,20 @@
 import Foundation
 
 extension Date {
+    
+    init(mq_str: String, formatter: String, timeZone: TimeZone = TimeZone.current) {
+        let nowFormatter = DateFormatter()
+        nowFormatter.dateFormat = formatter
+        nowFormatter.timeZone = timeZone
+        
+        guard let date = nowFormatter.date(from: mq_str) else {
+            self.init(timeIntervalSince1970: 0)
+            return
+        }
+        
+        self.init(timeIntervalSince1970: date.timeIntervalSince1970)
+    }
+    
     public var mq_year:Int {
         return Calendar.current.component(.year, from: self)
     }
