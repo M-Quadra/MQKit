@@ -36,6 +36,43 @@ extension NSMutableAttributedString {
         }
     }
     
+    public var mq_lineSpacing: CGFloat {
+        get {
+            return self.mq_paragraphStyle.lineSpacing
+        }
+        set {
+            let parStyle = self.mq_paragraphStyle
+            parStyle.lineSpacing = newValue
+            
+            self.mq_paragraphStyle = parStyle
+        }
+    }
+    
+    public var mq_alignment: NSTextAlignment {
+        get {
+            return self.mq_paragraphStyle.alignment
+        }
+        set {
+            let parStyle = self.mq_paragraphStyle
+            parStyle.alignment = newValue
+            
+            self.mq_paragraphStyle = parStyle
+        }
+    }
+    
+    fileprivate var mq_paragraphStyle: NSMutableParagraphStyle {
+        get {
+            if let parStyle = self.attribute(.paragraphStyle, at: 0, effectiveRange: nil) as? NSMutableParagraphStyle {
+                return parStyle
+            }
+            return NSMutableParagraphStyle()
+        }
+        set {
+            let range = NSRange(location: 0, length: self.length)
+            self.mq_setAttribute(.paragraphStyle, value: newValue, range: range)
+        }
+    }
+    
     fileprivate func mq_setAttribute(_ name: NSAttributedString.Key, value: Any?, range: NSRange) {
         guard let nowValue = value else {
             self.removeAttribute(name, range: range)

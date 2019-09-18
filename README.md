@@ -83,6 +83,19 @@ public var mq_font: UIFont?
 
 设置富文本的整体字体
 
+```
+public var mq_lineSpacing: CGFloat
+```
+
+NSParagraphStyle.lineSpacing
+
+```
+public var mq_alignment: NSTextAlignment
+```
+
+NSParagraphStyle.alignment
+
+
 # URL
 
 ```
