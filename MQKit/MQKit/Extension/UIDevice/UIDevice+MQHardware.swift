@@ -225,4 +225,12 @@ extension UIDevice {
         let mem_free: UInt64 = UInt64(vm_stat.free_count) * UInt64(pagesize)
         return mem_free;
     }
+    
+    public var mq_cpuThreads: Int {
+        // 6c12t will return 12
+        var size = MemoryLayout<Int>.size
+        var cnt = 0
+        sysctlbyname("hw.ncpu", &cnt, &size, nil, 0)
+        return cnt
+    }
 }
