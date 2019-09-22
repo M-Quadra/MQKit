@@ -13,7 +13,7 @@ extension UIDevice {
     var mq_isJailbroken: Bool {// just copy and exit(0) !!!
         #if targetEnvironment(simulator)
         return false;
-        #endif
+        #else
         
         // file check
         let jailbreakToolPatheAry = ["/Applications/Cydia.app",
@@ -53,6 +53,7 @@ extension UIDevice {
         }
         
         return false
+        #endif
     }
     
     var mq_isDebug: Bool {

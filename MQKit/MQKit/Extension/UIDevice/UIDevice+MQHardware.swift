@@ -12,7 +12,7 @@ extension UIDevice {
     
     /// eg. iPhone 4s
     public var mq_generation: String {
-        //https://www.theiphonewiki.com/wiki/Models
+        // https://www.theiphonewiki.com/wiki/Models
         var size = 0
         sysctlbyname("hw.machine", nil, &size, nil, 0)
         guard let identifier = malloc(size) else {
@@ -228,9 +228,6 @@ extension UIDevice {
     
     public var mq_cpuThreads: Int {
         // 6c12t will return 12
-        var size = MemoryLayout<Int>.size
-        var cnt = 0
-        sysctlbyname("hw.ncpu", &cnt, &size, nil, 0)
-        return cnt
+        return ProcessInfo.processInfo.processorCount
     }
 }
