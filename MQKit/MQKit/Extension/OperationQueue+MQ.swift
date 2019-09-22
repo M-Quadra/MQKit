@@ -6,7 +6,7 @@
 //  Copyright © 2019 M_noAria. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension OperationQueue {
     
@@ -18,13 +18,13 @@ extension OperationQueue {
     
     static var mq_mid: OperationQueue {
         let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = max(1, ProcessInfo.processInfo.activeProcessorCount/2)
+        queue.maxConcurrentOperationCount = max(1, UIDevice.current.mq_cpuThreads/2)
         return queue
     }
     
     static var mq_max: OperationQueue {
         let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = max(1, ProcessInfo.processInfo.activeProcessorCount)
+        queue.maxConcurrentOperationCount = max(1, UIDevice.current.mq_cpuThreads)
         return queue
     }
 }

@@ -33,6 +33,7 @@
 		E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */; };
 		E738258E230A2F5100927DBB /* UIDevice+MQSoftware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738258D230A2F5100927DBB /* UIDevice+MQSoftware.swift */; };
 		E7382590230AC2FF00927DBB /* UIDevice+MQHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738258F230AC2FF00927DBB /* UIDevice+MQHardware.swift */; };
+		E73A5F372337F5BA00EA4718 /* FixedWidthInteger+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A5F362337F5BA00EA4718 /* FixedWidthInteger+MQ.swift */; };
 		E73DEBF122EFE36E006FD71C /* StringEncoding+MQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */; };
 		E73DEBF322EFE380006FD71C /* StringEncoding+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */; };
 		E73DEBF722F043E9006FD71C /* String+MQSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF622F043E9006FD71C /* String+MQSub.swift */; };
@@ -90,6 +91,7 @@
 		E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+MQ.swift"; sourceTree = "<group>"; };
 		E738258D230A2F5100927DBB /* UIDevice+MQSoftware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+MQSoftware.swift"; sourceTree = "<group>"; };
 		E738258F230AC2FF00927DBB /* UIDevice+MQHardware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+MQHardware.swift"; sourceTree = "<group>"; };
+		E73A5F362337F5BA00EA4718 /* FixedWidthInteger+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FixedWidthInteger+MQ.swift"; sourceTree = "<group>"; };
 		E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringEncoding+MQList.swift"; sourceTree = "<group>"; };
 		E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringEncoding+MQCode.swift"; sourceTree = "<group>"; };
 		E73DEBF622F043E9006FD71C /* String+MQSub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQSub.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		E70A9B9A22B0872100D5E334 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E73A5F352337F59300EA4718 /* Number */,
 				E738258C230A2EBC00927DBB /* UIDevice */,
 				E7E738E92305D0FB00CC3C7E /* UIApplication */,
 				E70A549922EBE7AB003D0E2B /* String */,
@@ -303,6 +306,14 @@
 				E738258F230AC2FF00927DBB /* UIDevice+MQHardware.swift */,
 			);
 			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		E73A5F352337F59300EA4718 /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				E73A5F362337F5BA00EA4718 /* FixedWidthInteger+MQ.swift */,
+			);
+			path = Number;
 			sourceTree = "<group>";
 		};
 		E741048122F41A3800BE8984 /* MQTextField */ = {
@@ -540,6 +551,7 @@
 				E70DBCEC230639C00080F2A6 /* UIApplication+MQInfo.swift in Sources */,
 				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
 				E70A54A122EBF578003D0E2B /* String+MQCode.swift in Sources */,
+				E73A5F372337F5BA00EA4718 /* FixedWidthInteger+MQ.swift in Sources */,
 				E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */,
 				E7C2ACCA22DF2C4E00150F9E /* MQKeychain.swift in Sources */,
 				E72C450022F29B1E00F0FB79 /* Array+MQ.swift in Sources */,

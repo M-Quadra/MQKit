@@ -261,6 +261,10 @@ init(mq_edge: Double)
 
 参考[MQCollectionView](Document/MQ_Class.md)
 
+# Number
+
+1. [整数相关](Document/Extension/Number/FixedWidthInteger+MQ.md)
+
 # 零零碎碎
 
 1. [震动反馈](Document/Other/MQTaptic.md)
