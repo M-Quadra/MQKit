@@ -10,7 +10,7 @@ import Foundation
 
 extension FixedWidthInteger {
     
-    var mq_isOdd: Bool {
+    public var mq_isOdd: Bool {
         return self&1 == 1
     }
 }
