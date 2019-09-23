@@ -10,12 +10,24 @@ import Foundation
 
 extension String {
     
+    fileprivate static var mqCount = -1
+    public var mq_count: Int {
+        get {
+            var cnt = objc_getAssociatedObject(self, &String.mqCount) as? Int ?? -1
+            if cnt < 0 {
+                cnt = self.count
+                objc_setAssociatedObject(self, &String.mqCount, cnt, .OBJC_ASSOCIATION_ASSIGN)
+            }
+            return cnt
+        }
+    }
+    
     /// [st, ed), st..<ed
     public func mq_substring(with range: Range<Int>) -> String {
         let stIdx = range.startIndex
         let edIdx = stIdx < 0 ? min(range.endIndex, 0) : range.endIndex
         let rangeAry = [stIdx, edIdx].map {
-            min(stIdx < 0 ? max(0, self.count + $0) : $0, self.count)
+            min(stIdx < 0 ? max(0, self.mq_count + $0) : $0, self.mq_count)
         }
         guard rangeAry[0] < rangeAry[1] else {
             return ""
@@ -36,22 +48,22 @@ extension String {
     /// [0, ed], ...ed
     public func mq_substring(with range: PartialRangeThrough<Int>) -> String {
         let upperBound = range.upperBound
-        let ed = upperBound < 0 ? max(0, self.count + upperBound) : min(upperBound, self.count)
+        let ed = upperBound < 0 ? max(0, self.mq_count + upperBound) : min(upperBound, self.mq_count)
         return self.mq_substring(with: 0...ed)
     }
     
     /// [0, ed), ..<ed
     public func mq_substring(with range: PartialRangeUpTo<Int>) -> String {
         let upperBound = range.upperBound
-        let ed = upperBound < 0 ? max(0, self.count + upperBound) : min(upperBound, self.count)
+        let ed = upperBound < 0 ? max(0, self.mq_count + upperBound) : min(upperBound, self.mq_count)
         return self.mq_substring(with: 0..<ed)
     }
     
     /// [st, +∞), st...
     public func mq_substring(with range: PartialRangeFrom<Int>) -> String {
         let lowerBound = range.lowerBound
-        let st = lowerBound < 0 ? max(0, self.count + lowerBound) : min(lowerBound, self.count)
-        return self.mq_substring(with: min(st, self.count - 1)..<self.count)
+        let st = lowerBound < 0 ? max(0, self.mq_count + lowerBound) : min(lowerBound, self.mq_count)
+        return self.mq_substring(with: min(st, self.mq_count - 1)..<self.mq_count)
     }
     
     /// [.lowerBound, .upperBound)
