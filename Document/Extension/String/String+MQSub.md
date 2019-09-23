@@ -1,4 +1,4 @@
-#String
+# String+MQSub
 
 ```
 .mq_substring(with range: Range<Int>) -> String
@@ -64,3 +64,15 @@
 1         | "⅚"
 -1        | "万"
 -3		   | "😞"
+
+```
+.mq_substring(with range: NSRange) -> String
+```
+
+等效[st, ed)
+
+```
+.mq_substring(with range: CFRange) -> String
+```
+
+等效[st, ed)

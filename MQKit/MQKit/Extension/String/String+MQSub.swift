@@ -54,6 +54,18 @@ extension String {
         return self.mq_substring(with: min(st, self.count - 1)..<self.count)
     }
     
+    /// [.lowerBound, .upperBound)
+    public func mq_substring(with range: NSRange) -> String {
+        return self.mq_substring(with: range.lowerBound..<range.upperBound)
+    }
+    
+    /// [st, ed), st..<ed
+    public func mq_substring(with range: CFRange) -> String {
+        let st = range.location
+        let ed = range.location + range.length
+        return self.mq_substring(with: st..<ed)
+    }
+    
     public func mq_substring(with index: Int) -> String {
         return self.mq_substring(with: index..<index+1)
     }
