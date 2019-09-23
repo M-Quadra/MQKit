@@ -10,8 +10,8 @@ import Foundation
 
 extension String {
     
-    /// [st, ed),
-    func mq_substring(with range: Range<Int>) -> String {
+    /// [st, ed), st..<ed
+    public func mq_substring(with range: Range<Int>) -> String {
         let stIdx = range.startIndex
         let edIdx = stIdx < 0 ? min(range.endIndex, 0) : range.endIndex
         let rangeAry = [stIdx, edIdx].map {
@@ -26,35 +26,35 @@ extension String {
         return String(self[st..<ed])
     }
     
-    /// [st, ed]
-    func mq_substring(with range: ClosedRange<Int>) -> String {
+    /// [st, ed], st...ed
+    public func mq_substring(with range: ClosedRange<Int>) -> String {
         let st = range.lowerBound
         let ed = range.upperBound + 1
         return self.mq_substring(with: st..<ed)
     }
     
-    /// [0, ed]
-    func mq_substring(with range: PartialRangeThrough<Int>) -> String {
+    /// [0, ed], ...ed
+    public func mq_substring(with range: PartialRangeThrough<Int>) -> String {
         let upperBound = range.upperBound
         let ed = upperBound < 0 ? max(0, self.count + upperBound) : min(upperBound, self.count)
         return self.mq_substring(with: 0...ed)
     }
     
-    /// [0, ed)
-    func mq_substring(with range: PartialRangeUpTo<Int>) -> String {
+    /// [0, ed), ..<ed
+    public func mq_substring(with range: PartialRangeUpTo<Int>) -> String {
         let upperBound = range.upperBound
         let ed = upperBound < 0 ? max(0, self.count + upperBound) : min(upperBound, self.count)
         return self.mq_substring(with: 0..<ed)
     }
     
-    /// [st, +∞)
-    func mq_substring(with range: PartialRangeFrom<Int>) -> String {
+    /// [st, +∞), st...
+    public func mq_substring(with range: PartialRangeFrom<Int>) -> String {
         let lowerBound = range.lowerBound
         let st = lowerBound < 0 ? max(0, self.count + lowerBound) : min(lowerBound, self.count)
         return self.mq_substring(with: min(st, self.count - 1)..<self.count)
     }
     
-    func mq_substring(with index: Int) -> String {
+    public func mq_substring(with index: Int) -> String {
         return self.mq_substring(with: index..<index+1)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     /// #RRGGBB
-    convenience init(hexString: String, alpha: CGFloat = 1) {
+    public convenience init(hexString: String, alpha: CGFloat = 1) {
         if hexString.lengthOfBytes(using: .ascii) != "#RRGGBB".lengthOfBytes(using: .ascii) {
             self.init(cgColor: UIColor.clear.cgColor)
             return

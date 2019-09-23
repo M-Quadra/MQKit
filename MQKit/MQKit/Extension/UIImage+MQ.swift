@@ -9,7 +9,8 @@
 import UIKit
 
 extension UIImage {
-    var mq_averageColor: UIColor {
+    
+    public var mq_averageColor: UIColor {
         guard let cgImg = self.cgImage else {
             return .clear;
         }

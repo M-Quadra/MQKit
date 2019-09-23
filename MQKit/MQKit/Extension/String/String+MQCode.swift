@@ -12,7 +12,7 @@ import CommonCrypto
 extension String {
     
     /// 32hex lowercased MD5
-    var mq_md5: String {
+    public var mq_md5: String {
         return MQCrypt.MD5.encrypt(str: self)
     }
     

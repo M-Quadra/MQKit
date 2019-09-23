@@ -23,7 +23,7 @@ public class MQHorizontalPagingView: UIView {
         let cellWidth: CGFloat
         let pageWidth: CGFloat
         
-        init(edgeSpacing:CGFloat, cellSpacing: CGFloat, cellWidth: CGFloat, pageWidth: CGFloat) {
+        public init(edgeSpacing:CGFloat, cellSpacing: CGFloat, cellWidth: CGFloat, pageWidth: CGFloat) {
             self.edgeSpacing = edgeSpacing
             self.cellSpacing = cellSpacing
             
@@ -50,7 +50,7 @@ public class MQHorizontalPagingView: UIView {
         }
     }
     
-    var cellCount = 0 {
+    public var cellCount = 0 {
         didSet {
             if oldValue != self.cellCount {
                 self.collectionView.reloadData()
@@ -84,7 +84,7 @@ public class MQHorizontalPagingView: UIView {
         return cltView
     }()
     
-    init(frame: CGRect, info: ViewInfo) {
+    public init(frame: CGRect, info: ViewInfo) {
         self.viewInfo = info
         super.init(frame: frame)
         
@@ -150,7 +150,7 @@ public class MQHorizontalPagingView: UIView {
     }
     
     // MARK: - Delegate Closure
-    typealias dequeueCellClosure<T> = (_: Int) -> Cell<T>
+    public typealias dequeueCellClosure<T> = (_: Int) -> Cell<T>
     
     fileprivate var dequeueCell = { (cltView: UICollectionView, idxPath: IndexPath) -> UICollectionViewCell in
         return cltView.mq_dequeue(reusableCell: MQReusableCell<UICollectionViewCell>.forIndexPath(idxPath))
@@ -158,7 +158,7 @@ public class MQHorizontalPagingView: UIView {
     fileprivate var willDisplay = { (cell: UICollectionViewCell, idxPath: IndexPath) in
     }
     
-    func dequeueCell<T: UICollectionViewCell>(_ closure: @escaping dequeueCellClosure<T>) {
+    public func dequeueCell<T: UICollectionViewCell>(_ closure: @escaping dequeueCellClosure<T>) {
         self.dequeueCell = { (cltView: UICollectionView, idxPath: IndexPath) -> UICollectionViewCell in
             return cltView.mq_dequeue(reusableCell: MQReusableCell<T>.forIndexPath(idxPath))
         }
@@ -171,28 +171,28 @@ public class MQHorizontalPagingView: UIView {
         }
     }
     
-    struct Cell<T> {
+    public struct Cell<T> {
         
-        typealias emptyClosure = (T) -> Void
+        public typealias emptyClosure = (T) -> Void
         fileprivate var willDisplay: emptyClosure?
         
-        static func cell() -> Cell {
+        public static func cell() -> Cell {
             return .init()
         }
         
-        static func willDisplay(_ closure: @escaping emptyClosure) -> Cell {
+        public static func willDisplay(_ closure: @escaping emptyClosure) -> Cell {
             var cell = Cell<T>()
             cell.willDisplay = closure
             return cell
         }
     }
     
-    typealias didSelectCellClosure = (_: UICollectionView, _: Int) -> Void
+    public typealias didSelectCellClosure = (_: UICollectionView, _: Int) -> Void
     
     fileprivate var didSelectCell = { (cltView: UICollectionView, item: Int) in
     }
     
-    func didSelectCell(_ closure: @escaping didSelectCellClosure) {
+    public func didSelectCell(_ closure: @escaping didSelectCellClosure) {
         self.didSelectCell = closure
     }
 }

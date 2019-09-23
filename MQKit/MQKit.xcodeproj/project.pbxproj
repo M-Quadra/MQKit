@@ -10,65 +10,95 @@
 		E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812622C1348200FBD89D /* MQShowViewController.swift */; };
 		E700812B22C1350600FBD89D /* MQShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812A22C1350600FBD89D /* MQShowCell.swift */; };
 		E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E700812E22C13A1F00FBD89D /* MQFontViewController.swift */; };
-		E70705E822FC403200F5779C /* Data+MQCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70705E722FC403200F5779C /* Data+MQCrypt.swift */; };
-		E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */; };
-		E70A549B22EBE7CF003D0E2B /* String+MQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A549A22EBE7CF003D0E2B /* String+MQPath.swift */; };
-		E70A549F22EBF3BA003D0E2B /* String+MQMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A549E22EBF3BA003D0E2B /* String+MQMark.swift */; };
-		E70A54A122EBF578003D0E2B /* String+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A54A022EBF578003D0E2B /* String+MQCode.swift */; };
-		E70A54A322EBF684003D0E2B /* String+MQChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A54A222EBF684003D0E2B /* String+MQChar.swift */; };
-		E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9C22B0878600D5E334 /* MQCollectionView.swift */; };
-		E70A9B9F22B0883500D5E334 /* MQTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9E22B0883500D5E334 /* MQTableView.swift */; };
-		E70DBCEC230639C00080F2A6 /* UIApplication+MQInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DBCEB230639C00080F2A6 /* UIApplication+MQInfo.swift */; };
+		E707772A23385C820070360E /* fmwk.h in Headers */ = {isa = PBXBuildFile; fileRef = E707772823385C820070360E /* fmwk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E707772D23385C820070360E /* MQKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E707772623385C820070360E /* MQKit.framework */; };
+		E707772E23385C820070360E /* MQKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E707772623385C820070360E /* MQKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E707773323385CA30070360E /* MQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77E0A4B22F1B4D7003243F3 /* MQTextField.swift */; };
+		E707773423385CA30070360E /* UITextField+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D976D23029D640023AD8C /* UITextField+MQ.swift */; };
+		E707773523385CA70070360E /* Data+MQCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70705E722FC403200F5779C /* Data+MQCrypt.swift */; };
+		E707773623385CA70070360E /* MQCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7556C0A22FEA343005CFD37 /* MQCrypt.swift */; };
+		E707773723385CA70070360E /* MQCrypt+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72B9ECB23018F8000F2A8D7 /* MQCrypt+AES.swift */; };
+		E707773823385CA70070360E /* MQCrypt+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F66152318C9410091FDF8 /* MQCrypt+MD5.swift */; };
+		E707773923385CFF0070360E /* MQKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */; };
+		E707773A23385D030070360E /* MQHorizontalPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */; };
+		E707773B23385D050070360E /* MQTaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */; };
+		E707773C23385D090070360E /* MQCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9C22B0878600D5E334 /* MQCollectionView.swift */; };
+		E707773D23385D090070360E /* MQTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A9B9E22B0883500D5E334 /* MQTableView.swift */; };
+		E707773E23385D0F0070360E /* CGPoint+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */; };
+		E707773F23385D0F0070360E /* CGSize+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */; };
+		E707774023385D0F0070360E /* Coordinate+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B455C22E776460015038C /* Coordinate+MQ.swift */; };
+		E707774123385D0F0070360E /* Date+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72171F622B3AB7C00397F0E /* Date+MQ.swift */; };
+		E707774223385D0F0070360E /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */; };
+		E707774323385D0F0070360E /* OperationQueue+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */; };
+		E707774423385D0F0070360E /* UIColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */; };
+		E707774523385D0F0070360E /* UIFont+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */; };
+		E707774623385D0F0070360E /* UIImage+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722768522B8C56300008A96 /* UIImage+MQ.swift */; };
+		E707774723385D0F0070360E /* UIView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7122AE017B001202B2 /* UIView+MQ.swift */; };
+		E707774823385D0F0070360E /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
+		E707774923385D0F0070360E /* NSMutableAttributedString+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71AB46722F133DF00B84C68 /* NSMutableAttributedString+MQ.swift */; };
+		E707774A23385D0F0070360E /* Array+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */; };
+		E707774B23385D140070360E /* CFStringEncodings+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */; };
+		E707774C23385D140070360E /* CFStringEncodings+MQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */; };
+		E707774D23385D140070360E /* StringEncoding+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */; };
+		E707774E23385D140070360E /* StringEncoding+MQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */; };
+		E707774F23385D190070360E /* String+MQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A549A22EBE7CF003D0E2B /* String+MQPath.swift */; };
+		E707775023385D190070360E /* String+MQMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A549E22EBF3BA003D0E2B /* String+MQMark.swift */; };
+		E707775123385D190070360E /* String+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A54A022EBF578003D0E2B /* String+MQCode.swift */; };
+		E707775223385D190070360E /* String+MQChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70A54A222EBF684003D0E2B /* String+MQChar.swift */; };
+		E707775323385D190070360E /* String+MQSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF622F043E9006FD71C /* String+MQSub.swift */; };
+		E707775423385D1E0070360E /* UIApplication+MQThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E738EA2305D11C00CC3C7E /* UIApplication+MQThird.swift */; };
+		E707775523385D1E0070360E /* UIApplication+MQInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DBCEB230639C00080F2A6 /* UIApplication+MQInfo.swift */; };
+		E707775623385D220070360E /* UIDevice+MQSoftware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738258D230A2F5100927DBB /* UIDevice+MQSoftware.swift */; };
+		E707775723385D220070360E /* UIDevice+MQHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738258F230AC2FF00927DBB /* UIDevice+MQHardware.swift */; };
+		E707775823385D250070360E /* FixedWidthInteger+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A5F362337F5BA00EA4718 /* FixedWidthInteger+MQ.swift */; };
 		E70ECF2922C5F1400073B888 /* MQColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70ECF2822C5F1400073B888 /* MQColorViewController.swift */; };
 		E70ECF2C22C5F6600073B888 /* MQURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70ECF2B22C5F6600073B888 /* MQURLViewController.swift */; };
-		E71AB46822F133DF00B84C68 /* NSMutableAttributedString+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71AB46722F133DF00B84C68 /* NSMutableAttributedString+MQ.swift */; };
-		E72171F722B3AB7C00397F0E /* Date+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72171F622B3AB7C00397F0E /* Date+MQ.swift */; };
-		E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E722768522B8C56300008A96 /* UIImage+MQ.swift */; };
 		E722768A22B8CD1200008A96 /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E722768922B8CD1200008A96 /* image0@2x.png */; };
-		E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7246B7122AE017B001202B2 /* UIView+MQ.swift */; };
-		E72B9ECC23018F8000F2A8D7 /* MQCrypt+AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72B9ECB23018F8000F2A8D7 /* MQCrypt+AES.swift */; };
-		E72C450022F29B1E00F0FB79 /* Array+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */; };
-		E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */; };
 		E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */; };
-		E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */; };
-		E738258E230A2F5100927DBB /* UIDevice+MQSoftware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738258D230A2F5100927DBB /* UIDevice+MQSoftware.swift */; };
-		E7382590230AC2FF00927DBB /* UIDevice+MQHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738258F230AC2FF00927DBB /* UIDevice+MQHardware.swift */; };
-		E73A5F372337F5BA00EA4718 /* FixedWidthInteger+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73A5F362337F5BA00EA4718 /* FixedWidthInteger+MQ.swift */; };
-		E73DEBF122EFE36E006FD71C /* StringEncoding+MQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */; };
-		E73DEBF322EFE380006FD71C /* StringEncoding+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */; };
-		E73DEBF722F043E9006FD71C /* String+MQSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73DEBF622F043E9006FD71C /* String+MQSub.swift */; };
 		E741048322F41A7000BE8984 /* MQTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741048222F41A7000BE8984 /* MQTextFieldViewController.swift */; };
-		E74B455D22E776460015038C /* Coordinate+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74B455C22E776460015038C /* Coordinate+MQ.swift */; };
-		E74D976E23029D640023AD8C /* UITextField+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74D976D23029D640023AD8C /* UITextField+MQ.swift */; };
-		E7556C0B22FEA343005CFD37 /* MQCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7556C0A22FEA343005CFD37 /* MQCrypt.swift */; };
-		E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
 		E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */; };
 		E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918EE22C9AA2D00877715 /* MQStringViewController.swift */; };
 		E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */; };
-		E77E0A4C22F1B4D7003243F3 /* MQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77E0A4B22F1B4D7003243F3 /* MQTextField.swift */; };
-		E78F66162318C9410091FDF8 /* MQCrypt+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F66152318C9410091FDF8 /* MQCrypt+MD5.swift */; };
-		E79324A322EE0B9400880C23 /* OperationQueue+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */; };
-		E79324A822EE103600880C23 /* CFStringEncodings+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */; };
-		E79324AA22EE105900880C23 /* CFStringEncodings+MQList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */; };
 		E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */; };
 		E79ECC3522A6C10D00736EF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC3422A6C10D00736EF2 /* ViewController.swift */; };
 		E79ECC3822A6C10D00736EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3622A6C10D00736EF2 /* Main.storyboard */; };
 		E79ECC3A22A6C10D00736EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3922A6C10D00736EF2 /* Assets.xcassets */; };
 		E79ECC3D22A6C10D00736EF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3B22A6C10D00736EF2 /* LaunchScreen.storyboard */; };
-		E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */; };
-		E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */; };
-		E7A4DE4E22E955B2006D5AD8 /* CGPoint+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */; };
-		E7A4DE5022E9CD5C006D5AD8 /* CGSize+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */; };
-		E7C2ACCA22DF2C4E00150F9E /* MQKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */; };
-		E7E738EB2305D11C00CC3C7E /* UIApplication+MQThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E738EA2305D11C00CC3C7E /* UIApplication+MQThird.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E707772B23385C820070360E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E79ECC2722A6C10C00736EF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E707772523385C820070360E;
+			remoteInfo = fmwk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E707773223385C820070360E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E707772E23385C820070360E /* MQKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E700812622C1348200FBD89D /* MQShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQShowViewController.swift; sourceTree = "<group>"; };
 		E700812A22C1350600FBD89D /* MQShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQShowCell.swift; sourceTree = "<group>"; };
 		E700812E22C13A1F00FBD89D /* MQFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFontViewController.swift; sourceTree = "<group>"; };
 		E70705E722FC403200F5779C /* Data+MQCrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+MQCrypt.swift"; sourceTree = "<group>"; };
+		E707772623385C820070360E /* MQKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MQKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E707772823385C820070360E /* fmwk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fmwk.h; sourceTree = "<group>"; };
+		E707772923385C820070360E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E709B4EE22BCDF7C0093B7F1 /* MQTaptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTaptic.swift; sourceTree = "<group>"; };
 		E70A549A22EBE7CF003D0E2B /* String+MQPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQPath.swift"; sourceTree = "<group>"; };
 		E70A549E22EBF3BA003D0E2B /* String+MQMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQMark.swift"; sourceTree = "<group>"; };
@@ -109,7 +139,7 @@
 		E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+MQ.swift"; sourceTree = "<group>"; };
 		E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CFStringEncodings+MQCode.swift"; sourceTree = "<group>"; };
 		E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CFStringEncodings+MQList.swift"; sourceTree = "<group>"; };
-		E79ECC2F22A6C10C00736EF2 /* MQKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E79ECC2F22A6C10C00736EF2 /* MQKitMain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQKitMain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79ECC3222A6C10C00736EF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79ECC3422A6C10D00736EF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E79ECC3722A6C10D00736EF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,10 +155,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E707772323385C820070360E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E79ECC2C22A6C10C00736EF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E707772D23385C820070360E /* MQKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +229,15 @@
 				E78F66152318C9410091FDF8 /* MQCrypt+MD5.swift */,
 			);
 			path = MQCrypt;
+			sourceTree = "<group>";
+		};
+		E707772723385C820070360E /* fmwk */ = {
+			isa = PBXGroup;
+			children = (
+				E707772823385C820070360E /* fmwk.h */,
+				E707772923385C820070360E /* Info.plist */,
+			);
+			path = fmwk;
 			sourceTree = "<group>";
 		};
 		E709B4ED22BCDE670093B7F1 /* Other */ = {
@@ -381,6 +428,7 @@
 			children = (
 				E79ECC4422A6C16D00736EF2 /* Main */,
 				E79ECC3122A6C10C00736EF2 /* MQKit */,
+				E707772723385C820070360E /* fmwk */,
 				E79ECC3022A6C10C00736EF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -388,7 +436,8 @@
 		E79ECC3022A6C10C00736EF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E79ECC2F22A6C10C00736EF2 /* MQKit.app */,
+				E79ECC2F22A6C10C00736EF2 /* MQKitMain.app */,
+				E707772623385C820070360E /* MQKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -456,22 +505,53 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E707772123385C820070360E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E707772A23385C820070360E /* fmwk.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		E79ECC2E22A6C10C00736EF2 /* MQKit */ = {
+		E707772523385C820070360E /* MQKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E79ECC4122A6C10D00736EF2 /* Build configuration list for PBXNativeTarget "MQKit" */;
+			buildConfigurationList = E707772F23385C820070360E /* Build configuration list for PBXNativeTarget "MQKit" */;
 			buildPhases = (
-				E79ECC2B22A6C10C00736EF2 /* Sources */,
-				E79ECC2C22A6C10C00736EF2 /* Frameworks */,
-				E79ECC2D22A6C10C00736EF2 /* Resources */,
+				E707772123385C820070360E /* Headers */,
+				E707772223385C820070360E /* Sources */,
+				E707772323385C820070360E /* Frameworks */,
+				E707772423385C820070360E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MQKit;
+			productName = fmwk;
+			productReference = E707772623385C820070360E /* MQKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E79ECC2E22A6C10C00736EF2 /* MQKitMain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E79ECC4122A6C10D00736EF2 /* Build configuration list for PBXNativeTarget "MQKitMain" */;
+			buildPhases = (
+				E79ECC2B22A6C10C00736EF2 /* Sources */,
+				E79ECC2C22A6C10C00736EF2 /* Frameworks */,
+				E79ECC2D22A6C10C00736EF2 /* Resources */,
+				E707773223385C820070360E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E707772C23385C820070360E /* PBXTargetDependency */,
+			);
+			name = MQKitMain;
 			productName = MQKit;
-			productReference = E79ECC2F22A6C10C00736EF2 /* MQKit.app */;
+			productReference = E79ECC2F22A6C10C00736EF2 /* MQKitMain.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -484,6 +564,9 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = M_noAria;
 				TargetAttributes = {
+					E707772523385C820070360E = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					E79ECC2E22A6C10C00736EF2 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
@@ -503,12 +586,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E79ECC2E22A6C10C00736EF2 /* MQKit */,
+				E79ECC2E22A6C10C00736EF2 /* MQKitMain */,
+				E707772523385C820070360E /* MQKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E707772423385C820070360E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E79ECC2D22A6C10C00736EF2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,65 +614,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E707772223385C820070360E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E707773B23385D050070360E /* MQTaptic.swift in Sources */,
+				E707774E23385D140070360E /* StringEncoding+MQList.swift in Sources */,
+				E707774823385D0F0070360E /* URL+MQ.swift in Sources */,
+				E707773A23385D030070360E /* MQHorizontalPagingView.swift in Sources */,
+				E707773623385CA70070360E /* MQCrypt.swift in Sources */,
+				E707773323385CA30070360E /* MQTextField.swift in Sources */,
+				E707774523385D0F0070360E /* UIFont+MQ.swift in Sources */,
+				E707773E23385D0F0070360E /* CGPoint+MQ.swift in Sources */,
+				E707774123385D0F0070360E /* Date+MQ.swift in Sources */,
+				E707775323385D190070360E /* String+MQSub.swift in Sources */,
+				E707775023385D190070360E /* String+MQMark.swift in Sources */,
+				E707773C23385D090070360E /* MQCollectionView.swift in Sources */,
+				E707775423385D1E0070360E /* UIApplication+MQThird.swift in Sources */,
+				E707774A23385D0F0070360E /* Array+MQ.swift in Sources */,
+				E707775523385D1E0070360E /* UIApplication+MQInfo.swift in Sources */,
+				E707775223385D190070360E /* String+MQChar.swift in Sources */,
+				E707774723385D0F0070360E /* UIView+MQ.swift in Sources */,
+				E707774423385D0F0070360E /* UIColor+MQ.swift in Sources */,
+				E707775823385D250070360E /* FixedWidthInteger+MQ.swift in Sources */,
+				E707775723385D220070360E /* UIDevice+MQHardware.swift in Sources */,
+				E707774F23385D190070360E /* String+MQPath.swift in Sources */,
+				E707774B23385D140070360E /* CFStringEncodings+MQCode.swift in Sources */,
+				E707773D23385D090070360E /* MQTableView.swift in Sources */,
+				E707773523385CA70070360E /* Data+MQCrypt.swift in Sources */,
+				E707773F23385D0F0070360E /* CGSize+MQ.swift in Sources */,
+				E707774023385D0F0070360E /* Coordinate+MQ.swift in Sources */,
+				E707775123385D190070360E /* String+MQCode.swift in Sources */,
+				E707773723385CA70070360E /* MQCrypt+AES.swift in Sources */,
+				E707773423385CA30070360E /* UITextField+MQ.swift in Sources */,
+				E707774223385D0F0070360E /* Dictionary+MQ.swift in Sources */,
+				E707773823385CA70070360E /* MQCrypt+MD5.swift in Sources */,
+				E707774923385D0F0070360E /* NSMutableAttributedString+MQ.swift in Sources */,
+				E707775623385D220070360E /* UIDevice+MQSoftware.swift in Sources */,
+				E707774C23385D140070360E /* CFStringEncodings+MQList.swift in Sources */,
+				E707774623385D0F0070360E /* UIImage+MQ.swift in Sources */,
+				E707773923385CFF0070360E /* MQKeychain.swift in Sources */,
+				E707774D23385D140070360E /* StringEncoding+MQCode.swift in Sources */,
+				E707774323385D0F0070360E /* OperationQueue+MQ.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E79ECC2B22A6C10C00736EF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E71AB46822F133DF00B84C68 /* NSMutableAttributedString+MQ.swift in Sources */,
 				E79ECC3522A6C10D00736EF2 /* ViewController.swift in Sources */,
-				E7246B7222AE017B001202B2 /* UIView+MQ.swift in Sources */,
-				E79ECC4922A6DA1000736EF2 /* UIColor+MQ.swift in Sources */,
 				E70ECF2922C5F1400073B888 /* MQColorViewController.swift in Sources */,
-				E7A4DE5022E9CD5C006D5AD8 /* CGSize+MQ.swift in Sources */,
 				E741048322F41A7000BE8984 /* MQTextFieldViewController.swift in Sources */,
-				E73DEBF722F043E9006FD71C /* String+MQSub.swift in Sources */,
 				E700812F22C13A1F00FBD89D /* MQFontViewController.swift in Sources */,
-				E74D976E23029D640023AD8C /* UITextField+MQ.swift in Sources */,
-				E70705E822FC403200F5779C /* Data+MQCrypt.swift in Sources */,
-				E7E738EB2305D11C00CC3C7E /* UIApplication+MQThird.swift in Sources */,
-				E73DEBF122EFE36E006FD71C /* StringEncoding+MQList.swift in Sources */,
-				E78F66162318C9410091FDF8 /* MQCrypt+MD5.swift in Sources */,
 				E700812722C1348200FBD89D /* MQShowViewController.swift in Sources */,
-				E70A54A322EBF684003D0E2B /* String+MQChar.swift in Sources */,
 				E79ECC3322A6C10C00736EF2 /* AppDelegate.swift in Sources */,
 				E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */,
 				E70ECF2C22C5F6600073B888 /* MQURLViewController.swift in Sources */,
-				E70A549B22EBE7CF003D0E2B /* String+MQPath.swift in Sources */,
 				E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */,
-				E70DBCEC230639C00080F2A6 /* UIApplication+MQInfo.swift in Sources */,
-				E70A9B9D22B0878600D5E334 /* MQCollectionView.swift in Sources */,
-				E70A54A122EBF578003D0E2B /* String+MQCode.swift in Sources */,
-				E73A5F372337F5BA00EA4718 /* FixedWidthInteger+MQ.swift in Sources */,
 				E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */,
-				E7C2ACCA22DF2C4E00150F9E /* MQKeychain.swift in Sources */,
-				E72C450022F29B1E00F0FB79 /* Array+MQ.swift in Sources */,
-				E74B455D22E776460015038C /* Coordinate+MQ.swift in Sources */,
 				E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */,
-				E737D1A022D4760600AA9486 /* Dictionary+MQ.swift in Sources */,
-				E79ECC4622A6C6E800736EF2 /* UIFont+MQ.swift in Sources */,
-				E7556C0B22FEA343005CFD37 /* MQCrypt.swift in Sources */,
-				E79324A822EE103600880C23 /* CFStringEncodings+MQCode.swift in Sources */,
-				E75E5D0922A82EEE000C1A61 /* URL+MQ.swift in Sources */,
-				E722768622B8C56300008A96 /* UIImage+MQ.swift in Sources */,
-				E70A9B9F22B0883500D5E334 /* MQTableView.swift in Sources */,
 				E700812B22C1350600FBD89D /* MQShowCell.swift in Sources */,
-				E77E0A4C22F1B4D7003243F3 /* MQTextField.swift in Sources */,
-				E79324AA22EE105900880C23 /* CFStringEncodings+MQList.swift in Sources */,
-				E72D732222D885BB0064F5BF /* MQHorizontalPagingView.swift in Sources */,
-				E70A549F22EBF3BA003D0E2B /* String+MQMark.swift in Sources */,
-				E738258E230A2F5100927DBB /* UIDevice+MQSoftware.swift in Sources */,
-				E72B9ECC23018F8000F2A8D7 /* MQCrypt+AES.swift in Sources */,
-				E709B4EF22BCDF7C0093B7F1 /* MQTaptic.swift in Sources */,
-				E73DEBF322EFE380006FD71C /* StringEncoding+MQCode.swift in Sources */,
 				E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */,
-				E7A4DE4E22E955B2006D5AD8 /* CGPoint+MQ.swift in Sources */,
-				E7382590230AC2FF00927DBB /* UIDevice+MQHardware.swift in Sources */,
-				E72171F722B3AB7C00397F0E /* Date+MQ.swift in Sources */,
-				E79324A322EE0B9400880C23 /* OperationQueue+MQ.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E707772C23385C820070360E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E707772523385C820070360E /* MQKit */;
+			targetProxy = E707772B23385C820070360E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E79ECC3622A6C10D00736EF2 /* Main.storyboard */ = {
@@ -603,6 +709,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E707773023385C820070360E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = fmwk/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKit";
+				PRODUCT_NAME = MQKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E707773123385C820070360E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = fmwk/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKit";
+				PRODUCT_NAME = MQKit;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E79ECC3F22A6C10D00736EF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -722,6 +886,7 @@
 		E79ECC4222A6C10D00736EF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -733,8 +898,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKit";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKitMain";
+				PRODUCT_NAME = MQKitMain;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -745,6 +910,7 @@
 		E79ECC4322A6C10D00736EF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -756,8 +922,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKit";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.M-Quadra.MQKitMain";
+				PRODUCT_NAME = MQKitMain;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -767,6 +933,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E707772F23385C820070360E /* Build configuration list for PBXNativeTarget "MQKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E707773023385C820070360E /* Debug */,
+				E707773123385C820070360E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E79ECC2A22A6C10C00736EF2 /* Build configuration list for PBXProject "MQKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -776,7 +951,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E79ECC4122A6C10D00736EF2 /* Build configuration list for PBXNativeTarget "MQKit" */ = {
+		E79ECC4122A6C10D00736EF2 /* Build configuration list for PBXNativeTarget "MQKitMain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E79ECC4222A6C10D00736EF2 /* Debug */,
