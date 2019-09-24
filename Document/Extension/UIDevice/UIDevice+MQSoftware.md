@@ -11,3 +11,9 @@
 ```
 
 判断当前是否处于debug
+
+```
+.mq_networkType
+```
+
+获取当前网络类型, 4G/Wi-Fi

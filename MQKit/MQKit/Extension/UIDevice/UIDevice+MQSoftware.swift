@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SystemConfiguration
+import CoreTelephony
 
 extension UIDevice {
     
-    var mq_isJailbroken: Bool {// just copy and exit(0) !!!
+    public var mq_isJailbroken: Bool {// just copy and exit(0) !!!
         #if targetEnvironment(simulator)
         return false;
         #else
@@ -56,7 +58,7 @@ extension UIDevice {
         #endif
     }
     
-    var mq_isDebug: Bool {
+    public var mq_isDebug: Bool {
         let name = UnsafeMutablePointer<Int32>.allocate(capacity: 4)
         var info = kinfo_proc()
         var infoSize = MemoryLayout<kinfo_proc>.size
@@ -72,5 +74,60 @@ extension UIDevice {
             return true
         }
         return info.kp_proc.p_flag & P_TRACED != 0
+    }
+    
+    fileprivate static let networkTypeDic = [
+        CTRadioAccessTechnologyGPRS: "2G", // 2.5G   171Kbps
+        CTRadioAccessTechnologyEdge: "2G", // 2.75G  384Kbps
+        
+        CTRadioAccessTechnologyWCDMA:        "3G", // 3G     3.6Mbps/384Kbps
+        CTRadioAccessTechnologyHSDPA:        "3G", // 3.5G   14.4Mbps/384Kbps
+        CTRadioAccessTechnologyHSUPA:        "3G", // 3.75G  14.4Mbps/5.76Mbps
+        CTRadioAccessTechnologyCDMA1x:       "3G", // 2.5G
+        CTRadioAccessTechnologyCDMAEVDORev0: "3G",
+        CTRadioAccessTechnologyCDMAEVDORevA: "3G",
+        CTRadioAccessTechnologyCDMAEVDORevB: "3G",
+        CTRadioAccessTechnologyeHRPD:        "3G",
+        
+        CTRadioAccessTechnologyLTE: "4G", // LTE:3.9G 150M/75M  LTE-Advanced:4G 300M/150M
+    ]
+    
+    fileprivate static let reachability: SCNetworkReachability? = {
+        var address = sockaddr()
+        address.sa_len = __uint8_t(MemoryLayout<sockaddr>.size)
+        address.sa_family = __uint8_t(AF_INET);
+        return SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, &address)
+    }()
+    
+    ///eg. "4G", "Wi-Fi"
+    public var mq_networkType: String? {
+        guard let reachability = UIDevice.reachability else {
+            return nil
+        }
+        
+        var flags = SCNetworkReachabilityFlags()
+        SCNetworkReachabilityGetFlags(reachability, &flags)
+        let flagsValue = flags.rawValue
+        
+        if flagsValue & SCNetworkReachabilityFlags.reachable.rawValue == 0 {
+            return nil
+        }
+        if flagsValue&SCNetworkReachabilityFlags.connectionRequired.rawValue > 0 &&
+           flagsValue&SCNetworkReachabilityFlags.transientConnection.rawValue > 0 {
+            return nil
+        }
+        
+        if flagsValue & SCNetworkReachabilityFlags.isWWAN.rawValue > 0 {
+            let info = CTTelephonyNetworkInfo()
+            guard let technology = info.currentRadioAccessTechnology else {
+                return nil
+            }
+            guard let type = UIDevice.networkTypeDic[technology] else {
+                return nil
+            }
+            return type
+        }
+        
+        return "Wi-Fi"
     }
 }
