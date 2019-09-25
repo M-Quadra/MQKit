@@ -13,6 +13,7 @@ extension UIDevice {
     /// eg. iPhone 4s
     public var mq_generation: String {
         // https://www.theiphonewiki.com/wiki/Models
+        // https://gist.github.com/adamawolf/3048717
         var size = 0
         sysctlbyname("hw.machine", nil, &size, nil, 0)
         guard let identifier = malloc(size) else {
@@ -150,11 +151,13 @@ extension UIDevice {
         case "iPhone10,6": return "iPhone X"
             
         case "iPhone11,8": return "iPhone XR"
-            
         case "iPhone11,2": return "iPhone XS"
-            
-        case "iPhone11,6": return "iPhone XS Max"
         case "iPhone11,4": return "iPhone XS Max"
+        case "iPhone11,6": return "iPhone XS Max"
+            
+        case "iPhone12,1": return "iPhone 11"
+        case "iPhone12,3": return "iPhone 11 Pro"
+        case "iPhone12,5": return "iPhone 11 Pro Max"
             
         // MARK: - iPod touch
         case "iPod1,1": return "iPod touch"
