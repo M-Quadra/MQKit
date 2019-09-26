@@ -10,7 +10,7 @@ import Foundation
 
 extension String.Encoding {
     
-    static var mq_allValues: [String.Encoding] {
+    public static var mq_allValues: [String.Encoding] {
         return [
             .ascii,
             .nextstep,

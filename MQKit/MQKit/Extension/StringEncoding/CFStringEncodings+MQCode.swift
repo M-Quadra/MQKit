@@ -10,7 +10,7 @@ import Foundation
 
 extension CFStringEncodings {
     
-    var mq_StringEncoding: String.Encoding {
+    public var mq_StringEncoding: String.Encoding {
         return String.Encoding(self)
     }
 }

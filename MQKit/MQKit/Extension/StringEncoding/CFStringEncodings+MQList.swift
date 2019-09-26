@@ -11,7 +11,7 @@ import Foundation
 // order by CFStringEncodings case
 extension CFStringEncodings {
     
-    static var mq_AllValues: [CFStringEncodings] {
+    public static var mq_AllValues: [CFStringEncodings] {
         let mac = mq_mac_AllValues
         let iso = mq_isoLatin_AllValues
         let dos = mq_dos_AllValues
@@ -50,7 +50,7 @@ extension CFStringEncodings {
         ]
     }
     
-    static var mq_mac_AllValues: [CFStringEncodings] {
+    public static var mq_mac_AllValues: [CFStringEncodings] {
         return [
             .macJapanese,
             .macChineseTrad,
@@ -99,7 +99,7 @@ extension CFStringEncodings {
     }
     
     /// ISO 8-bit and 7-bit encodings begin at 0x200
-    static var mq_isoLatin_AllValues: [CFStringEncodings] {
+    public static var mq_isoLatin_AllValues: [CFStringEncodings] {
         return [
             .isoLatin2,
             .isoLatin3,
@@ -118,7 +118,7 @@ extension CFStringEncodings {
         ]
     }
     
-    static var mq_dos_AllValues: [CFStringEncodings] {
+    public static var mq_dos_AllValues: [CFStringEncodings] {
         return [
             .dosLatinUS,
             .dosGreek,
@@ -144,7 +144,7 @@ extension CFStringEncodings {
         ]
     }
     
-    static var mq_windows_AllValues: [CFStringEncodings] {
+    public static var mq_windows_AllValues: [CFStringEncodings] {
         return [
             .windowsLatin2,
             .windowsCyrillic,
@@ -158,7 +158,7 @@ extension CFStringEncodings {
         ]
     }
     
-    static var mq_JIS_AllValues: [CFStringEncodings] {
+    public static var mq_JIS_AllValues: [CFStringEncodings] {
         return [
             .JIS_X0201_76,
             .JIS_X0208_83,
@@ -168,7 +168,7 @@ extension CFStringEncodings {
         ]
     }
     
-    static var mq_CNS_11643_92_AllValues: [CFStringEncodings] {
+    public static var mq_CNS_11643_92_AllValues: [CFStringEncodings] {
         return [
             .CNS_11643_92_P1,
             .CNS_11643_92_P2,
@@ -176,7 +176,7 @@ extension CFStringEncodings {
         ]
     }
     
-    static var mq_ISO_2022_AllValues: [CFStringEncodings] {
+    public static var mq_ISO_2022_AllValues: [CFStringEncodings] {
         return [
             .ISO_2022_JP,
             .ISO_2022_JP_2,
@@ -188,7 +188,7 @@ extension CFStringEncodings {
         ]
     }
     
-    static var mq_EUC_AllValues: [CFStringEncodings] {
+    public static var mq_EUC_AllValues: [CFStringEncodings] {
         return [
             .EUC_JP,
             .EUC_CN,
