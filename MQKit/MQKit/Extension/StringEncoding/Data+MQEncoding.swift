@@ -10,8 +10,8 @@ import Foundation
 
 extension Data {
     
-    public var mq_autoEncoding: String.Encoding {
         var tsData = self
+    var mq_autoEncoding: String.Encoding {
         if self.count > 100 {
             let flagSet: Set<UInt8> = [10, 13, 32]
             for i in 90..<self.count {
@@ -67,7 +67,7 @@ extension Data {
         return cfEncodingAry[cfIdx].mq_StringEncoding
     }
     
-    public var mq_autoString: String? {
+    var mq_autoString: String? {
         return String(data: self, encoding: self.mq_autoEncoding)
     }
 }

@@ -10,15 +10,19 @@ import UIKit
 
 extension CGSize {
     
-    init(mq_edge: CGFloat) {
+    public init(mq_edge: CGFloat) {
         self.init(width: mq_edge, height: mq_edge)
     }
     
-    init(mq_edge: Int) {
+    public init(mq_edge: Int) {
         self.init(width: mq_edge, height: mq_edge)
     }
     
-    init(mq_edge: Double) {
+    public init(mq_edge: Double) {
         self.init(width: mq_edge, height: mq_edge)
+    }
+    
+    public var mq_area: CGFloat {
+        return self.width * self.height
     }
 }
