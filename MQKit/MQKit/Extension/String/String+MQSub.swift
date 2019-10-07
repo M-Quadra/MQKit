@@ -81,4 +81,33 @@ extension String {
     public func mq_substring(with index: Int) -> String {
         return self.mq_substring(with: index..<index+1)
     }
+    
+    struct MQWordInfo {
+        var wordSet: Set<String> = []
+        var maxWordStringCount = 0
+        var minWordStringCount = Int.max
+    }
+    
+    /// Don' t call it in a large text
+    var mq_wordInfo: MQWordInfo {
+        let tokenizer = CFStringTokenizerCreate(nil, self as CFString, CFRangeMake(0, self.mq_count), kCFStringTokenizerUnitWord, nil)
+        var info = MQWordInfo()
+        
+        while true {
+            CFStringTokenizerAdvanceToNextToken(tokenizer)
+            let range = CFStringTokenizerGetCurrentTokenRange(tokenizer)
+            guard range.length > 0 else {
+                break
+            }
+            
+            let word = self.mq_substring(with: range)
+            let cnt = word.count
+            
+            info.wordSet.insert(word)
+            info.maxWordStringCount = max(info.maxWordStringCount, cnt)
+            info.minWordStringCount = min(info.minWordStringCount, cnt)
+        }
+        
+        return info
+    }
 }

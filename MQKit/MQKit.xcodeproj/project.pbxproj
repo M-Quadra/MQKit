@@ -55,6 +55,7 @@
 		E70ECF2C22C5F6600073B888 /* MQURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70ECF2B22C5F6600073B888 /* MQURLViewController.swift */; };
 		E7208E64233C99E4008FB6DC /* Data+MQEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7208E63233C99E4008FB6DC /* Data+MQEncoding.swift */; };
 		E722768A22B8CD1200008A96 /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E722768922B8CD1200008A96 /* image0@2x.png */; };
+		E72A349F2341E3E70081C678 /* MQGarbledChecker.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E72A349E2341E3E70081C678 /* MQGarbledChecker.mlmodel */; };
 		E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */; };
 		E741048322F41A7000BE8984 /* MQTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741048222F41A7000BE8984 /* MQTextFieldViewController.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
@@ -116,6 +117,7 @@
 		E722768522B8C56300008A96 /* UIImage+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MQ.swift"; sourceTree = "<group>"; };
 		E722768922B8CD1200008A96 /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
 		E7246B7122AE017B001202B2 /* UIView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+MQ.swift"; sourceTree = "<group>"; };
+		E72A349E2341E3E70081C678 /* MQGarbledChecker.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MQGarbledChecker.mlmodel; sourceTree = "<group>"; };
 		E72B9ECB23018F8000F2A8D7 /* MQCrypt+AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MQCrypt+AES.swift"; sourceTree = "<group>"; };
 		E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+MQ.swift"; sourceTree = "<group>"; };
 		E72D732122D885BB0064F5BF /* MQHorizontalPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingView.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 		E79324A422EE0EED00880C23 /* StringEncoding */ = {
 			isa = PBXGroup;
 			children = (
+				E72A349E2341E3E70081C678 /* MQGarbledChecker.mlmodel */,
 				E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */,
 				E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */,
 				E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */,
@@ -564,7 +567,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = M_noAria;
 				TargetAttributes = {
 					E707772523385C820070360E = {
@@ -633,6 +636,7 @@
 				E707775323385D190070360E /* String+MQSub.swift in Sources */,
 				E707775023385D190070360E /* String+MQMark.swift in Sources */,
 				E707773C23385D090070360E /* MQCollectionView.swift in Sources */,
+				E72A349F2341E3E70081C678 /* MQGarbledChecker.mlmodel in Sources */,
 				E707775423385D1E0070360E /* UIApplication+MQThird.swift in Sources */,
 				E707774A23385D0F0070360E /* Array+MQ.swift in Sources */,
 				E707775523385D1E0070360E /* UIApplication+MQInfo.swift in Sources */,
@@ -716,7 +720,7 @@
 		E707773023385C820070360E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -745,7 +749,7 @@
 		E707773123385C820070360E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
