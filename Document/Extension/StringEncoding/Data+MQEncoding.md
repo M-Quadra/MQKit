@@ -4,9 +4,9 @@
 .mq_autoString
 ```
 
-Data转String, 自动识别文本编码
+Data转String, 自动识别文本编码。(SwiftPM 导入无法使用)
 
-由于使用了`Create ML`, 所以只能在iOS11及其以上版本使用
+由于使用了`Create ML`, 所以只能在iOS11及其以上版本使用。
 
 (tflite理论上可以兼容更多版本, 懒...)
 

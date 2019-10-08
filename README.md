@@ -6,9 +6,43 @@
 
 在QMUI里看到了一些感觉有趣的方法，这里就班门弄斧了
 
-支持Xcode11 SPM集成
-
 随缘更新
+
+# 集成
+
+- SwiftPM
+
+```
+https://github.com/M-Quadra/MQKit.git
+```
+
+或
+
+```
+git@github.com:M-Quadra/MQKit.git
+```
+
+由于`SwiftPM`目前不支持.mlmodel引用, 无法使用自动文本编码检测功能
+
+- CocoaPods
+
+由于搞不定`.mlmodel`引用问题, 所以需要使用frameworks引用。`Podfile`文件需要添加
+
+```
+use_frameworks!
+```
+
+```
+pod 'MQKit', :git => 'https://github.com/M-Quadra/MQKit.git'
+```
+
+或
+
+```
+pod 'MQKit', :git => 'git@github.com:M-Quadra/MQKit.git'
+```
+
+随缘更新中, 哪敢发正式库\_(ˊཀˋ」∠)_
 
 # UIFont
 
@@ -22,6 +56,7 @@
 .mq_localFontName(forPath: String) -> String
 .mq_localFontName(forPath: URL) -> String
 ```
+
 获取字体文件对应的`fontName`
 
 # UIColor

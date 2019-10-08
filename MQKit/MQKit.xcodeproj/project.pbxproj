@@ -334,6 +334,31 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		E72947F1234C5F7300DEB599 /* MQKit-SwiftPM-future */ = {
+			isa = PBXGroup;
+			children = (
+				E72947F2234C87B700DEB599 /* Extension */,
+			);
+			path = "MQKit-SwiftPM-future";
+			sourceTree = "<group>";
+		};
+		E72947F2234C87B700DEB599 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E72947F3234C87D300DEB599 /* StringEncoding */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E72947F3234C87D300DEB599 /* StringEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				E72A349E2341E3E70081C678 /* MQGarbledChecker.mlmodel */,
+				E7208E63233C99E4008FB6DC /* Data+MQEncoding.swift */,
+			);
+			path = StringEncoding;
+			sourceTree = "<group>";
+		};
 		E72D731E22D8857C0064F5BF /* MQHorizontalPagingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,12 +444,10 @@
 		E79324A422EE0EED00880C23 /* StringEncoding */ = {
 			isa = PBXGroup;
 			children = (
-				E72A349E2341E3E70081C678 /* MQGarbledChecker.mlmodel */,
 				E79324A722EE103600880C23 /* CFStringEncodings+MQCode.swift */,
 				E79324A922EE105900880C23 /* CFStringEncodings+MQList.swift */,
 				E73DEBF222EFE380006FD71C /* StringEncoding+MQCode.swift */,
 				E73DEBF022EFE36E006FD71C /* StringEncoding+MQList.swift */,
-				E7208E63233C99E4008FB6DC /* Data+MQEncoding.swift */,
 			);
 			path = StringEncoding;
 			sourceTree = "<group>";
@@ -432,6 +455,7 @@
 		E79ECC2622A6C10C00736EF2 = {
 			isa = PBXGroup;
 			children = (
+				E72947F1234C5F7300DEB599 /* MQKit-SwiftPM-future */,
 				E79ECC4422A6C16D00736EF2 /* Main */,
 				E79ECC3122A6C10C00736EF2 /* MQKit */,
 				E707772723385C820070360E /* fmwk */,
