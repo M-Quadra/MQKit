@@ -67,6 +67,7 @@
 		E79ECC3822A6C10D00736EF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3622A6C10D00736EF2 /* Main.storyboard */; };
 		E79ECC3A22A6C10D00736EF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3922A6C10D00736EF2 /* Assets.xcassets */; };
 		E79ECC3D22A6C10D00736EF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79ECC3B22A6C10D00736EF2 /* LaunchScreen.storyboard */; };
+		E7C00132234DF61A00CF41DE /* MQGarbledCheckerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C00131234DF61A00CF41DE /* MQGarbledCheckerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +155,7 @@
 		E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+MQ.swift"; sourceTree = "<group>"; };
 		E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+MQ.swift"; sourceTree = "<group>"; };
 		E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+MQ.swift"; sourceTree = "<group>"; };
+		E7C00131234DF61A00CF41DE /* MQGarbledCheckerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQGarbledCheckerModel.swift; sourceTree = "<group>"; };
 		E7C2ACC922DF2C4E00150F9E /* MQKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQKeychain.swift; sourceTree = "<group>"; };
 		E7E738EA2305D11C00CC3C7E /* UIApplication+MQThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+MQThird.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -355,6 +357,7 @@
 			children = (
 				E72A349E2341E3E70081C678 /* MQGarbledChecker.mlmodel */,
 				E7208E63233C99E4008FB6DC /* Data+MQEncoding.swift */,
+				E7C00131234DF61A00CF41DE /* MQGarbledCheckerModel.swift */,
 			);
 			path = StringEncoding;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				E707774B23385D140070360E /* CFStringEncodings+MQCode.swift in Sources */,
 				E707773D23385D090070360E /* MQTableView.swift in Sources */,
 				E707773523385CA70070360E /* Data+MQCrypt.swift in Sources */,
+				E7C00132234DF61A00CF41DE /* MQGarbledCheckerModel.swift in Sources */,
 				E707773F23385D0F0070360E /* CGSize+MQ.swift in Sources */,
 				E707774023385D0F0070360E /* Coordinate+MQ.swift in Sources */,
 				E707775123385D190070360E /* String+MQCode.swift in Sources */,

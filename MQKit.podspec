@@ -10,6 +10,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/M-Quadra/MQKit.git", :tag => spec.version.to_s }
 
   spec.source_files  = 'MQKit/MQKit/**/*.{swift}', 'MQKit/MQKit-SwiftPM-future/**/*'
+  spec.resources = ['MQKit/MQKit-SwiftPM-future/**/*.{mlmodel}']
   
   spec.frameworks = 'UIKit', 'Foundation'
 end

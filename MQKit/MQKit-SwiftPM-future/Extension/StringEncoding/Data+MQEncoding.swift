@@ -17,6 +17,10 @@ extension Data {
     }
     
     var mq_autoEncoding: MQEncodingResult {
+        guard let model = try? MQGarbledCheckerModel() else {
+            return .init()
+        }
+        
         var stData = self
         let flagSet: Set<UInt8> = [10, 13, 32]
         
@@ -36,30 +40,16 @@ extension Data {
         
         // local encoding check
         // 局部编码检查
-        let checker = MQGarbledChecker()
         let setterQue = OperationQueue.mq_single
         
         var localEncodingAry: [String.Encoding] = []
         DispatchQueue.concurrentPerform(iterations: encodingAry.count) { (i) in
             let encoding = encodingAry[i]
-            guard var tsStr = String(data: stData, encoding: encoding) else {
+            guard let tsStr = String(data: stData, encoding: encoding) else {
                 return
             }
-            tsStr = tsStr.replacingOccurrences(of: "\r", with: "")
-            tsStr = tsStr.replacingOccurrences(of: "\n", with: "")
-            tsStr = tsStr.replacingOccurrences(of: " ", with: "")
             
-            let strCnt = Double(tsStr.count)
-            let utf16Cnt = Double(tsStr.utf16.count)
-            let info = tsStr.mq_wordInfo
-            
-            let checkerOpt = try? checker.prediction(strCnt: strCnt,
-                                                     utf16Cnt: utf16Cnt,
-                                                     wordSetCnt: Double(info.wordSet.count),
-                                                     maxWordStrCnt: Double(info.maxWordStringCount),
-                                                     minWordStrCnt: Double(info.minWordStringCount),
-                                                     privateUseAreaCnt: 0)
-            guard checkerOpt?.isNormal == 1 else {
+            guard model.isNormal(tsStr, usePrivateUseArea: false) else {
                 return
             }
             
@@ -82,10 +72,6 @@ extension Data {
             return opt
         }
         
-        // 私用区(都用私用区了, 还猜啥编码？)
-        // 文本有小概率混入私用区字符, 下面的检查取2/3概率
-        let privateUseAreaRange = 0xE000...0xF8FF
-        
         let opQue = OperationQueue.mq_max
         for encoding in localEncodingAry {
             opQue.addOperation {
@@ -99,32 +85,9 @@ extension Data {
                 DispatchQueue.concurrentPerform(iterations: 3) { (_) in
                     let st = Int(arc4random())%(txt.mq_count - len)
                     let ed = st + (Int(arc4random())%len)
-                    var subTxt = txt.mq_substring(with: st..<ed)
-                    subTxt = subTxt.replacingOccurrences(of: "\r", with: "")
-                    subTxt = subTxt.replacingOccurrences(of: "\n", with: "")
-                    subTxt = subTxt.replacingOccurrences(of: " ", with: "")
-
-                    let strCnt = Double(subTxt.mq_count)
-                    let utf16Cnt = Double(subTxt.utf16.count)
-                    let info = subTxt.mq_wordInfo
-                    var privateUseAreaCnt = 0
-
-                    for code in subTxt.utf16 {
-                        if privateUseAreaRange.contains(Int(code)) {
-                            privateUseAreaCnt += 1
-                        } else if code == 0x00A0 {// 无中断空格(拉丁文补充1)
-                            privateUseAreaCnt += 1
-                        }
-                    }
-
-                    let checkerOpt = try? checker.prediction(strCnt: strCnt,
-                                                             utf16Cnt: utf16Cnt,
-                                                             wordSetCnt: Double(info.wordSet.count),
-                                                             maxWordStrCnt: Double(info.maxWordStringCount),
-                                                             minWordStrCnt: Double(info.minWordStringCount),
-                                                             privateUseAreaCnt: Double(privateUseAreaCnt))
-
-                    guard checkerOpt?.isNormal == 1 else {
+                    let subTxt = txt.mq_substring(with: st..<ed)
+                    
+                    guard model.isNormal(subTxt) else {
                         return
                     }
 

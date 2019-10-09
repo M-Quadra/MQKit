@@ -13,36 +13,24 @@
 - SwiftPM
 
 ```
+git@github.com:M-Quadra/MQKit.git
+or
 https://github.com/M-Quadra/MQKit.git
 ```
 
-或
-
-```
-git@github.com:M-Quadra/MQKit.git
-```
-
-由于`SwiftPM`目前不支持.mlmodel引用, 无法使用自动文本编码检测功能
+由于`SwiftPM`目前不支持资源引用, 无法使用自动文本编码检测功能
 
 - CocoaPods
 
-由于搞不定`.mlmodel`引用问题, 所以需要使用frameworks引用。`Podfile`文件需要添加
-
 ```
-use_frameworks!
-```
-
-```
+pod 'MQKit', :git => 'git@github.com:M-Quadra/MQKit.git'
+or
 pod 'MQKit', :git => 'https://github.com/M-Quadra/MQKit.git'
 ```
 
-或
+暂不支持`Object-C`(懒), 可尝试手动打`framework`
 
-```
-pod 'MQKit', :git => 'git@github.com:M-Quadra/MQKit.git'
-```
-
-随缘更新中, 哪敢发正式库\_(ˊཀˋ」∠)_
+随缘更新ing, 还不敢发正式库\_(ˊཀˋ」∠)_
 
 # UIFont
 
