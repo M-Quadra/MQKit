@@ -10,23 +10,17 @@ import UIKit
 
 extension UIDevice {
     
-    /// eg. iPhone 4s
+    /// eg. "iPhone 4s"
     public var mq_generation: String {
         // https://www.theiphonewiki.com/wiki/Models
         // https://gist.github.com/adamawolf/3048717
-        var size = 0
-        sysctlbyname("hw.machine", nil, &size, nil, 0)
-        guard let identifier = malloc(size) else {
-            return ""
-        }
+        var sysInfo = utsname()
+        uname(&sysInfo)
         
-        sysctlbyname("hw.machine", identifier, &size, nil, 0)
-        
-        let strData = Data(bytes: identifier, count: size)
-        var identifierStr = String(data: strData, encoding: .utf8) ?? ""
-        identifierStr = identifierStr.replacingOccurrences(of: "\0", with: "")
-        
-        free(identifier)
+        let machine = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(_SYS_NAMELEN))
+        memcpy(machine, &sysInfo.machine, MemoryLayout.size(ofValue: sysInfo.machine))
+        let identifierStr = String(cString: machine)
+        free(machine)
         
         switch identifierStr {
         // MARK: - Apple Watch
@@ -48,6 +42,11 @@ extension UIDevice {
         case "Watch4,2": return "Apple Watch Series 4"
         case "Watch4,3": return "Apple Watch Series 4"
         case "Watch4,4": return "Apple Watch Series 4"
+            
+        case "Watch5,1": return "Apple Watch Series 5"
+        case "Watch5,2": return "Apple Watch Series 5"
+        case "Watch5,3": return "Apple Watch Series 5"
+        case "Watch5,4": return "Apple Watch Series 5"
             
         // MARK: - iPad
         case "iPad1,1": return "iPad"
@@ -126,27 +125,22 @@ extension UIDevice {
         case "iPhone6,2": return "iPhone 5s"
             
         case "iPhone7,2": return "iPhone 6"
-            
         case "iPhone7,1": return "iPhone 6 Plus"
             
         case "iPhone8,1": return "iPhone 6s"
-            
         case "iPhone8,2": return "iPhone 6s Plus"
             
         case "iPhone8,4": return "iPhone SE"
             
         case "iPhone9,1": return "iPhone 7"
         case "iPhone9,3": return "iPhone 7"
-            
         case "iPhone9,2": return "iPhone 7 Plus"
         case "iPhone9,4": return "iPhone 7 Plus"
             
         case "iPhone10,1": return "iPhone 8"
         case "iPhone10,4": return "iPhone 8"
-            
         case "iPhone10,2": return "iPhone 8 Plus"
         case "iPhone10,5": return "iPhone 8 Plus"
-            
         case "iPhone10,3": return "iPhone X"
         case "iPhone10,6": return "iPhone X"
             
@@ -169,11 +163,12 @@ extension UIDevice {
         case "iPod9,1": return "iPod touch (7th generation)"
             
         // MARK: - Simulator
-        case "x86_64": return "iPhone Simulator"
+        case "i386":   return "Simulator"
+        case "x86_64": return "Simulator"
         default: break
         }
         
-        return identifierStr.count > 0 ? identifierStr : "iPhone Unknown"
+        return identifierStr.count > 0 ? identifierStr : "Unknown"
     }
     
     private static var mq_privateTotalCapacity: UInt64 = 0
