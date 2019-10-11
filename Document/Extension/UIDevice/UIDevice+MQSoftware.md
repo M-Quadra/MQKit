@@ -17,3 +17,9 @@
 ```
 
 获取当前网络类型, 4G/Wi-Fi
+
+```
+.mq_systemPoweronTime
+```
+
+上一次设备启动时间

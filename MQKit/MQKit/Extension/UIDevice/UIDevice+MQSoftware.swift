@@ -130,4 +130,9 @@ extension UIDevice {
         
         return "Wi-Fi"
     }
+    
+    public var mq_systemPoweronTime: Date {
+        let nowDate = Date()
+        return nowDate.addingTimeInterval(-ProcessInfo.processInfo.systemUptime)
+    }
 }
