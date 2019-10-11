@@ -60,7 +60,7 @@ extension Data {
         setterQue.waitUntilAllOperationsAreFinished()
         
         #if DEBUG
-        print("[MQKit] mq_autoEncoding first check over. count:", localEncodingAry.count)
+        print("[MQKit] mq_autoEncoding first check over. encoding count:", localEncodingAry.count)
         #endif
         
         var opt = MQEncodingResult()

@@ -54,15 +54,24 @@ class MQGarbledCheckerModel {
         let utf16Cnt = Double(subTxt.utf16.count)
         let info = subTxt.mq_wordInfo
         var privateUseAreaCnt = 0
+        var asciiCnt = 0
         
-        if usePrivateUseArea {
-            for code in subTxt.utf16 {
+        for code in subTxt.utf16 {
+            if code <= 127 {
+                asciiCnt += 1
+            }
+            
+            if usePrivateUseArea {
                 if privateUseAreaRange.contains(Int(code)) {
                     privateUseAreaCnt += 1
                 } else if code == 0x00A0 {// 无中断空格(拉丁文补充1)
                     privateUseAreaCnt += 1
                 }
             }
+        }
+        
+        if asciiCnt == subTxt.utf16.count {
+            return true
         }
         
         let checkerOpt = try? model.prediction(strCnt: strCnt,
