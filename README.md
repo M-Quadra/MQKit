@@ -198,6 +198,12 @@ init(mq_str: String, formatter: String, timeZone: TimeZone = TimeZone.current)
 
 String 转 Date
 
+```
+func mq_stringValue(formatter: String, timeZone: TimeZone = TimeZone.current) -> String
+```
+
+Date 转 String
+
 # UIImage
 
 ```

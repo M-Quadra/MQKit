@@ -68,7 +68,7 @@ extension Data {
             opt.encoding = encoding
             return opt
         }
-        if localEncodingAry.count == 0 {
+        if localEncodingAry.count <= 0 {
             return opt
         }
         

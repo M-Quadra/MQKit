@@ -46,4 +46,11 @@ extension Date {
     public var mq_second:Int {
         return Calendar.current.component(.second, from: self)
     }
+    
+    public func mq_stringValue(formatter: String, timeZone: TimeZone = TimeZone.current) -> String {
+        let nowFormatter = DateFormatter()
+        nowFormatter.dateFormat = formatter
+        nowFormatter.timeZone = timeZone
+        return nowFormatter.string(from: self)
+    }
 }
