@@ -30,7 +30,7 @@ extension Data {
                     continue
                 }
                 
-                stData = self[0..<i]
+                stData = self[0...i]
                 break
             }
         }
@@ -83,7 +83,7 @@ extension Data {
                 var normalCnt = 0
                 
                 DispatchQueue.concurrentPerform(iterations: 3) { (_) in
-                    let st = Int(arc4random())%(txt.mq_count - len)
+                    let st = Int(arc4random())%Swift.max(txt.mq_count - len, 1)
                     let ed = st + (Int(arc4random())%len)
                     let subTxt = txt.mq_substring(with: st..<ed)
                     
