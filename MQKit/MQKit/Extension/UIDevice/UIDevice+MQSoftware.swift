@@ -9,6 +9,7 @@
 import UIKit
 import SystemConfiguration
 import CoreTelephony
+import WebKit
 
 extension UIDevice {
     
@@ -134,5 +135,51 @@ extension UIDevice {
     public var mq_systemPoweronTime: Date {
         let nowDate = Date()
         return nowDate.addingTimeInterval(-ProcessInfo.processInfo.systemUptime)
+    }
+    
+    fileprivate static var userAgentCache = ""
+    fileprivate static var tmpWebView: WKWebView?
+    
+    fileprivate func userAgentCallback(_ closure: @escaping (_: String)->Void, isMainThread: Bool) {
+        if isMainThread {
+            DispatchQueue.main.async {
+                closure(UIDevice.userAgentCache)
+            }
+        } else {
+            DispatchQueue.global().async {
+                closure(UIDevice.userAgentCache)
+            }
+        }
+    }
+    
+    public func mq_systemUserAgent(_ closure: @escaping (_: String)->Void) {
+        let isMainThread = Thread.isMainThread
+        if UIDevice.userAgentCache.mq_count > 0 {
+            self.userAgentCallback(closure, isMainThread: isMainThread)
+        }
+        
+        let configuration = WKWebViewConfiguration()
+        configuration.allowsInlineMediaPlayback = true
+        
+        DispatchQueue.main.async {
+            if UIDevice.tmpWebView == nil {
+               UIDevice.tmpWebView = WKWebView(frame: .zero, configuration: configuration)
+                UIDevice.tmpWebView?.isHidden = true
+            }
+            guard let webView = UIDevice.tmpWebView else {
+                self.userAgentCallback(closure, isMainThread: isMainThread)
+                return
+            }
+            
+            webView.evaluateJavaScript("navigator.userAgent") { (result, error) in
+                let ua = (result as? String) ?? ""
+                if ua.mq_count > 0 {
+                    UIDevice.userAgentCache = ua
+                }
+                
+                UIDevice.tmpWebView = nil
+                closure(UIDevice.userAgentCache)
+            }
+        }
     }
 }
