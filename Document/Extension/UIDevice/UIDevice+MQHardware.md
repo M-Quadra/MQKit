@@ -1,6 +1,12 @@
 # UIDevice+MQHardware
 
 ```
+.mq_identifier
+```
+
+获取机型标志, 如`iPhone11,8`
+
+```
 .mq_generation
 ```
 
@@ -31,7 +37,13 @@
 获取可用内存大小(低于实际值)
 
 ```
-. mq_cpuThreads
+.mq_cpuThreads
 ```
 
 获取CPU线程数(模拟器运行只能获取线程数, 目前手机没有超线程, 所以此处称呼为线程数)
+
+```
+.mq_simInfo
+```
+
+sim卡信息, 为双卡数组做了排序

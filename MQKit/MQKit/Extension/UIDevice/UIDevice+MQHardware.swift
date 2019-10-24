@@ -7,13 +7,12 @@
 //
 
 import UIKit
+import CoreTelephony
 
 extension UIDevice {
-    
-    /// eg. "iPhone 4s"
-    public var mq_generation: String {
-        // https://www.theiphonewiki.com/wiki/Models
-        // https://gist.github.com/adamawolf/3048717
+        
+    /// eg. "iPhone11,8"
+    public var mq_identifier: String {
         var sysInfo = utsname()
         uname(&sysInfo)
         
@@ -22,7 +21,15 @@ extension UIDevice {
         let identifierStr = String(cString: machine)
         free(machine)
         
-        switch identifierStr {
+        return identifierStr
+    }
+    
+    /// eg. "iPhone 4s"
+    public var mq_generation: String {
+        // https://www.theiphonewiki.com/wiki/Models
+        // https://gist.github.com/adamawolf/3048717
+        let identifier = self.mq_identifier
+        switch identifier {
         // MARK: - Apple Watch
         case "Watch1,1": return "Apple Watch (1st generation)"
         case "Watch1,2": return "Apple Watch (1st generation)"
@@ -168,7 +175,7 @@ extension UIDevice {
         default: break
         }
         
-        return identifierStr.count > 0 ? identifierStr : "Unknown"
+        return identifier.count > 0 ? identifier : "Unknown"
     }
     
     private static var mq_privateTotalCapacity: UInt64 = 0
@@ -227,5 +234,22 @@ extension UIDevice {
     public var mq_cpuThreads: Int {
         // 6c12t will return 12
         return ProcessInfo.processInfo.processorCount
+    }
+    
+    public var mq_simInfo: [CTCarrier] {
+        let info = CTTelephonyNetworkInfo()
+        if #available(iOS 12.0, *) {
+            guard let providers = info.serviceSubscriberCellularProviders else {
+                return []
+            }
+            
+            let carrierAry = providers.sorted { Int($0.key) ?? 0 < Int($1.key) ?? 0 }
+            return carrierAry.map { $1 }
+        }
+        
+        guard let carrier = info.subscriberCellularProvider else {
+            return []
+        }
+        return [carrier]
     }
 }
