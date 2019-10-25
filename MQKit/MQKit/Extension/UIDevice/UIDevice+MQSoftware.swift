@@ -39,7 +39,7 @@ extension UIDevice {
             }
         }
         
-        //        https://stackoverflow.com/a/55643201
+        // https://stackoverflow.com/a/55643201
         var dylib_info = Dl_info()
         let RTLD_DEFAULT = UnsafeMutableRawPointer(bitPattern: -2)
         let func_stat = dlsym(RTLD_DEFAULT, "stat")
@@ -132,10 +132,6 @@ extension UIDevice {
         return "Wi-Fi"
     }
     
-    public var mq_systemPoweronTime: Date {
-        let nowDate = Date()
-        return nowDate.addingTimeInterval(-ProcessInfo.processInfo.systemUptime)
-    }
     
     fileprivate static var userAgentCache = ""
     fileprivate static var tmpWebView: WKWebView?
@@ -181,5 +177,19 @@ extension UIDevice {
                 closure(UIDevice.userAgentCache)
             }
         }
+    }
+    
+    ///μs, 1ms = 1000 μs
+    public var mq_systemPoweronTime: Int {
+        var name = [CTL_KERN, KERN_BOOTTIME]
+        var oldp = timeval()
+        var oldlenp = MemoryLayout.size(ofValue: oldp)
+        
+        guard sysctl(&name, 2, &oldp, &oldlenp, nil, 0) == 0 else {
+            return 0
+        }
+        
+        let time = oldp.tv_sec*1_000_000 + Int(oldp.tv_usec)
+        return time
     }
 }

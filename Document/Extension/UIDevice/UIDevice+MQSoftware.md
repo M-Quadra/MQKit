@@ -19,13 +19,13 @@
 获取当前网络类型, 4G/Wi-Fi
 
 ```
-.mq_systemPoweronTime
-```
-
-上一次设备启动时间(模拟器精度`10ms`, 真机精度`0.1ms`)
-
-```
 func mq_systemUserAgent(_ closure: @escaping (_: String)->Void)
 ```
 
 获取默认UserAgent
+
+```
+.mq_systemPoweronTime
+```
+
+上一次设备启动时间戳, 精度μs
