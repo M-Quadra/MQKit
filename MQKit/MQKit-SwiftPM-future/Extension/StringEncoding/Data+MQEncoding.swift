@@ -24,8 +24,8 @@ extension Data {
         var stData = self
         let flagSet: Set<UInt8> = [10, 13, 32]
         
-        if self.count > 200 {
-            for i in 190..<self.count {
+        if self.count > 300 {
+            for i in 290..<self.count {
                 if !flagSet.contains(self[i]) {
                     continue
                 }
