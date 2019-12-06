@@ -92,7 +92,7 @@ init(hexString: String, alpha: CGFloat = 1)
 2. [CFStringEncodings 枚举相关](Document/Extension/StringEncoding/CFStringEncodings+MQList.md)
 2. [StringEncoding 编码相关](Document/Extension/StringEncoding/StringEncoding+MQCode.md)
 3. [StringEncoding 枚举相关](Document/Extension/StringEncoding/StringEncoding+MQList.md)
-4. [Data 文本解码](Document/Extension/StringEncoding/Data+MQEncoding.md)
+4. [Data 文本自动解码](Document/Extension/StringEncoding/Data+MQEncoding.md)
 
 # NSMutableAttributedString
 

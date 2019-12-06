@@ -49,7 +49,7 @@ extension Data {
                 return
             }
             
-            guard model.isNormal(tsStr, usePrivateUseArea: false) else {
+            guard model.isNormal(tsStr) else {
                 return
             }
             
