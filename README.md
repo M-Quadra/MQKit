@@ -28,9 +28,9 @@ or
 pod 'MQKit', :git => 'https://github.com/M-Quadra/MQKit.git'
 ```
 
-暂不支持`Object-C`(懒), 可尝试手动打`framework`
+暂不支持`Objective-C`(懒), 可尝试手动打`framework`
 
-随缘更新ing, 还不敢发正式库\_(ˊཀˋ」∠)_
+还不敢发正式库\_(ˊཀˋ」∠)_
 
 # UIFont
 
@@ -92,7 +92,7 @@ init(hexString: String, alpha: CGFloat = 1)
 2. [CFStringEncodings 枚举相关](Document/Extension/StringEncoding/CFStringEncodings+MQList.md)
 2. [StringEncoding 编码相关](Document/Extension/StringEncoding/StringEncoding+MQCode.md)
 3. [StringEncoding 枚举相关](Document/Extension/StringEncoding/StringEncoding+MQList.md)
-4. [Data 文本自动解码](Document/Extension/StringEncoding/Data+MQEncoding.md)
+4. [Data 文本自动解码](Document/Extension/StringEncoding/Data+MQAutoGuessEncoding.md)
 
 # NSMutableAttributedString
 
