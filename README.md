@@ -2,7 +2,7 @@
 
 拖延症巨制, 不定时太监
 
-既然swift ABI稳定, SPM也要来了, 那么就尽量纯swift吧
+既然12.2 Swift ABI稳定, SwiftPM也来了, 那么就尽量纯swift吧
 
 在QMUI里看到了一些感觉有趣的方法，这里就班门弄斧了
 
