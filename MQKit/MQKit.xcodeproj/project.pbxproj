@@ -56,6 +56,7 @@
 		E722768A22B8CD1200008A96 /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E722768922B8CD1200008A96 /* image0@2x.png */; };
 		E72D732522D8AB510064F5BF /* MQHorizontalPagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D732422D8AB510064F5BF /* MQHorizontalPagingViewController.swift */; };
 		E741048322F41A7000BE8984 /* MQTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741048222F41A7000BE8984 /* MQTextFieldViewController.swift */; };
+		E758761823B0B1D200716CD3 /* NSRegularExpression+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758761723B0B1D200716CD3 /* NSRegularExpression+MQ.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
 		E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */; };
 		E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918EE22C9AA2D00877715 /* MQStringViewController.swift */; };
@@ -132,6 +133,7 @@
 		E74B455C22E776460015038C /* Coordinate+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinate+MQ.swift"; sourceTree = "<group>"; };
 		E74D976D23029D640023AD8C /* UITextField+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+MQ.swift"; sourceTree = "<group>"; };
 		E7556C0A22FEA343005CFD37 /* MQCrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQCrypt.swift; sourceTree = "<group>"; };
+		E758761723B0B1D200716CD3 /* NSRegularExpression+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQDateViewController.swift; sourceTree = "<group>"; };
 		E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIImageViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
 				E71AB46722F133DF00B84C68 /* NSMutableAttributedString+MQ.swift */,
 				E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */,
+				E758761723B0B1D200716CD3 /* NSRegularExpression+MQ.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				E707774023385D0F0070360E /* Coordinate+MQ.swift in Sources */,
 				E707775123385D190070360E /* String+MQCode.swift in Sources */,
 				E707773723385CA70070360E /* MQCrypt+AES.swift in Sources */,
+				E758761823B0B1D200716CD3 /* NSRegularExpression+MQ.swift in Sources */,
 				E707773423385CA30070360E /* UITextField+MQ.swift in Sources */,
 				E707774223385D0F0070360E /* Dictionary+MQ.swift in Sources */,
 				E707773823385CA70070360E /* MQCrypt+MD5.swift in Sources */,

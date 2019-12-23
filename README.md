@@ -4,7 +4,9 @@
 
 既然12.2 Swift ABI稳定, SwiftPM也来了, 那么就尽量纯swift吧
 
-在QMUI里看到了一些感觉有趣的方法，这里就班门弄斧了
+在[QMUI](https://github.com/Tencent/QMUI_iOS)里看到了一些感觉有趣的方法，这里就班门弄斧了
+
+许久之后可能会更新一波UIView相关的内容
 
 随缘更新
 
@@ -301,6 +303,14 @@ init(mq_edge: Double)
 # Number
 
 1. [整数相关](Document/Extension/Number/FixedWidthInteger+MQ.md)
+
+# NSRegularExpression
+
+```
+public func mq_firstMatch(in string: String) -> NSTextCheckingResult?
+```
+
+由于懒得写范围于是加了这个全文匹配方法
 
 # 零零碎碎
 
