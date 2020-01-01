@@ -312,6 +312,12 @@ public func mq_firstMatch(in string: String) -> NSTextCheckingResult?
 
 由于懒得写范围于是加了这个全文匹配方法
 
+```
+public func mq_matches(in string: String) -> [NSTextCheckingResult]
+```
+
+由于懒得写范围加了这个全文匹配的方法
+
 # 零零碎碎
 
 1. [震动反馈](Document/Other/MQTaptic.md)

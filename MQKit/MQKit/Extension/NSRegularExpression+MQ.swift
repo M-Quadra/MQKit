@@ -14,4 +14,8 @@ extension NSRegularExpression {
         return self.firstMatch(in: string, range: NSRange(location: 0, length: string.utf16.count))
     }
     
+    public func mq_matches(in string: String) -> [NSTextCheckingResult] {
+        return self.matches(in: string, range: NSRange(location: 0, length: string.utf16.count))
+    }
+    
 }
