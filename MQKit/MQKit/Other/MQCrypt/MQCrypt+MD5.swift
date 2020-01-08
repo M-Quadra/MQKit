@@ -18,12 +18,14 @@ extension MQCrypt {
                 return Data()
             }
             
-            var srcData = data
-            let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_MD5_DIGEST_LENGTH))
-            CC_MD5(&srcData, CC_LONG(data.count), buffer)
+            let dataPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: data.count)
+            let mdPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_MD5_DIGEST_LENGTH))
+            data.copyBytes(to: dataPtr, count: data.count)
+            CC_MD5(dataPtr, CC_LONG(data.count), mdPtr)
             
-            let opt = Data(bytes: buffer, count: Int(CC_MD5_DIGEST_LENGTH))
-            free(buffer)
+            let opt = Data(bytes: mdPtr, count: Int(CC_MD5_DIGEST_LENGTH))
+            free(mdPtr)
+            free(dataPtr)
             
             if bits/8 == Int(CC_MD5_DIGEST_LENGTH) {
                 return opt
