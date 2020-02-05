@@ -1,19 +1,24 @@
-# UIApplication+MQThirds
+# UIApplication+MQThird
 
 ```
-.mq_third.openQQGroup(qqGroup: String) -> Bool
+.MQThird.openQQGroup(qqGroup: String) -> Bool
 ```
 
 打开QQ群名片
 
 ```
-.mq_third.openQQScan() -> Bool
+.MQThird.openQQScan() -> Bool
 ```
 
 QQ 扫一扫
 
 ```
-.mq_third.openWeChetScan() -> Bool
+.MQThird.openQQMicroapp(_ urlStr: String) -> Bool
+```
+QQ小程序
+
+```
+.MQThird.openWeChetScan() -> Bool
 ```
 
 微信 扫一扫
