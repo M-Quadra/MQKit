@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct MQTaptic {
+public struct MQTaptic {
     enum type {
         case micro
         case light
