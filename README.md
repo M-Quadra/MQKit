@@ -87,6 +87,7 @@ init(hexString: String, alpha: CGFloat = 1)
 4. [字符相关](Document/Extension/String/String+MQChar.md)
 5. [子串相关](Document/Extension/String/String+MQSub.md)
 6. [数值相关](Document/Extension/String/String+MQSub.md)
+7. [大小相关](Document/Extension/String/String+MQSize.md)
 
 # StringEncoding
 
