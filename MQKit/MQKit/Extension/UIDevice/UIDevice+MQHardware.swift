@@ -252,4 +252,11 @@ extension UIDevice {
         }
         return [carrier]
     }
+    
+    /// is iPad
+    public var mq_isPad: Bool {
+        get {
+            return UIDevice.current.userInterfaceIdiom == .pad
+        }
+    }
 }
