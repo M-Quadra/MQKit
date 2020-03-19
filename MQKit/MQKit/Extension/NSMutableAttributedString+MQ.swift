@@ -81,4 +81,30 @@ extension NSMutableAttributedString {
         
         self.addAttribute(name, value: nowValue, range: range)
     }
+    
+    fileprivate func mq_nsRange(range: Range<String.Index>?) -> NSRange? {
+        guard let nRange = range else {
+            return nil
+        }
+        
+        let st = nRange.lowerBound.utf16Offset(in: self.string)
+        let ed = nRange.upperBound.utf16Offset(in: self.string)
+        guard st < self.length && ed <= self.length && st != ed else {
+            return nil
+        }
+        
+        return NSRange(location: st, length: ed - st)
+    }
+    
+    public func mq_setFont(_ font: UIFont, range: NSRange) {
+        mq_setAttribute(.font, value: font, range: range)
+    }
+    
+    public func mq_setFont(_ font: UIFont, range: Range<String.Index>?) {
+        guard let nsRange = self.mq_nsRange(range: range) else {
+            return
+        }
+        
+        mq_setFont(font, range: nsRange)
+    }
 }

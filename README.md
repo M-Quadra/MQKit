@@ -123,6 +123,12 @@ public var mq_alignment: NSTextAlignment
 
 NSParagraphStyle.alignment
 
+```
+.mq_setFont(_ font: UIFont, range: NSRange)
+.mq_setFont(_ font: UIFont, range: Range<String.Index>?)
+```
+
+局部字体设置
 
 # URL
 
