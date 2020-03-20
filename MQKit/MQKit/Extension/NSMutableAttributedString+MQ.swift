@@ -74,6 +74,9 @@ extension NSMutableAttributedString {
     }
     
     fileprivate func mq_setAttribute(_ name: NSAttributedString.Key, value: Any?, range: NSRange) {
+        guard 0 <= range.lowerBound && range.upperBound <= self.length else {
+            return
+        }
         guard let nowValue = value else {
             self.removeAttribute(name, range: range)
             return
@@ -89,22 +92,30 @@ extension NSMutableAttributedString {
         
         let st = nRange.lowerBound.utf16Offset(in: self.string)
         let ed = nRange.upperBound.utf16Offset(in: self.string)
-        guard st < self.length && ed <= self.length && st != ed else {
-            return nil
-        }
-        
         return NSRange(location: st, length: ed - st)
     }
     
-    public func mq_setFont(_ font: UIFont, range: NSRange) {
+    public func mq_setFont(_ font: UIFont?, range: NSRange) {
         mq_setAttribute(.font, value: font, range: range)
     }
     
-    public func mq_setFont(_ font: UIFont, range: Range<String.Index>?) {
+    public func mq_setFont(_ font: UIFont?, range: Range<String.Index>?) {
         guard let nsRange = self.mq_nsRange(range: range) else {
             return
         }
         
         mq_setFont(font, range: nsRange)
+    }
+    
+    public func mq_setColor(_ color: UIColor, range: NSRange) {
+        mq_setAttribute(.foregroundColor, value: color, range: range)
+    }
+    
+    public func mq_setColor(_ color: UIColor, range: Range<String.Index>?) {
+        guard let nsRange = self.mq_nsRange(range: range) else {
+            return
+        }
+        
+        mq_setAttribute(.foregroundColor, value: color, range: nsRange)
     }
 }

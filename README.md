@@ -124,11 +124,18 @@ public var mq_alignment: NSTextAlignment
 NSParagraphStyle.alignment
 
 ```
-.mq_setFont(_ font: UIFont, range: NSRange)
-.mq_setFont(_ font: UIFont, range: Range<String.Index>?)
+.mq_setFont(_ font: UIFont?, range: NSRange)
+.mq_setFont(_ font: UIFont?, range: Range<String.Index>?)
 ```
 
 局部字体设置
+
+```
+.mq_setColor(_ color: UIColor, range: NSRange)
+.mq_setColor(_ color: UIColor, range: Range<String.Index>?)
+```
+
+局部文字颜色设置
 
 # URL
 
