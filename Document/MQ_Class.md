@@ -30,6 +30,13 @@ CollectionView控件复用, 由于swift的迷の泛型传递，目前只能借�
 
 为了在实现`whenHitTest`后依然能在外部访问原`hitTest`
 
+```
+.mq_dequeue<T: UITableViewCell>(reusableCell: MQReusableCell<T>) -> T
+.mq_dequeue<T: UIView>(reusableHeaderFooter: MQReusableView<T>) -> T?
+```
+
+与`MQCollectionView`相同的注册与复用机制, 由于泛型问题需要使用结构体包装, HeaderFooter的返回值与`.dequeueReusableHeaderFooterView`保持一致, 使用可选值
+
 # MQTableView
 
 ```
@@ -54,7 +61,7 @@ CollectionView控件复用, 由于swift的迷の泛型传递，目前只能借�
 
 为了外部调用看着爽, 使用struct传递泛型
 
-后续可能会加入更多支持
+<del>后续可能会加入更多支持, </del>这种滑动已经成为iOS13中的`CompositionalLayout`了, 这个控件后续应该不会再更新了....
 
 ```
 .init(frame: CGRect, info: ViewInfo)

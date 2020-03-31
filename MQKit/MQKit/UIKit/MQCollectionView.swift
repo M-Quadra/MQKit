@@ -59,6 +59,10 @@ public struct MQReusableView<T> {
         self.idxPath = idxPath
     }
     
+    init() {
+        self.idxPath = .init()
+    }
+    
     static func forIndexPath(_ idxPath: IndexPath) -> MQReusableView {
         return MQReusableView<T>(idxPath)
     }
