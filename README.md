@@ -229,10 +229,16 @@ mq_averageColor
 获取图片平均色
 
 ```
-UIImage(layer: CALayer, alpha: Bool)
+UIImage(mq_layer: CALayer, alpha: Bool)
 ```
 
-通过CALayer创建UIImage，是否开启alpha通道由外部控制
+通过CALayer创建UIImage, 是否开启alpha通道由外部控制
+
+```
+UIImage(mq_color color: UIColor, size: CGSize = CGSize(mq_edge: 1))
+```
+
+通过color创建UIImage, 默认大小CGsize(1, 1)
 
 # UIDevice
 

@@ -43,7 +43,7 @@ extension UIImage {
                        alpha: rgba[3] / 255)
     }
     
-    convenience public init(layer: CALayer, alpha: Bool) {        
+    public convenience init(mq_layer layer: CALayer, alpha: Bool) {
         var optImg: UIImage?
         UIGraphicsBeginImageContextWithOptions(layer.frame.size, !alpha, 0)
         if let context = UIGraphicsGetCurrentContext() {
@@ -59,4 +59,27 @@ extension UIImage {
         }
     }
     
+    /// size = CGSize(1, 1)
+    public convenience init(mq_color color: UIColor, size: CGSize = CGSize(mq_edge: 1)) {
+        guard size.mq_isValidated() else {
+            self.init()
+            return
+        }
+        
+        var optImg: UIImage?
+        let opaque = color.mq_alpha == 1.0
+        UIGraphicsBeginImageContextWithOptions(size, opaque, 0)
+        if let context = UIGraphicsGetCurrentContext() {
+            context.setFillColor(color.cgColor)
+            context.fill(CGRect(origin: .zero, size: size))
+            optImg = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        UIGraphicsEndImageContext()
+        
+        if let cgImg = optImg?.cgImage {
+            self.init(cgImage: cgImg, scale: UIScreen.main.scale, orientation: .up)
+        } else {
+            self.init()
+        }
+    }
 }

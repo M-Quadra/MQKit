@@ -32,7 +32,7 @@ class MQUIImageViewController: UIViewController {
             layer.frame = CGRect(origin: .zero, size: imgSiz)
             
             // alpha判断太麻烦了，交给输入得了
-            let img = UIImage(layer: layer, alpha: false)
+            let img = UIImage(mq_layer: layer, alpha: false)
             
             DispatchQueue.main.async {
                 imgv.image = img
