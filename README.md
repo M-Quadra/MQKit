@@ -282,6 +282,12 @@ init(mq_edge: Double)
 
 面积
 
+```
+.mq_isValidated() -> Bool
+```
+
+有效性检查, !<=0 && !isInf() && !isNaN()
+
 # OperationQueue
 
 ```

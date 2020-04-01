@@ -25,4 +25,21 @@ extension CGSize {
     public var mq_area: CGFloat {
         return self.width * self.height
     }
+    
+    /// !<=0 && !isInf() && !isNaN()
+    public func mq_isValidated() -> Bool {
+        return !isEmpty() && !isInf() && !isNaN()
+    }
+    
+    func isEmpty() -> Bool {
+        return self.width <= 0 || self.height <= 0
+    }
+    
+    func isInf() -> Bool {
+        return width == .infinity || height == .infinity || width == -.infinity || height == -.infinity
+    }
+    
+    func isNaN() -> Bool {
+        return width == .nan || height == .nan
+    }
 }
