@@ -240,6 +240,12 @@ UIImage(mq_color color: UIColor, size: CGSize = CGSize(mq_edge: 1))
 
 通过color创建UIImage, 默认大小CGsize(1, 1)
 
+```
+.mq_corner(radius: CGFloat, corners: UIRectCorner = .allCorners) -> UIImage
+```
+
+图片切圆角
+
 # UIDevice
 
 1. [硬件相关信息](Document/Extension/UIDevice/UIDevice+MQHardware.md)

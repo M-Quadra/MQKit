@@ -12,7 +12,7 @@ extension UIImage {
     
     public var mq_averageColor: UIColor {
         guard let cgImg = self.cgImage else {
-            return .clear;
+            return .clear
         }
 
         let width = 1
@@ -28,7 +28,7 @@ extension UIImage {
                                            bytesPerRow: width * 4, space: colorSpace,
                                            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Big.rawValue)
             else {
-                return .clear;
+                return .clear
         }
         context.draw(cgImg, in: CGRect(x: 0, y: 0, width: width, height: height))
         
@@ -81,5 +81,53 @@ extension UIImage {
         } else {
             self.init()
         }
+    }
+    
+    public func mq_corner(radius: CGFloat, corners: UIRectCorner = .allCorners) -> UIImage {
+        if radius <= 0 {
+            return self
+        }
+        
+        var pathAry:[UIBezierPath] = []
+        let rect = CGRect(origin: .zero, size: size)
+        
+        if corners.isEmpty || corners.rawValue == 0xF || corners == .allCorners {
+            let path = UIBezierPath(roundedRect: rect, byRoundingCorners: .allCorners, cornerRadii: CGSize(width: radius, height: 0))
+            pathAry = [path]
+        } else {
+            if corners.contains(.topLeft) {
+                pathAry.append(UIBezierPath(roundedRect: rect, byRoundingCorners: .bottomLeft, cornerRadii: CGSize(width: radius, height: 0)))
+            }
+            if corners.contains(.topRight) {
+                pathAry.append(UIBezierPath(roundedRect: rect, byRoundingCorners: .bottomRight, cornerRadii: CGSize(width: radius, height: 0)))
+            }
+            if corners.contains(.bottomLeft) {
+                pathAry.append(UIBezierPath(roundedRect: rect, byRoundingCorners: .topLeft, cornerRadii: CGSize(width: radius, height: 0)))
+            }
+            if corners.contains(.bottomRight) {
+                pathAry.append(UIBezierPath(roundedRect: rect, byRoundingCorners: .topRight, cornerRadii: CGSize(width: radius, height: 0)))
+            }
+        }
+        
+        var optImg: UIImage?
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        if let context = UIGraphicsGetCurrentContext(), let cgImg = cgImage {
+            context.scaleBy(x: 1, y: -1)
+            context.translateBy(x: 0, y: -rect.height)
+            
+            for path in pathAry {
+                path.addClip()
+            }
+            
+            context.draw(cgImg, in: rect)
+            optImg = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        UIGraphicsEndImageContext()
+        
+        guard let img = optImg else {
+            return self
+        }
+        return img
     }
 }
