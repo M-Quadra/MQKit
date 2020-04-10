@@ -58,6 +58,12 @@ init(hexString: String, alpha: CGFloat = 1)
 \#RRGGBB 通过HEX创建颜色
 
 ```
+init(mq_backgroundColor: UIColor, frontColor: UIColor)
+```
+
+混色
+
+```
 .mq_random
 ```
 
