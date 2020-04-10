@@ -20,8 +20,6 @@ or
 https://github.com/M-Quadra/MQKit.git
 ```
 
-由于`SwiftPM`目前不支持资源引用, 无法使用自动文本编码检测功能
-
 - CocoaPods
 
 ```
@@ -31,6 +29,8 @@ pod 'MQKit', :git => 'https://github.com/M-Quadra/MQKit.git'
 ```
 
 暂不支持`Objective-C`(懒), 可尝试手动打`framework`
+
+由于`SwiftPM`目前不支持资源引用, 相关功能已移除
 
 还不敢发正式库\_(ˊཀˋ」∠)_
 
@@ -95,7 +95,6 @@ init(hexString: String, alpha: CGFloat = 1)
 2. [CFStringEncodings 枚举相关](Document/Extension/StringEncoding/CFStringEncodings+MQList.md)
 2. [StringEncoding 编码相关](Document/Extension/StringEncoding/StringEncoding+MQCode.md)
 3. [StringEncoding 枚举相关](Document/Extension/StringEncoding/StringEncoding+MQList.md)
-4. [Data 文本自动解码](Document/Extension/StringEncoding/Data+MQAutoGuessEncoding.md)
 
 # NSMutableAttributedString
 
