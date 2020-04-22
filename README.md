@@ -251,6 +251,12 @@ UIImage(mq_color color: UIColor, size: CGSize = CGSize(mq_edge: 1))
 
 图片切圆角
 
+```
+.mq_pixelRGBA() -> [[[UInt8]]]?
+```
+
+获取像素
+
 # UIDevice
 
 1. [硬件相关信息](Document/Extension/UIDevice/UIDevice+MQHardware.md)

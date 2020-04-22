@@ -130,4 +130,51 @@ extension UIImage {
         }
         return img
     }
+    
+    /// [y][x][RR, GG, BB, AA]
+    public func mq_pixelRGBA() -> [[[UInt8]]]? {
+        guard let cgImg = self.cgImage else {
+            return nil
+        }
+        
+        let pixWidth = cgImg.width
+        let pixHeight = cgImg.height
+        let bytesPerRow = pixWidth * pixHeight * 4
+        if pixWidth*pixHeight <= 0 {
+            return nil
+        }
+        
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        guard let context = CGContext.init(data: nil,
+                                           width: pixWidth,
+                                           height: pixHeight,
+                                           bitsPerComponent: 8,
+                                           bytesPerRow: pixWidth * 4,
+                                           space: colorSpace,
+                                           bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Big.rawValue) else {
+            return nil
+        }
+        
+        context.draw(cgImg, in: CGRect(x: 0, y: 0, width: pixWidth, height: pixHeight))
+        guard let imgData = context.data else {
+            return nil
+        }
+
+        let imgDataUint8 = imgData.bindMemory(to: UInt8.self, capacity: bytesPerRow)
+        
+        var pixAry = Array(repeating: Array(repeating: Array(repeating: UInt8(0), count: 4), count: pixWidth), count: pixHeight)
+        for y in 0..<pixHeight {
+            let iy = y * pixWidth*4
+            for x in 0..<pixWidth {
+                let ix = x * 4
+                for i in 0..<4 {
+                    let idx = iy + ix + i
+                    pixAry[y][x][i] = imgDataUint8[idx]
+                }
+            }
+        }
+        
+        return pixAry
+    }
 }
