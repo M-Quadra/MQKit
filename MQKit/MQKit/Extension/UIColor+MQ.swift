@@ -33,18 +33,26 @@ extension UIColor {
     }
     
     /// blend color
-    convenience init(mq_backgroundColor: UIColor, frontColor: UIColor) {
+    public convenience init(mq_backgroundColor: UIColor, frontColor: UIColor) {
         // http://stackoverflow.com/questions/10781953/determine-rgba-colour-received-by-combining-two-colours
         
         let bgRed   = mq_backgroundColor.mq_red
         let bgGreen = mq_backgroundColor.mq_green
         let bgBlue  = mq_backgroundColor.mq_blue
         let bgAlpha = mq_backgroundColor.mq_alpha
+        guard bgAlpha > 0 else {
+            self.init(cgColor: frontColor.cgColor)
+            return
+        }
         
         let frRed   = frontColor.mq_red
         let frGreen = frontColor.mq_green
         let frBlue  = frontColor.mq_blue
         let frAlpha = frontColor.mq_alpha
+        guard frAlpha > 0 else {
+            self.init(cgColor: mq_backgroundColor.cgColor)
+            return
+        }
         
         let alpha = frAlpha + bgAlpha*(1 - frAlpha)
         let red   = (frRed*frAlpha   + bgRed*bgAlpha*(1 - frAlpha))   / alpha
