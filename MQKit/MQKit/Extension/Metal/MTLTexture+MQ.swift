@@ -12,7 +12,7 @@ import UIKit
 extension MTLTexture {
     
     /// alpha: whether to ues colorAttachments[0].clearColor.alpha
-    func mq_uiImage(alpha: Bool = false) -> UIImage? {
+    public func mq_uiImage(alpha: Bool = false) -> UIImage? {
         if !alpha {
             return self.mq_uiImageWithCGImage()
         }
