@@ -180,3 +180,10 @@ init(mq_edge: Double)
 
 参考[MQCollectionView](../../MQ_Class.md)
 
+# CGRect
+
+```
+.init(mq_size: CGSize)
+```
+
+等价于 `.init(origin: .zero, size: mq_size)`
