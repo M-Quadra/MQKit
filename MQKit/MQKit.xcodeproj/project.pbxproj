@@ -275,25 +275,8 @@
 		E70A9B9A22B0872100D5E334 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E73A5F352337F59300EA4718 /* Number */,
-				E738258C230A2EBC00927DBB /* UIDevice */,
-				E7E738E92305D0FB00CC3C7E /* UIApplication */,
-				E70A549922EBE7AB003D0E2B /* String */,
-				E79324A422EE0EED00880C23 /* StringEncoding */,
-				E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */,
-				E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */,
-				E74B455C22E776460015038C /* Coordinate+MQ.swift */,
-				E72171F622B3AB7C00397F0E /* Date+MQ.swift */,
-				E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */,
-				E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */,
-				E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */,
-				E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */,
-				E722768522B8C56300008A96 /* UIImage+MQ.swift */,
-				E7246B7122AE017B001202B2 /* UIView+MQ.swift */,
-				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
-				E71AB46722F133DF00B84C68 /* NSMutableAttributedString+MQ.swift */,
-				E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */,
-				E758761723B0B1D200716CD3 /* NSRegularExpression+MQ.swift */,
+				E77BDDCE246421CD00E3B42D /* Foundation */,
+				E77BDDCD246421B700E3B42D /* UIKit */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -410,6 +393,39 @@
 				E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */,
 			);
 			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		E77BDDCD246421B700E3B42D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				E722768522B8C56300008A96 /* UIImage+MQ.swift */,
+				E7246B7122AE017B001202B2 /* UIView+MQ.swift */,
+				E79ECC4522A6C6E800736EF2 /* UIFont+MQ.swift */,
+				E79ECC4822A6DA1000736EF2 /* UIColor+MQ.swift */,
+				E74B455C22E776460015038C /* Coordinate+MQ.swift */,
+				E7A4DE4D22E955B2006D5AD8 /* CGPoint+MQ.swift */,
+				E7A4DE4F22E9CD5C006D5AD8 /* CGSize+MQ.swift */,
+				E7E738E92305D0FB00CC3C7E /* UIApplication */,
+				E738258C230A2EBC00927DBB /* UIDevice */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		E77BDDCE246421CD00E3B42D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				E79324A222EE0B9400880C23 /* OperationQueue+MQ.swift */,
+				E758761723B0B1D200716CD3 /* NSRegularExpression+MQ.swift */,
+				E72C44FF22F29B1E00F0FB79 /* Array+MQ.swift */,
+				E71AB46722F133DF00B84C68 /* NSMutableAttributedString+MQ.swift */,
+				E737D19F22D4760600AA9486 /* Dictionary+MQ.swift */,
+				E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */,
+				E72171F622B3AB7C00397F0E /* Date+MQ.swift */,
+				E79324A422EE0EED00880C23 /* StringEncoding */,
+				E70A549922EBE7AB003D0E2B /* String */,
+				E73A5F352337F59300EA4718 /* Number */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		E77E0A4A22F1B4B7003243F3 /* MQTextField */ = {
