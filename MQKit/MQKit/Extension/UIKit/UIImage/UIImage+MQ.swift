@@ -177,4 +177,59 @@ extension UIImage {
         
         return pixAry
     }
+    
+    /// !alpha
+    public var mq_opaque: Bool {
+        guard let cgImg = self.cgImage else {
+            return false
+        }
+        
+        return cgImg.alphaInfo == .noneSkipLast
+            || cgImg.alphaInfo == .noneSkipFirst
+            || cgImg.alphaInfo == .none
+    }
+    
+    public func mq_image(orientation: Orientation) -> UIImage? {
+        if orientation == .up {
+            return self
+        }
+        
+        var contextSiz = self.size
+        if orientation == .left || orientation == .right {
+            contextSiz = CGSize(width: contextSiz.height, height: contextSiz.width)
+        }
+        
+        var optImg: UIImage? = self
+        
+        UIGraphicsBeginImageContextWithOptions(contextSiz, self.mq_opaque, self.scale)
+        if let contextRef = UIGraphicsGetCurrentContext() {
+            switch orientation {
+            case .up: break
+            case .down:
+                contextRef.translateBy(x: contextSiz.width, y: contextSiz.height);
+                contextRef.rotate(by: .mq_radian(angle: 180))
+            case .left:
+                contextRef.translateBy(x: 0, y: contextSiz.height)
+                contextRef.rotate(by: .mq_radian(angle: -90))
+            case .right:
+                contextRef.translateBy(x: contextSiz.width, y: 0)
+                contextRef.rotate(by: .mq_radian(angle: 90))
+            case .upMirrored: fallthrough
+            case .downMirrored:
+                contextRef.translateBy(x: 0, y: contextSiz.height)
+                contextRef.scaleBy(x: 1, y: -1)
+            case .leftMirrored: fallthrough
+            case .rightMirrored:
+                contextRef.translateBy(x: contextSiz.width, y: 0)
+                contextRef.scaleBy(x: -1, y: 1)
+            default: break
+            }
+            
+            self.draw(in: CGRect(mq_size: self.size))
+            optImg = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        UIGraphicsEndImageContext()
+        
+        return optImg
+    }
 }
