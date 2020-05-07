@@ -38,6 +38,7 @@ pod 'MQKit', :git => 'https://github.com/M-Quadra/MQKit.git'
 
 1. [Foundation](Document/Extension/Foundation/Foundation.md)
 2. [UIKit](Document/Extension/UIKit/UIKit.md)
+3. [Metal](Document/Extension/Metal/Metal.md)
 
 # 零零碎碎
 

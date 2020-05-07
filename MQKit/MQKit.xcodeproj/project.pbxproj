@@ -62,6 +62,7 @@
 		E7704B2F2422181900672FD6 /* String+MQSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7704B2E2422181900672FD6 /* String+MQSize.swift */; };
 		E7784FD724646233009D3345 /* CGRect+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7784FD624646233009D3345 /* CGRect+MQ.swift */; };
 		E7784FDA24646DD6009D3345 /* UIImage+MQMetal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7784FD924646DD6009D3345 /* UIImage+MQMetal.swift */; };
+		E7784FDD246472BC009D3345 /* MTLTexture+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7784FDC246472BC009D3345 /* MTLTexture+MQ.swift */; };
 		E77918EF22C9AA2D00877715 /* MQStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918EE22C9AA2D00877715 /* MQStringViewController.swift */; };
 		E77918F222C9AFD700877715 /* MQUIApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */; };
 		E79447F8234F16FB00644790 /* String+MQValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79447F7234F16FB00644790 /* String+MQValue.swift */; };
@@ -141,6 +142,7 @@
 		E7704B2E2422181900672FD6 /* String+MQSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQSize.swift"; sourceTree = "<group>"; };
 		E7784FD624646233009D3345 /* CGRect+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+MQ.swift"; sourceTree = "<group>"; };
 		E7784FD924646DD6009D3345 /* UIImage+MQMetal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+MQMetal.swift"; sourceTree = "<group>"; };
+		E7784FDC246472BC009D3345 /* MTLTexture+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLTexture+MQ.swift"; sourceTree = "<group>"; };
 		E77918EE22C9AA2D00877715 /* MQStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQStringViewController.swift; sourceTree = "<group>"; };
 		E77918F122C9AFD700877715 /* MQUIApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIApplicationViewController.swift; sourceTree = "<group>"; };
 		E77E0A4B22F1B4D7003243F3 /* MQTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTextField.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				E77BDDCE246421CD00E3B42D /* Foundation */,
+				E7784FDB246472A0009D3345 /* Metal */,
 				E77BDDCD246421B700E3B42D /* UIKit */,
 			);
 			path = Extension;
@@ -390,6 +393,14 @@
 				E7784FD924646DD6009D3345 /* UIImage+MQMetal.swift */,
 			);
 			path = UIImage;
+			sourceTree = "<group>";
+		};
+		E7784FDB246472A0009D3345 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				E7784FDC246472BC009D3345 /* MTLTexture+MQ.swift */,
+			);
+			path = Metal;
 			sourceTree = "<group>";
 		};
 		E77918ED22C9A9EC00877715 /* String */ = {
@@ -666,6 +677,7 @@
 				E707773323385CA30070360E /* MQTextField.swift in Sources */,
 				E707774523385D0F0070360E /* UIFont+MQ.swift in Sources */,
 				E707773E23385D0F0070360E /* CGPoint+MQ.swift in Sources */,
+				E7784FDD246472BC009D3345 /* MTLTexture+MQ.swift in Sources */,
 				E707774123385D0F0070360E /* Date+MQ.swift in Sources */,
 				E707775323385D190070360E /* String+MQSub.swift in Sources */,
 				E7704B2F2422181900672FD6 /* String+MQSize.swift in Sources */,
