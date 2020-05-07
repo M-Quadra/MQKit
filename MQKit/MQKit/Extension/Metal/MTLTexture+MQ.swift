@@ -9,6 +9,7 @@
 import Metal
 import UIKit
 
+@available(iOS 9.0, *)
 extension MTLTexture {
     
     /// alpha: whether to ues colorAttachments[0].clearColor.alpha
