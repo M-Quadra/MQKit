@@ -14,6 +14,14 @@ extension MTLTexture {
     
     /// alpha: whether to ues colorAttachments[0].clearColor.alpha
     public func mq_uiImage(alpha: Bool = false) -> UIImage? {
+        if self.isFramebufferOnly {
+            #if DEBUG
+            fatalError("need self.isFramebufferOnly == false")
+            #else
+            return nil
+            #endif
+        }
+        
         if !alpha {
             return self.mq_uiImageWithCGImage()
         }
