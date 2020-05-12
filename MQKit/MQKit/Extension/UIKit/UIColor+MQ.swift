@@ -114,4 +114,15 @@ extension UIColor {
         return alpha
     }
     
+    public var mq_mtlClearColor: MTLClearColor {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        guard self.getRed(&red, green: &green, blue: &blue, alpha: &alpha) else {
+            return MTLClearColor()
+        }
+        
+        return MTLClearColorMake(Double(red), Double(green), Double(blue), Double(alpha))
+    }
 }

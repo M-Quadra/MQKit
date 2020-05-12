@@ -50,6 +50,12 @@ init(mq_backgroundColor: UIColor, frontColor: UIColor)
 
 获取RGBA
 
+```
+.mq_mtlClearColor
+```
+
+获取对应的`MTLClearColor`
+
 # UIView
 
 ```
