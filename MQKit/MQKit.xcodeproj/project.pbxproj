@@ -58,6 +58,8 @@
 		E741048322F41A7000BE8984 /* MQTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741048222F41A7000BE8984 /* MQTextFieldViewController.swift */; };
 		E758761823B0B1D200716CD3 /* NSRegularExpression+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E758761723B0B1D200716CD3 /* NSRegularExpression+MQ.swift */; };
 		E75EF41D22C99B25006DA5A3 /* MQDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */; };
+		E7607DBE246C0DE40032E20D /* Pow+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7607DBD246C0DE40032E20D /* Pow+MQ.swift */; };
+		E7607DC0246C12670032E20D /* Decimal+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7607DBF246C12670032E20D /* Decimal+MQ.swift */; };
 		E768962E22CB0A5200B5D143 /* MQUIImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */; };
 		E7704B2F2422181900672FD6 /* String+MQSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7704B2E2422181900672FD6 /* String+MQSize.swift */; };
 		E7784FD724646233009D3345 /* CGRect+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7784FD624646233009D3345 /* CGRect+MQ.swift */; };
@@ -138,6 +140,8 @@
 		E758761723B0B1D200716CD3 /* NSRegularExpression+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+MQ.swift"; sourceTree = "<group>"; };
 		E75E5D0822A82EEE000C1A61 /* URL+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
 		E75EF41C22C99B25006DA5A3 /* MQDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQDateViewController.swift; sourceTree = "<group>"; };
+		E7607DBD246C0DE40032E20D /* Pow+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pow+MQ.swift"; sourceTree = "<group>"; };
+		E7607DBF246C12670032E20D /* Decimal+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+MQ.swift"; sourceTree = "<group>"; };
 		E768962D22CB0A5200B5D143 /* MQUIImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQUIImageViewController.swift; sourceTree = "<group>"; };
 		E7704B2E2422181900672FD6 /* String+MQSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQSize.swift"; sourceTree = "<group>"; };
 		E7784FD624646233009D3345 /* CGRect+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+MQ.swift"; sourceTree = "<group>"; };
@@ -358,6 +362,8 @@
 			isa = PBXGroup;
 			children = (
 				E73A5F362337F5BA00EA4718 /* FixedWidthInteger+MQ.swift */,
+				E7607DBD246C0DE40032E20D /* Pow+MQ.swift */,
+				E7607DBF246C12670032E20D /* Decimal+MQ.swift */,
 			);
 			path = Number;
 			sourceTree = "<group>";
@@ -697,12 +703,14 @@
 				E707774B23385D140070360E /* CFStringEncodings+MQCode.swift in Sources */,
 				E707773D23385D090070360E /* MQTableView.swift in Sources */,
 				E707773523385CA70070360E /* Data+MQCrypt.swift in Sources */,
+				E7607DC0246C12670032E20D /* Decimal+MQ.swift in Sources */,
 				E707773F23385D0F0070360E /* CGSize+MQ.swift in Sources */,
 				E707774023385D0F0070360E /* Coordinate+MQ.swift in Sources */,
 				E707775123385D190070360E /* String+MQCode.swift in Sources */,
 				E707773723385CA70070360E /* MQCrypt+AES.swift in Sources */,
 				E758761823B0B1D200716CD3 /* NSRegularExpression+MQ.swift in Sources */,
 				E707773423385CA30070360E /* UITextField+MQ.swift in Sources */,
+				E7607DBE246C0DE40032E20D /* Pow+MQ.swift in Sources */,
 				E707774223385D0F0070360E /* Dictionary+MQ.swift in Sources */,
 				E707773823385CA70070360E /* MQCrypt+MD5.swift in Sources */,
 				E707774923385D0F0070360E /* NSMutableAttributedString+MQ.swift in Sources */,

@@ -133,6 +133,8 @@ Array转json
 # Number
 
 1. [整数相关](./Number/FixedWidthInteger+MQ.md)
+2. [Decimal相关](./Number/Decimal+MQ.md)
+3. [幂运算](./Number/Pow+MQ.md)
 
 # NSRegularExpression
 
