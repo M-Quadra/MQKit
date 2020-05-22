@@ -74,6 +74,7 @@
 		E736F3F624766FC10016FF3C /* MQShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F3E724766FC10016FF3C /* MQShowViewController.swift */; };
 		E736F3F724766FC10016FF3C /* MQShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F3E924766FC10016FF3C /* MQShowCell.swift */; };
 		E736F3F824766FC10016FF3C /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E736F3EC24766FC10016FF3C /* image0@2x.png */; };
+		E79C72C224783AB500AE327D /* MTLClearColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,7 @@
 		E736F3E724766FC10016FF3C /* MQShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQShowViewController.swift; sourceTree = "<group>"; };
 		E736F3E924766FC10016FF3C /* MQShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQShowCell.swift; sourceTree = "<group>"; };
 		E736F3EC24766FC10016FF3C /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
+		E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLClearColor+MQ.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				E736F36824766F910016FF3C /* MTLTexture+MQ.swift */,
+				E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				E736F3B524766F910016FF3C /* NSRegularExpression+MQ.swift in Sources */,
 				E736F3B624766F910016FF3C /* FixedWidthInteger+MQ.swift in Sources */,
 				E736F3CD24766F910016FF3C /* UITextField+MQ.swift in Sources */,
+				E79C72C224783AB500AE327D /* MTLClearColor+MQ.swift in Sources */,
 				E736F3B824766F910016FF3C /* Pow+MQ.swift in Sources */,
 				E736F3BE24766F910016FF3C /* String+MQCode.swift in Sources */,
 				E736F3B924766F910016FF3C /* CFStringEncodings+MQCode.swift in Sources */,
