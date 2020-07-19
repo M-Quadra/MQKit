@@ -24,9 +24,11 @@ public func **(left: Float, right: Float) -> Float {
     return pow(left, right)
 }
 
+#if arch(i386) || arch(x86_64)
 public func **(left: Float80, right: Float80) -> Float80 {
     return pow(left, right)
 }
+#endif
 
 public func **(left: Double, right: Double) -> Double {
     return pow(left, right)
