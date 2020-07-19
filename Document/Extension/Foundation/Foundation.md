@@ -68,6 +68,12 @@ NSParagraphStyle.alignment
 
 获取`Documents``Caches``Library``tmp`目录URL
 
+```
+init?(mq_srcURL: String, href: String)
+```
+
+根据`href`创建完整网址
+
 # Date
 
 ```
