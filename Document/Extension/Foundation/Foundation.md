@@ -9,6 +9,7 @@
 5. [子串相关](./String/String+MQSub.md)
 6. [数值相关](./String/String+MQSub.md)
 7. [大小相关](./String/String+MQSize.md)
+8. [正则相关](./String/String+MQRegularExpression.md)
 
 # StringEncoding
 
