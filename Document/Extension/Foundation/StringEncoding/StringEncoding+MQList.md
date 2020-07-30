@@ -7,7 +7,7 @@
 原String.Encoding列表
 
 ```
-.mq_CF
+.mq_xxxxxx
 ```
 
 直接获取`CFStringEncodings`的对应编码
