@@ -155,3 +155,13 @@ public func mq_matches(in string: String) -> [NSTextCheckingResult]
 ```
 
 由于懒得写范围加了这个全文匹配的方法
+
+# CharacterSet
+
+```
+public func union(mq_in: String) -> Self
+public func subtracting(mq_in: String) -> Self
+public func symmetricDifference(mq_in: String) -> Self
+```
+
+简化`String`相关操作代码

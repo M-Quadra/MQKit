@@ -75,6 +75,7 @@
 		E736F3F724766FC10016FF3C /* MQShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F3E924766FC10016FF3C /* MQShowCell.swift */; };
 		E736F3F824766FC10016FF3C /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E736F3EC24766FC10016FF3C /* image0@2x.png */; };
 		E79C72C224783AB500AE327D /* MTLClearColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */; };
+		E7CF6DB024D121B0004F3C66 /* CharacterSet+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF6DAF24D121B0004F3C66 /* CharacterSet+MQ.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +173,7 @@
 		E736F3E924766FC10016FF3C /* MQShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQShowCell.swift; sourceTree = "<group>"; };
 		E736F3EC24766FC10016FF3C /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
 		E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLClearColor+MQ.swift"; sourceTree = "<group>"; };
+		E7CF6DAF24D121B0004F3C66 /* CharacterSet+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+MQ.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +328,7 @@
 				E736F39024766F910016FF3C /* Dictionary+MQ.swift */,
 				E736F39124766F910016FF3C /* URL+MQ.swift */,
 				E736F39224766F910016FF3C /* NSMutableAttributedString+MQ.swift */,
+				E7CF6DAF24D121B0004F3C66 /* CharacterSet+MQ.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				E736F3B724766F910016FF3C /* Decimal+MQ.swift in Sources */,
 				E736F3CB24766F910016FF3C /* MQCrypt+MD5.swift in Sources */,
 				E736F3A324766F910016FF3C /* MQTableView.swift in Sources */,
+				E7CF6DB024D121B0004F3C66 /* CharacterSet+MQ.swift in Sources */,
 				E736F3C624766F910016FF3C /* NSMutableAttributedString+MQ.swift in Sources */,
 				E736F3C124766F910016FF3C /* String+MQSub.swift in Sources */,
 				E736F3B224766F910016FF3C /* OperationQueue+MQ.swift in Sources */,
