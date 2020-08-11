@@ -15,6 +15,10 @@ extension URL {
     public static let mq_tmp       = URL(fileURLWithPath: .mq_tmp)
     
     public init?(mq_srcURL: String, href: String) {
+        if href.hasPrefix("#") {
+            return nil
+        }
+        
         if href.contains("://") {
             self.init(string: href)
             return
