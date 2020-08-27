@@ -18,6 +18,10 @@ extension String {
         return self.mq_substring(with: result.range)
     }
     
+    public func mq_firstMatchResult(in exp: NSRegularExpression) -> NSTextCheckingResult? {
+        return exp.mq_firstMatch(in: self)
+    }
+    
     public func mq_matches(in exp: NSRegularExpression) -> [NSTextCheckingResult] {
         return exp.mq_matches(in: self)
     }
