@@ -77,6 +77,7 @@ extension UIDevice {
         return info.kp_proc.p_flag & P_TRACED != 0
     }
     
+    #if canImport(CTTelephonyNetworkInfo)
     fileprivate static let networkTypeDic = [
         CTRadioAccessTechnologyGPRS: "2G", // 2.5G   171Kbps
         CTRadioAccessTechnologyEdge: "2G", // 2.75G  384Kbps
@@ -92,6 +93,7 @@ extension UIDevice {
         
         CTRadioAccessTechnologyLTE: "4G", // LTE:3.9G 150M/75M  LTE-Advanced:4G 300M/150M
     ]
+    #endif
     
     fileprivate static let reachability: SCNetworkReachability? = {
         var address = sockaddr()
@@ -119,6 +121,7 @@ extension UIDevice {
         }
         
         if flagsValue & SCNetworkReachabilityFlags.isWWAN.rawValue > 0 {
+            #if canImport(CTTelephonyNetworkInfo)
             let info = CTTelephonyNetworkInfo()
             guard let technology = info.currentRadioAccessTechnology else {
                 return nil
@@ -127,6 +130,9 @@ extension UIDevice {
                 return nil
             }
             return type
+            #else
+            return nil
+            #endif
         }
         
         return "Wi-Fi"

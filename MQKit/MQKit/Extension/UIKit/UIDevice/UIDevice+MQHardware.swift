@@ -236,6 +236,7 @@ extension UIDevice {
         return ProcessInfo.processInfo.processorCount
     }
     
+    #if canImport(CTCarrier)
     public var mq_simInfo: [CTCarrier] {
         let info = CTTelephonyNetworkInfo()
         if #available(iOS 12.0, *) {
@@ -252,6 +253,7 @@ extension UIDevice {
         }
         return [carrier]
     }
+    #endif
     
     /// is iPad
     public var mq_isPad: Bool {
