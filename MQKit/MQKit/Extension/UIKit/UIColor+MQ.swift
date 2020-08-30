@@ -20,8 +20,8 @@ extension UIColor {
         let colorStr = hexString.replacingOccurrences(of: "#", with: "")
         let colorAlpha = max(0, min(alpha, 1))
         
-        var colorNum = UInt32(0);
-        Scanner(string: colorStr).scanHexInt32(&colorNum)
+        var colorNum: UInt64 = 0
+        Scanner(string: colorStr).scanHexInt64(&colorNum)
         
         let blue = CGFloat(colorNum & 0xFF)/255
         colorNum >>= 8
