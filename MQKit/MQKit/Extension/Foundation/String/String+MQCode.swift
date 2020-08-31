@@ -7,14 +7,8 @@
 //
 
 import Foundation
-import CommonCrypto
 
 extension String {
-    
-    /// 32hex lowercased MD5
-    public var mq_md5: String {
-        return MQCrypt.MD5.encrypt(str: self)
-    }
     
     public func mq_base64Encode(using: String.Encoding = .utf8) -> String {
         guard let data = self.data(using: using) else {

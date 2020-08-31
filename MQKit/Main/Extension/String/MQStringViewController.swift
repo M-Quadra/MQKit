@@ -16,7 +16,6 @@ class MQStringViewController: UITableViewController {
         "String.mq_caches:\n"    + .mq_caches,
         "String.mq_library:\n"   + .mq_library,
         "String.mq_tmp:\n"       + .mq_tmp,
-        "\"123\".mq_md5:\n"      + "123".mq_md5,
         """
         String过滤 (取自然数)
         "1as2⅚3qwe4qwe5😊😞asd万".mq_substring(with: .naturalNumber)

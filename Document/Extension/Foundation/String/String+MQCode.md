@@ -1,7 +1,3 @@
-```
-.mq_md5
-```
-32位 小写 md5
 
 ```
 .mq_base64Encode(using: String.Encoding = .utf8)

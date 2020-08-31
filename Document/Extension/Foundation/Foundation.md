@@ -166,3 +166,11 @@ public func symmetricDifference(mq_in: String) -> Self
 ```
 
 简化`String`相关操作代码
+
+# Data
+
+```
+public var mq_MD5: String
+```
+
+32位十六进制小写 md5
