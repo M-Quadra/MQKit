@@ -14,13 +14,13 @@ extension Data {
     
     /// 32hex lowercased
     public var mq_MD5: String {
+        guard !self.isEmpty else { return "" }
+        
         if #available(iOS 13.0, *) {
             return Insecure.MD5.hash(data: self).map {
                 String(format: "%02hhx", $0)
             }.joined()
         }
-        
-        if self.count <= 0 { return "" }
         
         let dataPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: self.count)
         let mdPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: Int(CC_MD5_DIGEST_LENGTH))
