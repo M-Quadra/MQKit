@@ -8,17 +8,73 @@
 
 import UIKit
 
-extension CGPoint {
+public extension CGPoint {
     
-    init(mq_xy: CGFloat) {
-        self.init(x: mq_xy, y: mq_xy)
+    init(xy: CGFloat) {
+        self.init(x: xy, y: xy)
     }
     
-    init(mq_xy: Int) {
-        self.init(x: mq_xy, y: mq_xy)
+    init(xy: Int) {
+        self.init(x: xy, y: xy)
     }
     
-    init(mq_xy: Double) {
-        self.init(x: mq_xy, y: mq_xy)
+    init(xy: Double) {
+        self.init(x: xy, y: xy)
+    }
+}
+
+// MARK: - CGPoint {+|-} CGPoint
+public extension CGPoint {
+
+    static func +(a: CGPoint, b: CGPoint) -> CGPoint {
+        return CGPoint(x: a.x + b.x, y: a.y + b.y)
+    }
+
+    static func -(a: CGPoint, b: CGPoint) -> CGPoint {
+        return CGPoint(x: a.x - b.x, y: a.y - b.y)
+    }
+}
+
+// MARK: - CGPoint {+|-|*|/} CGFloat
+public extension CGPoint {
+    
+    static func +(a: CGPoint, b: CGFloat) -> CGPoint {
+        return CGPoint(x: a.x + b, y: a.y + b)
+    }
+    
+    static func -(a: CGPoint, b: CGFloat) -> CGPoint {
+        return CGPoint(x: a.x - b, y: a.y - b)
+    }
+    
+    static func *(a: CGPoint, b: CGFloat) -> CGPoint {
+        return CGPoint(x: a.x * b, y: a.y * b)
+    }
+    
+    static func /(a: CGPoint, b: CGFloat) -> CGPoint {
+        return CGPoint(x: a.x / b, y: a.y / b)
+    }
+}
+
+// MARK: - CGPoint {+=|-=|*=|/=} CGFloat
+public extension CGPoint {
+    
+    static func +=(a: inout CGPoint, b: CGFloat) {
+        a.x += b
+        a.y += b
+    }
+    
+    static func -=(a: inout CGPoint, b: CGFloat) {
+        a.x -= b
+        a.y -= b
+    }
+    
+    static func *=(a: inout CGPoint, b: CGFloat) {
+        a.x *= b
+        a.y *= b
+    }
+    
+    static func /=(a: inout CGPoint, b: CGFloat) {
+        a.x /= b
+        a.y /= b
     }
 }

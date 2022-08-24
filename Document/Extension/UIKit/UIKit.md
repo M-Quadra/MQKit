@@ -117,13 +117,19 @@ CGFloat.mq_radian(angle: )
 
 # CGPoint
 
-```
-init(mq_xy: CGFloat)
-init(mq_xy: Int)
-init(mq_xy: Double)
+```swift
+CGPoint(xy: {CGFloat | Int | Double})
 ```
 
 创建xy相同的Point
+
+```
+CGPoint {+ | -} CGPoint
+CGPoint {+|-|*|/} CGFloat
+CGPoint {+=|-=|*=|/=} CGFloat
+```
+
+运算符重载
 
 # CGSize
 
