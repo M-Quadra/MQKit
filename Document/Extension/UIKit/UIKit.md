@@ -18,40 +18,41 @@
 # UIColor
 
 ```
-init(hexString: String, alpha: CGFloat = 1)
+UIColor.random
 ```
 
-\#RRGGBB 通过HEX创建颜色
+获取一个随机颜色
 
+```swift
+UIColor.init(hex: String, alpha: CGFloat = 1)
+UIColor.hex(_ hex: String, alpha: CGFloat = 1) -> UIColor
 ```
-init(mq_backgroundColor: UIColor, frontColor: UIColor)
+
+通过HEX (\#RRGGBB) 创建颜色
+
+```swift
+UIColor.init(mq_backgroundColor: UIColor, frontColor: UIColor)
 ```
 
 混色
 
 ```
-.mq_random
-```
-
-获取一个随机颜色
-
-```
-.mq_inverseColor
+.inverse
 ```
 
 计算反色
 
-```
-.mq_red
-.mq_green
-.mq_blue
-.mq_alpha
+```swift
+.getRed
+.getGreen
+.getBlue
+.getAlpha
 ```
 
 获取RGBA
 
 ```
-.mq_mtlClearColor
+.mtlClearColor
 ```
 
 获取对应的`MTLClearColor`

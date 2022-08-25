@@ -67,7 +67,7 @@ extension UIImage {
         }
         
         var optImg: UIImage?
-        let opaque = color.mq_alpha == 1.0
+        let opaque = color.getAlpha == 1.0
         UIGraphicsBeginImageContextWithOptions(size, opaque, 0)
         if let context = UIGraphicsGetCurrentContext() {
             context.setFillColor(color.cgColor)

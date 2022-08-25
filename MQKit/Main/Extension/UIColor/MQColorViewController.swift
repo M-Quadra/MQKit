@@ -32,16 +32,16 @@ class MQColorViewController: UITableViewController {
         switch indexPath.section {
         case 0:
             cell.textLabel?.text = "UIColor.mq_random"
-            cell.backgroundColor = .mq_random
+            cell.backgroundColor = .random
         case 1:
             cell.textLabel?.text = """
-            UIColor(hexString: "#112233", alpha: 0.5)
+            UIColor.hex("#112233", alpha: 0.5)
             """
-            cell.backgroundColor = UIColor(hexString: "#112233", alpha: 0.5)
+            cell.backgroundColor = .hex("#112233", alpha: 0.5)
         case 2:
-            cell.textLabel?.text = "UIColor.red.mq_inverseColor()"
+            cell.textLabel?.text = "UIColor.red.inverse"
             cell.textLabel?.textColor = .red
-            cell.backgroundColor = UIColor.red.mq_inverseColor()
+            cell.backgroundColor = .red.inverse
         default: break
         }
         return cell

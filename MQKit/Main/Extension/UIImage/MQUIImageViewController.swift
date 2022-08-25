@@ -24,8 +24,8 @@ class MQUIImageViewController: UIViewController {
             let layer = CAGradientLayer()
             
             layer.colors = [
-                UIColor(hexString: "#FFFFFF").cgColor,
-                UIColor(hexString: "#000000").cgColor,
+                CGColor.hex("#FFFFFF"),
+                CGColor.hex("#000000"),
             ]
             layer.startPoint = CGPoint(x: 0, y: 0)
             layer.endPoint   = CGPoint(x: 1, y: 1)

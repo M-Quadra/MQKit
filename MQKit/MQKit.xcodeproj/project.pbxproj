@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71E722E28B72ACE00197402 /* CGColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E722D28B72ACE00197402 /* CGColor+MQ.swift */; };
+		E71E723128B72C0F00197402 /* UIColor+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723028B72C0F00197402 /* UIColor+Creator.swift */; };
+		E71E723828B746C800197402 /* UIColor+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723728B746C800197402 /* UIColor+Metal.swift */; };
 		E736F34024766E310016FF3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F33F24766E310016FF3C /* AppDelegate.swift */; };
 		E736F34224766E310016FF3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F34124766E310016FF3C /* SceneDelegate.swift */; };
 		E736F34424766E310016FF3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F34324766E310016FF3C /* ViewController.swift */; };
@@ -89,6 +92,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E71E722D28B72ACE00197402 /* CGColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+MQ.swift"; sourceTree = "<group>"; };
+		E71E723028B72C0F00197402 /* UIColor+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Creator.swift"; sourceTree = "<group>"; };
+		E71E723728B746C800197402 /* UIColor+Metal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Metal.swift"; sourceTree = "<group>"; };
 		E736F33D24766E310016FF3C /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E736F33F24766E310016FF3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E736F34124766E310016FF3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +188,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E71E722F28B72BEF00197402 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				E71E723028B72C0F00197402 /* UIColor+Creator.swift */,
+				E71E723728B746C800197402 /* UIColor+Metal.swift */,
+				E736F37624766F910016FF3C /* UIColor+MQ.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		E736F31924766DCC0016FF3C = {
 			isa = PBXGroup;
 			children = (
@@ -261,16 +277,17 @@
 		E736F36924766F910016FF3C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				E736F36A24766F910016FF3C /* UIImage */,
+				E71E722D28B72ACE00197402 /* CGColor+MQ.swift */,
 				E736F36D24766F910016FF3C /* CGPoint+MQ.swift */,
-				E736F36E24766F910016FF3C /* UIApplication */,
+				E736F37924766F910016FF3C /* CGRect+MQ.swift */,
 				E736F37124766F910016FF3C /* CGSize+MQ.swift */,
 				E736F37224766F910016FF3C /* Coordinate+MQ.swift */,
+				E736F36E24766F910016FF3C /* UIApplication */,
+				E71E722F28B72BEF00197402 /* UIColor */,
 				E736F37324766F910016FF3C /* UIDevice */,
-				E736F37624766F910016FF3C /* UIColor+MQ.swift */,
 				E736F37724766F910016FF3C /* UIFont+MQ.swift */,
+				E736F36A24766F910016FF3C /* UIImage */,
 				E736F37824766F910016FF3C /* UIView+MQ.swift */,
-				E736F37924766F910016FF3C /* CGRect+MQ.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -721,14 +738,17 @@
 				E736F3A924766F910016FF3C /* UIApplication+MQInfo.swift in Sources */,
 				E736F3B024766F910016FF3C /* UIView+MQ.swift in Sources */,
 				E736F3C824766F910016FF3C /* Data+MQCrypt.swift in Sources */,
+				E71E723128B72C0F00197402 /* UIColor+Creator.swift in Sources */,
 				E736F3CC24766F910016FF3C /* MQTaptic.swift in Sources */,
 				E736F3A624766F910016FF3C /* UIImage+MQMetal.swift in Sources */,
 				E736F3AC24766F910016FF3C /* UIDevice+MQSoftware.swift in Sources */,
 				E736F3B124766F910016FF3C /* CGRect+MQ.swift in Sources */,
 				E736F3CA24766F910016FF3C /* MQCrypt+AES.swift in Sources */,
 				E736F3A724766F910016FF3C /* CGPoint+MQ.swift in Sources */,
+				E71E722E28B72ACE00197402 /* CGColor+MQ.swift in Sources */,
 				E736F3AD24766F910016FF3C /* UIDevice+MQHardware.swift in Sources */,
 				E736F3AA24766F910016FF3C /* CGSize+MQ.swift in Sources */,
+				E71E723828B746C800197402 /* UIColor+Metal.swift in Sources */,
 				E736F3B724766F910016FF3C /* Decimal+MQ.swift in Sources */,
 				E736F3A324766F910016FF3C /* MQTableView.swift in Sources */,
 				E7CF6DB024D121B0004F3C66 /* CharacterSet+MQ.swift in Sources */,
