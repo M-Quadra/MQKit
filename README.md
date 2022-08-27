@@ -8,7 +8,7 @@
 
 许久之后可能会更新一波UIView相关的内容
 
-既然不冲突, 似乎没必要加前缀
+既然不冲突, 就没必要加前缀
 
 随缘更新
 
@@ -21,20 +21,6 @@ git@github.com:M-Quadra/MQKit.git
 or
 https://github.com/M-Quadra/MQKit.git
 ```
-
-- CocoaPods
-
-```
-pod 'MQKit', :git => 'git@github.com:M-Quadra/MQKit.git'
-or
-pod 'MQKit', :git => 'https://github.com/M-Quadra/MQKit.git'
-```
-
-暂不支持`Objective-C`(懒), 可尝试手动打`framework`
-
-由于`SwiftPM`目前不支持资源引用, 相关功能已移除
-
-还不敢发正式库\_(ˊཀˋ」∠)_
 
 # 方法扩展
 
