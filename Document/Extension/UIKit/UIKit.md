@@ -125,8 +125,9 @@ CGPoint(xy: {CGFloat | Int | Double})
 创建xy相同的Point
 
 ```
-CGPoint {+ | -} CGPoint
-CGPoint {+|-|*|/} CGFloat
+CGPoint {+|-}   CGPoint
+CGPoint {+=|-=} CGPoint
+CGPoint {+|-|*|/}     CGFloat
 CGPoint {+=|-=|*=|/=} CGFloat
 ```
 

@@ -8,21 +8,6 @@
 
 import UIKit
 
-public extension CGPoint {
-    
-    init(xy: CGFloat) {
-        self.init(x: xy, y: xy)
-    }
-    
-    init(xy: Int) {
-        self.init(x: xy, y: xy)
-    }
-    
-    init(xy: Double) {
-        self.init(x: xy, y: xy)
-    }
-}
-
 // MARK: - CGPoint {+|-} CGPoint
 public extension CGPoint {
 
@@ -32,6 +17,20 @@ public extension CGPoint {
 
     static func -(a: CGPoint, b: CGPoint) -> CGPoint {
         return CGPoint(x: a.x - b.x, y: a.y - b.y)
+    }
+}
+
+// MARK: - CGPoint {+=|-=} CGPoint
+public extension CGPoint {
+    
+    static func +=(a: inout CGPoint, b: CGPoint) {
+        a.x += b.x
+        a.y += b.y
+    }
+    
+    static func -=(a: inout CGPoint, b: CGPoint) {
+        a.x -= b.x
+        a.y -= b.y
     }
 }
 
