@@ -124,7 +124,7 @@ CGPoint(xy: {CGFloat | Int | Double})
 
 创建xy相同的Point
 
-```
+```swift
 CGPoint {+|-}   CGPoint
 CGPoint {+=|-=} CGPoint
 CGPoint {+|-|*|/}     CGFloat
@@ -135,25 +135,32 @@ CGPoint {+=|-=|*=|/=} CGFloat
 
 # CGSize
 
+```swift
+CGSize.max
 ```
-init(mq_edge: CGFloat)
-init(mq_edge: Int)
-init(mq_edge: Double)
+
+取CGFloat上限
+
+```swift
+CGSize.init(edge: CGFloat)
+CGSize.init(edge: Int)
+CGSize.init(edge: Double)
 ```
 
 创建宽高相同的Size
 
-```
-.mq_area
+```swift
+.area
 ```
 
 面积
 
-```
-.mq_isValidated() -> Bool
+```swift
+CGSize {+|-|*|/} CGFloat
+CGSize {+=|-=|*=|/=} CGFloat
 ```
 
-有效性检查, !<=0 && !isInf() && !isNaN()
+运算符重载
 
 # UICollectionView
 

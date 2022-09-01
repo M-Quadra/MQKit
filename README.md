@@ -22,7 +22,7 @@ or
 https://github.com/M-Quadra/MQKit.git
 ```
 
-# 方法扩展
+# Extension
 
 1. [Foundation](Document/Extension/Foundation/Foundation.md)
 2. [UIKit](Document/Extension/UIKit/UIKit.md)

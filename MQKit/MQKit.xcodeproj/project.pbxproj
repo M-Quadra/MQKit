@@ -11,6 +11,7 @@
 		E71E723128B72C0F00197402 /* UIColor+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723028B72C0F00197402 /* UIColor+Creator.swift */; };
 		E71E723828B746C800197402 /* UIColor+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723728B746C800197402 /* UIColor+Metal.swift */; };
 		E72C9E7928B8A2A500DC6C02 /* CGPoint+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C9E7828B8A2A500DC6C02 /* CGPoint+Creator.swift */; };
+		E72C9E7C28B8A37B00DC6C02 /* CGSize+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C9E7B28B8A37B00DC6C02 /* CGSize+Creator.swift */; };
 		E736F34024766E310016FF3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F33F24766E310016FF3C /* AppDelegate.swift */; };
 		E736F34224766E310016FF3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F34124766E310016FF3C /* SceneDelegate.swift */; };
 		E736F34424766E310016FF3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F34324766E310016FF3C /* ViewController.swift */; };
@@ -97,6 +98,7 @@
 		E71E723028B72C0F00197402 /* UIColor+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Creator.swift"; sourceTree = "<group>"; };
 		E71E723728B746C800197402 /* UIColor+Metal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Metal.swift"; sourceTree = "<group>"; };
 		E72C9E7828B8A2A500DC6C02 /* CGPoint+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Creator.swift"; sourceTree = "<group>"; };
+		E72C9E7B28B8A37B00DC6C02 /* CGSize+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Creator.swift"; sourceTree = "<group>"; };
 		E736F33D24766E310016FF3C /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E736F33F24766E310016FF3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E736F34124766E310016FF3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,15 @@
 			path = CGPoint;
 			sourceTree = "<group>";
 		};
+		E72C9E7A28B8A2FA00DC6C02 /* CGSize */ = {
+			isa = PBXGroup;
+			children = (
+				E736F37124766F910016FF3C /* CGSize+MQ.swift */,
+				E72C9E7B28B8A37B00DC6C02 /* CGSize+Creator.swift */,
+			);
+			path = CGSize;
+			sourceTree = "<group>";
+		};
 		E736F31924766DCC0016FF3C = {
 			isa = PBXGroup;
 			children = (
@@ -290,8 +301,8 @@
 			children = (
 				E71E722D28B72ACE00197402 /* CGColor+MQ.swift */,
 				E736F37924766F910016FF3C /* CGRect+MQ.swift */,
-				E736F37124766F910016FF3C /* CGSize+MQ.swift */,
 				E72C9E7728B8A28300DC6C02 /* CGPoint */,
+				E72C9E7A28B8A2FA00DC6C02 /* CGSize */,
 				E736F37224766F910016FF3C /* Coordinate+MQ.swift */,
 				E736F36E24766F910016FF3C /* UIApplication */,
 				E71E722F28B72BEF00197402 /* UIColor */,
@@ -757,6 +768,7 @@
 				E736F3CA24766F910016FF3C /* MQCrypt+AES.swift in Sources */,
 				E736F3A724766F910016FF3C /* CGPoint+MQ.swift in Sources */,
 				E71E722E28B72ACE00197402 /* CGColor+MQ.swift in Sources */,
+				E72C9E7C28B8A37B00DC6C02 /* CGSize+Creator.swift in Sources */,
 				E736F3AD24766F910016FF3C /* UIDevice+MQHardware.swift in Sources */,
 				E736F3AA24766F910016FF3C /* CGSize+MQ.swift in Sources */,
 				E71E723828B746C800197402 /* UIColor+Metal.swift in Sources */,
