@@ -116,52 +116,6 @@ CGFloat.mq_radian(angle: )
 2. [软件相关信息](./UIDevice/UIDevice+MQSoftware.md)
 3. [设备判断](./UIDevice/设备判断.md)
 
-# CGPoint
-
-```swift
-CGPoint(xy: {CGFloat | Int | Double})
-```
-
-创建xy相同的Point
-
-```swift
-CGPoint {+|-}   CGPoint
-CGPoint {+=|-=} CGPoint
-CGPoint {+|-|*|/}     CGFloat
-CGPoint {+=|-=|*=|/=} CGFloat
-```
-
-运算符重载
-
-# CGSize
-
-```swift
-CGSize.max
-```
-
-取CGFloat上限
-
-```swift
-CGSize.init(edge: CGFloat)
-CGSize.init(edge: Int)
-CGSize.init(edge: Double)
-```
-
-创建宽高相同的Size
-
-```swift
-.area
-```
-
-面积
-
-```swift
-CGSize {+|-|*|/} CGFloat
-CGSize {+=|-=|*=|/=} CGFloat
-```
-
-运算符重载
-
 # UICollectionView
 
 ```
@@ -173,11 +127,3 @@ CGSize {+=|-=|*=|/=} CGFloat
 复用方法, 后续可能会加入注册
 
 参考[MQCollectionView](../../MQ_Class.md)
-
-# CGRect
-
-```
-.init(mq_size: CGSize)
-```
-
-等价于 `.init(origin: .zero, size: mq_size)`
