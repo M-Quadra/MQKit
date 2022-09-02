@@ -6,7 +6,7 @@
 //  Copyright © 2019 M_noAria. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 // MARK: - CGPoint {+|-} CGPoint
 public extension CGPoint {

@@ -6,7 +6,7 @@
 //  Copyright © 2022 M_noAria. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 public extension CGPoint {
     

@@ -12,8 +12,8 @@ class MQUIApplicationViewController: UITableViewController {
 
     let key = String(cString: class_getName(UITableViewCell.self))
     let titleAry = [
-        "UIApplication.mq_appDisplayName:\n"      + UIApplication.mq_appDisplayName,
-        "UIApplication.mq_appBundleIdentifier:\n" + UIApplication.mq_appBundleIdentifier,
+        "Bundle.main.displayName:\n"      + (Bundle.main.displayName ?? ""),
+        "Bundle.main.bundleIdentifier:\n" + (Bundle.main.bundleIdentifier ?? ""),
     ]
     
     override func viewDidLoad() {

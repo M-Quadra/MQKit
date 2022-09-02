@@ -1,6 +1,6 @@
 # Foundation 相关扩展
 
-# String
+## String
 
 1. [路径相关](./String/String+MQPath.md)
 2. [标示相关](./String/String+MQMark.md) (考虑迁移至UIDevice)
@@ -11,14 +11,14 @@
 7. [大小相关](./String/String+MQSize.md)
 8. [正则相关](./String/String+MQRegularExpression.md)
 
-# StringEncoding
+## StringEncoding
 
 1. [CFStringEncodings 编码相关](./StringEncoding/CFStringEncodings+MQCode.md)
 2. [CFStringEncodings 枚举相关](./StringEncoding/CFStringEncodings+MQList.md)
 2. [StringEncoding 编码相关](./StringEncoding/StringEncoding+MQCode.md)
 3. [StringEncoding 枚举相关](./StringEncoding/StringEncoding+MQList.md)
 
-# NSMutableAttributedString
+## NSMutableAttributedString
 
 ```
 var mq_color: UIColor?
@@ -58,7 +58,7 @@ NSParagraphStyle.alignment
 
 局部文字颜色设置
 
-# URL
+## URL
 
 ```
 .mq_documents
@@ -69,7 +69,7 @@ NSParagraphStyle.alignment
 
 获取`Documents``Caches``Library``tmp`目录URL
 
-# Date
+## Date
 
 ```
 .mq_year
@@ -94,7 +94,7 @@ func mq_stringValue(formatter: String, timeZone: TimeZone = TimeZone.current) ->
 
 Date 转 String
 
-# Dictionary
+## Dictionary
 
 ```
 .mq_jsonString(encoding: String.Encoding = .utf8) -> String
@@ -103,7 +103,7 @@ Date 转 String
 dic转json
 
 
-# Array
+## Array
 
 ```
 .mq_jsonString(encoding: String.Encoding = .utf8) -> String
@@ -111,7 +111,7 @@ dic转json
 
 Array转json
 
-# OperationQueue
+## OperationQueue
 
 ```
 .mq_single
@@ -131,13 +131,13 @@ Array转json
 
 并行队列, 最大并发数 = 线程数
 
-# Number
+## Number
 
 1. [整数相关](./Number/FixedWidthInteger+MQ.md)
 2. [Decimal相关](./Number/Decimal+MQ.md)
 3. [幂运算](./Number/Pow+MQ.md)
 
-# NSRegularExpression
+## NSRegularExpression
 
 ```
 public func mq_firstMatch(in string: String) -> NSTextCheckingResult?
@@ -151,7 +151,7 @@ public func mq_matches(in string: String) -> [NSTextCheckingResult]
 
 由于懒得写范围加了这个全文匹配的方法
 
-# CharacterSet
+## CharacterSet
 
 ```
 public func union(mq_in: String) -> Self
@@ -161,10 +161,30 @@ public func symmetricDifference(mq_in: String) -> Self
 
 简化`String`相关操作代码
 
-# Data
+## Data
 
 ```
 public var mq_MD5: String
 ```
 
 32位十六进制小写 md5
+
+## Bundle
+
+```
+.displayName
+```
+
+应用名
+
+```
+.version
+```
+
+应用版本号
+
+```
+.bluidVersion
+```
+
+应用构建版本号

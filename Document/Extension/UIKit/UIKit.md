@@ -102,7 +102,6 @@ CGFloat.mq_radian(angle: )
 # UIApplication
 
 1. [常用三方 URL Scheme](./UIApplication/UIApplication+MQThird.md)
-2. [应用相关信息](./UIApplication/UIApplication+MQInfo.md)
 
 
 # UIImage

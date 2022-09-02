@@ -6,7 +6,7 @@
 //  Copyright © 2020 M_noAria. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 // MARK: - CGRect {+|-} CGPoint
 public extension CGRect {
