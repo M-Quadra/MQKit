@@ -26,7 +26,7 @@ extension MTLTexture {
             return self.mq_uiImageWithCGImage()
         }
         
-        return self.mq_uiImageWithCIImage()?.mq_image(orientation: .downMirrored)
+        return self.mq_uiImageWithCIImage()?.orientation(.downMirrored)
     }
     
     fileprivate func mq_uiImageWithCGImage() -> UIImage? {

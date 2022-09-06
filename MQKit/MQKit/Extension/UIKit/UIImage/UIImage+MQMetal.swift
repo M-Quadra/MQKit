@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImage {
     
-    public func mq_mtlTexture2D(device: MTLDevice) -> MTLTexture? {
+    public func mtlTexture2D(device: MTLDevice) -> MTLTexture? {
         guard let cgImg = self.cgImage else {
             return nil
         }

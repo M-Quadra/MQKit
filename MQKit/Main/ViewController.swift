@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         self.view.addSubview(tsView)
         tsView.mq_left = 100
         
-        let radian = Double.mq_radian(angle: 45)
+        let radian = Double.radian(angle: 45)
         
         print(tan(radian))
     }

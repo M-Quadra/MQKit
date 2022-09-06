@@ -14,7 +14,7 @@ class MQUIImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIImage(named: "image0")?.mq_averageColor
+        self.view.backgroundColor = UIImage(named: "image0")?.averageColor
         
         let imgv = UIImageView(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
         self.view.addSubview(imgv)
@@ -32,7 +32,7 @@ class MQUIImageViewController: UIViewController {
             layer.frame = CGRect(origin: .zero, size: imgSiz)
             
             // alpha判断太麻烦了，交给输入得了
-            let img = UIImage(mq_layer: layer, alpha: false)
+            let img = UIImage.layer(layer)
             
             DispatchQueue.main.async {
                 imgv.image = img

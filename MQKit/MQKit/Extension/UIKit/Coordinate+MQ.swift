@@ -8,32 +8,40 @@
 
 import UIKit
 
-extension Double {
-    public static func mq_radian(angle: Double) -> Double {
+public extension Double {
+    
+    static func radian(angle: Double) -> Double {
         return angle * Double.pi / 180
     }
-    public static func mq_radian(angle: Int) -> Double {
-        return self.mq_radian(angle: Double(angle))
+    
+    static func radian(angle: Int) -> Double {
+        return self.radian(angle: Double(angle))
     }
-    public static func mq_radian(angle: CGFloat) -> Double {
-        return Double(CGFloat.mq_radian(angle: angle))
+    
+    static func radian(angle: CGFloat) -> Double {
+        return angle * CGFloat.pi / 180.0
     }
-    public static func mq_radian(angle: Float) -> Double {
-        return self.mq_radian(angle: Double(angle))
+    
+    static func radian(angle: Float) -> Double {
+        return Double(angle * Float.pi / 180.0)
     }
 }
 
-extension CGFloat {
-    public static func mq_radian(angle: Double) -> CGFloat {
-        return CGFloat(Double.mq_radian(angle: angle))
+public extension CGFloat {
+    
+    static func radian(angle: Double) -> CGFloat {
+        return angle * Double.pi / 180
     }
-    public static func mq_radian(angle: Int) -> CGFloat {
-        return self.mq_radian(angle: Double(angle))
+    
+    static func radian(angle: Int) -> CGFloat {
+        return self.radian(angle: Double(angle))
     }
-    public static func mq_radian(angle: CGFloat) -> CGFloat {
+    
+    static func radian(angle: CGFloat) -> CGFloat {
         return angle * CGFloat.pi / 180
     }
-    public static func mq_radian(angle: Float) -> CGFloat {
+    
+    static func radian(angle: Float) -> CGFloat {
         return CGFloat(angle * Float.pi / 180)
     }
 }

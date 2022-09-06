@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71DA96928B77FF9002A3DBD /* UIImage+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71DA96828B77FF9002A3DBD /* UIImage+Creator.swift */; };
 		E71E722E28B72ACE00197402 /* CGColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E722D28B72ACE00197402 /* CGColor+MQ.swift */; };
 		E71E723128B72C0F00197402 /* UIColor+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723028B72C0F00197402 /* UIColor+Creator.swift */; };
 		E71E723828B746C800197402 /* UIColor+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723728B746C800197402 /* UIColor+Metal.swift */; };
@@ -95,6 +96,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E71DA96828B77FF9002A3DBD /* UIImage+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Creator.swift"; sourceTree = "<group>"; };
 		E71E722D28B72ACE00197402 /* CGColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+MQ.swift"; sourceTree = "<group>"; };
 		E71E723028B72C0F00197402 /* UIColor+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Creator.swift"; sourceTree = "<group>"; };
 		E71E723728B746C800197402 /* UIColor+Metal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Metal.swift"; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		E736F36A24766F910016FF3C /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
+				E71DA96828B77FF9002A3DBD /* UIImage+Creator.swift */,
 				E736F36B24766F910016FF3C /* UIImage+MQ.swift */,
 				E736F36C24766F910016FF3C /* UIImage+MQMetal.swift */,
 			);
@@ -806,6 +809,7 @@
 				E7A4386F24F8AB0A0055CB17 /* Data+MD5.swift in Sources */,
 				E736F3CD24766F910016FF3C /* UITextField+MQ.swift in Sources */,
 				E79C72C224783AB500AE327D /* MTLClearColor+MQ.swift in Sources */,
+				E71DA96928B77FF9002A3DBD /* UIImage+Creator.swift in Sources */,
 				E736F3B824766F910016FF3C /* Pow+MQ.swift in Sources */,
 				E736F3BE24766F910016FF3C /* String+MQCode.swift in Sources */,
 				E7F5B00324D1952200C929A4 /* String+MQRegularExpression.swift in Sources */,
