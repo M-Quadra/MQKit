@@ -51,7 +51,6 @@
 		E736F3BD24766F910016FF3C /* String+MQPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38924766F910016FF3C /* String+MQPath.swift */; };
 		E736F3BE24766F910016FF3C /* String+MQCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38A24766F910016FF3C /* String+MQCode.swift */; };
 		E736F3BF24766F910016FF3C /* String+MQSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38B24766F910016FF3C /* String+MQSize.swift */; };
-		E736F3C024766F910016FF3C /* String+MQValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38C24766F910016FF3C /* String+MQValue.swift */; };
 		E736F3C124766F910016FF3C /* String+MQSub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38D24766F910016FF3C /* String+MQSub.swift */; };
 		E736F3C224766F910016FF3C /* String+MQMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38E24766F910016FF3C /* String+MQMark.swift */; };
 		E736F3C324766F910016FF3C /* String+MQChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38F24766F910016FF3C /* String+MQChar.swift */; };
@@ -143,7 +142,6 @@
 		E736F38924766F910016FF3C /* String+MQPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQPath.swift"; sourceTree = "<group>"; };
 		E736F38A24766F910016FF3C /* String+MQCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQCode.swift"; sourceTree = "<group>"; };
 		E736F38B24766F910016FF3C /* String+MQSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQSize.swift"; sourceTree = "<group>"; };
-		E736F38C24766F910016FF3C /* String+MQValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQValue.swift"; sourceTree = "<group>"; };
 		E736F38D24766F910016FF3C /* String+MQSub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQSub.swift"; sourceTree = "<group>"; };
 		E736F38E24766F910016FF3C /* String+MQMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQMark.swift"; sourceTree = "<group>"; };
 		E736F38F24766F910016FF3C /* String+MQChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQChar.swift"; sourceTree = "<group>"; };
@@ -398,7 +396,6 @@
 				E736F38924766F910016FF3C /* String+MQPath.swift */,
 				E736F38A24766F910016FF3C /* String+MQCode.swift */,
 				E736F38B24766F910016FF3C /* String+MQSize.swift */,
-				E736F38C24766F910016FF3C /* String+MQValue.swift */,
 				E736F38D24766F910016FF3C /* String+MQSub.swift */,
 				E736F38E24766F910016FF3C /* String+MQMark.swift */,
 				E736F38F24766F910016FF3C /* String+MQChar.swift */,
@@ -775,7 +772,6 @@
 				E736F3C324766F910016FF3C /* String+MQChar.swift in Sources */,
 				E736F3A224766F910016FF3C /* MQCollectionView.swift in Sources */,
 				E736F3BD24766F910016FF3C /* String+MQPath.swift in Sources */,
-				E736F3C024766F910016FF3C /* String+MQValue.swift in Sources */,
 				E736F3AE24766F910016FF3C /* UIColor+MQ.swift in Sources */,
 				E736F3BB24766F910016FF3C /* StringEncoding+MQCode.swift in Sources */,
 				E736F3CF24766F910016FF3C /* MQHorizontalPagingView.swift in Sources */,
