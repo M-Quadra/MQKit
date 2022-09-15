@@ -10,12 +10,11 @@ import Foundation
 
 extension String {
     
-    public func mq_firstMatch(in exp: NSRegularExpression) -> Self? {
+    public func mq_firstMatch(in exp: NSRegularExpression) -> String? {
         guard let result = exp.mq_firstMatch(in: self) else {
             return nil
         }
-        
-        return self.mq_substring(with: result.range)
+        return NSString(string: self).substring(with: result.range)
     }
     
     public func mq_firstMatchResult(in exp: NSRegularExpression) -> NSTextCheckingResult? {

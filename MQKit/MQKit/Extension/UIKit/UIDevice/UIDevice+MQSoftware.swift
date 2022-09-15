@@ -156,7 +156,7 @@ extension UIDevice {
     
     public func mq_systemUserAgent(_ closure: @escaping (_: String)->Void) {
         let isMainThread = Thread.isMainThread
-        if UIDevice.userAgentCache.mq_count > 0 {
+        if UIDevice.userAgentCache.cachedCount > 0 {
             self.userAgentCallback(closure, isMainThread: isMainThread)
         }
         
@@ -175,7 +175,7 @@ extension UIDevice {
             
             webView.evaluateJavaScript("navigator.userAgent") { (result, error) in
                 let ua = (result as? String) ?? ""
-                if ua.mq_count > 0 {
+                if ua.cachedCount > 0 {
                     UIDevice.userAgentCache = ua
                 }
                 

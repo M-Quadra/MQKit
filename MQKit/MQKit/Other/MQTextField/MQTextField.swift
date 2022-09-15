@@ -71,7 +71,7 @@ fileprivate class MQTextFieldDelegator: NSObject, UITextFieldDelegate {
             return
         }
         
-        field.text = text.mq_substring(with: 0..<field.maxTextCount)
+        field.text = text[0..<field.maxTextCount].stringValue
         field.delegate_?.textField?(field, textDidChange: field.text ?? "")
     }
 }
