@@ -88,7 +88,7 @@ public class MQHorizontalPagingView: UIView {
         self.viewInfo = info
         super.init(frame: frame)
         
-        self.scrollView.mq_width = self.viewInfo.pageWidth
+        self.scrollView.width = self.viewInfo.pageWidth
         self.scrollView.delegate = self.scrollViewDelegate
         self.scrollViewDelegate.prePagingView = self
         
@@ -136,8 +136,8 @@ public class MQHorizontalPagingView: UIView {
         
         var contentSiz = self.collectionView.contentSize
         let pageWidth = self.viewInfo.pageWidth
-        if pageWidth < self.collectionView.mq_width {
-            contentSiz.width -= self.collectionView.mq_width - pageWidth
+        if pageWidth < self.collectionView.width {
+            contentSiz.width -= self.collectionView.width - pageWidth
         }
         
         if contentSiz == self.lastContentSize {
@@ -290,7 +290,7 @@ UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFl
             return .zero
         }
         
-        let siz = CGSize(width: pgView.viewInfo.cellWidth, height: pgView.mq_height)
+        let siz = CGSize(width: pgView.viewInfo.cellWidth, height: pgView.height)
         return siz
     }
     

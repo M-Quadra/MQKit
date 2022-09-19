@@ -19,7 +19,7 @@ class MQUIImageViewController: UIViewController {
         let imgv = UIImageView(frame: CGRect(x: 0, y: 100, width: 100, height: 100))
         self.view.addSubview(imgv)
         
-        let imgSiz = imgv.mq_size
+        let imgSiz = imgv.size
         DispatchQueue.global().async {
             let layer = CAGradientLayer()
             

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let tsView = UIView(frame: CGRect(x: 0, y: 80, width: 50, height: 50))
         tsView.backgroundColor = .random
         self.view.addSubview(tsView)
-        tsView.mq_left = 100
+        tsView.left = 100
         
         let radian = Double.radian(angle: 45)
         

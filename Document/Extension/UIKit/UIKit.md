@@ -59,36 +59,55 @@ UIColor.init(mq_backgroundColor: UIColor, frontColor: UIColor)
 
 # UIView
 
-```
-.mq_top
-.mq_left
-.mq_bottom
-.mq_right
-.mq_size
-.mq_width
-.mq_height
+```swift
+.top
+.left
+.bottom
+.right
+.width
+.height
+.centerX
+.centerY
+.origin
+.size
 ```
 
 修改对应UIView属性
 
+
+
 ```
-.mq_parentViewController
+.parentViewController
 ```
 
 寻找UIView的上层VC
 
-```
-.mq_setShadow(offset: CGSize, effect: CGFloat, color: UIColor)
+
+
+```swift
+.setShadow(offset: CGSize, effect: CGFloat, color: UIColor)
 ```
 
 设置阴影，使用贴近标注的命名
 
 
-```
-.mq_shadowPathToFit
+
+
+```swift
+.shadowPathToFit()
 ```
 
 根据bounds创建shadowPath
+
+
+
+```swift
+.addSubviews(_ views: [UIView]) -> Self
+```
+
+批量添加子视图
+
+
 
 # 数值
 

@@ -18,10 +18,10 @@ class MQHorizontalPagingViewController: UIViewController {
         let gapX:CGFloat    = 30
         let gapCell:CGFloat = 10
         
-        let rct = CGRect(x: 0, y: 200, width: self.view.mq_width, height: 50)
+        let rct = CGRect(x: 0, y: 200, width: self.view.width, height: 50)
         let pgView = MQHorizontalPagingView(
             frame: rct,
-            info: .init(edgeSpacing: gapX, cellSpacing: gapCell, cellWidth: self.view.mq_width - gapX*2, pageWidth: self.view.mq_width - gapX*2 + gapCell))
+            info: .init(edgeSpacing: gapX, cellSpacing: gapCell, cellWidth: self.view.width - gapX*2, pageWidth: self.view.width - gapX*2 + gapCell))
         pgView.backgroundColor = .red
         self.view.addSubview(pgView)
         
