@@ -1,6 +1,6 @@
 # UIKit 相关扩展
 
-# UIFont
+## UIFont
 
 ```
 .mq_allFontNames
@@ -15,7 +15,7 @@
 
 获取字体文件对应的`fontName`
 
-# UIColor
+## UIColor
 
 ```
 UIColor.random
@@ -57,7 +57,7 @@ UIColor.init(mq_backgroundColor: UIColor, frontColor: UIColor)
 
 获取对应的`MTLClearColor`
 
-# UIView
+## UIView
 
 ```swift
 .top
@@ -109,7 +109,7 @@ UIColor.init(mq_backgroundColor: UIColor, frontColor: UIColor)
 
 
 
-# 数值
+## 数值
 
 ```
 Double.mq_radian(angle: )
@@ -118,31 +118,75 @@ CGFloat.mq_radian(angle: )
 
 角度值转弧度值
 
-# UIApplication
+## UIApplication
 
 1. [常用三方 URL Scheme](./UIApplication/UIApplication+MQThird.md)
 
 
-# UIImage
+## UIImage
 
 1. [通用方法](UIImage/UIImage+MQ.md)
 2. [构造相关](./UIImage/UIImage+Creator.md)
 3. [Metal相关](UIImage/UIImage+MQMetal.md)
 
-# UIDevice
+## UIDevice
 
 1. [硬件相关信息](./UIDevice/UIDevice+MQHardware.md)
 2. [软件相关信息](./UIDevice/UIDevice+MQSoftware.md)
 3. [设备判断](./UIDevice/设备判断.md)
 
-# UICollectionView
+## UICollectionView
 
-```
-.mq_dequeue<T>(reusableCell: MQReusableCell<T>) -> T
-.mq_dequeue<T>(reusableHeader: MQReusableView<T>) -> T
-.mq_dequeue<T>(reusableFooter: MQReusableView<T>) -> T
+```swift
+UICollectionView(layout: UICollectionViewLayout)
 ```
 
-复用方法, 后续可能会加入注册
+等效`init(frame: .zero, collectionViewLayout: layout)`
 
-参考[MQCollectionView](../../MQ_Class.md)
+
+
+```swift
+.register(cells: [UICollectionViewCell.Type])
+```
+
+批量注册Cell
+
+
+
+```swift
+.register(header: UICollectionReusableView.Type)
+```
+
+注册header, 使用`UICollectionElementKindSectionHeader`
+
+
+
+```swift
+.register(footer: UICollectionReusableView.Type)
+```
+
+注册footer, 使用`UICollectionElementKindSectionFooter`
+
+
+
+```
+.dequeue<T: UICollectionViewCell>(cell: T.Type = T.self, for indexPath: IndexPath) -> T
+```
+
+复用Cell
+
+
+
+```
+.dequeue<T: UICollectionReusableView>(header: T.Type, for indexPath: IndexPath) -> T
+```
+
+复用header, 使用`UICollectionElementKindSectionHeader`
+
+
+
+```
+.dequeue<T: UICollectionReusableView>(footer: T.Type, for indexPath: IndexPath) -> T
+```
+
+复用footer, 使用`UICollectionElementKindSectionFooter`
