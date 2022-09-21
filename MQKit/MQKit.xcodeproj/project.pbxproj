@@ -80,6 +80,7 @@
 		E736F3F624766FC10016FF3C /* MQShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F3E724766FC10016FF3C /* MQShowViewController.swift */; };
 		E736F3F724766FC10016FF3C /* MQShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F3E924766FC10016FF3C /* MQShowCell.swift */; };
 		E736F3F824766FC10016FF3C /* image0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E736F3EC24766FC10016FF3C /* image0@2x.png */; };
+		E74CA04728D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */; };
 		E74CA04C28D9A3B900CD4DC9 /* UICollectionView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */; };
 		E79231E028D230CC00C849FA /* String+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79231DF28D230CC00C849FA /* String+MQ.swift */; };
 		E79C72C224783AB500AE327D /* MTLClearColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */; };
@@ -177,6 +178,7 @@
 		E736F3E724766FC10016FF3C /* MQShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQShowViewController.swift; sourceTree = "<group>"; };
 		E736F3E924766FC10016FF3C /* MQShowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQShowCell.swift; sourceTree = "<group>"; };
 		E736F3EC24766FC10016FF3C /* image0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image0@2x.png"; sourceTree = "<group>"; };
+		E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutGroup+MQ.swift"; sourceTree = "<group>"; };
 		E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+MQ.swift"; sourceTree = "<group>"; };
 		E79231DF28D230CC00C849FA /* String+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQ.swift"; sourceTree = "<group>"; };
 		E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLClearColor+MQ.swift"; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				E736F37224766F910016FF3C /* Coordinate+MQ.swift */,
+				E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */,
 				E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */,
 				E736F36E24766F910016FF3C /* UIApplication */,
 				E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */,
@@ -793,6 +796,7 @@
 				E736F3AF24766F910016FF3C /* UIFont+MQ.swift in Sources */,
 				E736F3A424766F910016FF3C /* MTLTexture+MQ.swift in Sources */,
 				E725073B28D8886800378A7D /* UIView+Shortcut.swift in Sources */,
+				E74CA04728D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift in Sources */,
 				E736F3AB24766F910016FF3C /* Coordinate+MQ.swift in Sources */,
 				E736F3C224766F910016FF3C /* String+MQMark.swift in Sources */,
 				E736F3B324766F910016FF3C /* Array+MQ.swift in Sources */,

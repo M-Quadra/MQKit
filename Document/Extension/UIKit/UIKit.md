@@ -201,3 +201,14 @@ UICollectionView(layout: UICollectionViewLayout)
 ```
 
 清空section下的item
+
+
+
+## NSCollectionLayoutGroup
+
+```swift
+.section
+```
+
+等效`NSCollectionLayoutSection(group: group)`, 从头开始创建section太麻烦了
+
