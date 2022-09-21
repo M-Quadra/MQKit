@@ -190,3 +190,14 @@ UICollectionView(layout: UICollectionViewLayout)
 ```
 
 复用footer, 使用`UICollectionElementKindSectionFooter`
+
+
+
+## NSDiffableDataSourceSnapshot
+
+```swift
+.deleteItems(inSection section: SectionIdentifierType)
+.deleteItems(inSections sections: [SectionIdentifierType])
+```
+
+清空section下的item
