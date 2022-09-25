@@ -12,6 +12,6 @@ import UIKit
 public extension NSCollectionLayoutGroup {
     
     var section: NSCollectionLayoutSection {
-        NSCollectionLayoutSection(group: self)
+        return NSCollectionLayoutSection(group: self)
     }
 }

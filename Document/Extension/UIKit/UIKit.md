@@ -207,8 +207,25 @@ UICollectionView(layout: UICollectionViewLayout)
 ## NSCollectionLayoutGroup
 
 ```swift
-.section
+.section: NSCollectionLayoutSection
 ```
 
 等效`NSCollectionLayoutSection(group: group)`, 从头开始创建section太麻烦了
 
+
+
+## UICollectionViewDiffableDataSource
+
+```swift
+.supplementaryViewProvider(_ setter: @escaping UICollectionViewDiffableDataSource<SectionIdentifierType, ItemIdentifierType>.SupplementaryViewProvider)
+```
+
+等效`.supplementaryViewProvider`, 套func手动开启闭包补全
+
+
+
+```swift
+.emptySnapshot: NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType>
+```
+
+等效空Snapshot创建, 原始方法太长, 直接替换
