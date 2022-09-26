@@ -229,3 +229,29 @@ UICollectionView(layout: UICollectionViewLayout)
 ```
 
 等效空Snapshot创建, 原始方法太长, 直接替换
+
+
+
+## NSCollectionLayoutSize
+
+```swift
+static var fill: Self
+```
+
+等效`widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)`
+
+
+
+```swift
+static func width(_ width: NSCollectionLayoutDimension) -> Self
+```
+
+等效`widthDimension: width, heightDimension: .fractionalHeight(1)`
+
+
+
+```swift
+static func height(_ height: NSCollectionLayoutDimension) -> Self
+```
+
+等效`widthDimension: .fractionalWidth(1), heightDimension: height`
