@@ -255,3 +255,21 @@ static func height(_ height: NSCollectionLayoutDimension) -> Self
 ```
 
 等效`widthDimension: .fractionalWidth(1), heightDimension: height`
+
+
+
+## NSDirectionalEdgeInsets
+
+```swift
+static func top(_ top: CGFloat) -> NSDirectionalEdgeInsets
+static func leading(_ leading: CGFloat) -> NSDirectionalEdgeInsets
+static func bottom(_ bottom: CGFloat) -> NSDirectionalEdgeInsets
+static func trailing(_ trailing: CGFloat) -> NSDirectionalEdgeInsets
+static func horizontal(_ edge: CGFloat) -> NSDirectionalEdgeInsets
+static func horizontal(leading: CGFloat, trailing: CGFloat) -> NSDirectionalEdgeInsets
+static func vertical(_ edge: CGFloat) -> NSDirectionalEdgeInsets
+static func vertical(top: CGFloat, bottom: CGFloat) -> NSDirectionalEdgeInsets
+static func all(_ edge: CGFloat) -> NSDirectionalEdgeInsets
+```
+
+边距快速创建
