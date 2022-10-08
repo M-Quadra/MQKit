@@ -38,3 +38,27 @@ averageColor
 ```
 
 图片旋转
+
+
+
+```swift
+enum MQResizingMode {
+    case scaleToFill
+    
+    case scaleAspectFit
+    
+    case scaleAspectFill
+    case scaleAspectFillTop
+    case scaleAspectFillBottom
+}
+
+.resize(
+    to size: CGSize,
+    scale: CGFloat? = nil,
+    model: UIImage.MQResizingMode = .scaleToFill
+) -> UIImage
+```
+
+图片resize至目标大小, 可能存在透明填充
+
+Mode感觉够用, 以后也许会更新

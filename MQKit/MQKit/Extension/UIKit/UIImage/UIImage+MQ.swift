@@ -189,4 +189,51 @@ public extension UIImage {
             self.draw(in: CGRect(self.size))
         }
     }
+    
+    enum MQResizingMode {
+        case scaleToFill
+        
+        case scaleAspectFit
+        
+        case scaleAspectFill
+        case scaleAspectFillTop
+        case scaleAspectFillBottom
+        
+        func rect(dst: CGSize, src: CGSize) -> CGRect {
+            if self == .scaleToFill { return CGRect(dst) }
+            
+            let wScale = dst.width / src.width
+            let hScale = dst.height / src.height
+            let scale = (self == .scaleAspectFit ? min : max)(wScale, hScale)
+            
+            var opt = CGRect(src * scale)
+            opt.origin.x = (dst.width-opt.width) / 2
+            switch self {
+            case .scaleAspectFillTop:
+                opt.origin.y = 0
+            case .scaleAspectFillBottom:
+                opt.origin.y = dst.height - opt.height
+            default:
+                opt.origin.y = (dst.height-opt.height) / 2
+            }
+            return opt
+        }
+    }
+    
+    func resize(
+        to size: CGSize,
+        scale: CGFloat? = nil,
+        model: UIImage.MQResizingMode = .scaleToFill
+    ) -> UIImage {
+        let scale = scale ?? self.scale
+        if size.equalTo(self.size) && scale.isEqual(to: self.scale) {
+            return self
+        }
+        
+        let rect = model.rect(dst: size, src: self.size)
+        let opaque = model == .scaleAspectFit ? false : self.opaque
+        return .render(size: size, opaque: opaque, scale: scale) { ctx in
+            self.draw(in: rect)
+        }
+    }
 }
