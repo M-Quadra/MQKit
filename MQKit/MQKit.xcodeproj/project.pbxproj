@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E713601428F26F730010A83F /* UICollectionViewCompositionalLayout+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713601328F26F730010A83F /* UICollectionViewCompositionalLayout+MQ.swift */; };
+		E713601B28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713601A28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift */; };
+		E713601D28F271530010A83F /* UICollectionViewLayout+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713601C28F271530010A83F /* UICollectionViewLayout+MQ.swift */; };
 		E713607328D00C4500CE6A85 /* String+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713607228D00C4500CE6A85 /* String+Subscript.swift */; };
 		E713607628D00E7000CE6A85 /* Substring+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713607528D00E7000CE6A85 /* Substring+MQ.swift */; };
 		E713607828D00FA800CE6A85 /* Substring+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713607728D00FA800CE6A85 /* Substring+Subscript.swift */; };
@@ -111,6 +114,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E713601328F26F730010A83F /* UICollectionViewCompositionalLayout+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCompositionalLayout+MQ.swift"; sourceTree = "<group>"; };
+		E713601A28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutDecorationItem+MQ.swift"; sourceTree = "<group>"; };
+		E713601C28F271530010A83F /* UICollectionViewLayout+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+MQ.swift"; sourceTree = "<group>"; };
 		E713607228D00C4500CE6A85 /* String+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Subscript.swift"; sourceTree = "<group>"; };
 		E713607528D00E7000CE6A85 /* Substring+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Substring+MQ.swift"; sourceTree = "<group>"; };
 		E713607728D00FA800CE6A85 /* Substring+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Substring+Subscript.swift"; sourceTree = "<group>"; };
@@ -363,13 +369,16 @@
 			isa = PBXGroup;
 			children = (
 				E736F37224766F910016FF3C /* Coordinate+MQ.swift */,
+				E713601A28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift */,
 				E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */,
 				E74CA04428D99E5100CD4DC9 /* NSCollectionLayoutSize+MQ.swift */,
 				E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */,
 				E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */,
 				E736F36E24766F910016FF3C /* UIApplication */,
 				E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */,
+				E713601328F26F730010A83F /* UICollectionViewCompositionalLayout+MQ.swift */,
 				E79E04B928DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift */,
+				E713601C28F271530010A83F /* UICollectionViewLayout+MQ.swift */,
 				E71E722F28B72BEF00197402 /* UIColor */,
 				E736F37324766F910016FF3C /* UIDevice */,
 				E736F37724766F910016FF3C /* UIFont+MQ.swift */,
@@ -866,6 +875,7 @@
 				E736F3B124766F910016FF3C /* CGRect+MQ.swift in Sources */,
 				E79E04BA28DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift in Sources */,
 				E736F3CA24766F910016FF3C /* MQCrypt+AES.swift in Sources */,
+				E713601B28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift in Sources */,
 				E736F3A724766F910016FF3C /* CGPoint+MQ.swift in Sources */,
 				E71E722E28B72ACE00197402 /* CGColor+MQ.swift in Sources */,
 				E713607628D00E7000CE6A85 /* Substring+MQ.swift in Sources */,
@@ -880,6 +890,8 @@
 				E736F3B224766F910016FF3C /* OperationQueue+MQ.swift in Sources */,
 				E72C9E7628B8995700DC6C02 /* CGRect+Creator.swift in Sources */,
 				E736F3BC24766F910016FF3C /* StringEncoding+MQList.swift in Sources */,
+				E713601428F26F730010A83F /* UICollectionViewCompositionalLayout+MQ.swift in Sources */,
+				E713601D28F271530010A83F /* UICollectionViewLayout+MQ.swift in Sources */,
 				E736F3C424766F910016FF3C /* Dictionary+MQ.swift in Sources */,
 				E72C9E7928B8A2A500DC6C02 /* CGPoint+Creator.swift in Sources */,
 				E736F3B524766F910016FF3C /* NSRegularExpression+MQ.swift in Sources */,

@@ -273,3 +273,33 @@ static func all(_ edge: CGFloat) -> NSDirectionalEdgeInsets
 ```
 
 边距快速创建
+
+
+
+## NSCollectionLayoutDecorationItem
+
+```swift
+static func background(view: UICollectionReusableView.Type) -> Self
+```
+
+等效`background(elementKind: className)`
+
+
+
+## UICollectionViewCompositionalLayout
+
+```swift
+static func sectionProvider(_ provider: @escaping (_ idx: Int, _ env: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection) -> Self
+```
+
+等效`init(sectionProvider: provider)`, 闭包补全包装
+
+
+
+## UICollectionViewLayout
+
+```swift
+func register(decorationView view: UICollectionReusableView.Type)
+```
+
+view注册
