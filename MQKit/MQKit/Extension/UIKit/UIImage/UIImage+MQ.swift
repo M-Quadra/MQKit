@@ -226,12 +226,8 @@ public extension UIImage {
         model: UIImage.MQResizingMode = .scaleToFill
     ) -> UIImage {
         let scale = scale ?? self.scale
-        if size.equalTo(self.size) && scale.isEqual(to: self.scale) {
-            return self
-        }
-        
         let rect = model.rect(dst: size, src: self.size)
-        let opaque = model == .scaleAspectFit ? false : self.opaque
+        let opaque = (model != .scaleAspectFit || rect.size.equalTo(size)) ? self.opaque : false
         return .render(size: size, opaque: opaque, scale: scale) { ctx in
             self.draw(in: rect)
         }
