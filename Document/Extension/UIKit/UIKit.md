@@ -122,6 +122,17 @@ CGFloat.mq_radian(angle: )
 
 1. [常用三方 URL Scheme](./UIApplication/UIApplication+MQThird.md)
 
+```swift
+func openSettings(
+    options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:],
+    completionHandler completion: ((Bool) -> Void)? = nil
+)
+```
+
+设置页跳转
+
+
+
 
 ## UIImage
 

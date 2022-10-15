@@ -88,6 +88,7 @@
 		E74CA04528D99E5100CD4DC9 /* NSCollectionLayoutSize+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74CA04428D99E5100CD4DC9 /* NSCollectionLayoutSize+MQ.swift */; };
 		E74CA04728D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */; };
 		E74CA04C28D9A3B900CD4DC9 /* UICollectionView+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */; };
+		E759B73528F548750064E349 /* UIApplication+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759B73428F548750064E349 /* UIApplication+MQ.swift */; };
 		E79231E028D230CC00C849FA /* String+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79231DF28D230CC00C849FA /* String+MQ.swift */; };
 		E79C72C224783AB500AE327D /* MTLClearColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */; };
 		E79E04B828DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */; };
@@ -198,6 +199,7 @@
 		E74CA04428D99E5100CD4DC9 /* NSCollectionLayoutSize+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSize+MQ.swift"; sourceTree = "<group>"; };
 		E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutGroup+MQ.swift"; sourceTree = "<group>"; };
 		E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+MQ.swift"; sourceTree = "<group>"; };
+		E759B73428F548750064E349 /* UIApplication+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+MQ.swift"; sourceTree = "<group>"; };
 		E79231DF28D230CC00C849FA /* String+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQ.swift"; sourceTree = "<group>"; };
 		E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLClearColor+MQ.swift"; sourceTree = "<group>"; };
 		E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDiffableDataSourceSnapshot+MQ.swift"; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				E736F36F24766F910016FF3C /* UIApplication+MQThird.swift */,
+				E759B73428F548750064E349 /* UIApplication+MQ.swift */,
 			);
 			path = UIApplication;
 			sourceTree = "<group>";
@@ -909,6 +912,7 @@
 				E736F3B824766F910016FF3C /* Pow+MQ.swift in Sources */,
 				E736F3BE24766F910016FF3C /* String+MQCode.swift in Sources */,
 				E7F5B00324D1952200C929A4 /* String+MQRegularExpression.swift in Sources */,
+				E759B73528F548750064E349 /* UIApplication+MQ.swift in Sources */,
 				E736F3B924766F910016FF3C /* CFStringEncodings+MQCode.swift in Sources */,
 				E736F3BA24766F910016FF3C /* CFStringEncodings+MQList.swift in Sources */,
 			);
