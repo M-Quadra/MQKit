@@ -13,7 +13,7 @@ public extension String {
     /// [st, ed)
     subscript (range: Range<Int>) -> Substring {
         let cnt = self.count
-        var l = range.lowerBound, r = range.upperBound
+        var l = max(0, range.lowerBound), r = min(range.upperBound, self.count)
         if r <= 0 {
             l += cnt
             r += cnt
