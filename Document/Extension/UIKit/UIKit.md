@@ -314,3 +314,19 @@ func register(decorationView view: UICollectionReusableView.Type)
 ```
 
 view注册
+
+
+
+## UITextField
+
+```
+.markedText
+```
+
+获取`markedTextRange`对应`Text`, 如中文输入选词
+
+```
+.selectedText
+```
+
+获取`selectedTextRange`对应`Text`

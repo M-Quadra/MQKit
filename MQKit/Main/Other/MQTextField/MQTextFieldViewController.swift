@@ -9,7 +9,7 @@
 import UIKit
 import MQKit
 
-class MQTextFieldViewController: UIViewController, MQTextFieldDelegate {
+class MQTextFieldViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,13 +18,9 @@ class MQTextFieldViewController: UIViewController, MQTextFieldDelegate {
         let txtField = MQTextField(frame: CGRect(x: 0, y: 100, width: 200, height: 50));
         self.view.addSubview(txtField)
         txtField.placeholder = "这个是测试";
-        txtField.delegate_ = self
+        txtField.textDidChang { textField, text in
+            print(text)
+        }
         txtField.maxTextCount = 4
-//        txtField.delegate = self
-        
-    }
-    
-    func textField(_ textField: MQTextField, textDidChange text: String) {
-        print(text)
     }
 }

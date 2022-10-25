@@ -385,6 +385,7 @@
 				E736F37324766F910016FF3C /* UIDevice */,
 				E736F37724766F910016FF3C /* UIFont+MQ.swift */,
 				E736F36A24766F910016FF3C /* UIImage */,
+				E736F39E24766F910016FF3C /* UITextField+MQ.swift */,
 				E725073928D8885300378A7D /* UIView */,
 			);
 			path = UIKit;
@@ -516,7 +517,6 @@
 		E736F39D24766F910016FF3C /* MQTextField */ = {
 			isa = PBXGroup;
 			children = (
-				E736F39E24766F910016FF3C /* UITextField+MQ.swift */,
 				E736F39F24766F910016FF3C /* MQTextField.swift */,
 			);
 			path = MQTextField;

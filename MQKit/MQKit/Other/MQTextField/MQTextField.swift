@@ -8,70 +8,66 @@
 
 import UIKit
 
-@objc public protocol MQTextFieldDelegate : UITextFieldDelegate {
-    @objc optional func textField(_ textField: MQTextField, textDidChange text: String)
-}
-
 public class MQTextField: UITextField {
+    required init?(coder: NSCoder) { return nil }
     
-    @available(*, unavailable)
-    public override var delegate: UITextFieldDelegate? {
-        didSet {
+    fileprivate lazy var proxy = Proxy(self)
+    
+    public var maxTextCount = 0
+    public var textWithoutMarked: String {
+        var text = self.text ?? ""
+        guard let range = self.markedTextRange else { return text }
+        
+        let st = self.offset(from: self.beginningOfDocument, to: range.start)
+        let ed = self.offset(from: self.beginningOfDocument, to: range.end)
+        
+        let stIdx = text.index(text.startIndex, offsetBy: st)
+        let edIdx = text.index(text.startIndex, offsetBy: ed)
+        text.replaceSubrange(stIdx..<edIdx, with: "")
+        return text
+    }
+    
+    public var textDidChang: ((_ textField: MQTextField, _ text: String) -> Void)? {
+        get {
+            return self.proxy.handler
+        }
+        set {
+            self.proxy.handler = newValue
         }
     }
-    fileprivate let delegator = MQTextFieldDelegator()
-    
-    public var delegate_: MQTextFieldDelegate?
-    
-    public var maxTextCount = Int.max {
-        didSet {
-            if self.maxTextCount < 0 {
-                self.maxTextCount = 0
-            }
-            
-            if self.markedTextRange != nil || self.text?.count ?? 0 <= self.maxTextCount {
-                return
-            }
-            
-            self.delegator.textFieldDidChange(textField: self)
-        }
+    public func textDidChang(_ handler: @escaping (_ textField: MQTextField, _ text: String) -> Void) {
+        self.textDidChang = handler
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.didInitialize()
+        self.addTarget(self.proxy, action: #selector(Proxy.textFieldDidChange(sender:)), for: .editingChanged)
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.didInitialize()
-    }
-    
-    func didInitialize() {
-        self.delegator.textField = self
-        super.delegate = self.delegator
-        
-        self.addTarget(self.delegator, action: #selector(MQTextFieldDelegator.textFieldDidChange(textField:)), for: .editingChanged)
-    }
-    
 }
 
-fileprivate class MQTextFieldDelegator: NSObject, UITextFieldDelegate {
+fileprivate extension MQTextField {
     
-    weak var textField: MQTextField?
-    
-    @objc func textFieldDidChange(textField: MQTextField) {
-        guard textField == self.textField, let field = self.textField else {
-            return
-        }
-        let text = field.text ?? ""
+    class Proxy {
+        weak var textField: MQTextField?
+        var handler: ((_ textField: MQTextField, _ text: String) -> Void)?
         
-        if field.markedTextRange != nil || text.count < field.maxTextCount {
-            field.delegate_?.textField?(field, textDidChange: text)
-            return
+        init(_ textField: MQTextField) {
+            self.textField = textField
         }
         
-        field.text = text[0..<field.maxTextCount].stringValue
-        field.delegate_?.textField?(field, textDidChange: field.text ?? "")
+        @objc func textFieldDidChange(sender: MQTextField) {
+            guard let textField = self.textField,
+                  textField.markedTextRange == nil
+            else { return }
+            
+            var text = textField.text ?? ""
+            if textField.maxTextCount > 0,
+               text.count > textField.maxTextCount {
+                text = text[0..<textField.maxTextCount].stringValue
+                textField.text = text
+            }
+            
+            self.handler?(textField, text)
+        }
     }
 }
