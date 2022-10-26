@@ -27,14 +27,7 @@ public class MQTextField: UITextField {
         return text
     }
     
-    public var textDidChang: ((_ textField: MQTextField, _ text: String) -> Void)? {
-        get {
-            return self.proxy.handler
-        }
-        set {
-            self.proxy.handler = newValue
-        }
-    }
+    public var textDidChang: ((_ textField: MQTextField, _ text: String) -> Void)?
     public func textDidChang(_ handler: @escaping (_ textField: MQTextField, _ text: String) -> Void) {
         self.textDidChang = handler
     }
@@ -49,7 +42,6 @@ fileprivate extension MQTextField {
     
     class Proxy {
         weak var textField: MQTextField?
-        var handler: ((_ textField: MQTextField, _ text: String) -> Void)?
         
         init(_ textField: MQTextField) {
             self.textField = textField
@@ -57,7 +49,8 @@ fileprivate extension MQTextField {
         
         @objc func textFieldDidChange(sender: MQTextField) {
             guard let textField = self.textField,
-                  textField.markedTextRange == nil
+                  textField.markedTextRange == nil,
+                  let handler = textField.textDidChang
             else { return }
             
             var text = textField.text ?? ""
@@ -67,7 +60,7 @@ fileprivate extension MQTextField {
                 textField.text = text
             }
             
-            self.handler?(textField, text)
+            handler(textField, text)
         }
     }
 }

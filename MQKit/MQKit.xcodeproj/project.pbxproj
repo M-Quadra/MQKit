@@ -377,10 +377,7 @@
 				E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */,
 				E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */,
 				E736F36E24766F910016FF3C /* UIApplication */,
-				E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */,
-				E713601328F26F730010A83F /* UICollectionViewCompositionalLayout+MQ.swift */,
-				E79E04B928DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift */,
-				E713601C28F271530010A83F /* UICollectionViewLayout+MQ.swift */,
+				E77B241F2907969F00269AFA /* UICollectionView */,
 				E71E722F28B72BEF00197402 /* UIColor */,
 				E736F37324766F910016FF3C /* UIDevice */,
 				E736F37724766F910016FF3C /* UIFont+MQ.swift */,
@@ -672,6 +669,17 @@
 				E736F3EC24766FC10016FF3C /* image0@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		E77B241F2907969F00269AFA /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				E74CA04B28D9A3B900CD4DC9 /* UICollectionView+MQ.swift */,
+				E713601328F26F730010A83F /* UICollectionViewCompositionalLayout+MQ.swift */,
+				E79E04B928DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift */,
+				E713601C28F271530010A83F /* UICollectionViewLayout+MQ.swift */,
+			);
+			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		E7A4386D24F8AAF10055CB17 /* Data */ = {
