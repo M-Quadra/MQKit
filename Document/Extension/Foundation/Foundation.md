@@ -172,14 +172,6 @@ public func symmetricDifference(mq_in: String) -> Self
 
 简化`String`相关操作代码
 
-## Data
-
-```
-public var mq_MD5: String
-```
-
-32位十六进制小写 md5
-
 ## Bundle
 
 ```
@@ -199,3 +191,19 @@ public var mq_MD5: String
 ```
 
 应用构建版本号
+
+
+
+## Data
+
+```swift
+public func hexEncodeString() -> String
+```
+
+Data转换hex
+
+```swift
+public init?(hexEncoded hex: String)
+```
+
+hex转Data

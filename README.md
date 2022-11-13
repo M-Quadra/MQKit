@@ -33,7 +33,7 @@ https://github.com/M-Quadra/MQKit.git
 
 1. [震动反馈](Document/Other/MQTaptic.md)
 2. [简易Keychain](Document/Other/MQKeychain.md)
-3. [加密解密](Document/Other/MQCrypt.md)
+3. [Crypto](Document/Other/MQCrypto.md)
 4. [MQCollectionView](Document/MQ_Class.md)
 5. [MQTableView](Document/MQ_Class.md)
 6. [MQHorizontalPagingView](Document/MQ_Class.md)
