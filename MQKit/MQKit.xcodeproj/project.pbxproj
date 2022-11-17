@@ -110,6 +110,7 @@
 		E7EFBDCC291A76690065C325 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFBDCB291A76690065C325 /* AES.swift */; };
 		E7EFBDCE291A768B0065C325 /* AES+GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EFBDCD291A768B0065C325 /* AES+GCM.swift */; };
 		E7F5B00324D1952200C929A4 /* String+MQRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F5B00224D1952200C929A4 /* String+MQRegularExpression.swift */; };
+		E7F796EF2926429400B1FE97 /* UIScrollView+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F796EE2926429400B1FE97 /* UIScrollView+DSL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +230,7 @@
 		E7EFBDCB291A76690065C325 /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
 		E7EFBDCD291A768B0065C325 /* AES+GCM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AES+GCM.swift"; sourceTree = "<group>"; };
 		E7F5B00224D1952200C929A4 /* String+MQRegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MQRegularExpression.swift"; sourceTree = "<group>"; };
+		E7F796EE2926429400B1FE97 /* UIScrollView+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+DSL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -733,11 +735,12 @@
 			isa = PBXGroup;
 			children = (
 				E7C91EBF28BCA67300CFB751 /* DSL.swift */,
-				E7C91EC128BCB21300CFB751 /* CAShapeLayer+DSL.swift */,
 				E7C91EC328BCB26700CFB751 /* CALayer+DSL.swift */,
-				E74CA04028D98FD900CD4DC9 /* UIVIew+DSL.swift */,
+				E7C91EC128BCB21300CFB751 /* CAShapeLayer+DSL.swift */,
 				E74CA04228D996AB00CD4DC9 /* UIButton+DSL.swift */,
 				E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */,
+				E7F796EE2926429400B1FE97 /* UIScrollView+DSL.swift */,
+				E74CA04028D98FD900CD4DC9 /* UIVIew+DSL.swift */,
 			);
 			path = DSL;
 			sourceTree = "<group>";
@@ -963,6 +966,7 @@
 				E736F3B524766F910016FF3C /* NSRegularExpression+MQ.swift in Sources */,
 				E7EE4D092920A38300851D9B /* RSA+Raw.swift in Sources */,
 				E7BEF6EC28DC12F0000F6C91 /* UILabel+DSL.swift in Sources */,
+				E7F796EF2926429400B1FE97 /* UIScrollView+DSL.swift in Sources */,
 				E736F3B624766F910016FF3C /* FixedWidthInteger+MQ.swift in Sources */,
 				E74CA04528D99E5100CD4DC9 /* NSCollectionLayoutSize+MQ.swift in Sources */,
 				E7C91EC428BCB26700CFB751 /* CALayer+DSL.swift in Sources */,
