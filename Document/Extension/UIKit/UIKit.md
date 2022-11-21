@@ -242,3 +242,11 @@ static func background(view: UICollectionReusableView.Type) -> Self
 获取`selectedTextRange`对应`Text`
 
 
+
+## CGFloat
+
+```swift
+public static var max: CGFloat { get }
+```
+
+等效`.greatestFiniteMagnitude`

@@ -96,6 +96,8 @@
 		E79C72C224783AB500AE327D /* MTLClearColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */; };
 		E79E04B828DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */; };
 		E79E04BA28DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E04B928DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift */; };
+		E7AB2D12292B4AE500D2F40F /* MQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D11292B4AE500D2F40F /* MQTextView.swift */; };
+		E7AB2D18292B501000D2F40F /* CGFloat+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */; };
 		E7BEF6EC28DC12F0000F6C91 /* UILabel+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */; };
 		E7BEF6EE28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */; };
 		E7C91EC028BCA67300CFB751 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C91EBF28BCA67300CFB751 /* DSL.swift */; };
@@ -216,6 +218,8 @@
 		E79C72C124783AB500AE327D /* MTLClearColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MTLClearColor+MQ.swift"; sourceTree = "<group>"; };
 		E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDiffableDataSourceSnapshot+MQ.swift"; sourceTree = "<group>"; };
 		E79E04B928DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewDiffableDataSource+MQ.swift"; sourceTree = "<group>"; };
+		E7AB2D11292B4AE500D2F40F /* MQTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTextView.swift; sourceTree = "<group>"; };
+		E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+MQ.swift"; sourceTree = "<group>"; };
 		E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DSL.swift"; sourceTree = "<group>"; };
 		E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+MQ.swift"; sourceTree = "<group>"; };
 		E7C91EBF28BCA67300CFB751 /* DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL.swift; sourceTree = "<group>"; };
@@ -402,6 +406,7 @@
 				E736F36A24766F910016FF3C /* UIImage */,
 				E736F39E24766F910016FF3C /* UITextField+MQ.swift */,
 				E725073928D8885300378A7D /* UIView */,
+				E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -495,10 +500,11 @@
 			isa = PBXGroup;
 			children = (
 				E77BD377291A3D3300F7EF36 /* Crypto */,
+				E736F3A024766F910016FF3C /* MQHorizontalPagingView */,
 				E736F39424766F910016FF3C /* MQKeychain */,
 				E736F39B24766F910016FF3C /* MQTaptic */,
 				E736F39D24766F910016FF3C /* MQTextField */,
-				E736F3A024766F910016FF3C /* MQHorizontalPagingView */,
+				E7AB2D10292B4ABA00D2F40F /* MQTextView */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -720,6 +726,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		E7AB2D10292B4ABA00D2F40F /* MQTextView */ = {
+			isa = PBXGroup;
+			children = (
+				E7AB2D11292B4AE500D2F40F /* MQTextView.swift */,
+			);
+			path = MQTextView;
+			sourceTree = "<group>";
+		};
 		E7C083F128C24F2A00AA4C80 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -934,6 +948,7 @@
 				E7C91EC228BCB21300CFB751 /* CAShapeLayer+DSL.swift in Sources */,
 				E71E723128B72C0F00197402 /* UIColor+Creator.swift in Sources */,
 				E736F3CC24766F910016FF3C /* MQTaptic.swift in Sources */,
+				E7AB2D12292B4AE500D2F40F /* MQTextView.swift in Sources */,
 				E736F3A624766F910016FF3C /* UIImage+MQMetal.swift in Sources */,
 				E736F3AC24766F910016FF3C /* UIDevice+MQSoftware.swift in Sources */,
 				E736F3B124766F910016FF3C /* CGRect+MQ.swift in Sources */,
@@ -946,6 +961,7 @@
 				E713607628D00E7000CE6A85 /* Substring+MQ.swift in Sources */,
 				E7EE4D05291FB3F100851D9B /* RSA.swift in Sources */,
 				E72C9E7C28B8A37B00DC6C02 /* CGSize+Creator.swift in Sources */,
+				E7AB2D18292B501000D2F40F /* CGFloat+MQ.swift in Sources */,
 				E77BD37B291A436400F7EF36 /* Data+Hex.swift in Sources */,
 				E736F3AD24766F910016FF3C /* UIDevice+MQHardware.swift in Sources */,
 				E736F3AA24766F910016FF3C /* CGSize+MQ.swift in Sources */,
