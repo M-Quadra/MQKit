@@ -250,3 +250,14 @@ public static var max: CGFloat { get }
 ```
 
 等效`.greatestFiniteMagnitude`
+
+
+
+## NSCollectionLayoutSection
+
+```swift
+func visibleItemsInvalidationHandler(_ handler: @escaping (_ items: [NSCollectionLayoutVisibleItem], _ offset: CGPoint, _ env: NSCollectionLayoutEnvironment) -> Void) -> Self
+```
+
+等效`.visibleItemsInvalidationHandler`, 包装func实现闭包补全
+

@@ -11,6 +11,13 @@ import UIKit
 @available(iOS 13.0, *)
 public extension NSCollectionLayoutSize {
     
+    static var zero: Self {
+        return Self.init(
+            widthDimension: .absolute(0),
+            heightDimension: .absolute(0)
+        )
+    }
+    
     static var fill: Self {
         return Self.init(
             widthDimension: .fractionalWidth(1),

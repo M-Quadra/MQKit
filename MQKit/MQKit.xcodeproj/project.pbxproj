@@ -27,7 +27,6 @@
 		E736F34724766E310016FF3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E736F34524766E310016FF3C /* Main.storyboard */; };
 		E736F34924766E310016FF3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E736F34824766E310016FF3C /* Assets.xcassets */; };
 		E736F34C24766E310016FF3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E736F34A24766E310016FF3C /* LaunchScreen.storyboard */; };
-		E736F35A24766F5D0016FF3C /* MQKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E736F35824766F5D0016FF3C /* MQKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E736F35D24766F5D0016FF3C /* MQKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E736F35624766F5D0016FF3C /* MQKit.framework */; };
 		E736F3A224766F910016FF3C /* MQCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F36424766F910016FF3C /* MQCollectionView.swift */; };
 		E736F3A324766F910016FF3C /* MQTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F36524766F910016FF3C /* MQTableView.swift */; };
@@ -98,6 +97,7 @@
 		E79E04BA28DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79E04B928DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift */; };
 		E7AB2D12292B4AE500D2F40F /* MQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D11292B4AE500D2F40F /* MQTextView.swift */; };
 		E7AB2D18292B501000D2F40F /* CGFloat+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */; };
+		E7AB2D1E292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D1D292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift */; };
 		E7BEF6EC28DC12F0000F6C91 /* UILabel+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */; };
 		E7BEF6EE28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */; };
 		E7C91EC028BCA67300CFB751 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C91EBF28BCA67300CFB751 /* DSL.swift */; };
@@ -149,7 +149,6 @@
 		E736F34B24766E310016FF3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E736F34D24766E310016FF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E736F35624766F5D0016FF3C /* MQKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MQKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E736F35824766F5D0016FF3C /* MQKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MQKit.h; sourceTree = "<group>"; };
 		E736F35924766F5D0016FF3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E736F36424766F910016FF3C /* MQCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCollectionView.swift; sourceTree = "<group>"; };
 		E736F36524766F910016FF3C /* MQTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTableView.swift; sourceTree = "<group>"; };
@@ -220,6 +219,7 @@
 		E79E04B928DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewDiffableDataSource+MQ.swift"; sourceTree = "<group>"; };
 		E7AB2D11292B4AE500D2F40F /* MQTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTextView.swift; sourceTree = "<group>"; };
 		E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+MQ.swift"; sourceTree = "<group>"; };
+		E7AB2D1D292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSection+MQ.swift"; sourceTree = "<group>"; };
 		E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DSL.swift"; sourceTree = "<group>"; };
 		E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+MQ.swift"; sourceTree = "<group>"; };
 		E7C91EBF28BCA67300CFB751 /* DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL.swift; sourceTree = "<group>"; };
@@ -354,7 +354,6 @@
 				E736F36624766F910016FF3C /* Extension */,
 				E736F39324766F910016FF3C /* Other */,
 				E736F36324766F910016FF3C /* UIKit */,
-				E736F35824766F5D0016FF3C /* MQKit.h */,
 				E736F35924766F5D0016FF3C /* Info.plist */,
 			);
 			path = MQKit;
@@ -392,10 +391,9 @@
 		E736F36924766F910016FF3C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */,
 				E736F37224766F910016FF3C /* Coordinate+MQ.swift */,
-				E713601A28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift */,
-				E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */,
-				E74CA04428D99E5100CD4DC9 /* NSCollectionLayoutSize+MQ.swift */,
+				E7AB2D1F292B5CF400D2F40F /* NSCollectionLayout */,
 				E79E04B728DAFB8800151957 /* NSDiffableDataSourceSnapshot+MQ.swift */,
 				E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */,
 				E736F36E24766F910016FF3C /* UIApplication */,
@@ -406,7 +404,6 @@
 				E736F36A24766F910016FF3C /* UIImage */,
 				E736F39E24766F910016FF3C /* UITextField+MQ.swift */,
 				E725073928D8885300378A7D /* UIView */,
-				E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -734,6 +731,17 @@
 			path = MQTextView;
 			sourceTree = "<group>";
 		};
+		E7AB2D1F292B5CF400D2F40F /* NSCollectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				E713601A28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift */,
+				E74CA04628D9A0ED00CD4DC9 /* NSCollectionLayoutGroup+MQ.swift */,
+				E7AB2D1D292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift */,
+				E74CA04428D99E5100CD4DC9 /* NSCollectionLayoutSize+MQ.swift */,
+			);
+			path = NSCollectionLayout;
+			sourceTree = "<group>";
+		};
 		E7C083F128C24F2A00AA4C80 /* CoreGraphics */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,7 +794,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E736F35A24766F5D0016FF3C /* MQKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1003,7 @@
 				E736F3BE24766F910016FF3C /* String+MQCode.swift in Sources */,
 				E7F5B00324D1952200C929A4 /* String+MQRegularExpression.swift in Sources */,
 				E759B73528F548750064E349 /* UIApplication+MQ.swift in Sources */,
+				E7AB2D1E292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift in Sources */,
 				E7EFBDCE291A768B0065C325 /* AES+GCM.swift in Sources */,
 				E736F3B924766F910016FF3C /* CFStringEncodings+MQCode.swift in Sources */,
 				E736F3BA24766F910016FF3C /* CFStringEncodings+MQList.swift in Sources */,
