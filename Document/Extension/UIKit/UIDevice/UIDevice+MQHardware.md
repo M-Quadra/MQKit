@@ -1,13 +1,13 @@
 # UIDevice+MQHardware
 
 ```
-.mq_identifier
+public var identifier: String { get }
 ```
 
 获取机型标志, 如`iPhone11,8`
 
 ```
-.mq_generation
+public var generation: String { get }
 ```
 
 获取机型, 如`iPhone 4s`

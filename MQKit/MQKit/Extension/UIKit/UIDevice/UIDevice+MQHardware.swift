@@ -9,10 +9,16 @@
 import UIKit
 import CoreTelephony
 
-extension UIDevice {
+public extension UIDevice {
         
     /// eg. "iPhone11,8"
-    public var mq_identifier: String {
+    var identifier: String {
+#if targetEnvironment(simulator)
+        if let cStr = getenv("SIMULATOR_MODEL_IDENTIFIER") {
+            return String(cString: cStr)
+        }
+#endif
+        
         var sysInfo = utsname()
         uname(&sysInfo)
         
@@ -25,10 +31,10 @@ extension UIDevice {
     }
     
     /// eg. "iPhone 4s"
-    public var mq_generation: String {
+    var generation: String {
         // https://www.theiphonewiki.com/wiki/Models
         // https://gist.github.com/adamawolf/3048717
-        let identifier = self.mq_identifier
+        let identifier = self.identifier
         switch identifier {
         // MARK: - Apple Watch
         case "Watch1,1": return "Apple Watch (1st generation)"
@@ -54,80 +60,101 @@ extension UIDevice {
         case "Watch5,2": return "Apple Watch Series 5"
         case "Watch5,3": return "Apple Watch Series 5"
         case "Watch5,4": return "Apple Watch Series 5"
+        case "Watch5,9":  return "Apple Watch SE"
+        case "Watch5,10": return "Apple Watch SE"
+        case "Watch5,11": return "Apple Watch SE"
+        case "Watch5,12": return "Apple Watch SE"
+            
+        case "Watch6,1": return "Apple Watch Series 6"
+        case "Watch6,2": return "Apple Watch Series 6"
+        case "Watch6,3": return "Apple Watch Series 6"
+        case "Watch6,4": return "Apple Watch Series 6"
+        case "Watch6,6": return "Apple Watch Series 7"
+        case "Watch6,7": return "Apple Watch Series 7"
+        case "Watch6,8": return "Apple Watch Series 7"
+        case "Watch6,9": return "Apple Watch Series 7"
+        case "Watch6,10": return "Apple Watch SE (2nd generation)"
+        case "Watch6,11": return "Apple Watch SE (2nd generation)"
+        case "Watch6,12": return "Apple Watch SE (2nd generation)"
+        case "Watch6,13": return "Apple Watch SE (2nd generation)"
+        case "Watch6,14": return "Apple Watch Series 8"
+        case "Watch6,15": return "Apple Watch Series 8"
+        case "Watch6,16": return "Apple Watch Series 8"
+        case "Watch6,17": return "Apple Watch Series 8"
+        case "Watch6,18": return "Apple Watch Ultra"
             
         // MARK: - iPad
-        case "iPad1,1": return "iPad"
-            
-        case "iPad2,1": return "iPad 2"
-        case "iPad2,2": return "iPad 2"
-        case "iPad2,3": return "iPad 2"
-        case "iPad2,4": return "iPad 2"
-            
-        case "iPad3,1": return "iPad (3rd generation)"
-        case "iPad3,2": return "iPad (3rd generation)"
-        case "iPad3,3": return "iPad (3rd generation)"
-            
-        case "iPad3,4": return "iPad (4th generation)"
-        case "iPad3,5": return "iPad (4th generation)"
-        case "iPad3,6": return "iPad (4th generation)"
-            
         case "iPad4,1": return "iPad Air"
         case "iPad4,2": return "iPad Air"
         case "iPad4,3": return "iPad Air"
-            
+        case "iPad4,4": return "iPad mini 2"
+        case "iPad4,5": return "iPad mini 2"
+        case "iPad4,6": return "iPad mini 2"
+        case "iPad4,7": return "iPad mini 3"
+        case "iPad4,8": return "iPad mini 3"
+        case "iPad4,9": return "iPad mini 3"
+        
+        case "iPad5,1": return "iPad mini 4"
+        case "iPad5,2": return "iPad mini 4"
         case "iPad5,3": return "iPad Air 2"
         case "iPad5,4": return "iPad Air 2"
-            
-        case "iPad6,7": return "iPad Pro (12.9-inch)"
-        case "iPad6,8": return "iPad Pro (12.9-inch)"
-            
+        
         case "iPad6,3": return "iPad Pro (9.7-inch)"
         case "iPad6,4": return "iPad Pro (9.7-inch)"
-            
+        case "iPad6,7": return "iPad Pro (12.9-inch)"
+        case "iPad6,8": return "iPad Pro (12.9-inch)"
         case "iPad6,11": return "iPad (5th generation)"
         case "iPad6,12": return "iPad (5th generation)"
             
         case "iPad7,1": return "iPad Pro (12.9-inch) (2nd generation)"
         case "iPad7,2": return "iPad Pro (12.9-inch) (2nd generation)"
-            
         case "iPad7,3": return "iPad Pro (10.5-inch)"
         case "iPad7,4": return "iPad Pro (10.5-inch)"
-            
         case "iPad7,5": return "iPad (6th generation)"
         case "iPad7,6": return "iPad (6th generation)"
+        case "iPad7,11": return "iPad (7th generation)"
+        case "iPad7,12": return "iPad (7th generation)"
             
         case "iPad8,1": return "iPad Pro (11-inch)"
         case "iPad8,2": return "iPad Pro (11-inch)"
         case "iPad8,3": return "iPad Pro (11-inch)"
         case "iPad8,4": return "iPad Pro (11-inch)"
-            
         case "iPad8,5": return "iPad Pro (12.9-inch) (3rd generation)"
         case "iPad8,6": return "iPad Pro (12.9-inch) (3rd generation)"
         case "iPad8,7": return "iPad Pro (12.9-inch) (3rd generation)"
         case "iPad8,8": return "iPad Pro (12.9-inch) (3rd generation)"
+        case "iPad8,9":  return "iPad Pro (11-inch) (2nd generation)"
+        case "iPad8,10": return "iPad Pro (11-inch) (2nd generation)"
+        case "iPad8,11": return "iPad Pro (12.9-inch) (4th generation)"
+        case "iPad8,12": return "iPad Pro (12.9-inch) (4th generation)"
             
+        case "iPad11,1": return "iPad mini (5th generation)"
+        case "iPad11,2": return "iPad mini (5th generation)"
         case "iPad11,3": return "iPad Air (3rd generation)"
         case "iPad11,4": return "iPad Air (3rd generation)"
+        case "iPad11,6": return "iPad (8th generation)"
+        case "iPad11,7": return "iPad (8th generation)"
+            
+        case "iPad12,1": return "iPad (9th generation)"
+        case "iPad12,2": return "iPad (9th generation)"
+        
+        case "iPad13,1": return "iPad Air (4th generation)"
+        case "iPad13,2": return "iPad Air (4th generation)"
+        case "iPad13,4": return "iPad Pro (11-inch) (3rd generation)"
+        case "iPad13,5": return "iPad Pro (11-inch) (3rd generation)"
+        case "iPad13,6": return "iPad Pro (11-inch) (3rd generation)"
+        case "iPad13,7": return "iPad Pro (11-inch) (3rd generation)"
+        case "iPad13,8":  return "iPad Pro (12.9-inch) (5th generation)"
+        case "iPad13,9":  return "iPad Pro (12.9-inch) (5th generation)"
+        case "iPad13,10": return "iPad Pro (12.9-inch) (5th generation)"
+        case "iPad13,11": return "iPad Pro (12.9-inch) (5th generation)"
+        case "iPad13,16": return "iPad Air (5th generation)"
+        case "iPad13,17": return "iPad Air (5th generation)"
+            
+        case "iPad14,1": return "iPad mini (6th generation)"
+        case "iPad14,2": return "iPad mini (6th generation)"
             
         // MARK: - iPhone
-        case "iPhone1,1": return "iPhone"
-            
-        case "iPhone1,2": return "iPhone 3G"
-            
-        case "iPhone2,1": return "iPhone 3GS"
-            
-        case "iPhone3,1": return "iPhone 4"
-        case "iPhone3,2": return "iPhone 4"
-        case "iPhone3,3": return "iPhone 4"
-            
-        case "iPhone4,1": return "iPhone 4S"
-            
-        case "iPhone5,1": return "iPhone 5"
-        case "iPhone5,2": return "iPhone 5"
-            
-        case "iPhone5,3": return "iPhone 5c"
-        case "iPhone5,4": return "iPhone 5c"
-            
         case "iPhone6,1": return "iPhone 5s"
         case "iPhone6,2": return "iPhone 5s"
             
@@ -136,8 +163,7 @@ extension UIDevice {
             
         case "iPhone8,1": return "iPhone 6s"
         case "iPhone8,2": return "iPhone 6s Plus"
-            
-        case "iPhone8,4": return "iPhone SE"
+        case "iPhone8,4": return "iPhone SE (1st generation)"
             
         case "iPhone9,1": return "iPhone 7"
         case "iPhone9,3": return "iPhone 7"
@@ -159,27 +185,36 @@ extension UIDevice {
         case "iPhone12,1": return "iPhone 11"
         case "iPhone12,3": return "iPhone 11 Pro"
         case "iPhone12,5": return "iPhone 11 Pro Max"
+        case "iPhone12,8": return "iPhone SE (2nd generation)"
+            
+        case "iPhone13,1": return "iPhone 12 mini"
+        case "iPhone13,2": return "iPhone 12"
+        case "iPhone13,3": return "iPhone 12 Pro"
+        case "iPhone13,4": return "iPhone 12 Pro Max"
+        
+        case "iPhone14,2": return "iPhone 13 Pro"
+        case "iPhone14,3": return "iPhone 13 Pro Max"
+        case "iPhone14,4": return "iPhone 13 mini"
+        case "iPhone14,5": return "iPhone 13"
+        case "iPhone14,6": return "iPhone SE (3rd generation)"
+        case "iPhone14,7": return "iPhone 14"
+        case "iPhone14,8": return "iPhone 14 Plus"
+            
+        case "iPhone15,2": return "iPhone 14 Pro"
+        case "iPhone15,3": return "iPhone 14 Pro Max"
             
         // MARK: - iPod touch
-        case "iPod1,1": return "iPod touch"
-        case "iPod2,1": return "iPod touch (2nd generation)"
-        case "iPod3,1": return "iPod touch (3rd generation)"
-        case "iPod4,1": return "iPod touch (4th generation)"
-        case "iPod5,1": return "iPod touch (5th generation)"
         case "iPod7,1": return "iPod touch (6th generation)"
         case "iPod9,1": return "iPod touch (7th generation)"
             
-        // MARK: - Simulator
-        case "i386":   return "Simulator"
-        case "x86_64": return "Simulator"
         default: break
         }
         
-        return identifier.count > 0 ? identifier : "Unknown"
+        return identifier.isEmpty ? "Unknown" : identifier
     }
     
     private static var mq_privateTotalCapacity: UInt64 = 0
-    public var mq_totalCapacity: UInt64 {
+    var mq_totalCapacity: UInt64 {
         if UIDevice.mq_privateTotalCapacity > 0 {
             return UIDevice.mq_privateTotalCapacity
         }
@@ -193,7 +228,7 @@ extension UIDevice {
         return UIDevice.mq_privateTotalCapacity
     }
     
-    public var mq_availableCapacity: UInt64 {
+    var mq_availableCapacity: UInt64 {
         var info = statfs()
         guard statfs("/var", &info) == 0 else {
             return 0
@@ -202,12 +237,12 @@ extension UIDevice {
         return info.f_bavail * UInt64(info.f_bsize)
     }
     
-    public var mq_totalMemory: UInt64 {
+    var mq_totalMemory: UInt64 {
         return ProcessInfo.processInfo.physicalMemory
     }
     
     /// less than actual value
-    public var mq_availableMemory: UInt64 {
+    var mq_availableMemory: UInt64 {
         // https://stackoverflow.com/a/47354072
         var pagesize: vm_size_t = 0
         
@@ -231,7 +266,7 @@ extension UIDevice {
         return mem_free;
     }
     
-    public var mq_cpuThreads: Int {
+    var mq_cpuThreads: Int {
         // 6c12t will return 12
         return ProcessInfo.processInfo.processorCount
     }
@@ -256,7 +291,7 @@ extension UIDevice {
     #endif
     
     /// is iPad
-    public var mq_isPad: Bool {
+    var mq_isPad: Bool {
         get {
             return UIDevice.current.userInterfaceIdiom == .pad
         }
