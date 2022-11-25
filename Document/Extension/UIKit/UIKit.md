@@ -261,3 +261,19 @@ func visibleItemsInvalidationHandler(_ handler: @escaping (_ items: [NSCollectio
 
 等效`.visibleItemsInvalidationHandler`, 包装func实现闭包补全
 
+
+
+## UIEdgeInsets
+
+```swift
+public static func top(_ top: CGFloat) -> UIEdgeInsets
+public static func left(_ left: CGFloat) -> UIEdgeInsets
+public static func bottom(_ bottom: CGFloat) -> UIEdgeInsets
+public static func right(_ right: CGFloat) -> UIEdgeInsets
+public static func horizontal(_ horizontal: CGFloat) -> UIEdgeInsets
+public static func vertical(_ vertical: CGFloat) -> UIEdgeInsets
+public static func all(_ all: CGFloat) -> UIEdgeInsets
+```
+
+快速创建
+

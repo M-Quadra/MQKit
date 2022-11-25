@@ -98,6 +98,7 @@
 		E7AB2D12292B4AE500D2F40F /* MQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D11292B4AE500D2F40F /* MQTextView.swift */; };
 		E7AB2D18292B501000D2F40F /* CGFloat+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */; };
 		E7AB2D1E292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D1D292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift */; };
+		E7AB2D21292B69F300D2F40F /* UIEdgeInsets+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D20292B69F300D2F40F /* UIEdgeInsets+MQ.swift */; };
 		E7BEF6EC28DC12F0000F6C91 /* UILabel+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */; };
 		E7BEF6EE28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */; };
 		E7C91EC028BCA67300CFB751 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C91EBF28BCA67300CFB751 /* DSL.swift */; };
@@ -220,6 +221,7 @@
 		E7AB2D11292B4AE500D2F40F /* MQTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTextView.swift; sourceTree = "<group>"; };
 		E7AB2D17292B501000D2F40F /* CGFloat+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+MQ.swift"; sourceTree = "<group>"; };
 		E7AB2D1D292B5A3B00D2F40F /* NSCollectionLayoutSection+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCollectionLayoutSection+MQ.swift"; sourceTree = "<group>"; };
+		E7AB2D20292B69F300D2F40F /* UIEdgeInsets+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+MQ.swift"; sourceTree = "<group>"; };
 		E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DSL.swift"; sourceTree = "<group>"; };
 		E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+MQ.swift"; sourceTree = "<group>"; };
 		E7C91EBF28BCA67300CFB751 /* DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL.swift; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 				E77B241F2907969F00269AFA /* UICollectionView */,
 				E71E722F28B72BEF00197402 /* UIColor */,
 				E736F37324766F910016FF3C /* UIDevice */,
+				E7AB2D20292B69F300D2F40F /* UIEdgeInsets+MQ.swift */,
 				E736F37724766F910016FF3C /* UIFont+MQ.swift */,
 				E736F36A24766F910016FF3C /* UIImage */,
 				E736F39E24766F910016FF3C /* UITextField+MQ.swift */,
@@ -843,7 +846,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = M_noAria;
 				TargetAttributes = {
 					E736F33C24766E310016FF3C = {
@@ -962,6 +965,7 @@
 				E79E04BA28DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift in Sources */,
 				E77BD376291A3CF400F7EF36 /* Hash+MD5.swift in Sources */,
 				E77B8477291BBABC0086E951 /* MQCrypto+Padding.swift in Sources */,
+				E7AB2D21292B69F300D2F40F /* UIEdgeInsets+MQ.swift in Sources */,
 				E713601B28F271060010A83F /* NSCollectionLayoutDecorationItem+MQ.swift in Sources */,
 				E736F3A724766F910016FF3C /* CGPoint+MQ.swift in Sources */,
 				E71E722E28B72ACE00197402 /* CGColor+MQ.swift in Sources */,
@@ -1066,6 +1070,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1126,6 +1131,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
