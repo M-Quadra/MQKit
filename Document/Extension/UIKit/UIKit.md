@@ -277,3 +277,12 @@ public static func all(_ all: CGFloat) -> UIEdgeInsets
 
 快速创建
 
+
+
+## UIRectEdge
+
+```swift
+public static var none: UIRectEdge { get }
+```
+
+补充none, 与OC一致

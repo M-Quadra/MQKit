@@ -109,6 +109,7 @@
 		E7D5E69428C1F89700DF50A9 /* Bundle+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D5E69328C1F89700DF50A9 /* Bundle+MQ.swift */; };
 		E7DB9DC9292DCEF100DDFFB5 /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB9DC8292DCEF100DDFFB5 /* Semaphore.swift */; };
 		E7DB9DCB292E069600DDFFB5 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB9DCA292E069600DDFFB5 /* Atomic.swift */; };
+		E7DB9DCD292E1B5A00DDFFB5 /* UIRectEdge+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DB9DCC292E1B5A00DDFFB5 /* UIRectEdge+MQ.swift */; };
 		E7EE4D05291FB3F100851D9B /* RSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE4D04291FB3F100851D9B /* RSA.swift */; };
 		E7EE4D07291FB41700851D9B /* RSA+PKCS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE4D06291FB41700851D9B /* RSA+PKCS1.swift */; };
 		E7EE4D092920A38300851D9B /* RSA+Raw.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EE4D082920A38300851D9B /* RSA+Raw.swift */; };
@@ -236,6 +237,7 @@
 		E7D5E69328C1F89700DF50A9 /* Bundle+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+MQ.swift"; sourceTree = "<group>"; };
 		E7DB9DC8292DCEF100DDFFB5 /* Semaphore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semaphore.swift; sourceTree = "<group>"; };
 		E7DB9DCA292E069600DDFFB5 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		E7DB9DCC292E1B5A00DDFFB5 /* UIRectEdge+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRectEdge+MQ.swift"; sourceTree = "<group>"; };
 		E7EE4D04291FB3F100851D9B /* RSA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSA.swift; sourceTree = "<group>"; };
 		E7EE4D06291FB41700851D9B /* RSA+PKCS1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSA+PKCS1.swift"; sourceTree = "<group>"; };
 		E7EE4D082920A38300851D9B /* RSA+Raw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSA+Raw.swift"; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 				E7AB2D20292B69F300D2F40F /* UIEdgeInsets+MQ.swift */,
 				E736F37724766F910016FF3C /* UIFont+MQ.swift */,
 				E736F36A24766F910016FF3C /* UIImage */,
+				E7DB9DCC292E1B5A00DDFFB5 /* UIRectEdge+MQ.swift */,
 				E736F39E24766F910016FF3C /* UITextField+MQ.swift */,
 				E725073928D8885300378A7D /* UIView */,
 			);
@@ -1028,6 +1031,7 @@
 				E7C91EC028BCA67300CFB751 /* DSL.swift in Sources */,
 				E713607328D00C4500CE6A85 /* String+Subscript.swift in Sources */,
 				E736F3B824766F910016FF3C /* Pow+MQ.swift in Sources */,
+				E7DB9DCD292E1B5A00DDFFB5 /* UIRectEdge+MQ.swift in Sources */,
 				E736F3BE24766F910016FF3C /* String+MQCode.swift in Sources */,
 				E7F5B00324D1952200C929A4 /* String+MQRegularExpression.swift in Sources */,
 				E759B73528F548750064E349 /* UIApplication+MQ.swift in Sources */,
