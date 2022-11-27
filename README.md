@@ -40,4 +40,5 @@ https://github.com/M-Quadra/MQKit.git
 7. [MQTextField](Document/Other/MQTextField.md)
 8. [UIKit DSL](./Document/Other/UIKit_DSL.md)
 9. [MQTextView](./Document/Other/MQTextView.md)
+10. [Sync 并发工具](./Document/Other/Sync.md)
 
