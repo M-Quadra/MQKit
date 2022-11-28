@@ -207,3 +207,13 @@ public init?(hexEncoded hex: String)
 ```
 
 hex转Data
+
+
+
+## Task
+
+```swift
+public static func sleep(millisecond duration: UInt64) async throws
+```
+
+添加更常用的毫秒支持
