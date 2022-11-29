@@ -17,8 +17,8 @@ public extension UICollectionView {
 }
 
 fileprivate extension String {
-    static let header = "UICollectionElementKindSectionHeader"
-    static let footer = "UICollectionElementKindSectionFooter"
+    static let header = UICollectionView.elementKindSectionHeader
+    static let footer = UICollectionView.elementKindSectionFooter
 }
 
 // MARK: - Register
