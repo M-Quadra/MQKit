@@ -1,5 +1,6 @@
 # UIKit 相关扩展
 
+- [NSCollectionLayout 相关](./NSCollectionLayout.md)
 - [UICollectionView 相关](./UICollectionView.md)
 
 
@@ -163,42 +164,6 @@ func openSettings(
 
 
 
-## NSCollectionLayoutGroup
-
-```swift
-.section: NSCollectionLayoutSection
-```
-
-等效`NSCollectionLayoutSection(group: group)`, 从头开始创建section太麻烦了
-
-
-
-## NSCollectionLayoutSize
-
-```swift
-static var fill: Self
-```
-
-等效`widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)`
-
-
-
-```swift
-static func width(_ width: NSCollectionLayoutDimension) -> Self
-```
-
-等效`widthDimension: width, heightDimension: .fractionalHeight(1)`
-
-
-
-```swift
-static func height(_ height: NSCollectionLayoutDimension) -> Self
-```
-
-等效`widthDimension: .fractionalWidth(1), heightDimension: height`
-
-
-
 ## NSDirectionalEdgeInsets
 
 ```swift
@@ -214,16 +179,6 @@ static func all(_ edge: CGFloat) -> NSDirectionalEdgeInsets
 ```
 
 边距快速创建
-
-
-
-## NSCollectionLayoutDecorationItem
-
-```swift
-static func background(view: UICollectionReusableView.Type) -> Self
-```
-
-等效`background(elementKind: className)`
 
 
 
@@ -286,3 +241,4 @@ public static var none: UIRectEdge { get }
 ```
 
 补充none, 与OC一致
+
