@@ -105,6 +105,7 @@
 		E7AB2D21292B69F300D2F40F /* UIEdgeInsets+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB2D20292B69F300D2F40F /* UIEdgeInsets+MQ.swift */; };
 		E7BEF6EC28DC12F0000F6C91 /* UILabel+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */; };
 		E7BEF6EE28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */; };
+		E7C2F4F3293E0EC200ACED73 /* RangeExpression+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C2F4F2293E0EC200ACED73 /* RangeExpression+MQ.swift */; };
 		E7C91EC028BCA67300CFB751 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C91EBF28BCA67300CFB751 /* DSL.swift */; };
 		E7C91EC228BCB21300CFB751 /* CAShapeLayer+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C91EC128BCB21300CFB751 /* CAShapeLayer+DSL.swift */; };
 		E7C91EC428BCB26700CFB751 /* CALayer+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C91EC328BCB26700CFB751 /* CALayer+DSL.swift */; };
@@ -236,6 +237,7 @@
 		E7AB2D20292B69F300D2F40F /* UIEdgeInsets+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+MQ.swift"; sourceTree = "<group>"; };
 		E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DSL.swift"; sourceTree = "<group>"; };
 		E7BEF6ED28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDirectionalEdgeInsets+MQ.swift"; sourceTree = "<group>"; };
+		E7C2F4F2293E0EC200ACED73 /* RangeExpression+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RangeExpression+MQ.swift"; sourceTree = "<group>"; };
 		E7C91EBF28BCA67300CFB751 /* DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL.swift; sourceTree = "<group>"; };
 		E7C91EC128BCB21300CFB751 /* CAShapeLayer+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+DSL.swift"; sourceTree = "<group>"; };
 		E7C91EC328BCB26700CFB751 /* CALayer+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+DSL.swift"; sourceTree = "<group>"; };
@@ -460,6 +462,7 @@
 				E736F37E24766F910016FF3C /* NSRegularExpression+MQ.swift */,
 				E736F37F24766F910016FF3C /* Number */,
 				E736F37B24766F910016FF3C /* OperationQueue+MQ.swift */,
+				E7C2F4F2293E0EC200ACED73 /* RangeExpression+MQ.swift */,
 				E736F38824766F910016FF3C /* String */,
 				E736F38324766F910016FF3C /* StringEncoding */,
 				E713607428D00E5700CE6A85 /* Substring */,
@@ -969,6 +972,7 @@
 				E7BEF6EE28DC32E8000F6C91 /* NSDirectionalEdgeInsets+MQ.swift in Sources */,
 				E7D5E69428C1F89700DF50A9 /* Bundle+MQ.swift in Sources */,
 				E736F3B424766F910016FF3C /* Date+MQ.swift in Sources */,
+				E7C2F4F3293E0EC200ACED73 /* RangeExpression+MQ.swift in Sources */,
 				E736F3CE24766F910016FF3C /* MQTextField.swift in Sources */,
 				E79F76B92936E3EE009DED5F /* NSCollectionLayoutBoundarySupplementaryItem+MQ.swift in Sources */,
 				E74CA04C28D9A3B900CD4DC9 /* UICollectionView+MQ.swift in Sources */,

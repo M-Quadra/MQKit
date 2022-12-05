@@ -217,3 +217,14 @@ public static func sleep(millisecond duration: UInt64) async throws
 ```
 
 添加更常用的毫秒支持
+
+
+
+## RangeExpression
+
+```swift
+public static func !~= (a: Self, b: Bound) -> Bool
+```
+
+等效`!(a ~= b)`
+
