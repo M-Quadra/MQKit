@@ -6,6 +6,12 @@
 >
 > 使用Actor替代OC中标记为过期的原子操作
 
+正在考虑对`unlock`追加常态方法, 毕竟`defer`中开`Task`很烦
+
+异步方法用`byXXX`重命名? 但常态`unlock`只是入口变了
+
+追加`unlockAsync`? 但`defer`多了这不显得有点丑
+
 
 
 ## Mutex

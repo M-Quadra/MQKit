@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension ObjectDSL where T: UIView {
+public extension CALayerDSL where T: UIView {
     
     @discardableResult
     func clipsToBounds(_ clipsToBounds: Bool) -> Self {

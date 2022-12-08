@@ -6,28 +6,52 @@
 //  Copyright © 2022 M_noAria. All rights reserved.
 //
 
-import Foundation
-import QuartzCore
 import UIKit
 
-public class ObjectDSL<T: AnyObject> {
+// MARK: - CALayer
+public class CALayerDSL<T: NSObject> {
     
-    public weak internal(set) var object: T?
+    public weak fileprivate(set) var object: T?
     
     required init(_ object: T) {
         self.object = object
     }
 }
 
-public func dsl<T: NSObject>(for klass: T.Type = T.self, closure: (_ make: ObjectDSL<T>) -> Void) -> T {
+public func dsl<T: CALayer>(
+    for klass: T.Type = T.self,
+    closure: (_ make: CALayerDSL<T>) -> Void
+) -> T {
     let obj = klass.init()
-    let dsl = ObjectDSL(obj)
+    let dsl = CALayerDSL(obj)
     closure(dsl)
     return obj
 }
 
-public func dsl<T: NSObject>(for object: T, closure: (_ make: ObjectDSL<T>) -> Void) -> T {
-    let dsl = ObjectDSL(object)
+public func dsl<T: CALayer>(
+    for object: T,
+    closure: (_ make: CALayerDSL<T>) -> Void
+) -> T {
+    let dsl = CALayerDSL(object)
     closure(dsl)
     return object
+}
+
+// MARK: - Dictionary
+public class DictionaryDSL<Key: Hashable, Value> {
+    
+    var dic: [Key: Value]
+    
+    required init(_ dic: Dictionary<Key, Value>) {
+        self.dic = dic
+    }
+}
+
+public func dsl<Key: Hashable, Value>(
+    for dic: Dictionary<Key, Value> = [:],
+    closure: (_ make: DictionaryDSL<Key, Value>) -> Void
+) -> Dictionary<Key, Value> {
+    let dsl = DictionaryDSL(dic)
+    closure(dsl)
+    return dsl.dic
 }

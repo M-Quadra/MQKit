@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension ObjectDSL where T: CALayer {
+public extension CALayerDSL where T: CALayer {
     
     @discardableResult
     func size(_ size: CGSize) -> Self {

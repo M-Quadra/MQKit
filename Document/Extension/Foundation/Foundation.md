@@ -29,46 +29,6 @@
 
 
 
-## NSMutableAttributedString
-
-```
-var mq_color: UIColor?
-```
-
-设置富文本的整体文字颜色
-
-```
-public var mq_font: UIFont?
-```
-
-设置富文本的整体字体
-
-```
-public var mq_lineSpacing: CGFloat
-```
-
-NSParagraphStyle.lineSpacing
-
-```
-public var mq_alignment: NSTextAlignment
-```
-
-NSParagraphStyle.alignment
-
-```
-.mq_setFont(_ font: UIFont?, range: NSRange)
-.mq_setFont(_ font: UIFont?, range: Range<String.Index>?)
-```
-
-局部字体设置
-
-```
-.mq_setColor(_ color: UIColor, range: NSRange)
-.mq_setColor(_ color: UIColor, range: Range<String.Index>?)
-```
-
-局部文字颜色设置
-
 ## URL
 
 ```

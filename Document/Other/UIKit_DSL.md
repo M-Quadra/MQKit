@@ -6,12 +6,21 @@
 
 
 
+## CALayer 相关
+
 ```swift
-public func dsl<T: NSObject>(for klass: T.Type = T.self, closure: (_ make: 
-public func dsl<T: NSObject>(for object: T, closure: (_ make: ObjectDSL<T>) -> Void) -> T
+public func dsl<T: CALayer>(
+    for klass: T.Type = T.self,
+    closure: (_ make: CALayerDSL<T>) -> Void
+) -> T
+
+public func dsl<T: CALayer>(
+    for object: T,
+    closure: (_ make: CALayerDSL<T>) -> Void
+) -> T
 ```
 
-主要入口如上, 分别对应类型与对象
+入口如上, 分别对应类型与对象
 
 
 
@@ -27,3 +36,17 @@ fileprivate lazy var resetButton: UIButton = dsl { make in
 }
 ```
 
+
+
+## Dictionary 相关
+
+```swift
+public func dsl<Key: Hashable, Value>(
+    for dic: Dictionary<Key, Value> = [:],
+    closure: (_ make: DictionaryDSL<Key, Value>) -> Void
+) -> Dictionary<Key, Value>
+```
+
+入口如上, 目前主要用来提供富文本属性强类型
+
+看着不够优雅, 后续可能移除

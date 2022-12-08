@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension ObjectDSL where T: UILabel {
+public extension CALayerDSL where T: UILabel {
     
     @discardableResult
     func text(_ text: String?) -> Self {

@@ -17,6 +17,7 @@
 		E71E722E28B72ACE00197402 /* CGColor+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E722D28B72ACE00197402 /* CGColor+MQ.swift */; };
 		E71E723128B72C0F00197402 /* UIColor+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723028B72C0F00197402 /* UIColor+Creator.swift */; };
 		E71E723828B746C800197402 /* UIColor+Metal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71E723728B746C800197402 /* UIColor+Metal.swift */; };
+		E7202661293F11950092D25E /* NSAttributedStringKey+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7202660293F11950092D25E /* NSAttributedStringKey+DSL.swift */; };
 		E725073B28D8886800378A7D /* UIView+Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = E725073A28D8886800378A7D /* UIView+Shortcut.swift */; };
 		E72C9E7628B8995700DC6C02 /* CGRect+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C9E7528B8995700DC6C02 /* CGRect+Creator.swift */; };
 		E72C9E7928B8A2A500DC6C02 /* CGPoint+Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72C9E7828B8A2A500DC6C02 /* CGPoint+Creator.swift */; };
@@ -61,7 +62,6 @@
 		E736F3C324766F910016FF3C /* String+MQChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F38F24766F910016FF3C /* String+MQChar.swift */; };
 		E736F3C424766F910016FF3C /* Dictionary+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F39024766F910016FF3C /* Dictionary+MQ.swift */; };
 		E736F3C524766F910016FF3C /* URL+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F39124766F910016FF3C /* URL+MQ.swift */; };
-		E736F3C624766F910016FF3C /* NSMutableAttributedString+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F39224766F910016FF3C /* NSMutableAttributedString+MQ.swift */; };
 		E736F3C724766F910016FF3C /* MQKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F39524766F910016FF3C /* MQKeychain.swift */; };
 		E736F3CC24766F910016FF3C /* MQTaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F39C24766F910016FF3C /* MQTaptic.swift */; };
 		E736F3CD24766F910016FF3C /* UITextField+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736F39E24766F910016FF3C /* UITextField+MQ.swift */; };
@@ -146,6 +146,7 @@
 		E71E722D28B72ACE00197402 /* CGColor+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+MQ.swift"; sourceTree = "<group>"; };
 		E71E723028B72C0F00197402 /* UIColor+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Creator.swift"; sourceTree = "<group>"; };
 		E71E723728B746C800197402 /* UIColor+Metal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Metal.swift"; sourceTree = "<group>"; };
+		E7202660293F11950092D25E /* NSAttributedStringKey+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedStringKey+DSL.swift"; sourceTree = "<group>"; };
 		E725073A28D8886800378A7D /* UIView+Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shortcut.swift"; sourceTree = "<group>"; };
 		E72C9E7528B8995700DC6C02 /* CGRect+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Creator.swift"; sourceTree = "<group>"; };
 		E72C9E7828B8A2A500DC6C02 /* CGPoint+Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Creator.swift"; sourceTree = "<group>"; };
@@ -193,7 +194,6 @@
 		E736F38F24766F910016FF3C /* String+MQChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MQChar.swift"; sourceTree = "<group>"; };
 		E736F39024766F910016FF3C /* Dictionary+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+MQ.swift"; sourceTree = "<group>"; };
 		E736F39124766F910016FF3C /* URL+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+MQ.swift"; sourceTree = "<group>"; };
-		E736F39224766F910016FF3C /* NSMutableAttributedString+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+MQ.swift"; sourceTree = "<group>"; };
 		E736F39524766F910016FF3C /* MQKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQKeychain.swift; sourceTree = "<group>"; };
 		E736F39C24766F910016FF3C /* MQTaptic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTaptic.swift; sourceTree = "<group>"; };
 		E736F39E24766F910016FF3C /* UITextField+MQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+MQ.swift"; sourceTree = "<group>"; };
@@ -458,7 +458,6 @@
 				E7A4386D24F8AAF10055CB17 /* Data */,
 				E736F37D24766F910016FF3C /* Date+MQ.swift */,
 				E736F39024766F910016FF3C /* Dictionary+MQ.swift */,
-				E736F39224766F910016FF3C /* NSMutableAttributedString+MQ.swift */,
 				E736F37E24766F910016FF3C /* NSRegularExpression+MQ.swift */,
 				E736F37F24766F910016FF3C /* Number */,
 				E736F37B24766F910016FF3C /* OperationQueue+MQ.swift */,
@@ -801,6 +800,7 @@
 				E7BEF6EB28DC12F0000F6C91 /* UILabel+DSL.swift */,
 				E7F796EE2926429400B1FE97 /* UIScrollView+DSL.swift */,
 				E74CA04028D98FD900CD4DC9 /* UIVIew+DSL.swift */,
+				E7202660293F11950092D25E /* NSAttributedStringKey+DSL.swift */,
 			);
 			path = DSL;
 			sourceTree = "<group>";
@@ -1003,6 +1003,7 @@
 				E7AB2D12292B4AE500D2F40F /* MQTextView.swift in Sources */,
 				E736F3A624766F910016FF3C /* UIImage+MQMetal.swift in Sources */,
 				E736F3AC24766F910016FF3C /* UIDevice+MQSoftware.swift in Sources */,
+				E7202661293F11950092D25E /* NSAttributedStringKey+DSL.swift in Sources */,
 				E736F3B124766F910016FF3C /* CGRect+MQ.swift in Sources */,
 				E79E04BA28DB086100151957 /* UICollectionViewDiffableDataSource+MQ.swift in Sources */,
 				E77BD376291A3CF400F7EF36 /* Hash+MD5.swift in Sources */,
@@ -1023,7 +1024,6 @@
 				E736F3A324766F910016FF3C /* MQTableView.swift in Sources */,
 				E7EFBDC9291A751A0065C325 /* Hash+SHA256.swift in Sources */,
 				E7CF6DB024D121B0004F3C66 /* CharacterSet+MQ.swift in Sources */,
-				E736F3C624766F910016FF3C /* NSMutableAttributedString+MQ.swift in Sources */,
 				E763D960291B400800067B7A /* MQCrypto+CC.swift in Sources */,
 				E736F3B224766F910016FF3C /* OperationQueue+MQ.swift in Sources */,
 				E72C9E7628B8995700DC6C02 /* CGRect+Creator.swift in Sources */,

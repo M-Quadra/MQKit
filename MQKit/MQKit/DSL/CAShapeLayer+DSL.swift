@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension ObjectDSL where T: CAShapeLayer {
+public extension CALayerDSL where T: CAShapeLayer {
     
     @discardableResult
     func fillColor(_ color: UIColor) -> Self {
