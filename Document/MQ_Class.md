@@ -37,21 +37,7 @@ CollectionView控件复用, 由于swift的迷の泛型传递，目前只能借�
 
 与`MQCollectionView`相同的注册与复用机制, 由于泛型问题需要使用结构体包装, HeaderFooter的返回值与`.dequeueReusableHeaderFooterView`保持一致, 使用可选值
 
-# MQTableView
 
-```
-.whenHitTest(whenHitTest: hitTestClosure?)
-```
-
-为了更方便地写卡片滑动，延伸出了控制`hitTest`的闭包
-
-神™的swift不能自动补全闭包，没办法，改成func了
-
-```
-.superHitTest(_ point: CGPoint, with event: UIEvent?) -> UIView?
-```
-
-为了在实现`whenHitTest`后依然能在外部访问原`hitTest`
 
 # MQHorizontalPagingView
 
