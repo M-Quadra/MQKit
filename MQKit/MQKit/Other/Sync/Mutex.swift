@@ -8,12 +8,10 @@
 
 import Foundation
 
-fileprivate let mutexLocked: Int32 = 1
-
 @available(iOS 13, *)
 public class Mutex {
     
-    let state = Atomic(0)
+    fileprivate let state = Atomic(0)
     
     public init() {}
 }
@@ -22,7 +20,7 @@ public class Mutex {
 @available(iOS 13, *)
 public extension Mutex {
     
-    func lock() async {
+    func byLock() async {
         if await self.state.compareAndSwap(old: 0, new: 1) { return }
         
         for _ in 0..<4 {
@@ -37,13 +35,19 @@ public extension Mutex {
         }
     }
     
-    func tryLock() async -> Bool {
+    func byTryLock() async -> Bool {
         await self.state.compareAndSwap(old: 0, new: 1)
     }
     
-    func unlock() async {
+    func byUnlock() async {
         while await !self.state.compareAndSwap(old: 1, new: 0) {
             await Task.yield()
+        }
+    }
+    
+    func unlock() {
+        Task {
+            await self.byUnlock()
         }
     }
 }

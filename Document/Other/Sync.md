@@ -1,16 +1,10 @@
 # Sync 并发工具
 
-> 默认的NSLock async不安全, 根据测试, with-lock的表现也存在问题
+> 默认的NSLock 非async安全, 根据测试, with-lock的表现也存在问题
 >
-> 看了看Go, 自己勉强糊了些疑似能用的东西
->
-> 使用Actor替代OC中标记为过期的原子操作
+> 参考Go, 手动糊了套
 
-正在考虑对`unlock`追加常态方法, 毕竟`defer`中开`Task`很烦
-
-异步方法用`byXXX`重命名? 但常态`unlock`只是入口变了
-
-追加`unlockAsync`? 但`defer`多了这不显得有点丑
+使用Actor替代OC中标记为过期的原子操作
 
 
 
@@ -19,16 +13,19 @@
 互斥锁
 
 ```swift
-public func lock() async
-public func tryLock() async -> Bool
-public func unlock() async
+public func byLock() async
+public func byTryLock() async -> Bool
+public func byUnlock() async
+public func unlock()
 ```
 
 
 
 ## Channel
 
-约等于`AsyncStream`, 没有实现缓冲区限制, 相比原版取数据操作加了锁, 避免了部分情况下的奇怪阻塞/死锁
+约等于`AsyncStream`, 没有实现缓冲区限制
+
+<del>相比原版取数据操作加了锁, 避免了部分情况下的奇怪阻塞/死锁</del>, iOS更新后奇怪的阻塞/死锁问题消失了!?
 
 在没有读请求的情况下可以不主动close
 
@@ -36,7 +33,7 @@ public func unlock() async
 public init()
 public func close()
 public func push(_ v: T)
-public func pop() async -> T?
+public func byPop() async -> T?
 ```
 
 

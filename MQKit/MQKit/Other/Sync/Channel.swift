@@ -12,7 +12,7 @@ import Foundation
 @available(iOS 13, *)
 public struct Channel<T: Sendable> {
     
-    class Builder {
+    fileprivate class Builder {
         
         var continuation: AsyncStream<T>.Continuation?
         lazy var stream = AsyncStream<T>.init { [weak self] continuation in
@@ -22,10 +22,8 @@ public struct Channel<T: Sendable> {
         }
     }
     
-    let continuation: AsyncStream<T>.Continuation
-    let stream: AsyncStream<T>
-    
-    let m = Mutex()
+    fileprivate let continuation: AsyncStream<T>.Continuation
+    fileprivate let stream: AsyncStream<T>
     
     public init() {
         let b = Builder()
@@ -34,6 +32,7 @@ public struct Channel<T: Sendable> {
     }
 }
 
+// MARK: - Public
 @available(iOS 13, *)
 public extension Channel {
     
@@ -46,12 +45,7 @@ public extension Channel {
     }
     
     @discardableResult
-    func pop() async -> T? {
-        await self.m.lock()
-        defer { Task {
-            await self.m.unlock()
-        }}
-        
+    func byPop() async -> T? {
         var it = self.stream.makeAsyncIterator()
         let opt = await it.next()
         return opt

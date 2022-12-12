@@ -27,10 +27,10 @@ struct Semaphore {
         
         if isLIFO {
             _ = await lifoCount.add(1)
-            await self.lifoChanel.pop()
+            await self.lifoChanel.byPop()
         } else {
             _ = await self.slowCount.add(1)
-            await self.slowChanel.pop()
+            await self.slowChanel.byPop()
         }
     }
     
@@ -57,18 +57,4 @@ struct Semaphore {
             self.slowChanel.push(())
         }
     }
-}
-
-@available(iOS 13, *)
-public func ts() async {
-    let sem = Semaphore(0)
-    DispatchQueue.global().async {
-        Task {
-            try? await Task.sleep(millisecond: 1000)
-            await sem.release()
-        }
-    }
-    
-    await sem.acquire()
-    print("end")
 }
