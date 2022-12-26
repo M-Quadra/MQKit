@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension CALayerDSL where T: UIScrollView {
+public extension UIViewDSL where T: UIScrollView {
     
     @discardableResult
     func contentInset(_ contentInset: UIEdgeInsets) -> Self {

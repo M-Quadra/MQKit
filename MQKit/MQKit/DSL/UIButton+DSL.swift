@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension CALayerDSL where T: UIButton {
+public extension UIViewDSL where T: UIButton {
     
     @discardableResult
     func setTitle(_ title: String?, for state: UIControl.State) -> Self {

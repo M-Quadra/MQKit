@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension CALayerDSL where T: UICollectionView {
+public extension UIViewDSL where T: UICollectionView {
     
     @discardableResult
     func delegate(_ delegate: UICollectionViewDelegate?) -> Self {
@@ -102,7 +102,7 @@ public extension CALayerDSL where T: UICollectionView {
 }
 
 // MARK: - MQ
-public extension CALayerDSL where T: UICollectionView {
+public extension UIViewDSL where T: UICollectionView {
     
     @discardableResult
     func register(cells: [UICollectionViewCell.Type]) -> Self {
