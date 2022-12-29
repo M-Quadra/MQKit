@@ -74,13 +74,6 @@ Date 转 String
 dic转json
 
 
-## Array
-
-```
-.mq_jsonString(encoding: String.Encoding = .utf8) -> String
-```
-
-Array转json
 
 ## OperationQueue
 
@@ -187,4 +180,38 @@ public static func !~= (a: Self, b: Bound) -> Bool
 ```
 
 等效`!(a ~= b)`
+
+
+
+## UInt8
+
+```swift
+public static var random: UInt8 { get }
+```
+
+随机数
+
+
+
+## Array
+
+```swift
+Element == UInt8
+public static func random(_ count: Int) -> [Element]
+```
+
+随机数组生成
+
+```
+Element : Hashable
+public var unique: [Element] { get }
+```
+
+去重
+
+```swift
+public func `subscript`(_ index: Int) -> Element?
+```
+
+安全取下标
 

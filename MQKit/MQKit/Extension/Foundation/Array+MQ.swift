@@ -8,15 +8,32 @@
 
 import Foundation
 
-extension Array {
+public extension Array where Element == UInt8 {
     
-    public func mq_jsonString(encoding: String.Encoding = .utf8) -> String {
-        guard JSONSerialization.isValidJSONObject(self) else {
-            return ""
+    static func random(_ count: Int) -> Self {
+        return (0..<count).map({_ in
+            UInt8.random
+        })
+    }
+}
+
+public extension Array where Element: Hashable {
+    
+    var unique: [Element] {
+        var arr = [Element]()
+        var set = Set<Element>()
+        for v in self where !set.contains(v) {
+            arr.append(v)
+            set.insert(v)
         }
-        guard let jsonData = try? JSONSerialization.data(withJSONObject: self, options: .init(rawValue: 0)) else {
-            return ""
-        }
-        return String(data: jsonData, encoding: encoding) ?? ""
+        return arr
+    }
+}
+
+public extension Array {
+    
+    func `subscript`(_ index: Int) -> Element? {
+        if !(self.indices ~= index) { return nil }
+        return self[index]
     }
 }

@@ -1,16 +1,12 @@
 # MQKit
 
-拖延症巨制, 不定时太监
+因为不写iOS, 于是随缘更新
 
-既然12.2 Swift ABI稳定, SwiftPM也来了, 那么就尽量纯swift吧
+既然12.2 Swift ABI稳定, SwiftPM也来了, 那么就纯swift吧
 
 在[QMUI](https://github.com/Tencent/QMUI_iOS)里看到了一些感觉有趣的方法，这里就班门弄斧了
 
-许久之后可能会更新一波UIView相关的内容
-
 既然不冲突, 就没必要加前缀
-
-随缘更新
 
 # 集成
 
