@@ -215,3 +215,12 @@ public func `subscript`(_ index: Int) -> Element?
 
 安全取下标
 
+
+
+### NSMutableAttributedString
+
+```swift
+public func append(_ attachment: NSTextAttachment)
+```
+
+直接添加`NSTextAttachment`
