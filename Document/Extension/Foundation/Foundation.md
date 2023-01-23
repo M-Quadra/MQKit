@@ -13,12 +13,38 @@
 
 
 
-## StringEncoding
+## String.Encoding
 
 1. [CFStringEncodings 编码相关](./StringEncoding/CFStringEncodings+MQCode.md)
+
 2. [CFStringEncodings 枚举相关](./StringEncoding/CFStringEncodings+MQList.md)
-3. [StringEncoding 编码相关](./StringEncoding/StringEncoding+MQCode.md)
-4. [StringEncoding 枚举相关](./StringEncoding/StringEncoding+MQList.md)
+
+   
+
+```swift
+public init(_ cfStrEncoding: CFStringEncodings)
+```
+
+`CFStringEncodings`转`String.Encoding`
+
+
+
+```swift
+public static var allValues: [String.Encoding] { get }
+```
+
+获取所有编码, 包括`CFStringEncodings`的可用部分, 过滤无法从`""`转换`Data`的编码
+
+
+
+```swift
+public static let GB_18030_2000: String.Encoding
+public static let KOI8_R: String.Encoding
+public static let big5: String.Encoding
+...
+```
+
+直接获取`CFStringEncodings`定义的编码
 
 
 

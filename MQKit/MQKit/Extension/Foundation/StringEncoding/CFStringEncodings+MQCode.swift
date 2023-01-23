@@ -8,9 +8,9 @@
 
 import Foundation
 
-extension CFStringEncodings {
+public extension CFStringEncodings {
     
-    public var mq_StringEncoding: String.Encoding {
+    var stringEncoding: String.Encoding {
         return String.Encoding(self)
     }
 }

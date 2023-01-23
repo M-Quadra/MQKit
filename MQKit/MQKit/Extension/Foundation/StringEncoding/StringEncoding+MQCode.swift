@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension String.Encoding {
+public extension String.Encoding {
     
-    init(_ mq_cfStringEncoding: CFStringEncodings) {
-        let rawValue = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(mq_cfStringEncoding.rawValue))
+    init(_ cfStrEncoding: CFStringEncodings) {
+        let rawValue = CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(cfStrEncoding.rawValue))
         self.init(rawValue: rawValue)
     }
 }
