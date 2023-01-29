@@ -95,6 +95,7 @@
 		E759B73528F548750064E349 /* UIApplication+MQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E759B73428F548750064E349 /* UIApplication+MQ.swift */; };
 		E763D95E291B3FDE00067B7A /* AES+CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D95D291B3FDE00067B7A /* AES+CBC.swift */; };
 		E763D960291B400800067B7A /* MQCrypto+CC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E763D95F291B400800067B7A /* MQCrypto+CC.swift */; };
+		E769226D2986115200DE9837 /* NSAttributedStringDocumentReadingOptionKey+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769226C2986115200DE9837 /* NSAttributedStringDocumentReadingOptionKey+DSL.swift */; };
 		E77B8477291BBABC0086E951 /* MQCrypto+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77B8476291BBABC0086E951 /* MQCrypto+Padding.swift */; };
 		E77BD376291A3CF400F7EF36 /* Hash+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77BD375291A3CF400F7EF36 /* Hash+MD5.swift */; };
 		E77BD379291A3D6800F7EF36 /* MQCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77BD378291A3D6800F7EF36 /* MQCrypto.swift */; };
@@ -233,6 +234,7 @@
 		E759B73428F548750064E349 /* UIApplication+MQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+MQ.swift"; sourceTree = "<group>"; };
 		E763D95D291B3FDE00067B7A /* AES+CBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AES+CBC.swift"; sourceTree = "<group>"; };
 		E763D95F291B400800067B7A /* MQCrypto+CC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MQCrypto+CC.swift"; sourceTree = "<group>"; };
+		E769226C2986115200DE9837 /* NSAttributedStringDocumentReadingOptionKey+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedStringDocumentReadingOptionKey+DSL.swift"; sourceTree = "<group>"; };
 		E77B8476291BBABC0086E951 /* MQCrypto+Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MQCrypto+Padding.swift"; sourceTree = "<group>"; };
 		E77BD375291A3CF400F7EF36 /* Hash+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hash+MD5.swift"; sourceTree = "<group>"; };
 		E77BD378291A3D6800F7EF36 /* MQCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQCrypto.swift; sourceTree = "<group>"; };
@@ -819,6 +821,7 @@
 				E7F796EE2926429400B1FE97 /* UIScrollView+DSL.swift */,
 				E74CA04028D98FD900CD4DC9 /* UIVIew+DSL.swift */,
 				E7202660293F11950092D25E /* NSAttributedStringKey+DSL.swift */,
+				E769226C2986115200DE9837 /* NSAttributedStringDocumentReadingOptionKey+DSL.swift */,
 			);
 			path = DSL;
 			sourceTree = "<group>";
@@ -977,6 +980,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E736F3AF24766F910016FF3C /* UIFont+MQ.swift in Sources */,
+				E769226D2986115200DE9837 /* NSAttributedStringDocumentReadingOptionKey+DSL.swift in Sources */,
 				E7DB9DC9292DCEF100DDFFB5 /* Semaphore.swift in Sources */,
 				E736F3A424766F910016FF3C /* MTLTexture+MQ.swift in Sources */,
 				E725073B28D8886800378A7D /* UIView+Shortcut.swift in Sources */,
