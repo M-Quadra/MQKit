@@ -54,3 +54,14 @@ public func byPop() async -> T?
 
 后续待观察
 
+
+
+## NoMainActor
+
+```swift
+Task { @NoMainActor in
+    print("x")
+}
+```
+
+阻止Task被分配至主线程
