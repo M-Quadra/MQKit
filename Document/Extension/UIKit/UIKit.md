@@ -125,8 +125,6 @@ CGFloat.mq_radian(angle: )
 
 ## UIApplication
 
-1. [常用三方 URL Scheme](./UIApplication/UIApplication+MQThird.md)
-
 ```swift
 func openSettings(
     options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:],
