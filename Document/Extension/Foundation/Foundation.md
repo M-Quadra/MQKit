@@ -236,7 +236,7 @@ public var unique: [Element] { get }
 去重
 
 ```swift
-public func `subscript`(_ index: Int) -> Element?
+public func subscriptOrNil(_ index: Int) -> Element?
 ```
 
 安全取下标
