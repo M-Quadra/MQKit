@@ -21,7 +21,7 @@ public extension MQCrypto.RSA.PKCS1 {
               SecKeyIsAlgorithmSupported(pubKey, .encrypt, .rsaEncryptionPKCS1)
         else { return nil }
         
-        let blockSize = SecKeyGetBlockSize(pubKey)
+        let blockSize = SecKeyGetBlockSize(pubKey) - 11
         var opt = Data(capacity: (plaintext.count+blockSize-1)/blockSize*blockSize)
         
         var i = 0
