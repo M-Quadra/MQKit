@@ -39,4 +39,16 @@ public extension UIViewDSL {
         self.object?.contentMode = contentMode
         return self
     }
+
+    @discardableResult
+    func isUserInteractionEnabled(_ isUserInteractionEnabled: Bool) -> Self {
+        self.object?.isUserInteractionEnabled = isUserInteractionEnabled
+        return self
+    }
+
+    @discardableResult
+    func tag(_ tag: Int) -> Self {
+        self.object?.tag = tag
+        return self
+    }
 }
