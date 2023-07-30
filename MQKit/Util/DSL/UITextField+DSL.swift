@@ -140,4 +140,22 @@ public extension UIViewDSL where T: UITextField {
         self.object?.rightViewMode = rightViewMode
         return self
     }
+
+    @discardableResult
+    func inputView(_ inputView: UIView?) -> Self {
+        self.object?.inputView = inputView
+        return self
+    }
+
+    @discardableResult
+    func inputAccessoryView(_ inputAccessoryView: UIView?) -> Self {
+        self.object?.inputAccessoryView = inputAccessoryView
+        return self
+    }
+
+    @discardableResult
+    func clearsOnInsertion(_ clearsOnInsertion: Bool) -> Self {
+        self.object?.clearsOnInsertion = clearsOnInsertion
+        return self
+    }
 }
