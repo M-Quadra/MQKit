@@ -128,6 +128,7 @@
 		E7BC652F29A469F800C8C24E /* MQCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC652E29A469F800C8C24E /* MQCollectionView.swift */; };
 		E7BC653129A46C8D00C8C24E /* SceneDelegate+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC653029A46C8D00C8C24E /* SceneDelegate+UI.swift */; };
 		E7BC653529A472EC00C8C24E /* ComponentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC653429A472EC00C8C24E /* ComponentHomeViewController.swift */; };
+		E7FED9CD2A821A2A004ADF0D /* UITextView+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FED9CC2A821A2A004ADF0D /* UITextView+DSL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +264,7 @@
 		E7BC652E29A469F800C8C24E /* MQCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCollectionView.swift; sourceTree = "<group>"; };
 		E7BC653029A46C8D00C8C24E /* SceneDelegate+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneDelegate+UI.swift"; sourceTree = "<group>"; };
 		E7BC653429A472EC00C8C24E /* ComponentHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentHomeViewController.swift; sourceTree = "<group>"; };
+		E7FED9CC2A821A2A004ADF0D /* UITextView+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+DSL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -631,6 +633,7 @@
 				E7BC64E029A4684A00C8C24E /* UIScrollView+DSL.swift */,
 				E7BC64E129A4684A00C8C24E /* UIVIew+DSL.swift */,
 				E73EA3082A67C5FF000EF68F /* UITextField+DSL.swift */,
+				E7FED9CC2A821A2A004ADF0D /* UITextView+DSL.swift */,
 				E7BC64E229A4684A00C8C24E /* CAShapeLayer+DSL.swift */,
 				E7BC64E329A4684A00C8C24E /* UICollectionView+DSL.swift */,
 				E7BC64E429A4684A00C8C24E /* CALayer+DSL.swift */,
@@ -920,6 +923,7 @@
 				E7BC64A229A4681D00C8C24E /* UIColor+Metal.swift in Sources */,
 				E7BC64D429A4681D00C8C24E /* String+MQSize.swift in Sources */,
 				E7BC64ED29A4684A00C8C24E /* UICollectionView+DSL.swift in Sources */,
+				E7FED9CD2A821A2A004ADF0D /* UITextView+DSL.swift in Sources */,
 				E7BC649629A4681D00C8C24E /* CGSize+MQ.swift in Sources */,
 				E7BC64F829A4698800C8C24E /* ThirdScheme+WeChat.swift in Sources */,
 				E7BC649B29A4681D00C8C24E /* CGRect+MQ.swift in Sources */,
