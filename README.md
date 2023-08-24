@@ -1,6 +1,6 @@
 # MQKit
 
-因为不写iOS, 于是随缘更新
+跑路无望, 被迫写iOS, 随缘更新
 
 既然12.2 Swift ABI稳定, SwiftPM也来了, 那么就纯swift吧
 

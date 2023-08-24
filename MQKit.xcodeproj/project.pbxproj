@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70AAF492A97520800EF99E1 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70AAF482A97520800EF99E1 /* Atomic.swift */; };
 		E73157D229A7008700923A3B /* ExtensionHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73157D129A7008700923A3B /* ExtensionHomeViewController.swift */; };
 		E73157D429A7009400923A3B /* UtilHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73157D329A7009400923A3B /* UtilHomeViewController.swift */; };
 		E73157D729A774F900923A3B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E73157D629A774F900923A3B /* SnapKit */; };
@@ -121,7 +122,6 @@
 		E7BC652029A469A400C8C24E /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC651B29A469A400C8C24E /* Channel.swift */; };
 		E7BC652129A469A400C8C24E /* Semaphore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC651C29A469A400C8C24E /* Semaphore.swift */; };
 		E7BC652229A469A400C8C24E /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC651D29A469A400C8C24E /* Mutex.swift */; };
-		E7BC652329A469A400C8C24E /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC651E29A469A400C8C24E /* Atomic.swift */; };
 		E7BC652429A469A400C8C24E /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC651F29A469A400C8C24E /* Actor.swift */; };
 		E7BC652729A469B300C8C24E /* MQHorizontalPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC652629A469B300C8C24E /* MQHorizontalPagingView.swift */; };
 		E7BC652C29A469BC00C8C24E /* MQTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC652929A469BC00C8C24E /* MQTextField.swift */; };
@@ -143,6 +143,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E70AAF482A97520800EF99E1 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		E73157D129A7008700923A3B /* ExtensionHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHomeViewController.swift; sourceTree = "<group>"; };
 		E73157D329A7009400923A3B /* UtilHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilHomeViewController.swift; sourceTree = "<group>"; };
 		E73EA3082A67C5FF000EF68F /* UITextField+DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+DSL.swift"; sourceTree = "<group>"; };
@@ -258,7 +259,6 @@
 		E7BC651B29A469A400C8C24E /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E7BC651C29A469A400C8C24E /* Semaphore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semaphore.swift; sourceTree = "<group>"; };
 		E7BC651D29A469A400C8C24E /* Mutex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
-		E7BC651E29A469A400C8C24E /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		E7BC651F29A469A400C8C24E /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		E7BC652629A469B300C8C24E /* MQHorizontalPagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQHorizontalPagingView.swift; sourceTree = "<group>"; };
 		E7BC652929A469BC00C8C24E /* MQTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTextField.swift; sourceTree = "<group>"; };
@@ -729,11 +729,11 @@
 		E7BC651A29A469A400C8C24E /* Sync */ = {
 			isa = PBXGroup;
 			children = (
-				E7BC651B29A469A400C8C24E /* Channel.swift */,
-				E7BC651C29A469A400C8C24E /* Semaphore.swift */,
-				E7BC651D29A469A400C8C24E /* Mutex.swift */,
-				E7BC651E29A469A400C8C24E /* Atomic.swift */,
 				E7BC651F29A469A400C8C24E /* Actor.swift */,
+				E70AAF482A97520800EF99E1 /* Atomic.swift */,
+				E7BC651B29A469A400C8C24E /* Channel.swift */,
+				E7BC651D29A469A400C8C24E /* Mutex.swift */,
+				E7BC651C29A469A400C8C24E /* Semaphore.swift */,
 			);
 			path = Sync;
 			sourceTree = "<group>";
@@ -915,7 +915,6 @@
 				E7BC64EA29A4684A00C8C24E /* UIScrollView+DSL.swift in Sources */,
 				E7BC652129A469A400C8C24E /* Semaphore.swift in Sources */,
 				E7BC64AF29A4681D00C8C24E /* UICollectionView+MQ.swift in Sources */,
-				E7BC652329A469A400C8C24E /* Atomic.swift in Sources */,
 				E7BC64BC29A4681D00C8C24E /* CharacterSet+MQ.swift in Sources */,
 				E7BC64D629A4681D00C8C24E /* String+MQMark.swift in Sources */,
 				E7BC64A729A4681D00C8C24E /* UIApplication+MQ.swift in Sources */,
@@ -966,6 +965,7 @@
 				E7BC64B129A4681D00C8C24E /* UIRectEdge+MQ.swift in Sources */,
 				E7BC649C29A4681D00C8C24E /* MTLTexture+MQ.swift in Sources */,
 				E7BC652429A469A400C8C24E /* Actor.swift in Sources */,
+				E70AAF492A97520800EF99E1 /* Atomic.swift in Sources */,
 				E7BC64D329A4681D00C8C24E /* String+Subscript.swift in Sources */,
 				E7BC64AB29A4681D00C8C24E /* UIDevice+MQHardware.swift in Sources */,
 				E7BC64F929A4698800C8C24E /* ThirdScheme.swift in Sources */,

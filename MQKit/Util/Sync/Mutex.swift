@@ -11,43 +11,40 @@ import Foundation
 @available(iOS 13, *)
 public class Mutex {
     
-    fileprivate let state = Atomic(0)
-    
-    public init() {}
+    fileprivate var state: Int32 = 0
+    fileprivate let lock = NSLock() // 懒
 }
 
 // MARK: - Public
 @available(iOS 13, *)
 public extension Mutex {
     
-    func byLock() async {
-        if await self.state.compareAndSwap(old: 0, new: 1) { return }
-        
-        for _ in 0..<4 {
-            await Task.yield()
-            if await self.state.compareAndSwap(old: 0, new: 1) { return }
+    func lock() async {
+        if OSAtomicCompareAndSwap32(0, 1, &self.state) { return }
+        await Task.yield()
+        for _ in 0..<11 {
+            if OSAtomicCompareAndSwap32(0, 1, &self.state) { return }
         }
         
-        var duration: UInt64 = 1
-        while await !self.state.compareAndSwap(old: 0, new: 1) {
-            duration = min(duration << 1, 1_000_000)
-            try? await Task.sleep(nanoseconds: duration)
+        var isLock = false
+        for _ in 0..<61 {
+            self.lock.withLock {
+                if OSAtomicCompareAndSwap32(0, 1, &self.state) {
+                    isLock = true
+                    return
+                }
+            }
+            if isLock { return }
         }
-    }
-    
-    func byTryLock() async -> Bool {
-        await self.state.compareAndSwap(old: 0, new: 1)
-    }
-    
-    func byUnlock() async {
-        while await !self.state.compareAndSwap(old: 1, new: 0) {
-            await Task.yield()
-        }
+        
+        while !OSAtomicCompareAndSwap32(0, 1, &self.state) {}
     }
     
     func unlock() {
-        Task {
-            await self.byUnlock()
-        }
+        while !OSAtomicCompareAndSwap32(1, 0, &self.state) {}
+    }
+    
+    func tryLock() -> Bool {
+        return OSAtomicCompareAndSwap32(0, 1, &self.state)
     }
 }

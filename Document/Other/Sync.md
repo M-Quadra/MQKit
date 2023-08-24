@@ -1,10 +1,8 @@
 # Sync 并发工具
 
-> 默认的NSLock 非async安全, 根据测试, with-lock的表现也存在问题
+> 当前的结构化并发调度上约等于OperationQueue, 没有同Go一般的强占式调度。因此许多基于线程的旧操作都存在问题。
 >
-> 参考Go, 手动糊了套
-
-使用Actor替代OC中标记为过期的原子操作
+> 为了更愉快地异步乱飞, 参考Go瞎折腾一些工具。
 
 
 
@@ -13,11 +11,12 @@
 互斥锁
 
 ```swift
-public func byLock() async
-public func byTryLock() async -> Bool
-public func byUnlock() async
+public func lock() async
 public func unlock()
+public func tryLock() -> Bool
 ```
+
+公平调度偷懒, 饥饿模式摆烂\_(ˊཀˋ」∠)_
 
 
 
@@ -40,19 +39,15 @@ public func byPop() async -> T?
 
 ## Semaphore
 
-信号量, 还没考虑是否开放, 为避免警告目前的实现方式过于丑陋
-
-`async`没有Go那样runtime实现的信号量机制, 所以相关功能也不会依赖此实现
-
-目前还很纠结, 后续可能删掉
+信号量, 当前实现过丑, 重写待定
 
 
 
 ## RWMutex
 
-读写锁, 但是有`Actor`, 目前不考虑实现
+读写锁, 虽然有`Actor`, 但是系统内部的调度过于差劲
 
-后续待观察
+开发待定
 
 
 
