@@ -8,15 +8,13 @@
 
 import Foundation
 
-public extension MQCrypto.RSA {
-    
-    struct Raw {}
-}
+public extension Crypto.RSA { struct Raw {
+}}
 
-public extension MQCrypto.RSA.Raw {
+public extension Crypto.RSA.Raw {
     
     static func decrypt(_ ciphertext: Data, publicKey keyData: Data) -> Data? {
-        guard let pvtKey = MQCrypto.RSA.publicKey(keyData),
+        guard let pvtKey = Crypto.RSA.publicKey(keyData),
               SecKeyIsAlgorithmSupported(pvtKey, .decrypt, .rsaEncryptionRaw)
         else { return nil }
         

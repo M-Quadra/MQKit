@@ -8,9 +8,8 @@
 
 import Foundation
 
-public extension MQCrypto {
+public extension Crypto { struct AES {
+    fileprivate init() {}
     
-    struct AES {
-        static let blockSize = 16
-    }
-}
+    static let blockSize = 16
+}}

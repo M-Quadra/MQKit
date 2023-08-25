@@ -9,15 +9,13 @@
 import Foundation
 import Security
 
-public extension MQCrypto.RSA {
-    
-    struct PKCS1 {}
-}
+public extension Crypto.RSA { struct PKCS1 {
+}}
 
-public extension MQCrypto.RSA.PKCS1 {
+public extension Crypto.RSA.PKCS1 {
     
     static func encrypt(_ plaintext: Data, publicKey keyData: Data) -> Data? {
-        guard let pubKey = MQCrypto.RSA.publicKey(keyData),
+        guard let pubKey = Crypto.RSA.publicKey(keyData),
               SecKeyIsAlgorithmSupported(pubKey, .encrypt, .rsaEncryptionPKCS1)
         else { return nil }
         
@@ -38,7 +36,7 @@ public extension MQCrypto.RSA.PKCS1 {
     }
     
     static func decrypt(_ ciphertext: Data, privateKey keyData: Data) -> Data? {
-        guard let pvtKey = MQCrypto.RSA.privateKey(keyData),
+        guard let pvtKey = Crypto.RSA.privateKey(keyData),
               SecKeyIsAlgorithmSupported(pvtKey, .decrypt, .rsaEncryptionPKCS1)
         else { return nil }
         
@@ -58,17 +56,17 @@ public extension MQCrypto.RSA.PKCS1 {
         return opt
     }
     
-    static func sign(_ plaintext: Data, privateKey keyData: Data, hash: MQCrypto.RSA.Hash = .sha256) -> Data? {
+    static func sign(_ plaintext: Data, privateKey keyData: Data, hash: Crypto.RSA.Hash = .sha256) -> Data? {
         var algo: SecKeyAlgorithm = .rsaSignatureDigestPKCS1v15Raw
         var hashed = plaintext
         switch hash {
         case .raw: break
         case .sha256:
             algo = .rsaSignatureDigestPKCS1v15SHA256
-            hashed = MQCrypto.sha256(plaintext)
+            hashed = Crypto.sha256(plaintext)
         }
         
-        guard let pvtKey = MQCrypto.RSA.privateKey(keyData),
+        guard let pvtKey = Crypto.RSA.privateKey(keyData),
               SecKeyIsAlgorithmSupported(pvtKey, .sign, algo)
         else { return nil }
         
@@ -88,17 +86,17 @@ public extension MQCrypto.RSA.PKCS1 {
         return opt
     }
     
-    static func verify(_ plaintext: Data, publicKey keyData: Data, signature: Data, hash: MQCrypto.RSA.Hash = .sha256) -> Bool {
+    static func verify(_ plaintext: Data, publicKey keyData: Data, signature: Data, hash: Crypto.RSA.Hash = .sha256) -> Bool {
         var algo: SecKeyAlgorithm = .rsaSignatureDigestPKCS1v15Raw
         var hashed = plaintext
         switch hash {
         case .raw: break
         case .sha256:
             algo = .rsaSignatureDigestPKCS1v15SHA256
-            hashed = MQCrypto.sha256(plaintext)
+            hashed = Crypto.sha256(plaintext)
         }
         
-        guard let pubKey = MQCrypto.RSA.publicKey(keyData),
+        guard let pubKey = Crypto.RSA.publicKey(keyData),
               SecKeyIsAlgorithmSupported(pubKey, .verify, algo)
         else { return false }
         

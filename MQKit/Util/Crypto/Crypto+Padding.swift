@@ -1,5 +1,5 @@
 //
-//  MQCrypto+Padding.swift
+//  Crypto+Padding.swift
 //  MQKit
 //
 //  Created by m_quadra on 2022/11/9.
@@ -8,14 +8,11 @@
 
 import Foundation
 
-public extension MQCrypto {
-    
-    enum Padding {
+public extension Crypto { enum Padding {
     case zero, pkcs7
-    }
-}
+}}
 
-public extension MQCrypto.Padding {
+public extension Crypto.Padding {
     
     func padding(data: Data, blockSize: Int) -> Data {
         let padding = blockSize - (data.count%blockSize)

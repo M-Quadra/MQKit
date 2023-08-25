@@ -106,14 +106,14 @@
 		E7BC64F729A4698800C8C24E /* ThirdScheme+QQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC64F429A4698800C8C24E /* ThirdScheme+QQ.swift */; };
 		E7BC64F829A4698800C8C24E /* ThirdScheme+WeChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC64F529A4698800C8C24E /* ThirdScheme+WeChat.swift */; };
 		E7BC64F929A4698800C8C24E /* ThirdScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC64F629A4698800C8C24E /* ThirdScheme.swift */; };
-		E7BC650929A4699000C8C24E /* MQCrypto+CC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC64FB29A4699000C8C24E /* MQCrypto+CC.swift */; };
+		E7BC650929A4699000C8C24E /* Crypto+CC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC64FB29A4699000C8C24E /* Crypto+CC.swift */; };
 		E7BC650A29A4699000C8C24E /* Hash+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC64FD29A4699000C8C24E /* Hash+MD5.swift */; };
 		E7BC650B29A4699000C8C24E /* Hash+SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC64FE29A4699000C8C24E /* Hash+SHA256.swift */; };
 		E7BC650C29A4699000C8C24E /* RSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650029A4699000C8C24E /* RSA.swift */; };
 		E7BC650D29A4699000C8C24E /* RSA+Raw.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650129A4699000C8C24E /* RSA+Raw.swift */; };
 		E7BC650E29A4699000C8C24E /* RSA+PKCS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650229A4699000C8C24E /* RSA+PKCS1.swift */; };
-		E7BC650F29A4699000C8C24E /* MQCrypto+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650329A4699000C8C24E /* MQCrypto+Padding.swift */; };
-		E7BC651029A4699000C8C24E /* MQCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650429A4699000C8C24E /* MQCrypto.swift */; };
+		E7BC650F29A4699000C8C24E /* Crypto+Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650329A4699000C8C24E /* Crypto+Padding.swift */; };
+		E7BC651029A4699000C8C24E /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650429A4699000C8C24E /* Crypto.swift */; };
 		E7BC651129A4699000C8C24E /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650629A4699000C8C24E /* AES.swift */; };
 		E7BC651229A4699000C8C24E /* AES+GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650729A4699000C8C24E /* AES+GCM.swift */; };
 		E7BC651329A4699000C8C24E /* AES+CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC650829A4699000C8C24E /* AES+CBC.swift */; };
@@ -243,14 +243,14 @@
 		E7BC64F429A4698800C8C24E /* ThirdScheme+QQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThirdScheme+QQ.swift"; sourceTree = "<group>"; };
 		E7BC64F529A4698800C8C24E /* ThirdScheme+WeChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ThirdScheme+WeChat.swift"; sourceTree = "<group>"; };
 		E7BC64F629A4698800C8C24E /* ThirdScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdScheme.swift; sourceTree = "<group>"; };
-		E7BC64FB29A4699000C8C24E /* MQCrypto+CC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MQCrypto+CC.swift"; sourceTree = "<group>"; };
+		E7BC64FB29A4699000C8C24E /* Crypto+CC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Crypto+CC.swift"; sourceTree = "<group>"; };
 		E7BC64FD29A4699000C8C24E /* Hash+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+MD5.swift"; sourceTree = "<group>"; };
 		E7BC64FE29A4699000C8C24E /* Hash+SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hash+SHA256.swift"; sourceTree = "<group>"; };
 		E7BC650029A4699000C8C24E /* RSA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSA.swift; sourceTree = "<group>"; };
 		E7BC650129A4699000C8C24E /* RSA+Raw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSA+Raw.swift"; sourceTree = "<group>"; };
 		E7BC650229A4699000C8C24E /* RSA+PKCS1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSA+PKCS1.swift"; sourceTree = "<group>"; };
-		E7BC650329A4699000C8C24E /* MQCrypto+Padding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MQCrypto+Padding.swift"; sourceTree = "<group>"; };
-		E7BC650429A4699000C8C24E /* MQCrypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQCrypto.swift; sourceTree = "<group>"; };
+		E7BC650329A4699000C8C24E /* Crypto+Padding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Crypto+Padding.swift"; sourceTree = "<group>"; };
+		E7BC650429A4699000C8C24E /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		E7BC650629A4699000C8C24E /* AES.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
 		E7BC650729A4699000C8C24E /* AES+GCM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AES+GCM.swift"; sourceTree = "<group>"; };
 		E7BC650829A4699000C8C24E /* AES+CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AES+CBC.swift"; sourceTree = "<group>"; };
@@ -671,11 +671,11 @@
 		E7BC64FA29A4699000C8C24E /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				E7BC64FB29A4699000C8C24E /* MQCrypto+CC.swift */,
+				E7BC64FB29A4699000C8C24E /* Crypto+CC.swift */,
 				E7BC64FC29A4699000C8C24E /* Hash */,
 				E7BC64FF29A4699000C8C24E /* RSA */,
-				E7BC650329A4699000C8C24E /* MQCrypto+Padding.swift */,
-				E7BC650429A4699000C8C24E /* MQCrypto.swift */,
+				E7BC650329A4699000C8C24E /* Crypto+Padding.swift */,
+				E7BC650429A4699000C8C24E /* Crypto.swift */,
 				E7BC650529A4699000C8C24E /* AES */,
 			);
 			path = Crypto;
@@ -993,14 +993,14 @@
 				E7BC650D29A4699000C8C24E /* RSA+Raw.swift in Sources */,
 				E7BC64C429A4681D00C8C24E /* Task+MQ.swift in Sources */,
 				E7BC64BB29A4681D00C8C24E /* Array+MQ.swift in Sources */,
-				E7BC650929A4699000C8C24E /* MQCrypto+CC.swift in Sources */,
+				E7BC650929A4699000C8C24E /* Crypto+CC.swift in Sources */,
 				E7BC64C129A4681D00C8C24E /* Pow+MQ.swift in Sources */,
 				E7BC64A929A4681D00C8C24E /* Coordinate+MQ.swift in Sources */,
 				E7BC64CF29A4681D00C8C24E /* RangeExpression+MQ.swift in Sources */,
 				E7BC64D929A4681D00C8C24E /* Bundle+MQ.swift in Sources */,
 				E7BC652029A469A400C8C24E /* Channel.swift in Sources */,
 				E7BC64B929A4681D00C8C24E /* UIEdgeInsets+MQ.swift in Sources */,
-				E7BC651029A4699000C8C24E /* MQCrypto.swift in Sources */,
+				E7BC651029A4699000C8C24E /* Crypto.swift in Sources */,
 				E7BC652F29A469F800C8C24E /* MQCollectionView.swift in Sources */,
 				E7BC64D229A4681D00C8C24E /* String+MQCode.swift in Sources */,
 				E7BC64D129A4681D00C8C24E /* String+MQPath.swift in Sources */,
@@ -1013,7 +1013,7 @@
 				E7BC64B829A4681D00C8C24E /* UIFont+MQ.swift in Sources */,
 				E7BC649A29A4681D00C8C24E /* CGRect+Creator.swift in Sources */,
 				E7BC64A829A4681D00C8C24E /* NSDiffableDataSourceSnapshot+MQ.swift in Sources */,
-				E7BC650F29A4699000C8C24E /* MQCrypto+Padding.swift in Sources */,
+				E7BC650F29A4699000C8C24E /* Crypto+Padding.swift in Sources */,
 				E7BC649729A4681D00C8C24E /* CGSize+Creator.swift in Sources */,
 				E7BC64F029A4684A00C8C24E /* NSAttributedStringKey+DSL.swift in Sources */,
 				E7443DFD2A85018B00D461E9 /* UIStackView+DSL.swift in Sources */,

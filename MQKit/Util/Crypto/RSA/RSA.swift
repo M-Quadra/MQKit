@@ -8,18 +8,16 @@
 
 import Foundation
 
-public extension MQCrypto {
+public extension Crypto { struct RSA {
     
-    struct RSA {
-        
-        public enum Hash {
+    public enum Hash {
         case raw
         case sha256
-        }
     }
-}
+    
+}}
 
-extension MQCrypto.RSA {
+extension Crypto.RSA {
     
     static func publicKey(_ keyData: Data) -> SecKey? {
         let attDic: [CFString : Any] = [

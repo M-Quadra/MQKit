@@ -1,5 +1,5 @@
 //
-//  MQCrypto.swift
+//  Crypto.swift
 //  MQKit
 //
 //  Created by m_quadra on 2022/11/8.
@@ -8,4 +8,6 @@
 
 import Foundation
 
-public struct MQCrypto {}
+public struct Crypto {
+    fileprivate init() {}
+}

@@ -9,20 +9,19 @@
 import Foundation
 import CommonCrypto
 
-public extension MQCrypto.AES {
-    
-    struct CBC {}
-}
+public extension Crypto.AES { struct CBC {
+    fileprivate init() {}
+}}
 
-public extension MQCrypto.AES.CBC {
+public extension Crypto.AES.CBC {
     
     static func encrypt(
         _ plaintext: Data,
         key: Data,
         iv: Data? = nil,
-        padding: MQCrypto.Padding = .pkcs7
+        padding: Crypto.Padding = .pkcs7
     ) -> Data? {
-        let blockSize = MQCrypto.AES.blockSize
+        let blockSize = Crypto.AES.blockSize
         let iptData = padding.padding(data: plaintext, blockSize: blockSize)
         
         let ivPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: blockSize)
@@ -34,7 +33,7 @@ public extension MQCrypto.AES.CBC {
         defer { free(optPtr) }
         
         do {
-            try MQCrypto.CCCrypt(
+            try Crypto.CCCrypt(
                 op: .encrypt, alg: .aes,
                 options: .pkcs7Padding,
                 key: key,
@@ -50,9 +49,9 @@ public extension MQCrypto.AES.CBC {
         _ ciphertext: Data,
         key: Data,
         iv: Data? = nil,
-        padding: MQCrypto.Padding = .pkcs7
+        padding: Crypto.Padding = .pkcs7
     ) -> Data? {
-        let blockSize = MQCrypto.AES.blockSize
+        let blockSize = Crypto.AES.blockSize
         
         let ivPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: blockSize)
         defer { free(ivPtr) }
@@ -62,7 +61,7 @@ public extension MQCrypto.AES.CBC {
         let optPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: optCount)
         defer { free(optPtr) }
         
-        guard var moved = try? MQCrypto.CCCrypt(
+        guard var moved = try? Crypto.CCCrypt(
             op: .decrypt, alg: .aes,
             options: .pkcs7Padding,
             key: key,

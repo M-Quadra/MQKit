@@ -1,5 +1,5 @@
 //
-//  MQCrypto+CC.swift
+//  Crypto+CC.swift
 //  MQKit
 //
 //  Created by m_quadra on 2022/11/9.
@@ -10,7 +10,7 @@ import Foundation
 import CommonCrypto
 
 // MARK: - CCOperation
-extension MQCrypto {
+extension Crypto {
     
     enum CCOperation {
         case encrypt, decrypt
@@ -25,7 +25,7 @@ extension MQCrypto {
 }
 
 // MARK: - CCAlgorithm
-extension MQCrypto {
+extension Crypto {
     
     enum CCAlgorithm {
         case aes, des, tripleDES, cast, rc4, rc2, blowfish
@@ -45,7 +45,7 @@ extension MQCrypto {
 }
 
 // MARK: - CCOptions
-extension MQCrypto {
+extension Crypto {
     
     struct CCOptions: OptionSet {
         let rawValue: UInt32
@@ -56,7 +56,7 @@ extension MQCrypto {
 }
 
 // MARK: - CCCryptorStatus
-extension MQCrypto {
+extension Crypto {
     
     enum Errors: Error {
         case paramError
@@ -91,7 +91,7 @@ extension MQCrypto {
 }
 
 // MARK: - CCCrypt
-extension MQCrypto {
+extension Crypto {
     
     @discardableResult
     static func CCCrypt(

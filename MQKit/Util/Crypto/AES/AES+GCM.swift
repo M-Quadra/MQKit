@@ -10,16 +10,13 @@ import Foundation
 import CryptoKit
 
 @available(iOS 13.0, *)
-public extension MQCrypto.AES {
-    
-    struct GCM {
-        static let standardNonceSize = 12
-        static let tagSize = 16
-    }
-}
+public extension Crypto.AES { struct GCM {
+    static let standardNonceSize = 12
+    static let tagSize = 16   
+}}
 
 @available(iOS 13.0, *)
-public extension MQCrypto.AES.GCM {
+public extension Crypto.AES.GCM {
     
     /// nonce + ciphertext + tag
     static func encrypt(_ plaintext: Data, key: Data) -> Data? {

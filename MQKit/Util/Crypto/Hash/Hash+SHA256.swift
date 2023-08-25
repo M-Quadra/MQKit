@@ -10,7 +10,7 @@ import Foundation
 import CryptoKit
 import CommonCrypto
 
-public extension MQCrypto {
+public extension Crypto {
     
     static func sha256(_ data: Data) -> Data {
         if #available(iOS 13.0, *) {
