@@ -1,6 +1,6 @@
 # Crypto
 
-> 咕咕咕咕咕
+> 虽然已经有, 但我喜欢这么调（
 > 
 
 
@@ -30,11 +30,7 @@ Crypto.AES.CBC.encrypt(
     iv: Data? = nil,
     padding: Crypto.Padding = .pkcs7
 ) -> Data?
-```
 
-AES CBC 加密
-
-```swift
 Crypto.AES.CBC.decrypt(
     _ ciphertext: Data,
     key: Data,
@@ -43,7 +39,25 @@ Crypto.AES.CBC.decrypt(
 ) -> Data?
 ```
 
-AES CBC 解密
+AES CBC
+
+```swift
+Crypto.AES.EBC.encrypt(
+    _ plaintext: Data,
+    key: Data,
+    iv: Data? = nil,
+    padding: Crypto.Padding = .pkcs7
+) -> Data?
+
+Crypto.AES.EBC.decrypt(
+    _ ciphertext: Data,
+    key: Data,
+    iv: Data? = nil,
+    padding: Crypto.Padding = .pkcs7
+) -> Data?
+```
+
+AES EBC
 
 
 
