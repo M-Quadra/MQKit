@@ -42,14 +42,14 @@ Crypto.AES.CBC.decrypt(
 AES CBC
 
 ```swift
-Crypto.AES.EBC.encrypt(
+Crypto.AES.ECB.encrypt(
     _ plaintext: Data,
     key: Data,
     iv: Data? = nil,
     padding: Crypto.Padding = .pkcs7
 ) -> Data?
 
-Crypto.AES.EBC.decrypt(
+Crypto.AES.ECB.decrypt(
     _ ciphertext: Data,
     key: Data,
     iv: Data? = nil,
@@ -57,7 +57,7 @@ Crypto.AES.EBC.decrypt(
 ) -> Data?
 ```
 
-AES EBC
+AES ECB
 
 
 

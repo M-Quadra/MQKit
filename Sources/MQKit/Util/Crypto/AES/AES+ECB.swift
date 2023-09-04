@@ -1,5 +1,5 @@
 //
-//  AES+EBC.swift
+//  AES+ECB.swift
 //  
 //
 //  Created by m_quadra on 2023/8/28.
@@ -8,11 +8,11 @@
 import Foundation
 import CommonCrypto
 
-public extension Crypto.AES { struct EBC {
+public extension Crypto.AES { struct ECB {
     fileprivate init() {}
 }}
 
-public extension Crypto.AES.EBC {
+public extension Crypto.AES.ECB {
     
     static func encrypt(
         _ plaintext: Data,
@@ -34,7 +34,7 @@ public extension Crypto.AES.EBC {
         do {
             try Crypto.CCCrypt(
                 op: .encrypt, alg: .aes,
-                options: [.pkcs7Padding, .ebcMode],
+                options: [.pkcs7Padding, .ecbMode],
                 key: key,
                 iv: ivPtr,
                 dataIn: plaintext,
@@ -62,7 +62,7 @@ public extension Crypto.AES.EBC {
         
         guard var moved = try? Crypto.CCCrypt(
             op: .decrypt, alg: .aes,
-            options: [.pkcs7Padding, .ebcMode],
+            options: [.pkcs7Padding, .ecbMode],
             key: key,
             iv: ivPtr,
             dataIn: ciphertext,

@@ -51,7 +51,7 @@ extension Crypto {
         let rawValue: UInt32
 
         static let pkcs7Padding = CCOptions(rawValue: UInt32(kCCOptionPKCS7Padding))
-        static let ebcMode = CCOptions(rawValue: UInt32(kCCOptionECBMode))
+        static let ecbMode = CCOptions(rawValue: UInt32(kCCOptionECBMode))
     }
 }
 

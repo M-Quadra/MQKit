@@ -15,15 +15,15 @@ fileprivate class CryptoTests: XCTestCase {
         let key = Data([UInt8].random(16))
         let msg = "hello world"
         
-        guard let ciphertext0 = Crypto.AES.EBC.encrypt(Data(msg.utf8), key: key),
-              let ciphertext1 = Crypto.AES.EBC.encrypt(Data(msg.utf8), key: key)
+        guard let ciphertext0 = Crypto.AES.ECB.encrypt(Data(msg.utf8), key: key),
+              let ciphertext1 = Crypto.AES.ECB.encrypt(Data(msg.utf8), key: key)
         else {
             XCTFail("encrypt error")
             return
         }
         XCTAssertEqual(ciphertext0, ciphertext1)
         
-        guard let plaintext = Crypto.AES.EBC.decrypt(ciphertext0, key: key)
+        guard let plaintext = Crypto.AES.ECB.decrypt(ciphertext0, key: key)
         else {
             XCTFail("decrypt error")
             return
