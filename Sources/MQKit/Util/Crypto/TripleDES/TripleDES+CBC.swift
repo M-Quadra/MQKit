@@ -1,26 +1,32 @@
 //
-//  AES+ECB.swift
+//  TripleDES+CBC.swift
 //  
 //
-//  Created by m_quadra on 2023/8/28.
+//  Created by m_quadra on 2023/9/5.
 //
 
 import Foundation
 import CommonCrypto
 
-public extension Crypto.AES { struct ECB {
+public extension Crypto.TripleDES { struct CBC {
     fileprivate init() {}
 }}
 
-public extension Crypto.AES.ECB {
+public extension Crypto.TripleDES.CBC {
     
     static func encrypt(
         _ plaintext: Data,
         key: Data,
+        iv: Data? = nil,
         padding: Crypto.Padding = .pkcs7
     ) -> Data? {
-        let blockSize = Crypto.AES.blockSize
+        if key.count != kCCKeySize3DES { return nil }
+        let blockSize = Crypto.TripleDES.blockSize
         let iptData = padding.padding(data: plaintext, blockSize: blockSize)
+        
+        let ivPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: blockSize)
+        defer { free(ivPtr) }
+        iv?.copyBytes(to: ivPtr, count: min(iv?.count ?? 0, blockSize))
         
         let optCount = iptData.count + blockSize
         let optPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: optCount)
@@ -28,10 +34,10 @@ public extension Crypto.AES.ECB {
         
         do {
             try Crypto.CCCrypt(
-                op: .encrypt, alg: .aes,
-                options: [.pkcs7Padding, .ecbMode],
+                op: .encrypt, alg: .tripleDES,
+                options: .pkcs7Padding,
                 key: key,
-                iv: nil,
+                iv: ivPtr,
                 dataIn: plaintext,
                 dataOut: optPtr, dataOutAvailavle: optCount
             )
@@ -42,19 +48,25 @@ public extension Crypto.AES.ECB {
     static func decrypt(
         _ ciphertext: Data,
         key: Data,
+        iv: Data? = nil,
         padding: Crypto.Padding = .pkcs7
     ) -> Data? {
-        let blockSize = Crypto.AES.blockSize
+        if key.count != kCCKeySize3DES { return nil }
+        let blockSize = Crypto.TripleDES.blockSize
+        
+        let ivPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: blockSize)
+        defer { free(ivPtr) }
+        iv?.copyBytes(to: ivPtr, count: min(iv?.count ?? 0, blockSize))
         
         let optCount = ciphertext.count + blockSize
         let optPtr = UnsafeMutablePointer<UInt8>.allocate(capacity: optCount)
         defer { free(optPtr) }
         
         guard var moved = try? Crypto.CCCrypt(
-            op: .decrypt, alg: .aes,
-            options: [.pkcs7Padding, .ecbMode],
+            op: .decrypt, alg: .tripleDES,
+            options: .pkcs7Padding,
             key: key,
-            iv: nil,
+            iv: ivPtr,
             dataIn: ciphertext,
             dataOut: optPtr, dataOutAvailavle: optCount
         ) else { return nil }

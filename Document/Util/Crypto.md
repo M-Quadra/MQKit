@@ -45,14 +45,12 @@ AES CBC
 Crypto.AES.ECB.encrypt(
     _ plaintext: Data,
     key: Data,
-    iv: Data? = nil,
     padding: Crypto.Padding = .pkcs7
 ) -> Data?
 
 Crypto.AES.ECB.decrypt(
     _ ciphertext: Data,
     key: Data,
-    iv: Data? = nil,
     padding: Crypto.Padding = .pkcs7
 ) -> Data?
 ```
@@ -110,3 +108,25 @@ Crypto.RSA.Raw.decrypt(_ ciphertext: Data, publicKey keyData: Data) -> Data?
 ```
 
 RSA Raw 公钥解密
+
+
+
+## 3DES
+
+```swift
+Crypto.TripleDES.CBC.encrypt(
+    _ plaintext: Data,
+    key: Data,
+    iv: Data? = nil,
+    padding: Crypto.Padding = .pkcs7
+) -> Data?
+
+Crypto.TripleDES.CBC.decrypt(
+    _ ciphertext: Data,
+    key: Data,
+    iv: Data? = nil,
+    padding: Crypto.Padding = .pkcs7
+) -> Data?
+```
+
+3DES CBC

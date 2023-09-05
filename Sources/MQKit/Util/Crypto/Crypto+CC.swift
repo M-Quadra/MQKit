@@ -99,7 +99,7 @@ extension Crypto {
         alg: CCAlgorithm,
         options: CCOptions,
         key: Data,
-        iv: UnsafeRawPointer,
+        iv: UnsafeRawPointer?,
         dataIn: Data,
         dataOut: UnsafeMutableRawPointer, dataOutAvailavle: Int
     ) throws -> Int {
