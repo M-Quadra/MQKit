@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "MQKit",
-    platforms: [.iOS(.v11)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "MQKit",

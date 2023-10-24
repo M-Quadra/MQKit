@@ -37,19 +37,15 @@ public extension UIDevice {
         let identifier = self.identifier
         switch identifier {
         // MARK: - Apple Watch
-        case "Watch1,1": return "Apple Watch (1st generation)"
-        case "Watch1,2": return "Apple Watch (1st generation)"
+        case "Watch2,6": return "Apple Watch Series 1" // iOS 13.x
+        case "Watch2,7": return "Apple Watch Series 1" // iOS 13.x
+        case "Watch2,3": return "Apple Watch Series 2" // iOS 13.x
+        case "Watch2,4": return "Apple Watch Series 2" // iOS 13.x
             
-        case "Watch2,6": return "Apple Watch Series 1"
-        case "Watch2,7": return "Apple Watch Series 1"
-            
-        case "Watch2,3": return "Apple Watch Series 2"
-        case "Watch2,4": return "Apple Watch Series 2"
-            
-        case "Watch3,1": return "Apple Watch Series 3"
-        case "Watch3,2": return "Apple Watch Series 3"
-        case "Watch3,3": return "Apple Watch Series 3"
-        case "Watch3,4": return "Apple Watch Series 3"
+        case "Watch3,1": return "Apple Watch Series 3" // iOS 15.x
+        case "Watch3,2": return "Apple Watch Series 3" // iOS 15.x
+        case "Watch3,3": return "Apple Watch Series 3" // iOS 15.x
+        case "Watch3,4": return "Apple Watch Series 3" // iOS 15.x
             
         case "Watch4,1": return "Apple Watch Series 4"
         case "Watch4,2": return "Apple Watch Series 4"
@@ -82,29 +78,35 @@ public extension UIDevice {
         case "Watch6,16": return "Apple Watch Series 8"
         case "Watch6,17": return "Apple Watch Series 8"
         case "Watch6,18": return "Apple Watch Ultra"
+        
+        case "Watch7,1": return "Apple Watch Series 9"
+        case "Watch7,2": return "Apple Watch Series 9"
+        case "Watch7,3": return "Apple Watch Series 9"
+        case "Watch7,4": return "Apple Watch Series 9"
+        case "Watch7,5": return "Apple Watch Ultra 2"
             
         // MARK: - iPad
-        case "iPad4,1": return "iPad Air"
-        case "iPad4,2": return "iPad Air"
-        case "iPad4,3": return "iPad Air"
-        case "iPad4,4": return "iPad mini 2"
-        case "iPad4,5": return "iPad mini 2"
-        case "iPad4,6": return "iPad mini 2"
-        case "iPad4,7": return "iPad mini 3"
-        case "iPad4,8": return "iPad mini 3"
-        case "iPad4,9": return "iPad mini 3"
+        case "iPad4,1": return "iPad Air" // iOS 12.x
+        case "iPad4,2": return "iPad Air" // iOS 12.x
+        case "iPad4,3": return "iPad Air" // iOS 12.x
+        case "iPad4,4": return "iPad mini 2" // iOS 12.x
+        case "iPad4,5": return "iPad mini 2" // iOS 12.x
+        case "iPad4,6": return "iPad mini 2" // iOS 12.x
+        case "iPad4,7": return "iPad mini 3" // iOS 12.x
+        case "iPad4,8": return "iPad mini 3" // iOS 12.x
+        case "iPad4,9": return "iPad mini 3" // iOS 12.x
         
-        case "iPad5,1": return "iPad mini 4"
-        case "iPad5,2": return "iPad mini 4"
-        case "iPad5,3": return "iPad Air 2"
-        case "iPad5,4": return "iPad Air 2"
+        case "iPad5,1": return "iPad mini 4" // iPadOS 15.x
+        case "iPad5,2": return "iPad mini 4" // iPadOS 15.x
+        case "iPad5,3": return "iPad Air 2" // iPadOS 15.x
+        case "iPad5,4": return "iPad Air 2" // iPadOS 15.x
         
-        case "iPad6,3": return "iPad Pro (9.7-inch)"
-        case "iPad6,4": return "iPad Pro (9.7-inch)"
-        case "iPad6,7": return "iPad Pro (12.9-inch)"
-        case "iPad6,8": return "iPad Pro (12.9-inch)"
-        case "iPad6,11": return "iPad (5th generation)"
-        case "iPad6,12": return "iPad (5th generation)"
+        case "iPad6,3": return "iPad Pro (9.7-inch)" // iPadOS 16.x
+        case "iPad6,4": return "iPad Pro (9.7-inch)" // iPadOS 16.x
+        case "iPad6,7": return "iPad Pro (12.9-inch)" // iPadOS 16.x
+        case "iPad6,8": return "iPad Pro (12.9-inch)" // iPadOS 16.x
+        case "iPad6,11": return "iPad (5th generation)" // iPadOS 16.x
+        case "iPad6,12": return "iPad (5th generation)" // iPadOS 16.x
             
         case "iPad7,1": return "iPad Pro (12.9-inch) (2nd generation)"
         case "iPad7,2": return "iPad Pro (12.9-inch) (2nd generation)"
@@ -150,32 +152,38 @@ public extension UIDevice {
         case "iPad13,11": return "iPad Pro (12.9-inch) (5th generation)"
         case "iPad13,16": return "iPad Air (5th generation)"
         case "iPad13,17": return "iPad Air (5th generation)"
+        case "iPad13,18": return "iPad (10th generation)"
+        case "iPad13,19": return "iPad (10th generation)"
             
         case "iPad14,1": return "iPad mini (6th generation)"
         case "iPad14,2": return "iPad mini (6th generation)"
+        case "iPad14,3": return "iPad Pro (11-inch) (4th generation)"
+        case "iPad14,4": return "iPad Pro (11-inch) (4th generation)"
+        case "iPad14,5": return "iPad Pro (12.9-inch) (6th generation)"
+        case "iPad14,6": return "iPad Pro (12.9-inch) (6th generation)"
             
         // MARK: - iPhone
-        case "iPhone6,1": return "iPhone 5s"
-        case "iPhone6,2": return "iPhone 5s"
+        case "iPhone6,1": return "iPhone 5s" // iOS 12.x
+        case "iPhone6,2": return "iPhone 5s" // iOS 12.x
             
-        case "iPhone7,2": return "iPhone 6"
-        case "iPhone7,1": return "iPhone 6 Plus"
+        case "iPhone7,2": return "iPhone 6" // iOS 12.x
+        case "iPhone7,1": return "iPhone 6 Plus" // iOS 12.x
             
-        case "iPhone8,1": return "iPhone 6s"
-        case "iPhone8,2": return "iPhone 6s Plus"
-        case "iPhone8,4": return "iPhone SE (1st generation)"
+        case "iPhone8,1": return "iPhone 6s" // iOS 15.x
+        case "iPhone8,2": return "iPhone 6s Plus" // iOS 15.x
+        case "iPhone8,4": return "iPhone SE (1st generation)" // iOS 15.x
             
-        case "iPhone9,1": return "iPhone 7"
-        case "iPhone9,3": return "iPhone 7"
-        case "iPhone9,2": return "iPhone 7 Plus"
-        case "iPhone9,4": return "iPhone 7 Plus"
+        case "iPhone9,1": return "iPhone 7" // iOS 15.x
+        case "iPhone9,3": return "iPhone 7" // iOS 15.x
+        case "iPhone9,2": return "iPhone 7 Plus" // iOS 15.x
+        case "iPhone9,4": return "iPhone 7 Plus" // iOS 15.x
             
-        case "iPhone10,1": return "iPhone 8"
-        case "iPhone10,4": return "iPhone 8"
-        case "iPhone10,2": return "iPhone 8 Plus"
-        case "iPhone10,5": return "iPhone 8 Plus"
-        case "iPhone10,3": return "iPhone X"
-        case "iPhone10,6": return "iPhone X"
+        case "iPhone10,1": return "iPhone 8" // iOS 16.x
+        case "iPhone10,4": return "iPhone 8" // iOS 16.x
+        case "iPhone10,2": return "iPhone 8 Plus" // iOS 16.x
+        case "iPhone10,5": return "iPhone 8 Plus" // iOS 16.x
+        case "iPhone10,3": return "iPhone X" // iOS 16.x
+        case "iPhone10,6": return "iPhone X" // iOS 16.x
             
         case "iPhone11,8": return "iPhone XR"
         case "iPhone11,2": return "iPhone XS"
@@ -202,6 +210,11 @@ public extension UIDevice {
             
         case "iPhone15,2": return "iPhone 14 Pro"
         case "iPhone15,3": return "iPhone 14 Pro Max"
+        case "iPhone15,4": return "iPhone 15"
+        case "iPhone15,5": return "iPhone 15 Plus"
+            
+        case "iPhone16,1": return "iPhone 15 Pro"
+        case "iPhone16,2": return "iPhone 15 Pro Max"
             
         // MARK: - iPod touch
         case "iPod7,1": return "iPod touch (6th generation)"
