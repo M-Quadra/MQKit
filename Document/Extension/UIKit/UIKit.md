@@ -240,3 +240,13 @@ public static var none: UIRectEdge { get }
 
 补充none, 与OC一致
 
+
+
+## UIWindow
+
+```swift
+@MainActor public static var key: UIWindow? { get }
+```
+
+获取keyWindow
+
