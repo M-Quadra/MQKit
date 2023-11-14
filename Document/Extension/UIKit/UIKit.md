@@ -5,21 +5,6 @@
 
 
 
-## UIFont
-
-```
-.mq_allFontNames
-```
-
-获取系统支持的所有字体
-
-```
-.mq_localFontName(forPath: String) -> String
-.mq_localFontName(forPath: URL) -> String
-```
-
-获取字体文件对应的`fontName`
-
 ## UIColor
 
 ```
@@ -250,3 +235,30 @@ public static var none: UIRectEdge { get }
 
 获取keyWindow
 
+
+
+## UIFont
+
+```swift
+public class var allFontNames: [String] { get }
+```
+
+获取系统支持的所有字体名
+
+
+
+```swift
+public class func localFontName(forPath: String) -> String
+public class func localFontName(forPath: URL) -> String
+```
+
+获取字体文件对应的`fontName`
+
+
+
+```swift
+public static func inPath(_ path: URL, size: CGFloat) -> UIFont?
+public static func inPath(_ path: String, size: CGFloat) -> UIFont?
+```
+
+加载本地字体文件
