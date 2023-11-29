@@ -9,15 +9,15 @@
 import Foundation
 
 public extension Crypto { struct RSA {
-    
-    public enum Hash {
-        case raw
-        case sha256
-    }
-    
+    fileprivate init() {}
 }}
 
-extension Crypto.RSA {
+public extension Crypto.RSA { enum Hash {
+    case raw
+    case sha256
+}}
+
+public extension Crypto.RSA {
     
     static func publicKey(_ keyData: Data) -> SecKey? {
         let attDic: [CFString : Any] = [
