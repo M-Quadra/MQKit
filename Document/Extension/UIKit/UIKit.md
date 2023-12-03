@@ -47,24 +47,9 @@ UIColor.init(mq_backgroundColor: UIColor, frontColor: UIColor)
 
 获取对应的`MTLClearColor`
 
+
+
 ## UIView
-
-```swift
-.top
-.left
-.bottom
-.right
-.width
-.height
-.centerX
-.centerY
-.origin
-.size
-```
-
-修改对应UIView属性
-
-
 
 ```
 .parentViewController
