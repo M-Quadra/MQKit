@@ -130,3 +130,19 @@ Crypto.TripleDES.CBC.decrypt(
 ```
 
 3DES CBC
+
+
+
+## PKCS12
+
+```swift
+public static func parse(_ pfxData: Data, password: String) -> [Crypto.PKCS12.Item]
+
+public extension Crypto.PKCS12 { struct Item {
+    public let identity: SecIdentity?
+    public let trust: SecTrust?
+    public let certChain: [SecCertificate]
+}}
+```
+
+p12读取
