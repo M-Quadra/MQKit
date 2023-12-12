@@ -60,3 +60,11 @@ Task { @NoMainActor in
 ```
 
 阻止Task被分配至主线程
+
+## withTimeout
+
+```
+public func withTimeout<T>(_ ms: Int, priority: TaskPriority = .medium, operation: @escaping @Sendable () async throws -> T) async throws -> T where T : Sendable
+```
+
+超时取消
