@@ -12,6 +12,6 @@ import Foundation
 public extension Task where Success == Never, Failure == Never {
     
     static func sleep(millisecond duration: UInt64) async throws {
-        try await Task.sleep(nanoseconds: duration * 1_000_000)
+        try await Task.sleep(nanoseconds: duration * NSEC_PER_MSEC)
     }
 }
