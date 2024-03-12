@@ -8,8 +8,7 @@
 
 import UIKit
 
-public class MQTextView: UITextView {
-    
+open class MQTextView: UITextView {
     public var minHeight: CGFloat = 10
     public var maxHeight: CGFloat = .max
 }
@@ -17,20 +16,25 @@ public class MQTextView: UITextView {
 // MARK: - Override
 public extension MQTextView {
     
-    override var contentSize: CGSize {
-        didSet {
-            self.invalidateIntrinsicContentSize()
-        }
-    }
+    override var contentSize: CGSize { didSet {
+        self.invalidateIntrinsicContentSize()
+    }}
     
     override var intrinsicContentSize: CGSize {
-        get {
-            let size = super.contentSize
-            return CGSize(
-                width: size.width,
-                height: min(max(self.minHeight, size.height), self.maxHeight)
-            )
+        let size = self.contentSize
+        switch size.height {
+        case ...self.minHeight:
+            return CGSize(width: size.width, height: self.frame.height)
+        case self.maxHeight...:
+            return CGSize(width: size.width, height: self.maxHeight)
+        default: break
         }
+        
+        let h = size.height + self.contentInset.top + self.contentInset.bottom
+        return CGSize(
+            width: size.width,
+            height: clamp(low: self.minHeight, value: consume h, high: self.maxHeight)
+        )
     }
     
     override var contentOffset: CGPoint {

@@ -243,10 +243,20 @@ public func subscriptOrNil(_ index: Int) -> Element?
 
 
 
-### NSMutableAttributedString
+## NSMutableAttributedString
 
 ```swift
 public func append(_ attachment: NSTextAttachment)
 ```
 
 直接添加`NSTextAttachment`
+
+
+
+## Comparable
+
+```swift
+func clamp<T : Comparable>(low: T, value: T, high: T) -> T
+```
+
+三值取中
