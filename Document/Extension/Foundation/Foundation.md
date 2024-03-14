@@ -66,30 +66,7 @@ public static let big5: String.Encoding
 
 获取`Documents``Caches``Library``tmp`目录URL
 
-## Date
 
-```
-.mq_year
-.mq_month
-.mq_day
-.mq_hour
-.mq_minute
-.mq_second
-```
-
-获取 年/月/日/小时/分钟/秒
-
-```
-init(mq_str: String, formatter: String, timeZone: TimeZone = TimeZone.current)
-```
-
-String 转 Date
-
-```
-func mq_stringValue(formatter: String, timeZone: TimeZone = TimeZone.current) -> String
-```
-
-Date 转 String
 
 ## Dictionary
 
@@ -260,3 +237,37 @@ func clamp<T : Comparable>(low: T, value: T, high: T) -> T
 ```
 
 三值取中
+
+
+
+## Date
+
+
+
+###  获取 年/月/日/小时/分钟/秒
+
+```swift
+var year: Int { get }
+var month: Int { get }
+var day: Int { get }
+var hour: Int { get }
+var minute: Int { get }
+var second: Int { get }
+```
+
+
+
+### String 转 Date
+
+```swift
+init?(_ str: String, formatter: String, timeZone: TimeZone = TimeZone.current)
+```
+
+
+
+### Date 转 String
+
+```swift
+func stringValue(formatter: String, timeZone: TimeZone = TimeZone.current) -> String
+```
+
