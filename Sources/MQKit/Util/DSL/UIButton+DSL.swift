@@ -11,44 +11,44 @@ import UIKit
 public extension UIViewDSL where T: UIButton {
     
     @discardableResult
-    func setTitle(_ title: String?, for state: UIControl.State) -> Self {
+    func setTitle(_ title: consuming String?, for state: consuming UIControl.State = .normal) -> Self {
         self.object?.setTitle(title, for: state)
         return self
     }
-
+    
     @discardableResult
-    func setTitleColor(_ color: UIColor?, for state: UIControl.State) -> Self {
+    func setTitleColor(_ color: consuming UIColor?, for state: consuming UIControl.State = .normal) -> Self {
         self.object?.setTitleColor(color, for: state)
         return self
     }
-
+    
     @discardableResult
-    func setImage(_ image: UIImage?, for state: UIControl.State) -> Self {
+    func setImage(_ image: consuming UIImage?, for state: consuming UIControl.State = .normal) -> Self {
         self.object?.setImage(image, for: state)
         return self
     }
-
+    
     @discardableResult
-    func setBackgroundImage(_ image: UIImage?, for state: UIControl.State) -> Self {
+    func setBackgroundImage(_ image: consuming UIImage?, for state: consuming UIControl.State = .normal) -> Self {
         self.object?.setBackgroundImage(image, for: state)
         return self
     }
-
+    
     @discardableResult
-    func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State) -> Self {
+    func setAttributedTitle(_ title: consuming NSAttributedString?, for state: consuming UIControl.State = .normal) -> Self {
         self.object?.setAttributedTitle(title, for: state)
         return self
     }
-
+    
     @discardableResult
-    func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event) -> Self {
+    func addTarget(_ target: consuming Any?, action: consuming Selector, for controlEvents: consuming UIControl.Event = .touchUpInside) -> Self {
         self.object?.addTarget(target, action: action, for: controlEvents)
         return self
     }
     
     @available(iOS 14.0, *)
     @discardableResult
-    func addAction(handler: @escaping ((_ act: UIAction) -> Void), for event: UIControl.Event) -> Self {
+    func addAction(handler: consuming @escaping ((_ act: UIAction) -> Void), for event: consuming UIControl.Event = .touchUpInside) -> Self {
         self.object?.addAction(UIAction(handler: handler), for: event)
         return self
     }
