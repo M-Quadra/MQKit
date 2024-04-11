@@ -12,49 +12,49 @@ public extension UIViewDSL where T: UILabel {
     
     @discardableResult
     func text(_ text: String?) -> Self {
-        self.object?.text = text
+        self.object.text = text
         return self
     }
     
     @discardableResult
     func font(_ font: UIFont) -> Self {
-        self.object?.font = font
+        self.object.font = font
         return self
     }
 
     @discardableResult
     func textColor(_ color: UIColor) -> Self {
-        self.object?.textColor = color
+        self.object.textColor = color
         return self
     }
 
     @discardableResult
     func textAlignment(_ alignment: NSTextAlignment) -> Self {
-        self.object?.textAlignment = alignment
+        self.object.textAlignment = alignment
         return self
     }
 
     @discardableResult
     func lineBreakMode(_ mode: NSLineBreakMode) -> Self {
-        self.object?.lineBreakMode = mode
+        self.object.lineBreakMode = mode
         return self
     }
 
     @discardableResult
     func attributedText(_ text: NSAttributedString?) -> Self {
-        self.object?.attributedText = text
+        self.object.attributedText = text
         return self
     }
 
     @discardableResult
     func numberOfLines(_ number: Int) -> Self {
-        self.object?.numberOfLines = number
+        self.object.numberOfLines = number
         return self
     }
     
     @discardableResult
     func adjustsFontSizeToFitWidth(_ adjusts: Bool) -> Self {
-        self.object?.adjustsFontSizeToFitWidth = adjusts
+        self.object.adjustsFontSizeToFitWidth = adjusts
         return self
     }
 }

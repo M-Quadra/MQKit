@@ -37,35 +37,6 @@ public func dsl<T: CALayer>(
     return object
 }
 
-// MARK: - UIView
-public class UIViewDSL<T: UIView> {
-    
-    public weak fileprivate(set) var object: T?
-    
-    required init(_ object: T) {
-        self.object = object
-    }
-}
-
-public func dsl<T: UIView>(
-    for klass: T.Type = T.self,
-    closure: (_ make: UIViewDSL<T>) -> Void
-) -> T {
-    let obj = klass.init()
-    let dsl = UIViewDSL(obj)
-    closure(dsl)
-    return obj
-}
-
-public func dsl<T: UIView>(
-    for object: T,
-    closure: (_ make: UIViewDSL<T>) -> Void
-) -> T {
-    let dsl = UIViewDSL(object)
-    closure(dsl)
-    return object
-}
-
 // MARK: - Dictionary
 public class DictionaryDSL<Key: Hashable, Value> {
     
