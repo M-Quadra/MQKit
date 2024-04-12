@@ -7,10 +7,6 @@
 
 import Foundation
 
-fileprivate enum Errors: Error {
-    case timeout
-}
-
 @available(iOS 13.0, *)
 public func withTimeout<T: Sendable>(
     _ ms: Int,
