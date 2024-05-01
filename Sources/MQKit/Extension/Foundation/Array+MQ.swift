@@ -33,6 +33,6 @@ public extension Array where Element: Hashable {
 public extension Array {
     
     func subscriptOrNil(_ index: Int) -> Element? {
-        return self.indices ~= index ? self[index] : nil
+        return 0 <= index && index < self.count ? self[index] : nil
     }
 }
