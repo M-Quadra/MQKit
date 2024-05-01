@@ -16,20 +16,11 @@ public struct UIViewDSL<T: UIView> {
 }
 
 public func dsl<T: UIView>(
-    for klass: T.Type = T.self,
+    for view: T = T(),
     closure: (_ make: UIViewDSL<T>) -> Void
 ) -> T {
-    let obj = klass.init()
-    closure(UIViewDSL(obj))
-    return obj
-}
-
-public func dsl<T: UIView>(
-    for object: T,
-    closure: (_ make: UIViewDSL<T>) -> Void
-) -> T {
-    closure(UIViewDSL(object))
-    return object
+    closure(UIViewDSL(view))
+    return view
 }
 
 public extension UIViewDSL {
