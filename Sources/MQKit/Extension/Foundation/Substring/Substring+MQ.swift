@@ -13,4 +13,8 @@ public extension Substring {
     var stringValue: String {
         return String(self)
     }
+    
+    var nsRange: NSRange {
+        return NSRange(location: self.startIndex.utf16Offset(in: self.base), length: self.utf16.count)
+    }
 }
