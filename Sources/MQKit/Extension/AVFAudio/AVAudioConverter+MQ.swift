@@ -29,6 +29,7 @@ public extension AVAudioConverter {
     @MainActor func convert(_ iptBuf: AVAudioPCMBuffer) throws -> AVAudioPCMBuffer {
         if iptBuf.format == self.outputFormat { return iptBuf }
         let optBuf = try self.createOutputBuffer(from: iptBuf)
+        self.reset()
         
         var err: NSError?
         self.convert(to: optBuf, error: &err) { packetCount, statusPtr in
@@ -43,6 +44,7 @@ public extension AVAudioConverter {
     func convert(_ iptBuf: AVAudioPCMBuffer) async throws -> AVAudioPCMBuffer {
         if iptBuf.format == self.outputFormat { return iptBuf }
         let optBuf = try self.createOutputBuffer(from: iptBuf)
+        self.reset()
         
         let err = await MainActor.run {
             var err: NSError?
