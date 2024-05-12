@@ -9,12 +9,13 @@
 import UIKit
 
 public struct UIViewDSL<T: UIView> {
-    let object: T
+    public let object: T
     init(_ object: T) {
         self.object = object
     }
 }
 
+@discardableResult
 public func dsl<T: UIView>(
     for view: T = T(),
     closure: (_ make: UIViewDSL<T>) -> Void
