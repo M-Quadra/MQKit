@@ -36,3 +36,21 @@ public extension AVAudioConverter {
     @MainActor public func convert(_ iptBuf: AVAudioPCMBuffer) async throws -> AVAudioPCMBuffer
 }
 ```
+
+
+
+## AVSpeechSynthesizer
+
+
+
+### 获取合成结果Buffer
+
+```swift
+public extension AVSpeechSynthesizer {
+
+    @available(iOS 13.0, *)
+    public func generateBuffer(_ utt: consuming AVSpeechUtterance) async -> AVAudioPCMBuffer?
+}
+```
+
+直接进行pcm流播放可能存在噪声问题，打包收集结果。

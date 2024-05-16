@@ -15,7 +15,7 @@ class FontExtensionViewController: UIViewController {
         self.view.backgroundColor = .lightGray
         self.title = "UIFont+MQ"
         
-        _ = UIFont.mq_allFontNames
+        _ = UIFont.allFontNames
     }
     
     override func viewWillAppear(_ animated: Bool) {
