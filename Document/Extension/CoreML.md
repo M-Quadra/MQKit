@@ -1,6 +1,6 @@
 # CoreML 相关扩展
 
-方便移植部署与测试
+限制太多，很是难受。为方便移植部署与测试糊了写东西。
 
 
 
@@ -8,10 +8,13 @@
 
 ```swift
 static func randn(
-    shape: [NSNumber], dataType: MLMultiArrayDataType = .float32,
-    scale: Double = 1
+    shape: [NSNumber],
+    scale: Double = 1,
+    dataType: MLMultiArrayDataType = .float32
 ) throws -> MLMultiArray
 ```
+
+若干年后最低兼容提升了，只保留MPS实现的版本？
 
 
 
