@@ -39,4 +39,9 @@ public extension UIColor {
         let r = CGFloat(num & 0xFF)/255
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
+    
+    @available(iOS 13.0, *)
+    static func dynamic(any: UIColor, dark: UIColor) -> UIColor {
+        return UIColor { $0.userInterfaceStyle == .dark ? dark : any }
+    }
 }
