@@ -29,9 +29,9 @@ public extension UIViewDSL where T: UISlider {
     
     @discardableResult
     func setValue(_ value: Float, range: ClosedRange<Float>) -> Self {
-        self.object.value = value
         self.object.minimumValue = range.lowerBound
         self.object.maximumValue = range.upperBound
+        self.object.value = value
         return self
     }
     
