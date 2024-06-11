@@ -1,45 +1,52 @@
-# UIImage+MQ 通用方法
-
-
-```
-averageColor
-```
-
-获取图片平均色
+# UIImage+MQ 扩展方法
 
 
 
-```
-.corner(radius: CGFloat, corners: UIRectCorner = .allCorners) -> UIImage
+## 取平均色
+
+
+```swift
+var averageColor: UIColor { get }
 ```
 
-图片切圆角
 
 
+## 切圆角
 
-```
-.pixelRGBA() -> [[[UInt8]]]?
-```
-
-获取像素
-
-
-
-```
-.opaque: Bool { get }
+```swift
+func corner(radius: CGFloat, corners: UIRectCorner = .allCorners) -> UIImage
 ```
 
-是否不存在alpha通道
 
 
+## 转像素
+
+```swift
+/// [y][x][RR, GG, BB, AA]
+func pixelRGBA() -> [[[UInt8]]]?
+```
+
+实现太丑, 考虑弃用
+
+
+
+## 是否不存在alpha通道
+
+```swift
+var opaque: Bool { get }
+```
+
+
+
+## 旋转
 
 ```
 .image(orientation: Orientation) -> UIImage
 ```
 
-图片旋转
 
 
+## Resize
 
 ```swift
 enum MQResizingMode {
@@ -62,3 +69,22 @@ enum MQResizingMode {
 图片resize至目标大小, 可能存在透明填充
 
 Mode感觉够用, 以后也许会更新
+
+
+
+## 染色保持形状
+
+```swift
+func tint(color: consuming UIColor) -> UIImage?
+```
+
+
+
+## 染色保持纹理
+
+```swift
+func blend(color: consuming UIColor) -> UIImage?
+```
+
+
+

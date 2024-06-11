@@ -232,4 +232,39 @@ public extension UIImage {
             self.draw(in: rect)
         }
     }
+    
+    func tint(color: consuming UIColor) -> UIImage? {
+        if #available(iOS 13.0, *) {
+            return .render(size: self.size, opaque: self.opaque, scale: self.scale) { ctx in
+                self.withTintColor(color).draw(at: .zero)
+            }
+        }
+        
+        guard let cgImg = self.cgImage else { return nil }
+        return .render(size: self.size, opaque: self.opaque, scale: self.scale) { ctx in
+            color.set()
+            
+            ctx.translateBy(x: 0, y: self.size.height)
+            ctx.scaleBy(x: 1.0, y: -1.0)
+            ctx.setBlendMode(.normal)
+            
+            ctx.clip(to: CGRect(origin: .zero, size: self.size), mask: cgImg)
+            ctx.fill(CGRect(origin: .zero, size: self.size))
+        }
+    }
+    
+    func blend(color: consuming UIColor) -> UIImage? {
+        guard let cgImg = self.cgImage,
+              let cgImgColored = self.tint(color: color)?.cgImage,
+              let filter = CIFilter(name: "CIColorBlendMode", parameters: [
+                kCIInputImageKey: CIImage(cgImage: consume cgImgColored),
+                kCIInputBackgroundImageKey: CIImage(cgImage: consume cgImg),
+              ]),
+              let optImg = filter.outputImage,
+              let imgRef = CIContext().createCGImage(optImg, from: optImg.extent)
+        else { return nil }
+        
+        let img = UIImage(cgImage: consume imgRef, scale: self.scale, orientation: self.imageOrientation)
+        return img
+    }
 }
