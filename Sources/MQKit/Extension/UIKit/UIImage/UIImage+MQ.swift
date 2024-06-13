@@ -264,7 +264,6 @@ public extension UIImage {
               let imgRef = CIContext().createCGImage(optImg, from: optImg.extent)
         else { return nil }
         
-        let img = UIImage(cgImage: consume imgRef, scale: self.scale, orientation: self.imageOrientation)
-        return img
+        return UIImage(cgImage: consume imgRef, scale: self.scale, orientation: self.imageOrientation)
     }
 }

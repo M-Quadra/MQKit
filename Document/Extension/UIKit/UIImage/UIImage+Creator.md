@@ -36,3 +36,14 @@ UIColor.color(
 ```
 
 绘制纯色图片
+
+
+
+## 动态UIImage
+
+```swift
+@available(iOS 13.0, *)
+static func dynamic(any: consuming UIImage, dark: consuming UIImage) -> UIImage
+```
+
+配合深色模式
