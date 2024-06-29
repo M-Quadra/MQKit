@@ -64,8 +64,7 @@ extension MLMultiArray {
         
         let ok = opt.withUnsafeMutableBytes { [arr = consume arr] ptr, _ in
             guard let dst = ptr.baseAddress else { return false }
-            var size = arr.dataTypeSize
-            arr.readBytes(consume dst, strideBytes: &size)
+            arr.readBytes(consume dst, strideBytes: nil)
             return true
         }
         if !ok { throw Errors.msg("readBytes failed") }
