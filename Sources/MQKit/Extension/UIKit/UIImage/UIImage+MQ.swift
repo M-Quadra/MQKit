@@ -233,7 +233,7 @@ public extension UIImage {
         }
     }
     
-    func tint(color: consuming UIColor) -> UIImage? {
+    func tint(color: UIColor) -> UIImage? {
         if #available(iOS 13.0, *) {
             return .render(size: self.size, opaque: self.opaque, scale: self.scale) { ctx in
                 self.withTintColor(color).draw(at: .zero)

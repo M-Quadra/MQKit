@@ -10,7 +10,7 @@ import AVFAudio
 public extension AVSpeechSynthesizer {
     
     @available(iOS 13.0, *)
-    func generateBuffer(_ utt: consuming AVSpeechUtterance) async -> AVAudioPCMBuffer? {
+    func generateBuffer(_ utt: borrowing AVSpeechUtterance) async -> AVAudioPCMBuffer? {
         let bufs = await AsyncStream<AVAudioPCMBuffer> { cont in
             self.write(utt) { buffer in
                 guard let buffer = buffer as? AVAudioPCMBuffer,
