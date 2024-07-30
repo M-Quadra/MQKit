@@ -33,7 +33,6 @@ https://github.com/M-Quadra/MQKit.git
 
 ## 一点工具
 
-- [三方 URL Scheme](./Document/Util/ThirdScheme.md)
 - [Crypto](./Document/Util/Crypto.md)
 
 
