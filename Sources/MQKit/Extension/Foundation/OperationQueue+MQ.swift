@@ -8,23 +8,23 @@
 
 import UIKit
 
-extension OperationQueue {
+public extension OperationQueue {
     
-    public static var mq_single: OperationQueue {
+    static var single: OperationQueue {
         let queue = OperationQueue()
         queue.maxConcurrentOperationCount = 1
         return queue
     }
     
-    public static var mq_mid: OperationQueue {
+    static var mid: OperationQueue {
         let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = max(1, UIDevice.current.mq_cpuThreads/2)
+        queue.maxConcurrentOperationCount = max(1, ProcessInfo.processInfo.activeProcessorCount/2)
         return queue
     }
     
-    public static var mq_max: OperationQueue {
+    static var full: OperationQueue {
         let queue = OperationQueue()
-        queue.maxConcurrentOperationCount = max(1, UIDevice.current.mq_cpuThreads)
+        queue.maxConcurrentOperationCount = max(1, ProcessInfo.processInfo.activeProcessorCount)
         return queue
     }
 }

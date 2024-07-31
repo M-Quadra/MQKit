@@ -78,26 +78,6 @@ dic转json
 
 
 
-## OperationQueue
-
-```
-.mq_single
-```
-
-串型队列, 最大并发数 = 1
-
-```
-.mq_mid
-```
-
-并行队列, 最大并发数 = 线程数/2
-
-```
-.mq_max
-```
-
-并行队列, 最大并发数 = 线程数
-
 ## Number
 
 1. [整数相关](./Number/FixedWidthInteger+MQ.md)
@@ -269,5 +249,33 @@ init?(_ str: String, formatter: String, timeZone: TimeZone = TimeZone.current)
 
 ```swift
 func stringValue(formatter: String, timeZone: TimeZone = TimeZone.current) -> String
+```
+
+
+
+## OperationQueue
+
+
+
+### 最大并发数 = 1
+
+```swift
+static var single: OperationQueue { get }
+```
+
+
+
+### 最大并发数 = 可用线程数/2
+
+```swift
+static var mid: OperationQueue { get }
+```
+
+
+
+### 最大并发数 = 可用线程数
+
+```swift
+static var full: OperationQueue { get }
 ```
 
