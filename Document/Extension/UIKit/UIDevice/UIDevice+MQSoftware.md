@@ -19,12 +19,6 @@
 获取当前网络类型, 4G/Wi-Fi
 
 ```
-func mq_systemUserAgent(_ closure: @escaping (_: String)->Void)
-```
-
-获取默认UserAgent
-
-```
 .mq_systemPoweronTime
 ```
 

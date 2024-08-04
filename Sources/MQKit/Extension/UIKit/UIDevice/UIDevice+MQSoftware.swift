@@ -138,53 +138,6 @@ extension UIDevice {
         return "Wi-Fi"
     }
     
-    
-    fileprivate static var userAgentCache = ""
-    fileprivate static var tmpWebView: WKWebView?
-    
-    fileprivate func userAgentCallback(_ closure: @escaping (_: String)->Void, isMainThread: Bool) {
-        if isMainThread {
-            DispatchQueue.main.async {
-                closure(UIDevice.userAgentCache)
-            }
-        } else {
-            DispatchQueue.global().async {
-                closure(UIDevice.userAgentCache)
-            }
-        }
-    }
-    
-    public func mq_systemUserAgent(_ closure: @escaping (_: String)->Void) {
-        let isMainThread = Thread.isMainThread
-        if UIDevice.userAgentCache.cachedCount > 0 {
-            self.userAgentCallback(closure, isMainThread: isMainThread)
-        }
-        
-        let configuration = WKWebViewConfiguration()
-        configuration.allowsInlineMediaPlayback = true
-        
-        DispatchQueue.main.async {
-            if UIDevice.tmpWebView == nil {
-               UIDevice.tmpWebView = WKWebView(frame: .zero, configuration: configuration)
-                UIDevice.tmpWebView?.isHidden = true
-            }
-            guard let webView = UIDevice.tmpWebView else {
-                self.userAgentCallback(closure, isMainThread: isMainThread)
-                return
-            }
-            
-            webView.evaluateJavaScript("navigator.userAgent") { (result, error) in
-                let ua = (result as? String) ?? ""
-                if ua.cachedCount > 0 {
-                    UIDevice.userAgentCache = ua
-                }
-                
-                UIDevice.tmpWebView = nil
-                closure(UIDevice.userAgentCache)
-            }
-        }
-    }
-    
     ///μs, 1ms = 1000 μs
     public var mq_systemPoweronTime: Int {
         var name = [CTL_KERN, KERN_BOOTTIME]
