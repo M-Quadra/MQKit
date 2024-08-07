@@ -3,7 +3,6 @@
 ## String
 
 1. [路径相关](./String/String+MQPath.md)
-2. [标示相关](./String/String+MQMark.md) (考虑迁移至UIDevice)
 3. [编码相关](./String/String+MQCode.md)
 4. [字符相关](./String/String+MQChar.md)
 5. [大小相关](./String/String+MQSize.md)
