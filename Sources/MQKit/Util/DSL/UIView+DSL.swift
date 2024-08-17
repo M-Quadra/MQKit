@@ -8,14 +8,14 @@
 
 import UIKit
 
-public struct UIViewDSL<T: UIView> {
+@MainActor public struct UIViewDSL<T: UIView> {
     public let object: T
     init(_ object: T) {
         self.object = object
     }
 }
 
-@discardableResult
+@MainActor @discardableResult
 public func dsl<T: UIView>(
     for view: T = T(),
     closure: (_ make: UIViewDSL<T>) -> Void

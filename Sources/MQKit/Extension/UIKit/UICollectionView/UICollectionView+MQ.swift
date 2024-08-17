@@ -16,7 +16,7 @@ public extension UICollectionView {
     }
 }
 
-fileprivate extension String {
+@MainActor fileprivate extension String {
     static let header = UICollectionView.elementKindSectionHeader
     static let footer = UICollectionView.elementKindSectionFooter
 }
