@@ -36,20 +36,20 @@ extension MTLTexture {
         let region = MTLRegionMake2D(0, 0, self.width, self.height)
         self.getBytes(&src, bytesPerRow: bytesPerRow, from: region, mipmapLevel: 0)
         
-        guard let context = CGContext(data: &src,
-                                      width: self.width, height: self.height,
-                                      bitsPerComponent: 8,
-                                      bytesPerRow: bytesPerRow,
-                                      space: CGColorSpaceCreateDeviceRGB(),
-                                      bitmapInfo: CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.noneSkipFirst.rawValue) else {
-            return nil
-        }
+        guard let context = CGContext(
+            data: &src,
+            width: self.width, height: self.height,
+            bitsPerComponent: 8,
+            bytesPerRow: bytesPerRow,
+            space: CGColorSpaceCreateDeviceRGB(),
+            bitmapInfo: CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.noneSkipFirst.rawValue
+        ) else { return nil }
         
         guard let cgImg = context.makeImage() else {
             return nil
         }
         
-        return UIImage(cgImage: cgImg, scale: UIScreen.main.scale, orientation: .up)
+        return UIImage(cgImage: cgImg, scale: UITraitCollection.current.displayScale, orientation: .up)
     }
     
     fileprivate func mq_uiImageWithCIImage() -> UIImage? {
@@ -57,6 +57,6 @@ extension MTLTexture {
             return nil
         }
         
-        return UIImage(ciImage: ciImg, scale: UIScreen.main.scale, orientation: .up)
+        return UIImage(ciImage: ciImg, scale: UITraitCollection.current.displayScale, orientation: .up)
     }
 }

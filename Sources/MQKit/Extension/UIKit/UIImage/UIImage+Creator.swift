@@ -13,7 +13,7 @@ public extension UIImage {
     static func render(
         size: CGSize,
         opaque: Bool = false,
-        scale: CGFloat = UIScreen.main.scale,
+        scale: CGFloat = UITraitCollection.current.displayScale,
         closure: (_ ctx: CGContext) -> ()
     ) -> UIImage {
         let format = UIGraphicsImageRendererFormat.default()
@@ -29,7 +29,7 @@ public extension UIImage {
         _ layer: CALayer,
         size: CGSize? = nil,
         opaque: Bool = false,
-        scale: CGFloat = UIScreen.main.scale
+        scale: CGFloat = UITraitCollection.current.displayScale
     ) -> UIImage {
         return Self.render(
             size: size ?? layer.frame.size,
@@ -43,7 +43,7 @@ public extension UIImage {
     static func color(
         _ color: UIColor,
         size: CGSize = CGSize(1),
-        scale: CGFloat = UIScreen.main.scale
+        scale: CGFloat = UITraitCollection.current.displayScale
     ) -> UIImage {
         return Self.render(
             size: size,
