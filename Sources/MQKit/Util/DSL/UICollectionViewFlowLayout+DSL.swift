@@ -7,14 +7,14 @@
 
 import UIKit
 
-public struct UICollectionViewFlowLayoutDSL<T: UICollectionViewFlowLayout> {
+@MainActor public struct UICollectionViewFlowLayoutDSL<T: UICollectionViewFlowLayout> {
     let object: T
     init(_ object: T) {
         self.object = object
     }
 }
 
-public func dsl<T: UICollectionViewFlowLayout>(
+@MainActor public func dsl<T: UICollectionViewFlowLayout>(
     for layout: T = T(),
     closure: (_ make: UICollectionViewFlowLayoutDSL<T>) -> Void
 ) -> T {

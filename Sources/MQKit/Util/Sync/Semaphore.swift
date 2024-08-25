@@ -9,7 +9,7 @@
 import Foundation
 
 @available(iOS 13, *)
-struct Semaphore {
+struct Semaphore: @unchecked Sendable {
     
     let lifoCount = Atomic(0)
     let lifoChanel = Channel<Void>()

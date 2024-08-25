@@ -8,7 +8,13 @@
 
 import UIKit
 
-public struct MQTaptic {
+@MainActor public struct MQTaptic {
+    fileprivate init() {}
+}
+
+// MARK: - Public
+public extension MQTaptic {
+    
     enum type {
         case micro
         case light
@@ -16,20 +22,7 @@ public struct MQTaptic {
         case heavy
     }
     
-    private static var lastTapTime = Date().timeIntervalSince1970 - 5
-    
     static func tap(type:type) {
-        guard #available(iOS 10.0, *) else {
-            return;
-        }
-        
-        let nowTapTime = Date().timeIntervalSince1970
-        if nowTapTime > lastTapTime + 0.5 {
-            let generator = UIFeedbackGenerator()
-            generator.prepare()
-        }
-        lastTapTime = nowTapTime
-        
         switch type {
         case .micro:
             let generator = UISelectionFeedbackGenerator()

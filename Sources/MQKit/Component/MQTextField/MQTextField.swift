@@ -40,7 +40,7 @@ public class MQTextField: UITextField {
 
 fileprivate extension MQTextField {
     
-    class Proxy {
+    @MainActor class Proxy {
         weak var textField: MQTextField?
         
         init(_ textField: MQTextField) {
