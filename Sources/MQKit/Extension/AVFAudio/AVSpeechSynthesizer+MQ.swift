@@ -16,7 +16,7 @@ public extension AVSpeechSynthesizer {
                 guard let buffer = buffer as? AVAudioPCMBuffer,
                       buffer.frameLength > 1
                 else { return cont.finish() }
-                cont.yield(consume buffer)
+                cont.yield(Uncheck(consume buffer).base)
             }
         }.reduce(into: [AVAudioPCMBuffer]()) { $0.append($1) }
         return merge(buffers: consume bufs)
@@ -37,10 +37,10 @@ fileprivate func merge(buffers iptBufs: [AVAudioPCMBuffer]) -> AVAudioPCMBuffer?
     var offset: AVAudioFrameCount = 0
     for buf in iptBufs {
         guard let src = buf.floatChannelData?[0] else { return nil }
-        memcpy(ptr + Int(offset), consume src, Int(buf.frameLength) * MemoryLayout<Float>.size)
+        memcpy(ptr + Int(offset), src, Int(buf.frameLength) * MemoryLayout<Float>.size)
         offset += buf.frameLength
     }
-    optBuf.frameLength = consume len
+    optBuf.frameLength = len
     return optBuf
 }
 

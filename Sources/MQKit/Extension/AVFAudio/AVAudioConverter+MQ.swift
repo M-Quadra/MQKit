@@ -46,7 +46,11 @@ public extension AVAudioConverter {
         let optBuf = try self.createOutputBuffer(from: iptBuf)
         self.reset()
         
-        let err = await MainActor.run {
+        let err = await MainActor.run { [
+            self = Uncheck(self).base,
+            iptBuf = Uncheck(iptBuf).base,
+            optBuf = Uncheck(optBuf).base
+        ] in
             var err: NSError?
             self.convert(to: optBuf, error: &err) { packetCount, statusPtr in
                 statusPtr.pointee = .haveData

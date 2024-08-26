@@ -12,7 +12,7 @@ public extension UIApplication {
     
     func openSettings(
         options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:],
-        completionHandler completion: ((Bool) -> Void)? = nil
+        completionHandler completion: (@MainActor (Bool) -> Void)? = nil
     ) {
         guard let url = URL(string: UIApplication.openSettingsURLString) else {
             completion?(false)
