@@ -5,33 +5,25 @@
 //  Created by m_quadra on 2024/4/12.
 //
 
-import XCTest
+import Testing
 import AVFAudio
 @testable import MQKit
 
-final class AVAudioConverterTests: XCTestCase {
+struct AVAudioConverterTests {
     
     fileprivate let synthesizer = AVSpeechSynthesizer()
     fileprivate var converter: AVAudioConverter?
     
-    func testConvert() async throws {
-        DispatchQueue.concurrentPerform(iterations: 11) { _ in
-            let utterance = AVSpeechUtterance(string: "嗯，哼哼，啊啊啊啊啊！")
-            self.synthesizer.write(consume utterance) { [weak self] buffer in
-                guard let self = self,
-                      let iptBuf = buffer as? AVAudioPCMBuffer
-                else { return }
-                
-                Task {
-                    let optBuf = try! await self.convert(iptBuf)
-                    print(iptBuf.frameLength, "->", optBuf.frameLength)
-                }
-            }
-        }
-        try await Task.sleep(nanoseconds: 5 * NSEC_PER_SEC)
+    @Test mutating func testConvert() async throws {
+        let utterance = AVSpeechUtterance(string: "嗯，哼哼，啊啊啊啊啊！")
+        guard let iptBuf = await self.synthesizer.generateBuffer(utterance) else { return }
+        #expect(iptBuf.frameLength == 46080)
+        
+        let optBuf = try! await self.convert(iptBuf)
+        #expect(optBuf.frameLength == 239310)
     }
     
-    fileprivate func convert(_ buffer: AVAudioPCMBuffer) async throws -> AVAudioPCMBuffer {
+    fileprivate mutating func convert(_ buffer: AVAudioPCMBuffer) async throws -> AVAudioPCMBuffer {
         let iptFmt = buffer.format
         
         if self.converter == nil,
@@ -45,6 +37,6 @@ final class AVAudioConverterTests: XCTestCase {
         }
         guard let converter = self.converter else { throw Errors.msg("empty convert") }
         
-        return try await converter.convert(buffer)
+        return try converter.convert(buffer)
     }
 }

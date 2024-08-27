@@ -9,7 +9,7 @@ import AVFAudio
 
 public extension AVAudioConverter {
     
-    @MainActor func convert(data: consuming Data) throws -> AVAudioPCMBuffer {
+    func convert(data: consuming Data) throws -> AVAudioPCMBuffer {
         let iptBuf = switch self.inputFormat.commonFormat {
         case .pcmFormatInt16:
             try self.createInputBufferInt16(data)
@@ -26,7 +26,7 @@ public extension AVAudioConverter {
         return try self.convert(consume iptBuf)
     }
     
-    @MainActor func convert(_ iptBuf: AVAudioPCMBuffer) throws -> AVAudioPCMBuffer {
+    func convert(_ iptBuf: AVAudioPCMBuffer) throws -> AVAudioPCMBuffer {
         if iptBuf.format == self.outputFormat { return iptBuf }
         let optBuf = try self.createOutputBuffer(from: iptBuf)
         self.reset()
@@ -35,28 +35,6 @@ public extension AVAudioConverter {
         self.convert(to: optBuf, error: &err) { packetCount, statusPtr in
             statusPtr.pointee = .haveData
             return iptBuf
-        }
-        if let err = err { throw err }
-        return optBuf
-    }
-    
-    @available(iOS 13, *)
-    func convert(_ iptBuf: AVAudioPCMBuffer) async throws -> AVAudioPCMBuffer {
-        if iptBuf.format == self.outputFormat { return iptBuf }
-        let optBuf = try self.createOutputBuffer(from: iptBuf)
-        self.reset()
-        
-        let err = await MainActor.run { [
-            self = Uncheck(self).base,
-            iptBuf = Uncheck(iptBuf).base,
-            optBuf = Uncheck(optBuf).base
-        ] in
-            var err: NSError?
-            self.convert(to: optBuf, error: &err) { packetCount, statusPtr in
-                statusPtr.pointee = .haveData
-                return iptBuf
-            }
-            return err
         }
         if let err = err { throw err }
         

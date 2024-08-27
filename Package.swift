@@ -18,7 +18,8 @@ let package = Package(
         ),
         .testTarget(
             name: "MQKitTests",
-            dependencies: ["MQKit"]
+            dependencies: ["MQKit"],
+            swiftSettings: [.swiftLanguageMode(.v5)]
         ),
     ]
 )

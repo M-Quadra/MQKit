@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct UIViewDSL<T: UIView>: ~Copyable {
+@MainActor struct UIViewDSL<T: UIView>: ~Copyable {
     let object: T
     init(_ object: T) {
         self.object = object
@@ -29,7 +29,7 @@ extension UIViewDSL {
     }
 }
 
-func dsl<T: UIView>(
+@MainActor func dsl<T: UIView>(
     for view: T = T(),
     closure: (_ make: consuming UIViewDSL<T>) -> Void
 ) -> T {
@@ -37,12 +37,12 @@ func dsl<T: UIView>(
     return view
 }
 
-let view0: UIView = dsl { (make: consuming UIViewDSL<UIView>) in
+@MainActor let view0: UIView = dsl { (make: consuming UIViewDSL<UIView>) in
     make.backgroundColor(.white)
         .alpha(1)
 }
 // 等未来编译器类型推理能正确传递所有权再跳NoCopyable
-//let view1: UIView = dsl { make in
+//@MainActor let view1: UIView = dsl { make in
 //    make.backgroundColor(.white)
 //        .alpha(1)
 //}
