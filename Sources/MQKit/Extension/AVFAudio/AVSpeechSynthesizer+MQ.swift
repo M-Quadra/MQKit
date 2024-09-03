@@ -9,18 +9,25 @@ import AVFAudio
 
 public extension AVSpeechSynthesizer {
     
+#if swift(<6)
     func generateBuffer(_ utt: consuming AVSpeechUtterance) async -> AVAudioPCMBuffer? {
-        let bufs = await self.generateStream(utt).reduce(into: [AVAudioPCMBuffer]()) { $0.append($1) }
-        return merge(buffers: consume bufs)
+        let bufs = await self.generateStream(utt)
+            .reduce(into: [AVAudioPCMBuffer]()) { $0.append($1.base) }
+        let buf = merge(buffers: consume bufs)
+        return buf
     }
+#else
+    @available(*, deprecated, message: "在外部手动实现")
+    func generateBuffer(_ utt: consuming AVSpeechUtterance) async -> AVAudioPCMBuffer? { nil }
+#endif
     
-    func generateStream(_ utt: consuming AVSpeechUtterance) -> AsyncStream<AVAudioPCMBuffer> {
-        return AsyncStream<AVAudioPCMBuffer> { [utt = utt] cont in
+    func generateStream(_ utt: consuming AVSpeechUtterance) -> AsyncStream<Uncheck<AVAudioPCMBuffer>> {
+        return AsyncStream<Uncheck<AVAudioPCMBuffer>> { [utt = utt] cont in
             self.write(utt) { buffer in
                 guard let buffer = buffer as? AVAudioPCMBuffer,
                       buffer.frameLength > 1
                 else { return cont.finish() }
-                cont.yield(Uncheck(consume buffer).base)
+                cont.yield(Uncheck(consume buffer))
             }
         }
     }

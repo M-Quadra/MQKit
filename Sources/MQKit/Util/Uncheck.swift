@@ -5,9 +5,9 @@
 //  Created by m_quadra on 2024/8/19.
 //
 
-struct Uncheck<Base>: @unchecked Sendable, ~Copyable {
+public struct Uncheck<Base>: @unchecked Sendable {
     
-    let base: Base
+    public let base: Base
     
     init(_ base: Base) {
         self.base = base

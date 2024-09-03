@@ -37,13 +37,13 @@ public extension AVAudioConverter {
 ```swift
 public extension AVSpeechSynthesizer {
     public func generateBuffer(_ utt: consuming AVSpeechUtterance) async -> AVAudioPCMBuffer?
-    public func generateStream(_ utt: consuming AVSpeechUtterance) -> AsyncStream<AVAudioPCMBuffer>
+    public func generateStream(_ utt: consuming AVSpeechUtterance) -> AsyncStream<Uncheck<AVAudioPCMBuffer>>
 }
 ```
 
 直接进行pcm流播放可能存在噪声问题，打包收集结果。
 
-`generateBuffer`直接获取完整PCM流，由于设备与系统版本差别，耗时存在差异。
+`generateBuffer`直接获取完整PCM流，由于设备与系统版本差别，耗时存在差异。`Swift 6`需要在外部手动实现，存在竞争问题暂时不知咋解决。
 
-`generateStream`是针对write方法的async包装。
+`generateStream`是针对write方法强扣的async包装。
 
