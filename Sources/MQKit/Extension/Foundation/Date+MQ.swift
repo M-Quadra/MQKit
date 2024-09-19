@@ -16,7 +16,7 @@ public extension Date {
         fmt.timeZone = timeZone
         guard let ts = (consume fmt).date(from: str)?.timeIntervalSince1970 else { return nil }
         
-        self.init(timeIntervalSince1970: consume ts)
+        self.init(timeIntervalSince1970: ts)
     }
     
     var year: Int {

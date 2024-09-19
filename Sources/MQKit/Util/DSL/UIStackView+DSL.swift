@@ -65,7 +65,7 @@ public extension UIViewDSL where T: UIStackView {
 
     @discardableResult
     func customSpacing(after arrangedSubview: UIView) -> CGFloat {
-        return self.object.customSpacing(after: arrangedSubview) ?? 0
+        return self.object.customSpacing(after: arrangedSubview)
     }
 
     @discardableResult

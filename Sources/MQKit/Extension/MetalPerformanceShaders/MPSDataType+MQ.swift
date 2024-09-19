@@ -8,7 +8,7 @@
 import MetalPerformanceShaders
 
 #if DEBUG
-extension MPSDataType: CustomStringConvertible {
+extension MPSDataType: @retroactive CustomStringConvertible {
     
     public var description: String {
         return switch self {

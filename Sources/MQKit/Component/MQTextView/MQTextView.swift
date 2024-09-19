@@ -33,7 +33,7 @@ public extension MQTextView {
         let h = size.height + self.contentInset.top + self.contentInset.bottom
         return CGSize(
             width: size.width,
-            height: clamp(low: self.minHeight, value: consume h, high: self.maxHeight)
+            height: clamp(low: self.minHeight, value: h, high: self.maxHeight)
         )
     }
     
