@@ -33,9 +33,9 @@ public extension UIView {
     }
     
     @discardableResult
-    func addSubviews(_ views: [UIView]) -> Self {
+    func addSubviews(_ views: consuming [UIView]) -> Self {
         for view in views {
-            self.addSubview(view)
+            self.addSubview(consume view)
         }
         return self
     }
