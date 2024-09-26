@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIViewDSL where T: UIButton {
+public extension UIViewDSL<UIButton> {
     
     @discardableResult
     consuming func setTitle(_ title: consuming String?, for state: consuming UIControl.State = .normal) -> Self {
@@ -48,8 +48,9 @@ public extension UIViewDSL where T: UIButton {
     
     @available(iOS 14.0, *)
     @discardableResult
-    consuming func addAction(handler: consuming @escaping ((_ act: UIAction) -> Void), for event: consuming UIControl.Event = .touchUpInside) -> Self {
-        self.object.addAction(UIAction(handler: handler), for: event)
+    func addAction(for controlEvents: consuming UIControl.Event = .touchUpInside, handler: consuming @escaping UIActionHandler) -> Self {
+        let act = UIAction(handler: handler)
+        self.object.addAction(consume act, for: controlEvents)
         return self
     }
 }
