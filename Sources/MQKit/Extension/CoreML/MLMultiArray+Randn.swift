@@ -12,147 +12,111 @@ import MetalPerformanceShadersGraph
 
 public extension MLMultiArray {
     
-    /// torch.randn([...]) * scale
-    static func randn(
-        shape: consuming [NSNumber],
-        scale: Float = 1,
-        dataType: MLMultiArrayDataType = .float32
-    ) throws -> MLMultiArray {
-        if #available(iOS 15.4, *) {
-            return switch dataType {
-            case .float16: try .randnMPS(shape: shape, scale: Double(scale), dataType: dataType)
-            case .float32: try .randnMPS(shape: shape, scale: Double(scale), dataType: dataType)
-            case .float64: try .randnFP64(shape: shape, scale: scale)
-            default: throw Errors.msg("unsupported type")
-            }
+    @available(iOS 16.0, *)
+    static func randnFP16(shape: consuming [NSNumber]) throws -> MLMultiArray {
+        return try .BNNS.fp16(shape: shape)
+    }
+    
+    static func randnFP32(shape: consuming [NSNumber]) throws -> MLMultiArray {
+        if #available(iOS 16.0, *) {
+            return try .BNNS.fp32(shape: shape)
+        } else if #available(iOS 15.4, *) {
+            return try .MPS.fp32(shape: shape)
         }
-        
-        return try .randnFP32or64(shape: shape, scale: scale, dataType: dataType)
+        return try .BoxMuller.fp32(shape: shape)
     }
 }
 
-extension MLMultiArray {
+// MARK: - Private
+@available(iOS 16.0, *)
+fileprivate extension MLMultiArray { struct BNNS {
     
-    @available(iOS 15.4, *)
-    static func randnMPS(
-        shape: consuming [NSNumber],
-        scale: Double = 1,
-        dataType: MLMultiArrayDataType = .float32,
-        seed: Int = .random(in: 0..<Int.max)
-    ) throws -> MLMultiArray {
-        let opt = try MLMultiArray(shape: shape, dataType: dataType)
-        let dType: MPSDataType = switch dataType {
-        case .float32: .float32
-        case .float16: .float16
-        default: throw Errors.msg("unsupported type")
+    static func fp32(shape: consuming [NSNumber], mean: Float32 = 0, std: Float32 = 1) throws -> MLMultiArray {
+        let arr = try MLMultiArray(shape: shape, dataType: .float32)
+        let cnt = arr.count
+        
+        try arr.withUnsafeMutableBufferPointer(ofType: Float32.self) { ptr, strides in
+            guard var des = BNNSNDArrayDescriptor(data: ptr, shape: .vector(cnt)),
+                  let gen = BNNSCreateRandomGenerator(BNNSRandomGeneratorMethodAES_CTR, nil)
+            else { throw Errors.msg("BNNS failed") }
+            BNNSRandomFillNormalFloat(gen, &des, mean, std)
+            BNNSDestroyRandomGenerator(gen)
         }
-        guard let op = MPSGraphRandomOpDescriptor(distribution: .normal, dataType: dType)
-        else { throw Errors.msg("MPSGraphRandomOpDescriptor failed") }
-        let graph = MPSGraph()
+        return arr
+    }
+    
+    static func fp16(shape: consuming [NSNumber], mean: Float32 = 0, std: Float32 = 1) throws -> MLMultiArray {
+        let arr = try MLMultiArray(shape: shape, dataType: .float16)
+        let cnt = arr.count
+        
+        _ = [Float32](unsafeUninitializedCapacity: cnt) { buffer, initializedCount in
+            guard var des = BNNSNDArrayDescriptor(data: buffer, shape: .vector(cnt)),
+                  let gen = BNNSCreateRandomGenerator(BNNSRandomGeneratorMethodAES_CTR, nil)
+            else { fatalError() }
+            BNNSRandomFillNormalFloat(gen, &des, mean, std)
+            BNNSDestroyRandomGenerator(gen)
+            initializedCount = cnt
+            
+            arr.withUnsafeMutableBufferPointer(ofType: Float16.self) { ptr, strides in
+                var src = vImage_Buffer(data: buffer.baseAddress, height: 1, width: vImagePixelCount(cnt), rowBytes: cnt * MemoryLayout<Float32>.size)
+                var dst = vImage_Buffer(data: ptr.baseAddress, height: 1, width: vImagePixelCount(cnt), rowBytes: cnt * MemoryLayout<Float16>.size)
+                vImageConvert_PlanarFtoPlanar16F(&src, &dst, 0)
+            }
+        }
+        return arr
+    }
+}}
+
+@available(iOS 15.4, *)
+fileprivate extension MLMultiArray { struct MPS {
+    
+    static func fp32(shape: [NSNumber], seed: Int = .random(in: 0..<Int.max)) throws -> MLMultiArray {
+        guard let op = MPSGraphRandomOpDescriptor(distribution: .normal, dataType: .float32) else { fatalError() }
         op.samplingMethod = .boxMuller
+        let graph = MPSGraph()
         
-        let ts0 = graph.randomTensor(withShape: [opt.count as NSNumber], descriptor: consume op, seed: seed, name: nil)
-        let ts1 = graph.constant(scale, shape: [], dataType: dType)
-        let ts2 = graph.multiplication(consume ts0, consume ts1, name: nil)
+        let y = graph.randomTensor(withShape: shape, descriptor: consume op, seed: seed, name: nil)
         
-        guard let arr = graph.run(
+        guard let yData = graph.run(
             feeds: [:],
-            targetTensors: [ts2],
+            targetTensors: [y],
             targetOperations: nil
-        )[consume ts2]?.mpsndarray()
-        else { throw Errors.msg("graph.run failed") }
+        )[consume y] else { throw Errors.msg("graph.run failed") }
         
-        let ok = opt.withUnsafeMutableBytes { [arr = consume arr] ptr, _ in
+        let arr = try MLMultiArray(shape: shape, dataType: .float32)
+        let ok = arr.withUnsafeMutableBytes { ptr, _ in
             guard let dst = ptr.baseAddress else { return false }
-            arr.readBytes(dst, strideBytes: nil)
+            yData.mpsndarray().readBytes(dst, strideBytes: nil)
             return true
         }
         if !ok { throw Errors.msg("readBytes failed") }
-        return opt
+        return arr
     }
+}}
 
-    @available(iOS 15.4, *)
-    static func randnFP64(
-        shape: consuming [NSNumber],
-        scale: Float = 1
-    ) throws -> MLMultiArray {
-        let ts = try MLMultiArray(shape: shape, dataType: .float64)
-        var arr = boxMullerFP64(count: ts.count)
-        if scale != 1 {
-            vDSP_vsmulD(arr, 1, [Double(scale)], &arr, 1, vDSP_Length(arr.count))
-        }
-        
-        let ok = ts.withUnsafeMutableBytes { ptr, _ in
-            guard let dst = ptr.baseAddress else { return false }
-            let dstPtr = memcpy(dst, arr, ts.count * MemoryLayout<Float64>.size)
-            return dstPtr == dst
-        }
-        if !ok { throw Errors.msg("memcpy failed") }
-        return ts
-    }
+fileprivate extension MLMultiArray { struct BoxMuller {
     
-    static func randnFP32or64(
-        shape: consuming [NSNumber],
-        scale: Float = 1,
-        dataType: MLMultiArrayDataType = .float32
-    ) throws -> MLMultiArray {
-        let ts = try MLMultiArray(shape: shape, dataType: dataType)
-        switch dataType {
-        case .float32:
-            var arr = boxMullerFP32(count: ts.count)
-            if scale != 1 {
-                vDSP_vsmul(arr, 1, [scale], &arr, 1, vDSP_Length(arr.count))
+    static func fp32(shape: consuming [NSNumber]) throws -> MLMultiArray {
+        let arr = try MLMultiArray(shape: shape, dataType: .float32)
+        let cnt = arr.count
+        
+        let mean: Float = 0.0, std: Float = 1.0
+        var arr16 = (0..<(cnt/16 + 1) * 16).map { _ in Float32.random(in: 0..<1) }
+        for i in stride(from: 0, to: arr16.count, by: 16) {
+            for j in i..<(i+8) {
+                let u1 = 1 - arr16[j]
+                let u2 = arr16[j + 8]
+                let radius = sqrt(-2 * log(u1))
+                let theta = 2 * Float.pi * u2
+                
+                arr16[j] = radius * cos(theta) * std + mean
+                arr16[j+8] = radius * sin(theta) * std + mean
             }
-            
-            for i in 0..<ts.count {
-                ts[i] = arr[i] as NSNumber
-            }
-        case .float64:
-            var arr = boxMullerFP64(count: ts.count)
-            if scale != 1 {
-                vDSP_vsmulD(arr, 1, [Double(scale)], &arr, 1, vDSP_Length(arr.count))
-            }
-            
-            for i in 0..<ts.count {
-                ts[i] = arr[i] as NSNumber
-            }
-        default:
-            throw Errors.msg("unsupported type")
         }
         
-        return ts
-    }
-}
-
-fileprivate func boxMullerFP32(count: Int) -> [Float32] {
-    let mean: Float = 0.0, std: Float = 1.0
-    var arr = (0..<(count/16 + 1) * 16).map { _ in Float32.random(in: 0..<1) }
-    for i in stride(from: 0, to: arr.count, by: 16) {
-        for j in i..<(i+8) {
-            let u1 = 1 - arr[j]
-            let u2 = arr[j + 8]
-            let radius = sqrt(-2 * log(u1))
-            let theta = 2 * Float.pi * u2
-            
-            arr[j] = radius * cos(theta) * std + mean
-            arr[j+8] = radius * sin(theta) * std + mean
+        for i in 0..<cnt {
+            arr[i] = arr16[i] as NSNumber
         }
+        return arr
     }
-    return arr
-}
-fileprivate func boxMullerFP64(count: Int) -> [Float64] {
-    let mean: Float64 = 0.0, std: Float64 = 1.0
-    var arr = (0..<(count/16 + 1) * 16).map { _ in Float64.random(in: 0..<1) }
-    for i in stride(from: 0, to: arr.count, by: 16) {
-        for j in i..<(i+8) {
-            let u1 = 1 - arr[j]
-            let u2 = arr[j + 8]
-            let radius = sqrt(-2 * log(u1))
-            let theta = 2 * Float64.pi * u2
-            
-            arr[j] = radius * cos(theta) * std + mean
-            arr[j+8] = radius * sin(theta) * std + mean
-        }
-    }
-    return arr
-}
+}}

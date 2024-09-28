@@ -1,22 +1,19 @@
 # CoreML 相关扩展
 
-限制太多，很是难受。为方便移植部署与测试糊了写东西。
-
-这部分太特化，准备后续剥离。
+还在挣扎推理辅助工具，完成后移除这部分扩展。
 
 
 
 ## torch.randn
 
 ```swift
-static func randn(
-    shape: [NSNumber],
-    scale: Double = 1,
-    dataType: MLMultiArrayDataType = .float32
-) throws -> MLMultiArray
+@available(iOS 16.0, *)
+public static func randnFP16(shape: consuming [NSNumber]) throws -> MLMultiArray
+
+public static func randnFP32(shape: consuming [NSNumber]) throws -> MLMultiArray
 ```
 
-若干年后最低兼容提升了，只保留MPS实现的版本？
+出于实用考虑，仅保留FP16与FP32实现。
 
 
 
