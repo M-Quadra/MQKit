@@ -170,4 +170,10 @@ public extension UIViewDSL where T: UITextField {
         self.object.returnKeyType = returnKeyType
         return self
     }
+    
+    @discardableResult
+    consuming func keyboardType(_ keyboardType: UIKeyboardType) -> Self {
+        self.object.keyboardType = keyboardType
+        return self
+    }
 }
