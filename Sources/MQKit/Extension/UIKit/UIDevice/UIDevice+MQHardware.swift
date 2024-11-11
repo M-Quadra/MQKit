@@ -86,16 +86,6 @@ public extension UIDevice {
         case "Watch7,5": return "Apple Watch Ultra 2"
             
         // MARK: - iPad
-        case "iPad4,1": return "iPad Air" // iOS 12.x
-        case "iPad4,2": return "iPad Air" // iOS 12.x
-        case "iPad4,3": return "iPad Air" // iOS 12.x
-        case "iPad4,4": return "iPad mini 2" // iOS 12.x
-        case "iPad4,5": return "iPad mini 2" // iOS 12.x
-        case "iPad4,6": return "iPad mini 2" // iOS 12.x
-        case "iPad4,7": return "iPad mini 3" // iOS 12.x
-        case "iPad4,8": return "iPad mini 3" // iOS 12.x
-        case "iPad4,9": return "iPad mini 3" // iOS 12.x
-        
         case "iPad5,1": return "iPad mini 4" // iPadOS 15.x
         case "iPad5,2": return "iPad mini 4" // iPadOS 15.x
         case "iPad5,3": return "iPad Air 2" // iPadOS 15.x
@@ -161,6 +151,15 @@ public extension UIDevice {
         case "iPad14,4": return "iPad Pro (11-inch) (4th generation)"
         case "iPad14,5": return "iPad Pro (12.9-inch) (6th generation)"
         case "iPad14,6": return "iPad Pro (12.9-inch) (6th generation)"
+        case "iPad14,8": return "iPad Air (6th generation)"
+        case "iPad14,9": return "iPad Air (6th generation)"
+        case "iPad14,10": return "iPad Air (7th generation)"
+        case "iPad14,11": return "iPad Air (7th generation)"
+            
+        case "iPad16,3": return "iPad Pro (11-inch) (5th generation)"
+        case "iPad16,4": return "iPad Pro (11-inch) (5th generation)"
+        case "iPad16,5": return "iPad Pro (12.9-inch) (7th generation)"
+        case "iPad16,6": return "iPad Pro (12.9-inch) (7th generation)"
             
         // MARK: - iPhone
         // https://endoflife.date/iphone
@@ -210,6 +209,11 @@ public extension UIDevice {
             
         case "iPhone16,1": return "iPhone 15 Pro"
         case "iPhone16,2": return "iPhone 15 Pro Max"
+            
+        case "iPhone17,1": return "iPhone 16 Pro"
+        case "iPhone17,2": return "iPhone 16 Pro Max"
+        case "iPhone17,3": return "iPhone 16"
+        case "iPhone17,4": return "iPhone 16 Plus"
             
         // MARK: - iPod touch
         case "iPod9,1": return "iPod touch (7th generation)" // iOS 15.x

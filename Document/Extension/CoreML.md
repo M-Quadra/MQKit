@@ -1,6 +1,6 @@
 # CoreML 相关扩展
 
-还在挣扎推理辅助工具，完成后移除这部分扩展。
+还在挣扎[推理辅助工具](https://github.com/M-Quadra/Irokane)，简陋的初版public后将移除这部分扩展。
 
 
 
