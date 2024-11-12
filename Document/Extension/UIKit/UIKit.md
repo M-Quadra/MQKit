@@ -111,7 +111,6 @@ func openSettings(
 
 1. [通用方法](UIImage/UIImage+MQ.md)
 2. [构造相关](./UIImage/UIImage+Creator.md)
-3. [Metal相关](UIImage/UIImage+MQMetal.md)
 
 ## UIDevice
 
