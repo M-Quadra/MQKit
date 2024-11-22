@@ -64,4 +64,10 @@ public extension UIFont {
         let url = URL(fileURLWithPath: path)
         return UIFont.inPath(url, size: size)
     }
+    
+    consuming func height(for str: consuming String, width: CGFloat) -> CGFloat {
+        let size = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let rect = str.boundingRect(with: size, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [.font: self], context: nil)
+        return rect.height
+    }
 }
