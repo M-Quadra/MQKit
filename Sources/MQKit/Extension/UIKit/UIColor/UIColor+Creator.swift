@@ -20,16 +20,9 @@ public extension UIColor {
     
     /// #RRGGBB
     static func hex(_ hex: String, alpha: CGFloat = 1) -> UIColor {
-        let str = String(hex.dropFirst())
-        let a = min(max(0, alpha), 1)
-        
-        var num: UInt64 = 0
-        if !Scanner(string: str).scanHexInt64(&num) {
-#if DEBUG
-            fatalError("UIColor.hex failed")
-#else
+        guard var num = UInt64(hex.dropFirst(), radix: 16) else {
+            assertionFailure("Invalid hex string")
             return .clear
-#endif
         }
         
         let b = CGFloat(num & 0xFF)/255
@@ -37,7 +30,7 @@ public extension UIColor {
         let g = CGFloat(num & 0xFF)/255
         num >>= 8
         let r = CGFloat(num & 0xFF)/255
-        return UIColor(red: r, green: g, blue: b, alpha: a)
+        return UIColor(red: r, green: g, blue: b, alpha: alpha)
     }
     
     @available(iOS 13.0, *)

@@ -2,10 +2,6 @@
 
 跑路无望, 被迫写iOS, 随缘更新
 
-既然12.2 Swift ABI稳定, SwiftPM也来了, 那么就纯swift吧
-
-在[QMUI](https://github.com/Tencent/QMUI_iOS)里看到了一些感觉有趣的方法，这里就班门弄斧了
-
 既然不冲突, 就没必要加前缀（感觉会打脸）
 
 
