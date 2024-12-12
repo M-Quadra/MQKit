@@ -4,6 +4,8 @@
 >
 > 为了更愉快地异步乱飞, 参考Go瞎折腾一些工具。
 
+iOS 18 新增了 Synchronization.Atomic，有生之年考虑下重构。
+
 
 
 ## Mutex
