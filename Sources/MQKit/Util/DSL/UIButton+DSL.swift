@@ -27,10 +27,24 @@ public extension UIViewDSL<UIButton> {
         self.object.setImage(image, for: state)
         return self
     }
+    @discardableResult
+    consuming func setImage(_ imageTask: @concurrent @escaping () async -> UIImage?, for state: consuming UIControl.State = .normal) -> Self {
+        Task { @MainActor in
+            await self.object.setImage(imageTask(), for: state)
+        }
+        return self
+    }
     
     @discardableResult
     consuming func setBackgroundImage(_ image: consuming UIImage?, for state: consuming UIControl.State = .normal) -> Self {
         self.object.setBackgroundImage(image, for: state)
+        return self
+    }
+    @discardableResult
+    consuming func setBackgroundImage(_ imageTask: @concurrent @escaping () async -> UIImage?, for state: consuming UIControl.State = .normal) -> Self {
+        Task { @MainActor in
+            await self.object.setBackgroundImage(imageTask(), for: state)
+        }
         return self
     }
     
