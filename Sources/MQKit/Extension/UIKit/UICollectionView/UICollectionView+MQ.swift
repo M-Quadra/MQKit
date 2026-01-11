@@ -45,17 +45,17 @@ public extension UICollectionView {
 // MARK: - Dequeue
 public extension UICollectionView {
     
-    func dequeue<T: UICollectionViewCell>(cell: T.Type = T.self, for indexPath: IndexPath) -> T {
+    func dequeueCell<T: UICollectionViewCell>(_ cell: T.Type = T.self, for indexPath: IndexPath) -> T {
         let identifier = NSStringFromClass(cell)
         return self.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! T
     }
     
-    func dequeue<T: UICollectionReusableView>(header: T.Type, for indexPath: IndexPath) -> T {
+    func dequeueHeader<T: UICollectionReusableView>(_ header: T.Type = T.self, for indexPath: IndexPath) -> T {
         let identifier = NSStringFromClass(header)
         return self.dequeueReusableSupplementaryView(ofKind: .header, withReuseIdentifier: identifier, for: indexPath) as! T
     }
     
-    func dequeue<T: UICollectionReusableView>(footer: T.Type, for indexPath: IndexPath) -> T {
+    func dequeueFooter<T: UICollectionReusableView>(_ footer: T.Type = T.self, for indexPath: IndexPath) -> T {
         let identifier = NSStringFromClass(footer)
         return self.dequeueReusableSupplementaryView(ofKind: .footer, withReuseIdentifier: identifier, for: indexPath) as! T
     }
