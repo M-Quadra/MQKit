@@ -55,14 +55,19 @@ public extension UIImage {
         }
     }
     
-    @available(iOS 13.0, *)
-    static func dynamic(any: consuming UIImage, dark: consuming UIImage) -> UIImage {
-        let anyStyle = UITraitCollection(userInterfaceStyle: .unspecified)
-        let darkStyle = UITraitCollection(userInterfaceStyle: .dark)
+    static func dynamic(any: UIImage, dark: UIImage) -> UIImage {
+        let anyStyle = UITraitCollection(traitsFrom: [
+            UITraitCollection(userInterfaceStyle: .unspecified),
+            UITraitCollection(displayScale: any.scale)
+        ])
+        let darkStyle = UITraitCollection(traitsFrom: [
+            UITraitCollection(userInterfaceStyle: .dark),
+            UITraitCollection(displayScale: dark.scale)
+        ])
         
         let asset = UIImageAsset()
-        asset.register(any, with: anyStyle)
-        asset.register(dark, with: consume darkStyle)
+        asset.register(consume any, with: anyStyle)
+        asset.register(consume dark, with: consume darkStyle)
         return asset.image(with: consume anyStyle)
     }
 }
