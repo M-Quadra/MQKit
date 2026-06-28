@@ -8,9 +8,7 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
 public extension NSDiffableDataSourceSnapshot {
-    
     mutating func deleteItems(inSection section: SectionIdentifierType) {
         let items = self.itemIdentifiers(inSection: section)
         self.deleteItems(items)
@@ -20,5 +18,15 @@ public extension NSDiffableDataSourceSnapshot {
         for section in sections {
             self.deleteItems(inSection: section)
         }
+    }
+    
+    mutating func appendIfNeeded(section: SectionIdentifierType) {
+        if self.indexOfSection(section) != nil { return }
+        self.appendSections([section])
+    }
+    
+    mutating func appendIfNeeded(item: ItemIdentifierType, toSection section: SectionIdentifierType? = nil) {
+        if self.indexOfItem(item) != nil { return }
+        self.appendItems([item], toSection: section)
     }
 }
